@@ -4,10 +4,17 @@ from turtle import width
 import customtkinter
 from PIL import Image, ImageTk
 from matplotlib.ft2font import BOLD
+from RegistroEstudiantes import Regest
 
 class App (customtkinter.CTk):
     WIDTH = 1366
     HEIGHT = 768
+
+    def on_closing(self, event=0):
+        self.destroy()
+
+    #def resizef(e):
+        #print(e)
 
     def __init__(self):
         # ================ Basic Window Options ================= 
@@ -86,17 +93,17 @@ class App (customtkinter.CTk):
         self.frame_middle.columnconfigure(0, weight=2)
         
         # ================ Invisible Space Lines =================
-        self.frame_line1 = customtkinter.CTkFrame(master=self.frame_middle, width=1366, height=1, bg_color="#565a5c", fg_color="#565a5c")
+        self.frame_line1 = customtkinter.CTkFrame(master=self.frame_middle, width=1, height=1, bg_color="#565a5c", fg_color="#565a5c")
         self.frame_line1.grid(row=2, column=0, sticky ="nswe")
 
-        self.frame_line2 = customtkinter.CTkFrame(master=self.frame_middle, width=1366, height=1, bg_color="#565a5c", fg_color="#565a5c")
+        self.frame_line2 = customtkinter.CTkFrame(master=self.frame_middle, width=1, height=1, bg_color="#565a5c", fg_color="#565a5c")
         self.frame_line2.grid(row=3, column=0, sticky ="nswe")
 
-        self.frame_line4 = customtkinter.CTkFrame(master=self.frame_middle, width=1366, height=1, bg_color="#565a5c", fg_color="#565a5c")
+        self.frame_line4 = customtkinter.CTkFrame(master=self.frame_middle, width=1, height=1, bg_color="#565a5c", fg_color="#565a5c")
         self.frame_line4.grid(row=7, column=0, sticky ="wnse")
 
-        self.frame_line5 = customtkinter.CTkFrame(master=self.frame_middle, width=1366, height=1, bg_color="#565a5c", fg_color="#565a5c")
-        self.frame_line5.grid(row=9, column=0, sticky ="wnse")
+        self.frame_line5 = customtkinter.CTkFrame(master=self.frame_middle, width=1, height=1, bg_color="#565a5c", fg_color="#565a5c")
+        self.frame_line5.grid(row=9, column=0, sticky ="ns")
 
         self.frame_line6 = customtkinter.CTkFrame(master=self.frame_middle, width=1, height=1, bg_color="#565a5c", fg_color="#565a5c")
         self.frame_line6.grid(row=11, column=0, sticky ="")
@@ -111,9 +118,20 @@ class App (customtkinter.CTk):
         self.LoginButton = customtkinter.CTkButton(master=self.frame_middle, border_width=1, border_color="#565a5c", text = "Iniciar Sesión", width = 215, height = 50,
                                                      corner_radius=0, fg_color="#94b43b", text_color="White").grid(row=8, column=0, stick="ns")
 
-        self.label_maintitle = customtkinter.CTkLabel(master=self.frame_middle, text="¿No está registrado? Cree su cuenta", text_font=("Urbanist", -20, tkinter.UNDERLINE),
-                                                         text_color="White") 
-        self.label_maintitle.grid(row=10, column = 0, pady=10, sticky = "")
+        self.label_registro2 = tkinter.Label(master=self.frame_middle, text="¿No está registrado? Cree su cuenta.", font=("Urbanist", -20, tkinter.UNDERLINE),
+                                                fg="White", bg="#565a5c")
+        self.label_registro2.grid(row=10, column = 0, pady=10, sticky = "")
+        #self.label_registro = customtkinter.CTkLabel(master=self.frame_middle, text="¿No está registrado? Cree su cuenta.", text_font=("Urbanist", -20, tkinter.UNDERLINE),
+                                                         #text_color="White") 
+        #self.label_registro.grid(row=10, column = 0, pady=10, sticky = "")
+        #self.label_registro.bind("<Button-1>", Regest.Launch())
+
+        def changeprep(*args):
+            Regest.Launch()
+            app.destroy()
+
+        self.label_registro2.bind("<Button-1>", changeprep)
+               
         # ================ Handle User Frame ================= 
         self.frame_user = customtkinter.CTkFrame(border_width=1, master=self.frame_middle, width=350, height=40, fg_color="White", bg_color="White", corner_radius=0)
         self.frame_user.grid(row=4, column=0, sticky ="ns")         
@@ -138,11 +156,7 @@ class App (customtkinter.CTk):
                                                  corner_radius=0, border_color="White", text_color="Black")
         self.passwordentry.grid(row=0, column=1, sticky="nswe")
 
-        
-
-    def on_closing(self, event=0):
-        self.destroy()
-
 if __name__ == "__main__":
     app = App()
+    #app.bind('<Configure>', App.resizef)
     app.mainloop()
