@@ -4,7 +4,7 @@ from turtle import width
 import customtkinter
 from PIL import Image, ImageTk
 from matplotlib.ft2font import BOLD
-from RegistroEstudiantes import Regest
+import sys
 
 class App (customtkinter.CTk):
     WIDTH = 1366
@@ -12,10 +12,8 @@ class App (customtkinter.CTk):
 
     def on_closing(self, event=0):
         self.destroy()
-
-    #def resizef(e):
-        #print(e)
-
+        sys.exit()
+        
     def __init__(self):
         # ================ Basic Window Options ================= 
         super().__init__()
@@ -120,18 +118,8 @@ class App (customtkinter.CTk):
 
         self.label_registro2 = tkinter.Label(master=self.frame_middle, text="¿No está registrado? Cree su cuenta.", font=("Urbanist", -20, tkinter.UNDERLINE),
                                                 fg="White", bg="#565a5c")
-        self.label_registro2.grid(row=10, column = 0, pady=10, sticky = "")
-        #self.label_registro = customtkinter.CTkLabel(master=self.frame_middle, text="¿No está registrado? Cree su cuenta.", text_font=("Urbanist", -20, tkinter.UNDERLINE),
-                                                         #text_color="White") 
-        #self.label_registro.grid(row=10, column = 0, pady=10, sticky = "")
-        #self.label_registro.bind("<Button-1>", Regest.Launch())
+        self.label_registro2.grid(row=10, column = 0, pady=10, sticky = "")    
 
-        def changeprep(*args):
-            Regest.Launch()
-            app.destroy()
-
-        self.label_registro2.bind("<Button-1>", changeprep)
-               
         # ================ Handle User Frame ================= 
         self.frame_user = customtkinter.CTkFrame(border_width=1, master=self.frame_middle, width=350, height=40, fg_color="White", bg_color="White", corner_radius=0)
         self.frame_user.grid(row=4, column=0, sticky ="ns")         
@@ -156,7 +144,14 @@ class App (customtkinter.CTk):
                                                  corner_radius=0, border_color="White", text_color="Black")
         self.passwordentry.grid(row=0, column=1, sticky="nswe")
 
+        # ================ Register Window (TopLevel) =================
+        def popRegistro(*args):
+            self.withdraw()
+            vRegistro = customtkinter.CTkToplevel()
+            vRegistro.geometry("1366x768")
+
+        self.label_registro2.bind("<Button-1>", popRegistro)
+
 if __name__ == "__main__":
     app = App()
-    #app.bind('<Configure>', App.resizef)
     app.mainloop()
