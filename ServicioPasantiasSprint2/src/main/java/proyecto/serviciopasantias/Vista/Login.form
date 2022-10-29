@@ -20,7 +20,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="0" postCode="java.awt.Image logoun= new javax.swing.ImageIcon(&quot;/proyecto/serviciopasantias/Logo UN.png&quot;).getImage();      &#xa;jLabel1.setIcon(new javax.swing.ImageIcon(logoun.getScaledInstance(298, 120, java.awt.Image.SCALE_SMOOTH)));"/>
+        <Property name="horizontalAlignment" type="int" value="0" postCode="java.awt.Image logoun = new javax.swing.ImageIcon(&quot;\\ServicioPasantias\\src\\main\\java\\proyecto\\serviciopasantias\\Vista\\Images\\LogoUN.png&quot;).getImage();      &#xa;jLabel1.setIcon(new javax.swing.ImageIcon(logoun.getScaledInstance(298, 120, java.awt.Image.SCALE_SMOOTH)));"/>
         <Property name="text" type="java.lang.String" value="LOGOUN"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -44,7 +44,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="117" y="0" width="298" height="120"/>
+          <AbsoluteConstraints x="116" y="0" width="298" height="120"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -86,7 +86,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="1" y="0" width="59" height="53"/>
+              <AbsoluteConstraints x="0" y="0" width="59" height="53"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -94,6 +94,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="40" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Servicio de pasant&#xed;as"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -121,7 +124,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="59" y="0" width="59" height="53"/>
+              <AbsoluteConstraints x="58" y="0" width="59" height="53"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -177,6 +180,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="&#xbf;No est&#xe1; registrado? Cree su cuenta."/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -223,12 +229,10 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="toolTipText" type="java.lang.String" value="Contrase&#xf1;a"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
-                  </Border>
+                  <Border info="null"/>
                 </Property>
                 <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
-                  <Insets value="[0, 50, 0, 0]"/>
+                  <Insets value="[60, 60, 60, 60]"/>
                 </Property>
               </Properties>
               <AccessibilityProperties>
@@ -239,7 +243,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="322" y="221" width="305" height="35"/>
+                  <AbsoluteConstraints x="322" y="222" width="305" height="33"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -257,12 +261,7 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="toolTipText" type="java.lang.String" value="Usuario"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
-                  </Border>
-                </Property>
-                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
-                  <Insets value="[0, 50, 0, 0]"/>
+                  <Border info="null"/>
                 </Property>
               </Properties>
               <AccessibilityProperties>
@@ -273,7 +272,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="322" y="145" width="305" height="35"/>
+                  <AbsoluteConstraints x="322" y="146" width="305" height="33"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -282,7 +281,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Pass" postCode="java.awt.Image password= new javax.swing.ImageIcon(&quot;/proyecto/serviciopasantias/Password.png&quot;).getImage();      &#xa;jLabel1.setIcon(new javax.swing.ImageIcon(logoun.getScaledInstance(298, 120, java.awt.Image.SCALE_SMOOTH)));"/>
+                <Property name="text" type="java.lang.String" value="Pass" postCode="java.awt.Image password= new javax.swing.ImageIcon(&quot;/proyecto/serviciopasantias/Password.png&quot;).getImage();      &#xa;jLabel1.setIcon(new javax.swing.ImageIcon(password.getScaledInstance(298, 120, java.awt.Image.SCALE_SMOOTH)));"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder/>
@@ -303,7 +302,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="User" postCode="java.awt.Image usuario = new javax.swing.ImageIcon(&quot;/proyecto/serviciopasantias/user.png&quot;).getImage();      &#xa;jLabel1.setIcon(new javax.swing.ImageIcon(logoun.getScaledInstance(38, 31, java.awt.Image.SCALE_SMOOTH)));"/>
+                <Property name="text" type="java.lang.String" value="User" postCode="java.awt.Image usuario = new javax.swing.ImageIcon(&quot;/proyecto/serviciopasantias/user.png&quot;).getImage();      &#xa;jLabel1.setIcon(new javax.swing.ImageIcon(usuario.getScaledInstance(38, 31, java.awt.Image.SCALE_SMOOTH)));"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder/>
@@ -348,6 +347,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="18" style="0"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Iniciar Sesi&#xf3;n"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -368,6 +370,9 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="28" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Ingrese su usuario y contrase&#xf1;a"/>
