@@ -1,4 +1,4 @@
-package proyecto.serviciopasantias.Vista;
+package proyecto.serviciopasantias;
 
 public class main {
     public static void main(String[] args){

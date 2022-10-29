@@ -2,10 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package proyecto.serviciopasantias.Vista;
-import java.awt.Color;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+package proyecto.serviciopasantias;
+
 /**
  *
  * @author snsc2
@@ -49,7 +47,7 @@ public class Login extends javax.swing.JPanel {
         setLayout(null);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        java.awt.Image logoun = new javax.swing.ImageIcon("\\ServicioPasantias\\src\\main\\java\\proyecto\\serviciopasantias\\Vista\\Images\\LogoUN.png").getImage();
+        java.awt.Image logoun= new javax.swing.ImageIcon("/proyecto/serviciopasantias/Logo UN.png").getImage();
         jLabel1.setIcon(new javax.swing.ImageIcon(logoun.getScaledInstance(298, 120, java.awt.Image.SCALE_SMOOTH)));
         jLabel1.setText("LOGOUN");
         jLabel1.setToolTipText("");
@@ -60,7 +58,7 @@ public class Login extends javax.swing.JPanel {
         jLabel1.setMinimumSize(new java.awt.Dimension(298, 120));
         jLabel1.setPreferredSize(new java.awt.Dimension(298, 120));
         add(jLabel1);
-        jLabel1.setBounds(116, 0, 298, 120);
+        jLabel1.setBounds(117, 0, 298, 120);
 
         jPanel1.setBackground(new java.awt.Color(86, 90, 92));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -75,10 +73,9 @@ public class Login extends javax.swing.JPanel {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(0, 0, 59, 53);
+        jButton1.setBounds(1, 0, 59, 53);
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 40)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Servicio de pasantías");
         jLabel3.setToolTipText("");
         jPanel1.add(jLabel3);
@@ -93,7 +90,7 @@ public class Login extends javax.swing.JPanel {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(58, 0, 59, 53);
+        jButton5.setBounds(59, 0, 59, 53);
 
         add(jPanel1);
         jPanel1.setBounds(0, 0, 1366, 77);
@@ -108,7 +105,6 @@ public class Login extends javax.swing.JPanel {
         jPanel3.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("¿No está registrado? Cree su cuenta.");
         jLabel2.setToolTipText("");
@@ -126,15 +122,15 @@ public class Login extends javax.swing.JPanel {
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextField1.setToolTipText("Contraseña");
-        jTextField1.setBorder(null);
-        jTextField1.setMargin(new java.awt.Insets(60, 60, 60, 60));
+        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField1.setMargin(new java.awt.Insets(0, 50, 0, 0));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
         jPanel3.add(jTextField1);
-        jTextField1.setBounds(322, 222, 305, 33);
+        jTextField1.setBounds(322, 221, 305, 35);
         jTextField1.getAccessibleContext().setAccessibleName("contraseña");
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
@@ -142,20 +138,21 @@ public class Login extends javax.swing.JPanel {
         jTextField2.setForeground(new java.awt.Color(0, 0, 0));
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextField2.setToolTipText("Usuario");
-        jTextField2.setBorder(null);
+        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField2.setMargin(new java.awt.Insets(0, 50, 0, 0));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
         jPanel3.add(jTextField2);
-        jTextField2.setBounds(322, 146, 305, 33);
+        jTextField2.setBounds(322, 145, 305, 35);
         jTextField2.getAccessibleContext().setAccessibleName("usuario");
 
         jToggleButton2.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton2.setText("Pass");
         java.awt.Image password= new javax.swing.ImageIcon("/proyecto/serviciopasantias/Password.png").getImage();
-        jLabel1.setIcon(new javax.swing.ImageIcon(password.getScaledInstance(298, 120, java.awt.Image.SCALE_SMOOTH)));
+        jLabel1.setIcon(new javax.swing.ImageIcon(logoun.getScaledInstance(298, 120, java.awt.Image.SCALE_SMOOTH)));
         jToggleButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,7 +165,7 @@ public class Login extends javax.swing.JPanel {
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("User");
         java.awt.Image usuario = new javax.swing.ImageIcon("/proyecto/serviciopasantias/user.png").getImage();
-        jLabel1.setIcon(new javax.swing.ImageIcon(usuario.getScaledInstance(38, 31, java.awt.Image.SCALE_SMOOTH)));
+        jLabel1.setIcon(new javax.swing.ImageIcon(logoun.getScaledInstance(38, 31, java.awt.Image.SCALE_SMOOTH)));
         jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +188,6 @@ public class Login extends javax.swing.JPanel {
 
         jButton4.setBackground(new java.awt.Color(148, 180, 59));
         jButton4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Iniciar Sesión");
         jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -203,7 +199,6 @@ public class Login extends javax.swing.JPanel {
         jButton4.setBounds(370, 290, 171, 39);
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 28)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Ingrese su usuario y contraseña");
         jLabel4.setToolTipText("");
