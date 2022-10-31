@@ -3,9 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package proyecto.serviciopasantias.Vista;
-import java.awt.Color;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 /**
  *
  * @author snsc2

@@ -4,23 +4,29 @@
  */
 package proyecto.serviciopasantias.Vista;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author snsc2
  */
-public class MainScreenCardLayout extends javax.swing.JFrame {
+
+      
+
+public class MainCardLayout extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainScreen
+     * Creates new form MainCardLayout
      */
-    
+    static CardLayout cardLayout;
+        
     Login log = new Login();
     Registro reg = new Registro();
-    
-    public MainScreenCardLayout() {
+    public MainCardLayout() {
         initComponents();
-        
-        
+        cardLayout = (CardLayout) jPanel1.getLayout();
+        jPanel1.add(log,"Login");
+        cardLayout.show(jPanel1, "Login");
     }
 
     /**
@@ -35,13 +41,12 @@ public class MainScreenCardLayout extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
-        setSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(null);
 
+        jPanel1.setMinimumSize(new java.awt.Dimension(1366, 768));
         jPanel1.setLayout(new java.awt.CardLayout());
-        jPanel1.add(log);
-        jPanel1.add(reg);
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1366, 768);
 
@@ -65,25 +70,24 @@ public class MainScreenCardLayout extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainScreenCardLayout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainCardLayout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainScreenCardLayout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainCardLayout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainScreenCardLayout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainCardLayout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainScreenCardLayout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainCardLayout.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                MainScreenCardLayout frame = new MainScreenCardLayout();
-                frame.setVisible(true);
+                new MainCardLayout().setVisible(true);
             }
         });
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
