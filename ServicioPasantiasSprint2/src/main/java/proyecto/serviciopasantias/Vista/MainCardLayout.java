@@ -22,11 +22,22 @@ public class MainCardLayout extends javax.swing.JFrame {
         
     Login log = new Login();
     Registro reg = new Registro();
+    
     public MainCardLayout() {
         initComponents();
         cardLayout = (CardLayout) jPanel1.getLayout();
         jPanel1.add(log,"Login");
+        jPanel1.add(reg,"Registro");
+        /*showLogin();*/
+        showRegistro();
+    }
+    
+    public void showLogin(){
         cardLayout.show(jPanel1, "Login");
+    }
+    
+    public void showRegistro(){
+        cardLayout.show(jPanel1, "Registro");
     }
 
     /**
