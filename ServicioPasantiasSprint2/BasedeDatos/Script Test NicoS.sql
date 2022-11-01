@@ -1,4 +1,3 @@
-
 drop table if exists VERIFICACION;
 drop table if exists COMITE_ASESOR;
 drop table if exists CRITERIO;
@@ -13,7 +12,7 @@ drop table if exists DOCENTE;
 drop table if exists PROGRAMA;
 drop table if exists JORNADA;
 drop table if exists SEDE;
-drop table if exists DEPARTAMENTO;
+drop table if exists FACULTAD;
 drop table if exists RESPONSABLE;
 drop table if exists AREA;
 drop table if exists USUARIO;
@@ -56,7 +55,7 @@ create table TIPO_ID (
 /* Table: PERSONA                                               */
 /*==============================================================*/
 create table PERSONA (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
+   ID                   int                            NOT NULL,
    TIPO_ID              int                            NOT NULL,
    LUGAR_EXP_ID         varchar(100)                        NOT NULL,
    NOMBRE               varchar(100)                        NOT NULL,
@@ -136,9 +135,9 @@ alter table RESPONSABLE
       ON DELETE CASCADE;
 
 /*==============================================================*/
-/* Table: DEPARTAMENTO                                          */
+/* Table: FACULTAD                                              */
 /*==============================================================*/
-create table DEPARTAMENTO (
+create table FACULTAD (
    ID                   int                            NOT NULL AUTO_INCREMENT,
    NOMBRE               varchar(100)                        NOT NULL,
    CONSTRAINT PK_DEPARTAMENTO PRIMARY KEY clustered (ID)
@@ -171,13 +170,13 @@ create table PROGRAMA (
    NOMBRE               varchar(100)                        NOT NULL,
    SEDE                 int                            NOT NULL,
    JORNADA              int                            NOT NULL,
-   DEPARTAMENTO         int                            null,
+   FACULTAD         int                            null,
    CONSTRAINT PK_PROGRAMA PRIMARY KEY clustered (ID)
 );
 
 alter table PROGRAMA
-   add CONSTRAINT FK_PROGRAMA_REFERENCE_DEPARTAM foreign key (DEPARTAMENTO)
-      references DEPARTAMENTO (ID)
+   add CONSTRAINT FK_PROGRAMA_REFERENCE_FACULTAD foreign key (FACULTAD)
+      references FACULTAD (ID)
       ON UPDATE CASCADE
       ON DELETE CASCADE;
 
@@ -197,10 +196,10 @@ alter table PROGRAMA
 /* Table: DOCENTE                                               */
 /*==============================================================*/
 CREATE TABLE DOCENTE (
-    ID INT NOT NULL AUTO_INCREMENT,
+    ID INT NOT NULL,
     PERSONA_ID INT NOT NULL,
     PROGRAMA INT NOT NULL,
-    EXTENCION INT NOT NULL,
+    TELEFONO INT NOT NULL,
     CONSTRAINT PK_DOCENTE PRIMARY KEY clustered (ID)
 );
 
@@ -422,6 +421,13 @@ alter table VERIFICACION
       ON UPDATE CASCADE
       ON DELETE CASCADE;
 
-INSERT INTO `capibaritax`.`tipo_id` (`NOMBRE`) VALUES ('Cedula de ciudadania');
-INSERT INTO `capibaritax`.`persona` (`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1', 'Bogotá', 'Sergio Nicolas', 'Siabatto Cleves', 'ssiabatto@unal.edu.co', 'pendiente', '1');
-INSERT INTO `capibaritax`.`usuario` (`PERSONA`, `NOMBRE`, `CONTRASENA`) VALUES ('1', 'Nico', '1234');
+INSERT INTO `proyecto`.`tipo_id` (`NOMBRE`) VALUES ('Cedula de ciudadania');
+INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808481','1', 'Bogotá', 'Sergio Nicolas', 'Siabatto Cleves', 'ssiabatto@unal.edu.co', '3053109089', '1');
+INSERT INTO `proyecto`.`usuario` (`PERSONA`, `NOMBRE`, `CONTRASENA`) VALUES ('1000808481', 'Nico', '1234');
+INSERT INTO `proyecto`.`jornada` (`NOMBRE`) VALUES ('Diurno');
+INSERT INTO `proyecto`.`sede` (`NOMBRE`, `CIUDAD`) VALUES ('Sede Bogotá','Bogotá');
+INSERT INTO `proyecto`.`facultad` (`NOMBRE`) VALUES ('Ingeniería');
+INSERT INTO `proyecto`.`programa` (`ID`, `NOMBRE`, `SEDE`,`JORNADA`,`FACULTAD`) VALUES ('24','Ingeniería Agrícola','1','1','1');
+INSERT INTO `proyecto`.`programa` (`ID`, `NOMBRE`, `SEDE`,`JORNADA`,`FACULTAD`) VALUES ('106661','Ingeniería de Sistemas y Computación','1','1','1');
+insert into `proyecto`.`estado` (`NOMBRE`) VALUES ('Disponible');
+INSERT INTO `proyecto`.`estudiante` (`PERSONA_ID`, `PROGRAMA_ID`,`AVANCE`,`ESTADO`) VALUES ('1000808481','106661','50','1');

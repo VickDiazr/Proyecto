@@ -20,6 +20,7 @@ public class Registro extends javax.swing.JPanel {
     RegistroEstudiantes regest = new RegistroEstudiantes();
     RegistroEmpty regempty = new RegistroEmpty();
     RegistroProfesores regprof = new RegistroProfesores();
+    RegistroEmpresas regemp = new RegistroEmpresas();
     
     
     public Registro() {
@@ -28,6 +29,7 @@ public class Registro extends javax.swing.JPanel {
         jPanel4.add(regest, "RegistroEstudiantes");
         jPanel4.add(regempty, "RegistroEmpty");
         jPanel4.add(regprof, "RegistroProfesores");
+        jPanel4.add(regemp, "RegistroEmpresas");
         showRegEmpty();
     }
     
@@ -41,6 +43,10 @@ public class Registro extends javax.swing.JPanel {
     
     public void showRegProf(){
         cardLayoutReg.show(jPanel4, "RegistroProfesores");
+    }
+    
+    public void showRegEmp(){
+        cardLayoutReg.show(jPanel4, "RegistroEmpresas");
     }
 
     /**
@@ -168,10 +174,16 @@ public class Registro extends javax.swing.JPanel {
         jRadioButton2.setBackground(new java.awt.Color(86, 90, 92));
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Arial", 0, 23)); // NOI18N
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("Empresa");
         jRadioButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jRadioButton2.setBorderPainted(true);
         jRadioButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jRadioButton2);
         jRadioButton2.setBounds(340, 97, 140, 40);
 
@@ -231,6 +243,10 @@ public class Registro extends javax.swing.JPanel {
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         showRegProf();
     }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        showRegEmp();
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

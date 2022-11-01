@@ -12,7 +12,7 @@ drop table if exists DOCENTE;
 drop table if exists PROGRAMA;
 drop table if exists JORNADA;
 drop table if exists SEDE;
-drop table if exists DEPARTAMENTO;
+drop table if exists FACULTAD;
 drop table if exists RESPONSABLE;
 drop table if exists AREA;
 drop table if exists PERSONA;

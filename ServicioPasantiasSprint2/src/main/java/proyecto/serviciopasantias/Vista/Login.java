@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package proyecto.serviciopasantias.Vista;
+import java.sql.Connection;
+import proyecto.serviciopasantias.Modelo.PruebaConexion;
+import javax.swing.JOptionPane;
 /**
  *
  * @author snsc2
@@ -34,8 +37,8 @@ public class Login extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        Passwordentry = new javax.swing.JTextField();
+        Userentry = new javax.swing.JTextField();
         jToggleButton2 = new javax.swing.JToggleButton();
         jButton3 = new javax.swing.JButton();
         jToggleButton3 = new javax.swing.JToggleButton();
@@ -118,36 +121,36 @@ public class Login extends javax.swing.JPanel {
         jPanel3.add(jSeparator2);
         jSeparator2.setBounds(0, 56, 908, 3);
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField1.setToolTipText("Contraseña");
-        jTextField1.setBorder(null);
-        jTextField1.setMargin(new java.awt.Insets(60, 60, 60, 60));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Passwordentry.setBackground(new java.awt.Color(255, 255, 255));
+        Passwordentry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        Passwordentry.setForeground(new java.awt.Color(0, 0, 0));
+        Passwordentry.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Passwordentry.setToolTipText("Contraseña");
+        Passwordentry.setBorder(null);
+        Passwordentry.setMargin(new java.awt.Insets(60, 60, 60, 60));
+        Passwordentry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                PasswordentryActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField1);
-        jTextField1.setBounds(322, 222, 305, 33);
-        jTextField1.getAccessibleContext().setAccessibleName("contraseña");
+        jPanel3.add(Passwordentry);
+        Passwordentry.setBounds(322, 222, 305, 33);
+        Passwordentry.getAccessibleContext().setAccessibleName("contraseña");
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField2.setToolTipText("Usuario");
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Userentry.setBackground(new java.awt.Color(255, 255, 255));
+        Userentry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        Userentry.setForeground(new java.awt.Color(0, 0, 0));
+        Userentry.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        Userentry.setToolTipText("Usuario");
+        Userentry.setBorder(null);
+        Userentry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                UserentryActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField2);
-        jTextField2.setBounds(322, 146, 305, 33);
-        jTextField2.getAccessibleContext().setAccessibleName("usuario");
+        jPanel3.add(Userentry);
+        Userentry.setBounds(322, 146, 305, 33);
+        Userentry.getAccessibleContext().setAccessibleName("usuario");
 
         jToggleButton2.setBackground(new java.awt.Color(255, 255, 255));
         jToggleButton2.setText("Pass");
@@ -227,7 +230,16 @@ public class Login extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        PruebaConexion conectar = new PruebaConexion();
+        Connection resultado = conectar.Test();
+        if (resultado == null){
+            JOptionPane.showMessageDialog(null, "Conexión fallida"+ resultado);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Conexión establecida con éxito"+ resultado);
+        }
+        
+            
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
@@ -242,16 +254,18 @@ public class Login extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void UserentryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserentryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_UserentryActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void PasswordentryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordentryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_PasswordentryActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Passwordentry;
+    private javax.swing.JTextField Userentry;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -265,8 +279,6 @@ public class Login extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
     // End of variables declaration//GEN-END:variables

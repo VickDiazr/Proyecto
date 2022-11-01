@@ -1,20 +1,19 @@
-package proyecto.serviciopasantias.Vista;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
+package proyecto.serviciopasantias.Vista;
 
 /**
  *
  * @author snsc2
  */
-public class RegistroProfesores extends javax.swing.JPanel {
+public class RegistroEmpresas extends javax.swing.JPanel {
 
     /**
-     * Creates new form RegistroProfesores
+     * Creates new form RegistroEmpresas
      */
-    public RegistroProfesores() {
+    public RegistroEmpresas() {
         initComponents();
     }
 
@@ -36,9 +35,6 @@ public class RegistroProfesores extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -56,6 +52,15 @@ public class RegistroProfesores extends javax.swing.JPanel {
         jButton4 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(null);
@@ -64,93 +69,64 @@ public class RegistroProfesores extends javax.swing.JPanel {
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jSeparator3);
-        jSeparator3.setBounds(0, 180, 1230, 3);
+        jSeparator3.setBounds(0, 220, 1230, 3);
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Ingrese su número de identificación:");
+        jLabel7.setText("Ingrese su correo eléctronico:");
         jPanel4.add(jLabel7);
-        jLabel7.setBounds(20, 140, 260, 19);
+        jLabel7.setBounds(15, 120, 260, 19);
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Ingrese su nombre:");
+        jLabel8.setText("Ingrese el nombre de la empresa:");
         jPanel4.add(jLabel8);
-        jLabel8.setBounds(20, 20, 220, 20);
+        jLabel8.setBounds(15, 15, 250, 20);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Ingrese su apellido:");
+        jLabel9.setText("Ingrese el NIT:");
         jPanel4.add(jLabel9);
-        jLabel9.setBounds(20, 60, 220, 20);
+        jLabel9.setBounds(15, 50, 220, 20);
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("Seleccione su tipo de identificación:");
+        jLabel10.setText("Ingrese un número de contacto:");
         jPanel4.add(jLabel10);
-        jLabel10.setBounds(20, 100, 260, 19);
+        jLabel10.setBounds(15, 85, 260, 19);
 
         jLabel11.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("(se recomienda usar el mismo usuario institucional)");
         jPanel4.add(jLabel11);
-        jLabel11.setBounds(0, 220, 1230, 22);
+        jLabel11.setBounds(0, 245, 1230, 22);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setText("Seleccione la sede a la que pertenece:");
+        jLabel12.setText("Ingrese el cargo del representante:");
         jPanel4.add(jLabel12);
-        jLabel12.setBounds(633, 100, 290, 19);
+        jLabel12.setBounds(15, 155, 290, 19);
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("Ingrese su correo eléctronico:");
+        jLabel14.setText("Ingrese el nombre del representante:");
         jPanel4.add(jLabel14);
-        jLabel14.setBounds(633, 20, 280, 20);
-
-        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jComboBox2);
-        jComboBox2.setBounds(393, 100, 200, 20);
-
-        jComboBox3.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox3.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel4.add(jComboBox3);
-        jComboBox3.setBounds(1010, 100, 200, 20);
-
-        jComboBox4.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox4.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel4.add(jComboBox4);
-        jComboBox4.setBounds(1010, 140, 200, 20);
+        jLabel14.setBounds(628, 15, 280, 20);
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jTextField1);
-        jTextField1.setBounds(1010, 20, 200, 20);
+        jTextField1.setBounds(1015, 15, 200, 20);
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(0, 0, 0));
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jTextField2);
-        jTextField2.setBounds(393, 60, 200, 20);
+        jTextField2.setBounds(398, 85, 200, 20);
 
         jTextField3.setBackground(new java.awt.Color(255, 255, 255));
         jTextField3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -162,7 +138,7 @@ public class RegistroProfesores extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jTextField3);
-        jTextField3.setBounds(393, 20, 200, 20);
+        jTextField3.setBounds(398, 15, 200, 20);
 
         jTextField4.setBackground(new java.awt.Color(255, 255, 255));
         jTextField4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -174,33 +150,33 @@ public class RegistroProfesores extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jTextField4);
-        jTextField4.setBounds(393, 140, 200, 20);
+        jTextField4.setBounds(398, 120, 200, 20);
 
         jSeparator4.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jSeparator4);
-        jSeparator4.setBounds(613, 0, 3, 180);
+        jSeparator4.setBounds(613, 0, 3, 220);
 
         jLabel15.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("Seleccione la facultad a la que pertenece:");
+        jLabel15.setText("Ingrese la ciudad de la empresa:");
         jPanel4.add(jLabel15);
-        jLabel15.setBounds(633, 140, 289, 19);
+        jLabel15.setBounds(628, 155, 226, 19);
 
         jLabel16.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Ingrese un usuario y su contraseña");
         jPanel4.add(jLabel16);
-        jLabel16.setBounds(0, 200, 1230, 22);
+        jLabel16.setBounds(0, 225, 1230, 22);
 
         jLabel17.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("Ingrese un nombre de usuario:");
         jPanel4.add(jLabel17);
-        jLabel17.setBounds(20, 270, 260, 19);
+        jLabel17.setBounds(20, 280, 260, 19);
 
         jTextField5.setBackground(new java.awt.Color(255, 255, 255));
         jTextField5.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -212,13 +188,13 @@ public class RegistroProfesores extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jTextField5);
-        jTextField5.setBounds(390, 270, 200, 20);
+        jTextField5.setBounds(390, 280, 200, 20);
 
         jLabel18.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Ingrese una contraseña:");
         jPanel4.add(jLabel18);
-        jLabel18.setBounds(20, 310, 260, 19);
+        jLabel18.setBounds(20, 320, 260, 19);
 
         jTextField6.setBackground(new java.awt.Color(255, 255, 255));
         jTextField6.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -230,13 +206,13 @@ public class RegistroProfesores extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jTextField6);
-        jTextField6.setBounds(390, 310, 200, 20);
+        jTextField6.setBounds(390, 320, 200, 20);
 
         jLabel19.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Verifique su contraseña:");
         jPanel4.add(jLabel19);
-        jLabel19.setBounds(20, 350, 260, 19);
+        jLabel19.setBounds(20, 360, 260, 19);
 
         jTextField7.setBackground(new java.awt.Color(255, 255, 255));
         jTextField7.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -248,7 +224,7 @@ public class RegistroProfesores extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jTextField7);
-        jTextField7.setBounds(390, 350, 200, 20);
+        jTextField7.setBounds(390, 360, 200, 20);
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
@@ -256,7 +232,7 @@ public class RegistroProfesores extends javax.swing.JPanel {
         jLabel2.setText("Verificar el llenado de los campos marcados con un *");
         jLabel2.setToolTipText("");
         jPanel4.add(jLabel2);
-        jLabel2.setBounds(620, 350, 610, 30);
+        jLabel2.setBounds(620, 360, 610, 30);
 
         jButton4.setBackground(new java.awt.Color(148, 180, 59));
         jButton4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -269,20 +245,87 @@ public class RegistroProfesores extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jButton4);
-        jButton4.setBounds(760, 270, 330, 80);
+        jButton4.setBounds(760, 280, 330, 80);
 
         jLabel20.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel20.setText("Ingrese su número de celular:");
+        jLabel20.setText("Ingrese el apellido del representante:");
         jPanel4.add(jLabel20);
-        jLabel20.setBounds(633, 60, 280, 20);
+        jLabel20.setBounds(628, 50, 280, 20);
 
         jTextField8.setBackground(new java.awt.Color(255, 255, 255));
         jTextField8.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jTextField8.setForeground(new java.awt.Color(0, 0, 0));
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jTextField8);
-        jTextField8.setBounds(1010, 60, 200, 20);
+        jTextField8.setBounds(1015, 155, 200, 20);
+
+        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField9.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jTextField9.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jTextField9);
+        jTextField9.setBounds(398, 50, 200, 20);
+
+        jTextField10.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField10.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jTextField10.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jTextField10);
+        jTextField10.setBounds(1015, 50, 200, 20);
+
+        jTextField11.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField11.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jTextField11.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jTextField11);
+        jTextField11.setBounds(398, 155, 200, 20);
+
+        jLabel13.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Seleccione su tipo de identificación:");
+        jPanel4.add(jLabel13);
+        jLabel13.setBounds(628, 85, 260, 19);
+
+        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jComboBox2);
+        jComboBox2.setBounds(1015, 85, 200, 20);
+
+        jLabel21.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel21.setText("Ingrese su número de identificación:");
+        jPanel4.add(jLabel21);
+        jLabel21.setBounds(628, 120, 260, 19);
+
+        jTextField12.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField12.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jTextField12.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jTextField12);
+        jTextField12.setBounds(1015, 120, 200, 20);
+
+        jLabel22.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel22.setText("Seleccione su área de trabajo:");
+        jPanel4.add(jLabel22);
+        jLabel22.setBounds(10, 190, 260, 19);
+
+        jComboBox3.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jComboBox3.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jComboBox3);
+        jComboBox3.setBounds(398, 190, 200, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -322,19 +365,19 @@ public class RegistroProfesores extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jTextField12ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -343,6 +386,8 @@ public class RegistroProfesores extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -350,6 +395,9 @@ public class RegistroProfesores extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -357,5 +405,6 @@ public class RegistroProfesores extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
