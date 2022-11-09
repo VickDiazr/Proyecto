@@ -80,13 +80,11 @@ public class Login extends javax.swing.JFrame {
         Ingresar_Pass = new javax.swing.JPasswordField();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        Boton_Ingresar = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         Ass = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        Boton_Ingresar = new javax.swing.JLabel();
         as = new javax.swing.JPanel();
         Boton_Registrar = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -158,24 +156,25 @@ public class Login extends javax.swing.JFrame {
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 170, 140));
 
-        jPanel7.setLayout(null);
+        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 28)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Sistema de Practicas y Pasantias");
+        jLabel6.setToolTipText("");
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 680, 53));
+
+        Ass.setBackground(new java.awt.Color(148, 180, 59));
+        Ass.setLayout(null);
 
         Boton_Ingresar.setFont(new java.awt.Font("Tw Cen MT", 1, 28)); // NOI18N
         Boton_Ingresar.setForeground(new java.awt.Color(255, 255, 255));
         Boton_Ingresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Boton_Ingresar.setText("Ingresar");
         Boton_Ingresar.setToolTipText("");
-        jPanel7.add(Boton_Ingresar);
-        Boton_Ingresar.setBounds(10, 10, 230, 50);
+        Ass.add(Boton_Ingresar);
+        Boton_Ingresar.setBounds(0, 0, 230, 50);
 
-        Ass.setBackground(new java.awt.Color(148, 180, 59));
-        Ass.setLayout(null);
-        jPanel7.add(Ass);
-        Ass.setBounds(10, 10, 230, 50);
-
-        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 250, 70));
-
-        jPanel6.setLayout(null);
+        jPanel3.add(Ass, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 230, 50));
 
         as.setBackground(new java.awt.Color(148, 180, 59));
         as.setToolTipText("");
@@ -200,17 +199,7 @@ public class Login extends javax.swing.JFrame {
         as.add(Boton_Registrar);
         Boton_Registrar.setBounds(0, 0, 230, 50);
 
-        jPanel6.add(as);
-        as.setBounds(10, 10, 230, 50);
-
-        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, 250, 70));
-
-        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 28)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Sistema de Practicas y Pasantias");
-        jLabel6.setToolTipText("");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 680, 53));
+        jPanel3.add(as, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 400, 230, 50));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 1140, 520));
 
@@ -281,12 +270,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_Ingresar_PassActionPerformed
 
     private void asMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_asMouseClicked
-        
+
     }//GEN-LAST:event_asMouseClicked
 
     private void Boton_RegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_RegistrarMouseClicked
         RegistroUser a = new RegistroUser();
-        a.setVisible(true);  
+        a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_Boton_RegistrarMouseClicked
 
@@ -343,8 +332,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
 }
