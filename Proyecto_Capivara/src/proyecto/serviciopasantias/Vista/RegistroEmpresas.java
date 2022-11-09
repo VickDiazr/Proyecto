@@ -109,7 +109,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jTextField3);
-        jTextField3.setBounds(680, 60, 400, 20);
+        jTextField3.setBounds(680, 60, 220, 20);
 
         jTextField4.setBackground(new java.awt.Color(204, 204, 204));
         jTextField4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -171,7 +171,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         jLabel16.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel16.setText("Interes en contratar");
         jPanel4.add(jLabel16);
-        jLabel16.setBounds(760, 100, 150, 19);
+        jLabel16.setBounds(640, 100, 150, 19);
 
         jTextField5.setBackground(new java.awt.Color(204, 204, 204));
         jTextField5.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -193,7 +193,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jTextField6);
-        jTextField6.setBounds(600, 20, 480, 20);
+        jTextField6.setBounds(600, 20, 300, 20);
 
         Boton_Registrar.setBackground(new java.awt.Color(148, 180, 59));
         Boton_Registrar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -217,34 +217,34 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Administración de Empresas", "Antropología", "Arquictectura", "Artes Plasticas", "Administración de Sistemas Informaticos", "Biologia,Ciencia Política", "Ciencias de la Computación", "Cine y Televisión", "Contaduría Pública", "Construcción", "Derecho", "Diseño Grafico", "Diseño Industrial", "Economia", "Enfermeria", "Español y Filología Clasíca", "Estadistica", "Estudios Literarios", "Farmacia", "Filología e Idiomas:Alemán", "Filología e Idiomas:Francés", "Filología e Idiomas:Inglés", "Filología", "Física", "Fonoaudiología","Geografia","Geologia", "Gestión Cultural y Comunicativa", "Historia", "Ingeniería Agrícola", "Ingeniería Agronómica", "Ingeniería Civil", "Ingeniería de Sistemas y Computación", "Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería Industrial", "Ingeniería Mecánica", "Ingeniería Mecatrónica", "Ingeniería Química", "Ingeniería Fisica", "Ingeniería de Control", "Ingeniería de Minas y Metalurgia", "Ingeniería de Petroleos", "Ingeniería de Sistemas e Informatica", "Ingeniería Forestal","Ingeniería Geológica", "Matematicas", "Medicina", "Medicina Veterinaria", "Música", "Musica Instrumental", "Nutrición y Dietetica", "Odontologia", "Psicologia", "Quimica", "Sociologia", "Terepia Ocupacional", "Trabajo Social", "Zootecnía" }));
         jComboBox6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jComboBox6);
-        jComboBox6.setBounds(560, 260, 520, 20);
+        jComboBox6.setBounds(560, 260, 340, 20);
 
         jComboBox9.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox9.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Administración de Empresas", "Antropología", "Arquictectura", "Artes Plasticas", "Administración de Sistemas Informaticos", "Biologia,Ciencia Política", "Ciencias de la Computación", "Cine y Televisión", "Contaduría Pública", "Construcción", "Derecho", "Diseño Grafico", "Diseño Industrial", "Economia", "Enfermeria", "Español y Filología Clasíca", "Estadistica", "Estudios Literarios", "Farmacia", "Filología e Idiomas:Alemán", "Filología e Idiomas:Francés", "Filología e Idiomas:Inglés", "Filología", "Física", "Fonoaudiología","Geografia","Geologia", "Gestión Cultural y Comunicativa", "Historia", "Ingeniería Agrícola", "Ingeniería Agronómica", "Ingeniería Civil", "Ingeniería de Sistemas y Computación", "Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería Industrial", "Ingeniería Mecánica", "Ingeniería Mecatrónica", "Ingeniería Química", "Ingeniería Fisica", "Ingeniería de Control", "Ingeniería de Minas y Metalurgia", "Ingeniería de Petroleos", "Ingeniería de Sistemas e Informatica", "Ingeniería Forestal","Ingeniería Geológica", "Matematicas", "Medicina", "Medicina Veterinaria", "Música", "Musica Instrumental", "Nutrición y Dietetica", "Odontologia", "Psicologia", "Quimica", "Sociologia", "Terepia Ocupacional", "Trabajo Social", "Zootecnía" }));
         jComboBox9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jComboBox9);
-        jComboBox9.setBounds(560, 140, 520, 20);
+        jComboBox9.setBounds(560, 140, 340, 20);
 
         jComboBox10.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox10.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Administración de Empresas", "Antropología", "Arquictectura", "Artes Plasticas", "Administración de Sistemas Informaticos", "Biologia,Ciencia Política", "Ciencias de la Computación", "Cine y Televisión", "Contaduría Pública", "Construcción", "Derecho", "Diseño Grafico", "Diseño Industrial", "Economia", "Enfermeria", "Español y Filología Clasíca", "Estadistica", "Estudios Literarios", "Farmacia", "Filología e Idiomas:Alemán", "Filología e Idiomas:Francés", "Filología e Idiomas:Inglés", "Filología", "Física", "Fonoaudiología","Geografia","Geologia", "Gestión Cultural y Comunicativa", "Historia", "Ingeniería Agrícola", "Ingeniería Agronómica", "Ingeniería Civil", "Ingeniería de Sistemas y Computación", "Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería Industrial", "Ingeniería Mecánica", "Ingeniería Mecatrónica", "Ingeniería Química", "Ingeniería Fisica", "Ingeniería de Control", "Ingeniería de Minas y Metalurgia", "Ingeniería de Petroleos", "Ingeniería de Sistemas e Informatica", "Ingeniería Forestal","Ingeniería Geológica", "Matematicas", "Medicina", "Medicina Veterinaria", "Música", "Musica Instrumental", "Nutrición y Dietetica", "Odontologia", "Psicologia", "Quimica", "Sociologia", "Terepia Ocupacional", "Trabajo Social", "Zootecnía" }));
         jComboBox10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jComboBox10);
-        jComboBox10.setBounds(560, 180, 520, 20);
+        jComboBox10.setBounds(560, 180, 340, 20);
 
         jComboBox11.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox11.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Administración de Empresas", "Antropología", "Arquictectura", "Artes Plasticas", "Administración de Sistemas Informaticos", "Biologia,Ciencia Política", "Ciencias de la Computación", "Cine y Televisión", "Contaduría Pública", "Construcción", "Derecho", "Diseño Grafico", "Diseño Industrial", "Economia", "Enfermeria", "Español y Filología Clasíca", "Estadistica", "Estudios Literarios", "Farmacia", "Filología e Idiomas:Alemán", "Filología e Idiomas:Francés", "Filología e Idiomas:Inglés", "Filología", "Física", "Fonoaudiología","Geografia","Geologia", "Gestión Cultural y Comunicativa", "Historia", "Ingeniería Agrícola", "Ingeniería Agronómica", "Ingeniería Civil", "Ingeniería de Sistemas y Computación", "Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería Industrial", "Ingeniería Mecánica", "Ingeniería Mecatrónica", "Ingeniería Química", "Ingeniería Fisica", "Ingeniería de Control", "Ingeniería de Minas y Metalurgia", "Ingeniería de Petroleos", "Ingeniería de Sistemas e Informatica", "Ingeniería Forestal","Ingeniería Geológica", "Matematicas", "Medicina", "Medicina Veterinaria", "Música", "Musica Instrumental", "Nutrición y Dietetica", "Odontologia", "Psicologia", "Quimica", "Sociologia", "Terepia Ocupacional", "Trabajo Social", "Zootecnía" }));
         jComboBox11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jComboBox11);
-        jComboBox11.setBounds(560, 220, 520, 20);
+        jComboBox11.setBounds(560, 220, 340, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1100, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 970, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

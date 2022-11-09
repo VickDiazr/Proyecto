@@ -4,6 +4,9 @@
  */
 package proyecto.serviciopasantias.Vista;
 
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import com.mysql.jdbc.Connection;
 import java.awt.Color;
 
 
@@ -21,6 +24,34 @@ public class Login extends javax.swing.JFrame {
     /*
     Iniciando conexión con la base de datos
     */
+    
+    private static Connection con;
+    
+    public static final String driver="com.mysql.jdbc.Driver";
+    public static final String Url = "jdbc:mysql://localhost:3306/scripttestnicos";
+    public static final String User = "root";
+    public static final String Password = "";
+    
+    
+    public void conexion(){
+        con=null;
+        try{
+            Class.forName(driver);
+            
+            con= (Connection) DriverManager.getConnection(Url, User, Password);
+            
+            if (con!=null){
+                System.out.println("Soy GEi");
+            }
+            
+        }
+        
+        
+        catch (ClassNotFoundException | SQLException e){
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
     /**
      * Creates new form Loginn
      */
@@ -28,7 +59,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         
         
-        this.setExtendedState(MAXIMIZED_BOTH);
+     
     }
 
     /**
@@ -49,12 +80,9 @@ public class Login extends javax.swing.JFrame {
         Ingresar_Pass = new javax.swing.JPasswordField();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        Ass = new javax.swing.JPanel();
-        Boton_Ingresar = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
+        Boton_Ingresar = new javax.swing.JLabel();
+        Ass = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         as = new javax.swing.JPanel();
         Boton_Registrar = new javax.swing.JLabel();
@@ -65,25 +93,24 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(148, 180, 59));
-        getContentPane().setLayout(null);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(148, 180, 59));
         jPanel1.setForeground(new java.awt.Color(148, 180, 59));
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(86, 90, 92));
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel3.setLayout(null);
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/User.png"))); // NOI18N
-        jPanel3.add(jLabel7);
-        jLabel7.setBounds(580, 250, 35, 35);
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, -1, -1));
 
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel3.add(jSeparator2);
-        jSeparator2.setBounds(0, 56, 980, 0);
+        jPanel3.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 56, 980, 0));
 
         Ingresar_Usuario.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         Ingresar_Usuario.setForeground(new java.awt.Color(204, 204, 204));
@@ -91,7 +118,7 @@ public class Login extends javax.swing.JFrame {
         Ingresar_Usuario.setText("Ingrese Usuario");
         Ingresar_Usuario.setToolTipText("Usuario");
         Ingresar_Usuario.setBorder(null);
-        Ingresar_Usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Ingresar_Usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         Ingresar_Usuario.setName(""); // NOI18N
         Ingresar_Usuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -106,13 +133,11 @@ public class Login extends javax.swing.JFrame {
                 Ingresar_UsuarioActionPerformed(evt);
             }
         });
-        jPanel3.add(Ingresar_Usuario);
-        Ingresar_Usuario.setBounds(570, 240, 300, 50);
+        jPanel3.add(Ingresar_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 300, 50));
         Ingresar_Usuario.getAccessibleContext().setAccessibleName("");
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/PasswordUn.png"))); // NOI18N
-        jPanel3.add(jLabel8);
-        jLabel8.setBounds(580, 330, 36, 34);
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
 
         Ingresar_Pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ingresar_Pass.setText("************");
@@ -126,44 +151,29 @@ public class Login extends javax.swing.JFrame {
                 Ingresar_PassActionPerformed(evt);
             }
         });
-        jPanel3.add(Ingresar_Pass);
-        Ingresar_Pass.setBounds(570, 320, 300, 50);
+        jPanel3.add(Ingresar_Pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 300, 50));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Capybara.png"))); // NOI18N
         jPanel4.add(jLabel10);
 
-        jPanel3.add(jPanel4);
-        jPanel4.setBounds(630, 20, 170, 140);
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 170, 140));
 
-        Ass.setBackground(new java.awt.Color(148, 180, 59));
-        Ass.setLayout(null);
+        jPanel7.setLayout(null);
 
         Boton_Ingresar.setFont(new java.awt.Font("Tw Cen MT", 1, 28)); // NOI18N
         Boton_Ingresar.setForeground(new java.awt.Color(255, 255, 255));
         Boton_Ingresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Boton_Ingresar.setText("Ingresar");
         Boton_Ingresar.setToolTipText("");
-        Ass.add(Boton_Ingresar);
-        Boton_Ingresar.setBounds(0, 0, 230, 50);
+        jPanel7.add(Boton_Ingresar);
+        Boton_Ingresar.setBounds(10, 10, 230, 50);
 
-        jPanel3.add(Ass);
-        Ass.setBounds(600, 410, 230, 50);
+        Ass.setBackground(new java.awt.Color(148, 180, 59));
+        Ass.setLayout(null);
+        jPanel7.add(Ass);
+        Ass.setBounds(10, 10, 230, 50);
 
-        jPanel7.setLayout(null);
-        jPanel3.add(jPanel7);
-        jPanel7.setBounds(590, 400, 250, 70);
-
-        jPanel9.setBackground(new java.awt.Color(148, 180, 59));
-        jPanel3.add(jPanel9);
-        jPanel9.setBounds(600, 410, 230, 50);
-
-        jPanel10.setBackground(new java.awt.Color(148, 180, 59));
-        jPanel3.add(jPanel10);
-        jPanel10.setBounds(600, 410, 230, 50);
-
-        jPanel11.setBackground(new java.awt.Color(148, 180, 59));
-        jPanel3.add(jPanel11);
-        jPanel11.setBounds(600, 410, 230, 50);
+        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 250, 70));
 
         jPanel6.setLayout(null);
 
@@ -193,40 +203,33 @@ public class Login extends javax.swing.JFrame {
         jPanel6.add(as);
         as.setBounds(10, 10, 230, 50);
 
-        jPanel3.add(jPanel6);
-        jPanel6.setBounds(590, 490, 250, 70);
+        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, 250, 70));
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 28)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Sistema de Practicas y Pasantias");
         jLabel6.setToolTipText("");
-        jPanel3.add(jLabel6);
-        jLabel6.setBounds(370, 170, 680, 53);
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 680, 53));
 
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(80, 170, 1410, 580);
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 1140, 520));
 
         jPanel2.setBackground(new java.awt.Color(86, 90, 92));
-        jPanel2.setLayout(null);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/LogoUN.png"))); // NOI18N
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(1290, 0, 214, 110);
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 0, -1, 110));
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Servicio de pasantias");
         jLabel5.setToolTipText("");
-        jPanel2.add(jLabel5);
-        jLabel5.setBounds(550, 30, 560, 53);
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 560, 53));
 
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 1660, 110);
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1660, -1));
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(-10, 0, 1660, 890);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 0, 1366, 768));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -337,14 +340,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
 }

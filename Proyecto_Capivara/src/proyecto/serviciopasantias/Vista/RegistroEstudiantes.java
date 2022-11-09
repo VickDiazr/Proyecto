@@ -108,7 +108,7 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jComboBox1);
-        jComboBox1.setBounds(620, 20, 460, 20);
+        jComboBox1.setBounds(620, 20, 300, 20);
 
         jComboBox2.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -132,14 +132,14 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jComboBox3);
-        jComboBox3.setBounds(640, 60, 440, 20);
+        jComboBox3.setBounds(640, 60, 280, 20);
 
         jComboBox4.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Activo", "Suspendido", "Desactivado"}));
         jComboBox4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jComboBox4);
-        jComboBox4.setBounds(630, 140, 450, 20);
+        jComboBox4.setBounds(630, 140, 290, 20);
 
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -162,7 +162,7 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jTextField3);
-        jTextField3.setBounds(640, 220, 440, 20);
+        jTextField3.setBounds(640, 220, 280, 20);
 
         jTextField4.setBackground(new java.awt.Color(204, 204, 204));
         jTextField4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -236,7 +236,7 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Administración de Empresas", "Antropología", "Arquictectura", "Artes Plasticas", "Administración de Sistemas Informaticos", "Biologia,Ciencia Política", "Ciencias de la Computación", "Cine y Televisión", "Contaduría Pública", "Construcción", "Derecho", "Diseño Grafico", "Diseño Industrial", "Economia", "Enfermeria", "Español y Filología Clasíca", "Estadistica", "Estudios Literarios", "Farmacia", "Filología e Idiomas:Alemán", "Filología e Idiomas:Francés", "Filología e Idiomas:Inglés", "Filología", "Física", "Fonoaudiología","Geografia","Geologia", "Gestión Cultural y Comunicativa", "Historia", "Ingeniería Agrícola", "Ingeniería Agronómica", "Ingeniería Civil", "Ingeniería de Sistemas y Computación", "Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería Industrial", "Ingeniería Mecánica", "Ingeniería Mecatrónica", "Ingeniería Química", "Ingeniería Fisica", "Ingeniería de Control", "Ingeniería de Minas y Metalurgia", "Ingeniería de Petroleos", "Ingeniería de Sistemas e Informatica", "Ingeniería Forestal","Ingeniería Geológica", "Matematicas", "Medicina", "Medicina Veterinaria", "Música", "Musica Instrumental", "Nutrición y Dietetica", "Odontologia", "Psicologia", "Quimica", "Sociologia", "Terepia Ocupacional", "Trabajo Social", "Zootecnía" }));
         jComboBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(jComboBox5);
-        jComboBox5.setBounds(720, 100, 360, 20);
+        jComboBox5.setBounds(720, 100, 200, 20);
 
         jLabel21.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel21.setText("Estado:");
@@ -268,7 +268,7 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jTextField6);
-        jTextField6.setBounds(710, 180, 370, 20);
+        jTextField6.setBounds(710, 180, 210, 20);
 
         Boton_Registrar.setBackground(new java.awt.Color(148, 180, 59));
         Boton_Registrar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -291,7 +291,7 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1100, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 970, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

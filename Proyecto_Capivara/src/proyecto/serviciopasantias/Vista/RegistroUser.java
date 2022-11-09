@@ -17,7 +17,7 @@ public class RegistroUser extends javax.swing.JFrame {
      */
     public RegistroUser() {
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH);
+        
         
     }
 
@@ -56,6 +56,7 @@ public class RegistroUser extends javax.swing.JFrame {
         Panel_Contenido = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         Fondo.setBackground(new java.awt.Color(148, 180, 59));
         Fondo.setLayout(null);
@@ -85,15 +86,15 @@ public class RegistroUser extends javax.swing.JFrame {
                 .addComponent(Img_atras, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(536, 536, 536)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 247, Short.MAX_VALUE)
+                .addGap(77, 77, 77)
                 .addComponent(Escudo_Nacional)
-                .addGap(57, 57, 57))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
         Barra_SupLayout.setVerticalGroup(
             Barra_SupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Barra_SupLayout.createSequentialGroup()
                 .addGroup(Barra_SupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Escudo_Nacional)
+                    .addComponent(Escudo_Nacional, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(Barra_SupLayout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addGroup(Barra_SupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -219,7 +220,7 @@ public class RegistroUser extends javax.swing.JFrame {
         Panel_Contenido.setLayout(Panel_ContenidoLayout);
         Panel_ContenidoLayout.setHorizontalGroup(
             Panel_ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1100, Short.MAX_VALUE)
+            .addGap(0, 970, Short.MAX_VALUE)
         );
         Panel_ContenidoLayout.setVerticalGroup(
             Panel_ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,21 +228,21 @@ public class RegistroUser extends javax.swing.JFrame {
         );
 
         jPanel1.add(Panel_Contenido);
-        Panel_Contenido.setBounds(230, 80, 1100, 490);
+        Panel_Contenido.setBounds(230, 80, 970, 490);
 
         Fondo.add(jPanel1);
-        jPanel1.setBounds(100, 170, 1330, 570);
+        jPanel1.setBounds(100, 170, 1170, 570);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Fondo, javax.swing.GroupLayout.DEFAULT_SIZE, 1568, Short.MAX_VALUE)
+            .addComponent(Fondo, javax.swing.GroupLayout.DEFAULT_SIZE, 1366, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 768, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -251,7 +252,7 @@ public class RegistroUser extends javax.swing.JFrame {
     private void Boton_UsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_UsuarioMouseClicked
         
         RegistroEstudiantes p1 = new RegistroEstudiantes();
-        p1.setSize(1100,490);
+        p1.setSize(970,490);
         p1.setLocation(0,0);
         
         Panel_Contenido.removeAll();
@@ -265,7 +266,7 @@ public class RegistroUser extends javax.swing.JFrame {
 
     private void Boton_DocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_DocenteMouseClicked
         RegistroDocente p2 = new RegistroDocente();
-        p2.setSize(1100,490);
+        p2.setSize(970,490);
         p2.setLocation(0,0);
         
         Panel_Contenido.removeAll();
@@ -276,7 +277,7 @@ public class RegistroUser extends javax.swing.JFrame {
 
     private void Boton_EmpresaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_EmpresaMouseClicked
         RegistroEmpresas p3 = new RegistroEmpresas();
-        p3.setSize(1100,490);
+        p3.setSize(970,490);
         p3.setLocation(0,0);
         
         Panel_Contenido.removeAll();

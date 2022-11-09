@@ -100,7 +100,7 @@ public class RegistroDocente extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jComboBox1);
-        jComboBox1.setBounds(620, 20, 460, 20);
+        jComboBox1.setBounds(620, 20, 290, 20);
 
         jComboBox2.setBackground(new java.awt.Color(204, 204, 204));
         jComboBox2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -124,7 +124,7 @@ public class RegistroDocente extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jComboBox3);
-        jComboBox3.setBounds(640, 60, 440, 20);
+        jComboBox3.setBounds(640, 60, 270, 20);
 
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -227,7 +227,7 @@ public class RegistroDocente extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1100, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 970, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
