@@ -33,7 +33,6 @@ public class Login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         Ingresar_Usuario = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         Ingresar_Pass = new javax.swing.JPasswordField();
@@ -64,13 +63,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/User.png"))); // NOI18N
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(420, 230, 35, 35);
-
-        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        jSeparator2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel3.add(jSeparator2);
-        jSeparator2.setBounds(0, 56, 980, 0);
+        jLabel7.setBounds(430, 240, 35, 35);
 
         Ingresar_Usuario.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         Ingresar_Usuario.setForeground(new java.awt.Color(204, 204, 204));
@@ -94,12 +87,12 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel3.add(Ingresar_Usuario);
-        Ingresar_Usuario.setBounds(410, 220, 300, 50);
+        Ingresar_Usuario.setBounds(420, 230, 300, 50);
         Ingresar_Usuario.getAccessibleContext().setAccessibleName("");
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/PasswordUn.png"))); // NOI18N
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(420, 300, 36, 34);
+        jLabel8.setBounds(430, 310, 36, 34);
 
         Ingresar_Pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ingresar_Pass.setText("************");
@@ -114,7 +107,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel3.add(Ingresar_Pass);
-        Ingresar_Pass.setBounds(410, 290, 300, 50);
+        Ingresar_Pass.setBounds(420, 300, 300, 50);
 
         jPanel4.setLayout(null);
 
@@ -123,7 +116,7 @@ public class Login extends javax.swing.JFrame {
         jLabel10.setBounds(33, 5, 104, 124);
 
         jPanel3.add(jPanel4);
-        jPanel4.setBounds(490, 10, 170, 140);
+        jPanel4.setBounds(485, 20, 170, 140);
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 28)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -131,7 +124,7 @@ public class Login extends javax.swing.JFrame {
         jLabel6.setText("Sistema de Practicas y Pasantias");
         jLabel6.setToolTipText("");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(230, 160, 680, 53);
+        jLabel6.setBounds(0, 170, 1140, 53);
 
         Ass.setBackground(new java.awt.Color(148, 180, 59));
         Ass.setLayout(null);
@@ -150,7 +143,7 @@ public class Login extends javax.swing.JFrame {
         Boton_Ingresar.setBounds(0, 0, 230, 50);
 
         jPanel3.add(Ass);
-        Ass.setBounds(180, 400, 230, 50);
+        Ass.setBounds(190, 400, 230, 50);
 
         as.setBackground(new java.awt.Color(148, 180, 59));
         as.setToolTipText("");
@@ -176,12 +169,13 @@ public class Login extends javax.swing.JFrame {
         Boton_Registrar.setBounds(0, 0, 230, 50);
 
         jPanel3.add(as);
-        as.setBounds(710, 400, 230, 50);
+        as.setBounds(720, 400, 230, 50);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(120, 170, 1140, 520);
+        jPanel3.setBounds(113, 179, 1140, 520);
 
         jPanel2.setBackground(new java.awt.Color(86, 90, 92));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1366, 0));
         jPanel2.setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/LogoUN.png"))); // NOI18N
@@ -191,13 +185,13 @@ public class Login extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Servicio de pasantias");
+        jLabel5.setText("Servicio de pasantías");
         jLabel5.setToolTipText("");
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(0, 0, 1370, 110);
+        jLabel5.setBounds(0, 0, 1366, 110);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 1660, 0);
+        jPanel2.setBounds(0, -1, 1366, 110);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(-1, 0, 1366, 768);
@@ -310,13 +304,13 @@ public class Login extends javax.swing.JFrame {
                 this.setVisible(false);
             }
             else if ("Docente".equals(resultado)){
-                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, docente.", "Ingreso Fallido", JOptionPane.OK_OPTION);
+                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, docente.", "Ingreso Fallido", JOptionPane.INFORMATION_MESSAGE);
                 MenuProfesor menuprof = new MenuProfesor();
                 menuprof.setVisible(true);  
                 this.setVisible(false);
             }
             else if ("Empresa".equals(resultado)){
-                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, empresario.", "Ingreso Fallido", JOptionPane.OK_OPTION);
+                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, empresario.", "Ingreso Fallido", JOptionPane.INFORMATION_MESSAGE);
                 MenuEmpresa menuemp = new MenuEmpresa();
                 menuemp.setVisible(true);  
                 this.setVisible(false);               
@@ -344,6 +338,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
 }

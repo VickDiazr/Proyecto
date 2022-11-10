@@ -5,6 +5,9 @@
 package proyecto.serviciopasantias.Vista;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
+import proyecto.serviciopasantias.Modelo.Estudiantes;
+import proyecto.serviciopasantias.Vista.Login;
 
 /**
  *
@@ -36,262 +39,276 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
+        SedeCombo = new javax.swing.JComboBox<>();
+        IDCombo = new javax.swing.JComboBox<>();
+        FacultadCombo = new javax.swing.JComboBox<>();
+        LugarCombo = new javax.swing.JComboBox<>();
+        CorreoEntry = new javax.swing.JTextField();
+        ApellidoEntry = new javax.swing.JTextField();
+        IDEntry = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        TelefonoEntry = new javax.swing.JTextField();
+        PassEntry1 = new javax.swing.JPasswordField();
+        PassEntry2 = new javax.swing.JPasswordField();
         jLabel16 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jLabel21 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        ProgramaCombo = new javax.swing.JComboBox<>();
+        NombreEntry = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        AvanceEntry = new javax.swing.JTextField();
         Boton_Registrar = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         jPanel4.setBackground(new java.awt.Color(236, 234, 234));
         jPanel4.setLayout(null);
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel7.setText("N.Id:");
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("No. ID:");
         jPanel4.add(jLabel7);
-        jLabel7.setBounds(240, 100, 40, 19);
+        jLabel7.setBounds(225, 120, 70, 25);
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Nombres:");
         jPanel4.add(jLabel8);
-        jLabel8.setBounds(20, 20, 160, 20);
+        jLabel8.setBounds(20, 20, 160, 25);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Apellidos:");
         jPanel4.add(jLabel9);
-        jLabel9.setBounds(20, 60, 150, 20);
+        jLabel9.setBounds(20, 70, 150, 25);
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel10.setText("Tipo id:");
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Tipo ID:");
         jPanel4.add(jLabel10);
-        jLabel10.setBounds(20, 100, 60, 19);
+        jLabel10.setBounds(20, 120, 60, 25);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Facultad:");
         jPanel4.add(jLabel12);
-        jLabel12.setBounds(560, 60, 70, 19);
+        jLabel12.setBounds(500, 70, 70, 25);
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Sede:");
         jPanel4.add(jLabel13);
-        jLabel13.setBounds(560, 20, 50, 20);
+        jLabel13.setBounds(500, 20, 50, 25);
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Correo Institucional:");
         jPanel4.add(jLabel14);
-        jLabel14.setBounds(20, 180, 150, 20);
+        jLabel14.setBounds(20, 270, 150, 25);
 
-        jComboBox1.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ","Bogota", "Medellin", "Orinoquia", "Palmira","Manizales","Tumaco" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        SedeCombo.setBackground(new java.awt.Color(204, 204, 204));
+        SedeCombo.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        SedeCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ","Bogota", "Medellin", "Orinoquia", "Palmira","Manizales","Tumaco" }));
+        SedeCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                SedeComboActionPerformed(evt);
             }
         });
-        jPanel4.add(jComboBox1);
-        jComboBox1.setBounds(620, 20, 300, 20);
+        jPanel4.add(SedeCombo);
+        SedeCombo.setBounds(550, 20, 370, 25);
 
-        jComboBox2.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "C.C.", "T.I.", "C.E."}));
-        jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        IDCombo.setBackground(new java.awt.Color(204, 204, 204));
+        IDCombo.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        IDCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "C.C.", "T.I.", "C.E."}));
+        IDCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                IDComboActionPerformed(evt);
             }
         });
-        jPanel4.add(jComboBox2);
-        jComboBox2.setBounds(100, 100, 80, 20);
+        jPanel4.add(IDCombo);
+        IDCombo.setBounds(95, 120, 120, 25);
 
-        jComboBox3.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Facultad de Ciencias Agrarias", "Facultad Artes", "Facultad de Ciencias", "Facultad de Enfermeria", "Facultad de Ciencias Humanas", "Facultad de Derecho", "Facultad de Ingenieria", "Facultad de Medicina", "Facultad de Odontologia", "Facultad de Medicina Veterinaria y Zootecnia", "Facultad de Ciencias Economicas", "Facultad de Arquitectura", "Facultad de Minas" }));
-        jComboBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        FacultadCombo.setBackground(new java.awt.Color(204, 204, 204));
+        FacultadCombo.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        FacultadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Facultad de Ciencias Agrarias", "Facultad Artes", "Facultad de Ciencias", "Facultad de Enfermeria", "Facultad de Ciencias Humanas", "Facultad de Derecho", "Facultad de Ingenieria", "Facultad de Medicina", "Facultad de Odontologia", "Facultad de Medicina Veterinaria y Zootecnia", "Facultad de Ciencias Economicas", "Facultad de Arquitectura", "Facultad de Minas" }));
+        FacultadCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                FacultadComboActionPerformed(evt);
             }
         });
-        jPanel4.add(jComboBox3);
-        jComboBox3.setBounds(640, 60, 280, 20);
+        jPanel4.add(FacultadCombo);
+        FacultadCombo.setBounds(570, 70, 350, 25);
 
-        jComboBox4.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Activo", "Suspendido", "Desactivado"}));
-        jComboBox4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel4.add(jComboBox4);
-        jComboBox4.setBounds(630, 140, 290, 20);
+        LugarCombo.setBackground(new java.awt.Color(204, 204, 204));
+        LugarCombo.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        LugarCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Bogotá", "Tunja", "Sogamoso"}));
+        jPanel4.add(LugarCombo);
+        LugarCombo.setBounds(180, 170, 255, 25);
 
-        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel4.add(jTextField1);
-        jTextField1.setBounds(170, 180, 340, 20);
+        CorreoEntry.setBackground(new java.awt.Color(255, 255, 255));
+        CorreoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        CorreoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(CorreoEntry);
+        CorreoEntry.setBounds(170, 270, 265, 25);
 
-        jTextField2.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel4.add(jTextField2);
-        jTextField2.setBounds(100, 60, 410, 20);
+        ApellidoEntry.setBackground(new java.awt.Color(255, 255, 255));
+        ApellidoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ApellidoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(ApellidoEntry);
+        ApellidoEntry.setBounds(95, 70, 340, 25);
 
-        jTextField3.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        IDEntry.setBackground(new java.awt.Color(255, 255, 255));
+        IDEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        IDEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        IDEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                IDEntryActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField3);
-        jTextField3.setBounds(640, 220, 280, 20);
-
-        jTextField4.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jTextField4);
-        jTextField4.setBounds(310, 100, 200, 20);
-
-        jLabel15.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel15.setText("Extensión:");
-        jPanel4.add(jLabel15);
-        jLabel15.setBounds(560, 220, 80, 19);
+        jPanel4.add(IDEntry);
+        IDEntry.setBounds(280, 120, 155, 25);
 
         jLabel18.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Contraseña:");
         jPanel4.add(jLabel18);
-        jLabel18.setBounds(20, 220, 90, 19);
+        jLabel18.setBounds(500, 220, 90, 25);
 
         jLabel20.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Teléfono:");
         jPanel4.add(jLabel20);
-        jLabel20.setBounds(20, 140, 70, 19);
+        jLabel20.setBounds(20, 220, 70, 25);
 
-        jTextField8.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField8.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        TelefonoEntry.setBackground(new java.awt.Color(255, 255, 255));
+        TelefonoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        TelefonoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        TelefonoEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                TelefonoEntryActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField8);
-        jTextField8.setBounds(100, 140, 200, 20);
+        jPanel4.add(TelefonoEntry);
+        TelefonoEntry.setBounds(100, 220, 335, 25);
 
-        jPasswordField1.setBackground(new java.awt.Color(204, 204, 204));
-        jPasswordField1.setText("****************");
-        jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
+        PassEntry1.setBackground(new java.awt.Color(255, 255, 255));
+        PassEntry1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        PassEntry1.setText("****************");
+        PassEntry1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PassEntry1.setPreferredSize(new java.awt.Dimension(69, 20));
+        PassEntry1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPasswordField1MousePressed(evt);
+                PassEntry1MousePressed(evt);
             }
         });
-        jPanel4.add(jPasswordField1);
-        jPasswordField1.setBounds(120, 220, 390, 22);
+        jPanel4.add(PassEntry1);
+        PassEntry1.setBounds(600, 220, 315, 25);
 
-        jPasswordField2.setBackground(new java.awt.Color(204, 204, 204));
-        jPasswordField2.setText("****************");
-        jPasswordField2.addMouseListener(new java.awt.event.MouseAdapter() {
+        PassEntry2.setBackground(new java.awt.Color(255, 255, 255));
+        PassEntry2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        PassEntry2.setText("****************");
+        PassEntry2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PassEntry2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPasswordField2MousePressed(evt);
+                PassEntry2MousePressed(evt);
             }
         });
-        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+        PassEntry2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField2ActionPerformed(evt);
+                PassEntry2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jPasswordField2);
-        jPasswordField2.setBounds(200, 260, 310, 22);
+        jPanel4.add(PassEntry2);
+        PassEntry2.setBounds(680, 270, 235, 25);
 
         jLabel16.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Programa curricular:");
         jPanel4.add(jLabel16);
-        jLabel16.setBounds(560, 100, 150, 19);
+        jLabel16.setBounds(500, 120, 150, 25);
 
-        jComboBox5.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox5.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Administración de Empresas", "Antropología", "Arquictectura", "Artes Plasticas", "Administración de Sistemas Informaticos", "Biologia,Ciencia Política", "Ciencias de la Computación", "Cine y Televisión", "Contaduría Pública", "Construcción", "Derecho", "Diseño Grafico", "Diseño Industrial", "Economia", "Enfermeria", "Español y Filología Clasíca", "Estadistica", "Estudios Literarios", "Farmacia", "Filología e Idiomas:Alemán", "Filología e Idiomas:Francés", "Filología e Idiomas:Inglés", "Filología", "Física", "Fonoaudiología","Geografia","Geologia", "Gestión Cultural y Comunicativa", "Historia", "Ingeniería Agrícola", "Ingeniería Agronómica", "Ingeniería Civil", "Ingeniería de Sistemas y Computación", "Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería Industrial", "Ingeniería Mecánica", "Ingeniería Mecatrónica", "Ingeniería Química", "Ingeniería Fisica", "Ingeniería de Control", "Ingeniería de Minas y Metalurgia", "Ingeniería de Petroleos", "Ingeniería de Sistemas e Informatica", "Ingeniería Forestal","Ingeniería Geológica", "Matematicas", "Medicina", "Medicina Veterinaria", "Música", "Musica Instrumental", "Nutrición y Dietetica", "Odontologia", "Psicologia", "Quimica", "Sociologia", "Terepia Ocupacional", "Trabajo Social", "Zootecnía" }));
-        jComboBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel4.add(jComboBox5);
-        jComboBox5.setBounds(720, 100, 200, 20);
-
-        jLabel21.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel21.setText("Estado:");
-        jPanel4.add(jLabel21);
-        jLabel21.setBounds(560, 140, 60, 19);
-
-        jTextField5.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField5.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        ProgramaCombo.setBackground(new java.awt.Color(204, 204, 204));
+        ProgramaCombo.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ProgramaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Administración de Empresas", "Antropología", "Arquictectura", "Artes Plasticas", "Administración de Sistemas Informaticos", "Biologia,Ciencia Política", "Ciencias de la Computación", "Cine y Televisión", "Contaduría Pública", "Construcción", "Derecho", "Diseño Grafico", "Diseño Industrial", "Economia", "Enfermeria", "Español y Filología Clasíca", "Estadistica", "Estudios Literarios", "Farmacia", "Filología e Idiomas:Alemán", "Filología e Idiomas:Francés", "Filología e Idiomas:Inglés", "Filología", "Física", "Fonoaudiología","Geografia","Geologia", "Gestión Cultural y Comunicativa", "Historia", "Ingeniería Agrícola", "Ingeniería Agronómica", "Ingeniería Civil", "Ingeniería de Sistemas y Computación", "Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería Industrial", "Ingeniería Mecánica", "Ingeniería Mecatrónica", "Ingeniería Química", "Ingeniería Fisica", "Ingeniería de Control", "Ingeniería de Minas y Metalurgia", "Ingeniería de Petroleos", "Ingeniería de Sistemas e Informatica", "Ingeniería Forestal","Ingeniería Geológica", "Matematicas", "Medicina", "Medicina Veterinaria", "Música", "Musica Instrumental", "Nutrición y Dietetica", "Odontologia", "Psicologia", "Quimica", "Sociologia", "Terepia Ocupacional", "Trabajo Social", "Zootecnía" }));
+        ProgramaCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                ProgramaComboActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField5);
-        jTextField5.setBounds(100, 20, 410, 20);
+        jPanel4.add(ProgramaCombo);
+        ProgramaCombo.setBounds(650, 120, 270, 25);
+
+        NombreEntry.setBackground(new java.awt.Color(255, 255, 255));
+        NombreEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        NombreEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreEntryActionPerformed(evt);
+            }
+        });
+        jPanel4.add(NombreEntry);
+        NombreEntry.setBounds(95, 20, 340, 25);
 
         jLabel22.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setText("Porcentaje avance:");
         jPanel4.add(jLabel22);
-        jLabel22.setBounds(560, 180, 140, 19);
+        jLabel22.setBounds(500, 170, 140, 25);
 
-        jTextField6.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField6.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        AvanceEntry.setBackground(new java.awt.Color(255, 255, 255));
+        AvanceEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        AvanceEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        AvanceEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                AvanceEntryActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField6);
-        jTextField6.setBounds(710, 180, 210, 20);
+        jPanel4.add(AvanceEntry);
+        AvanceEntry.setBounds(640, 170, 280, 25);
 
         Boton_Registrar.setBackground(new java.awt.Color(148, 180, 59));
         Boton_Registrar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Boton_Registrar.setLayout(null);
 
         jLabel19.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Registrar");
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
         Boton_Registrar.add(jLabel19);
-        jLabel19.setBounds(90, 10, 110, 40);
+        jLabel19.setBounds(0, 0, 280, 60);
 
         jPanel4.add(Boton_Registrar);
-        Boton_Registrar.setBounds(390, 340, 280, 60);
+        Boton_Registrar.setBounds(330, 380, 280, 60);
 
         jLabel23.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel23.setText("Verificar su contraseña:");
+        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel23.setText("Verifique su contraseña:");
         jPanel4.add(jLabel23);
-        jLabel23.setBounds(20, 260, 170, 19);
+        jLabel23.setBounds(500, 270, 170, 25);
+
+        jLabel17.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("Lugar de Expedición:");
+        jPanel4.add(jLabel17);
+        jLabel17.setBounds(20, 170, 170, 25);
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.add(jSeparator1);
+        jSeparator1.setBounds(468, 0, 2, 300);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 970, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 940, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,104 +318,130 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void SedeComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SedeComboActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_SedeComboActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void IDEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDEntryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_IDEntryActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void TelefonoEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefonoEntryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_TelefonoEntryActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void IDComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDComboActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_IDComboActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void NombreEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEntryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_NombreEntryActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void AvanceEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AvanceEntryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_AvanceEntryActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void FacultadComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FacultadComboActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_FacultadComboActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
-
-    private void jPasswordField1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MousePressed
-        if (String.valueOf(jPasswordField1.getPassword()).equals("****************")){
+    private void PassEntry1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PassEntry1MousePressed
+        if (String.valueOf(PassEntry1.getPassword()).equals("****************")){
             
-            jPasswordField1.setText("");
-            jPasswordField1.setForeground(Color.black);
+            PassEntry1.setText("");
+            PassEntry1.setForeground(Color.black);
   
         }
         
-        if (String.valueOf(jPasswordField2.getPassword()).isEmpty()){
+        if (String.valueOf(PassEntry2.getPassword()).isEmpty()){
             
-            jPasswordField2.setText("****************");
-            jPasswordField2.setForeground(Color.gray);   
+            PassEntry2.setText("****************");
+            PassEntry2.setForeground(Color.gray);   
         }
-    }//GEN-LAST:event_jPasswordField1MousePressed
+    }//GEN-LAST:event_PassEntry1MousePressed
 
-    private void jPasswordField2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField2MousePressed
-        if (String.valueOf(jPasswordField2.getPassword()).equals("****************")){
+    private void PassEntry2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PassEntry2MousePressed
+        if (String.valueOf(PassEntry2.getPassword()).equals("****************")){
             
-            jPasswordField2.setText("");
-            jPasswordField2.setForeground(Color.black);
+            PassEntry2.setText("");
+            PassEntry2.setForeground(Color.black);
   
         }
         
-        if (String.valueOf(jPasswordField1.getPassword()).isEmpty()){
+        if (String.valueOf(PassEntry1.getPassword()).isEmpty()){
             
-            jPasswordField1.setText("****************");
-            jPasswordField1.setForeground(Color.gray);   
+            PassEntry1.setText("****************");
+            PassEntry1.setForeground(Color.gray);   
         }
-    }//GEN-LAST:event_jPasswordField2MousePressed
+    }//GEN-LAST:event_PassEntry2MousePressed
 
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+    private void PassEntry2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PassEntry2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
+    }//GEN-LAST:event_PassEntry2ActionPerformed
+
+    private void ProgramaComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProgramaComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProgramaComboActionPerformed
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        if ("C.C.".equals(IDCombo.getSelectedItem().toString())){
+            String resultado = Estudiantes.Register(IDEntry.getText(), "Cedula de ciudadania", LugarCombo.getSelectedItem().toString(), 
+                    NombreEntry.getText(), ApellidoEntry.getText(), CorreoEntry.getText(), TelefonoEntry.getText(),
+                    ProgramaCombo.getSelectedItem().toString(), AvanceEntry.getText());
+            
+            if ("Error".equals(resultado)){
+                JOptionPane.showMessageDialog(this, "Revise el registro.", "Registro Fallido", JOptionPane.ERROR_MESSAGE);
+            }
+                
+            else if ("Registro Exitoso".equals(resultado)){
+                JOptionPane.showMessageDialog(this, "Se ha hecho el registro de forma exitosa.", "Registro Exitoso.", JOptionPane.INFORMATION_MESSAGE);
+                Login frame = new Login();
+                frame.setVisible(true);  
+                this.setVisible(false);
+            }
+                
+            else if ("Ya Registrado".equals(resultado)){
+                JOptionPane.showMessageDialog(this, "Ya existe un usuario registrado con esa ID.", "Registro Fallido", JOptionPane.ERROR_MESSAGE);
+            }
+            
+            /*else{
+                JOptionPane.showMessageDialog(this, resultado, "Registro Fallido", JOptionPane.ERROR_MESSAGE);
+            }*/
+        }
+    }//GEN-LAST:event_jLabel19MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ApellidoEntry;
+    private javax.swing.JTextField AvanceEntry;
     private javax.swing.JPanel Boton_Registrar;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JTextField CorreoEntry;
+    private javax.swing.JComboBox<String> FacultadCombo;
+    private javax.swing.JComboBox<String> IDCombo;
+    private javax.swing.JTextField IDEntry;
+    private javax.swing.JComboBox<String> LugarCombo;
+    private javax.swing.JTextField NombreEntry;
+    private javax.swing.JPasswordField PassEntry1;
+    private javax.swing.JPasswordField PassEntry2;
+    private javax.swing.JComboBox<String> ProgramaCombo;
+    private javax.swing.JComboBox<String> SedeCombo;
+    private javax.swing.JTextField TelefonoEntry;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

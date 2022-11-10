@@ -59,31 +59,37 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         jPanel4.setLayout(null);
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Nombres:");
         jPanel4.add(jLabel8);
         jLabel8.setBounds(20, 20, 160, 20);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Ciudad:");
         jPanel4.add(jLabel9);
         jLabel9.setBounds(20, 60, 150, 20);
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Dirección:");
         jPanel4.add(jLabel10);
         jLabel10.setBounds(20, 100, 80, 19);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Area de trabajo:");
         jPanel4.add(jLabel12);
         jLabel12.setBounds(560, 60, 130, 19);
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Nit:");
         jPanel4.add(jLabel13);
         jLabel13.setBounds(560, 20, 50, 20);
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Correo:");
         jPanel4.add(jLabel14);
         jLabel14.setBounds(20, 180, 60, 20);
@@ -123,11 +129,13 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         jTextField4.setBounds(100, 100, 410, 20);
 
         jLabel18.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Contraseña:");
         jPanel4.add(jLabel18);
         jLabel18.setBounds(20, 220, 90, 19);
 
         jLabel20.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Teléfono:");
         jPanel4.add(jLabel20);
         jLabel20.setBounds(20, 140, 70, 19);
@@ -151,7 +159,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jPasswordField1);
-        jPasswordField1.setBounds(120, 220, 390, 22);
+        jPasswordField1.setBounds(120, 220, 390, 19);
 
         jPasswordField2.setBackground(new java.awt.Color(204, 204, 204));
         jPasswordField2.setText("****************");
@@ -166,9 +174,10 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             }
         });
         jPanel4.add(jPasswordField2);
-        jPasswordField2.setBounds(200, 260, 310, 22);
+        jPasswordField2.setBounds(200, 260, 310, 19);
 
         jLabel16.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Interes en contratar");
         jPanel4.add(jLabel16);
         jLabel16.setBounds(640, 100, 150, 19);
@@ -208,6 +217,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         Boton_Registrar.setBounds(390, 340, 280, 60);
 
         jLabel23.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
         jLabel23.setText("Verificar su contraseña:");
         jPanel4.add(jLabel23);
         jLabel23.setBounds(20, 260, 170, 19);
