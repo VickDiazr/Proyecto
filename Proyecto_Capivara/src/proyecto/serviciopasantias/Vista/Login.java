@@ -3,65 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyecto.serviciopasantias.Vista;
-
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import com.mysql.jdbc.Connection;
 import java.awt.Color;
-
-
+import javax.swing.JOptionPane;
+import proyecto.serviciopasantias.Modelo.LoginForAll;
+import proyecto.serviciopasantias.Vista.Menu_Estudiante.*;
+import proyecto.serviciopasantias.Vista.Menu_Empresa.*;
+import proyecto.serviciopasantias.Vista.Menu_Profesor.*;
 
 /**
  *
  * @author Windows
  */
 public class Login extends javax.swing.JFrame {
-    
-    
-    
-    
-    
-    /*
-    Iniciando conexión con la base de datos
-    */
-    
-    private static Connection con;
-    
-    public static final String driver="com.mysql.jdbc.Driver";
-    public static final String Url = "jdbc:mysql://localhost:3306/scripttestnicos";
-    public static final String User = "root";
-    public static final String Password = "";
-    
-    
-    public void conexion(){
-        con=null;
-        try{
-            Class.forName(driver);
-            
-            con= (Connection) DriverManager.getConnection(Url, User, Password);
-            
-            if (con!=null){
-                System.out.println("Soy GEi");
-            }
-            
-        }
-        
-        
-        catch (ClassNotFoundException | SQLException e){
-            System.out.println("Error: " + e.getMessage());
-        }
-    }
-
     /**
      * Creates new form Loginn
      */
     public Login() {
         initComponents();
-        
-        
-     
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -91,24 +50,27 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(148, 180, 59));
+        setPreferredSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(148, 180, 59));
         jPanel1.setForeground(new java.awt.Color(148, 180, 59));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(86, 90, 92));
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.setLayout(null);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/User.png"))); // NOI18N
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, -1, -1));
+        jPanel3.add(jLabel7);
+        jLabel7.setBounds(420, 230, 35, 35);
 
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel3.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 56, 980, 0));
+        jPanel3.add(jSeparator2);
+        jSeparator2.setBounds(0, 56, 980, 0);
 
         Ingresar_Usuario.setFont(new java.awt.Font("Tw Cen MT", 0, 16)); // NOI18N
         Ingresar_Usuario.setForeground(new java.awt.Color(204, 204, 204));
@@ -116,7 +78,7 @@ public class Login extends javax.swing.JFrame {
         Ingresar_Usuario.setText("Ingrese Usuario");
         Ingresar_Usuario.setToolTipText("Usuario");
         Ingresar_Usuario.setBorder(null);
-        Ingresar_Usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        Ingresar_Usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Ingresar_Usuario.setName(""); // NOI18N
         Ingresar_Usuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -131,11 +93,13 @@ public class Login extends javax.swing.JFrame {
                 Ingresar_UsuarioActionPerformed(evt);
             }
         });
-        jPanel3.add(Ingresar_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 300, 50));
+        jPanel3.add(Ingresar_Usuario);
+        Ingresar_Usuario.setBounds(410, 220, 300, 50);
         Ingresar_Usuario.getAccessibleContext().setAccessibleName("");
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/PasswordUn.png"))); // NOI18N
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
+        jPanel3.add(jLabel8);
+        jLabel8.setBounds(420, 300, 36, 34);
 
         Ingresar_Pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ingresar_Pass.setText("************");
@@ -149,19 +113,25 @@ public class Login extends javax.swing.JFrame {
                 Ingresar_PassActionPerformed(evt);
             }
         });
-        jPanel3.add(Ingresar_Pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 300, 50));
+        jPanel3.add(Ingresar_Pass);
+        Ingresar_Pass.setBounds(410, 290, 300, 50);
+
+        jPanel4.setLayout(null);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Capybara.png"))); // NOI18N
         jPanel4.add(jLabel10);
+        jLabel10.setBounds(33, 5, 104, 124);
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 170, 140));
+        jPanel3.add(jPanel4);
+        jPanel4.setBounds(490, 10, 170, 140);
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 28)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Sistema de Practicas y Pasantias");
         jLabel6.setToolTipText("");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 680, 53));
+        jPanel3.add(jLabel6);
+        jLabel6.setBounds(230, 160, 680, 53);
 
         Ass.setBackground(new java.awt.Color(148, 180, 59));
         Ass.setLayout(null);
@@ -171,10 +141,16 @@ public class Login extends javax.swing.JFrame {
         Boton_Ingresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Boton_Ingresar.setText("Ingresar");
         Boton_Ingresar.setToolTipText("");
+        Boton_Ingresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Boton_IngresarMouseClicked(evt);
+            }
+        });
         Ass.add(Boton_Ingresar);
         Boton_Ingresar.setBounds(0, 0, 230, 50);
 
-        jPanel3.add(Ass, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 230, 50));
+        jPanel3.add(Ass);
+        Ass.setBounds(180, 400, 230, 50);
 
         as.setBackground(new java.awt.Color(148, 180, 59));
         as.setToolTipText("");
@@ -199,26 +175,32 @@ public class Login extends javax.swing.JFrame {
         as.add(Boton_Registrar);
         Boton_Registrar.setBounds(0, 0, 230, 50);
 
-        jPanel3.add(as, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 400, 230, 50));
+        jPanel3.add(as);
+        as.setBounds(710, 400, 230, 50);
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 1140, 520));
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(120, 170, 1140, 520);
 
         jPanel2.setBackground(new java.awt.Color(86, 90, 92));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/LogoUN.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 0, -1, 110));
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(1120, 0, 214, 110);
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Servicio de pasantias");
         jLabel5.setToolTipText("");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 560, 53));
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(0, 0, 1370, 110);
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1660, -1));
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 0, 1660, 0);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 0, 1366, 768));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(-1, 0, 1366, 768);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -228,20 +210,14 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_Ingresar_UsuarioActionPerformed
 
     private void Ingresar_UsuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ingresar_UsuarioMousePressed
-        if (Ingresar_Usuario.getText().equals("Ingrese Usuario")){
-            
+        if (Ingresar_Usuario.getText().equals("Ingrese Usuario")){            
             Ingresar_Usuario.setText("");
-            Ingresar_Usuario.setForeground(Color.black);
-  
-        }
-        
-        if (String.valueOf(Ingresar_Pass.getPassword()).isEmpty()){
-            
+            Ingresar_Usuario.setForeground(Color.black);  
+        }        
+        if (String.valueOf(Ingresar_Pass.getPassword()).isEmpty()){            
             Ingresar_Pass.setText("************");
             Ingresar_Pass.setForeground(Color.gray);   
-        }
-        
-         
+        }         
     }//GEN-LAST:event_Ingresar_UsuarioMousePressed
 
     private void Ingresar_UsuarioMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ingresar_UsuarioMouseReleased
@@ -278,10 +254,7 @@ public class Login extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_Boton_RegistrarMouseClicked
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -296,15 +269,14 @@ public class Login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -314,6 +286,46 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void Boton_IngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_IngresarMouseClicked
+        Login frame = new Login();
+        if ("Ingrese Usuario".equals(Ingresar_Usuario.getText()) && "************".equals(Ingresar_Pass.getText())){
+            JOptionPane.showMessageDialog(frame, "Las casillas de usuario y contraseña se encuentran vacías.", "Campos Vacíos", JOptionPane.ERROR_MESSAGE);   
+        }
+        else if ("Ingrese Usuario".equals(Ingresar_Usuario.getText()) && "".equals(Ingresar_Pass.getText())){
+            JOptionPane.showMessageDialog(frame, "Las casillas de usuario y contraseña se encuentran vacías.", "Campos Vacíos", JOptionPane.ERROR_MESSAGE);   
+        }
+        else if ("".equals(Ingresar_Usuario.getText()) && "************".equals(Ingresar_Pass.getText())){
+            JOptionPane.showMessageDialog(frame, "Las casillas de usuario y contraseña se encuentran vacías.", "Campos Vacíos", JOptionPane.ERROR_MESSAGE);   
+        }
+        else{
+            String resultado = LoginForAll.Login(Ingresar_Usuario.getText(), Ingresar_Pass.getText());
+            if ("Error".equals(resultado)){
+                JOptionPane.showMessageDialog(frame, "Revise sus credenciales.", "Ingreso Fallido", JOptionPane.ERROR_MESSAGE);
+            }
+            else if ("Estudiante".equals(resultado)){
+                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, estudiante.", "Ingreso Correcto", JOptionPane.INFORMATION_MESSAGE);
+                MenuEstudiante menuest = new MenuEstudiante();
+                menuest.setVisible(true);  
+                this.setVisible(false);
+            }
+            else if ("Docente".equals(resultado)){
+                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, docente.", "Ingreso Fallido", JOptionPane.OK_OPTION);
+                MenuProfesor menuprof = new MenuProfesor();
+                menuprof.setVisible(true);  
+                this.setVisible(false);
+            }
+            else if ("Empresa".equals(resultado)){
+                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, empresario.", "Ingreso Fallido", JOptionPane.OK_OPTION);
+                MenuEmpresa menuemp = new MenuEmpresa();
+                menuemp.setVisible(true);  
+                this.setVisible(false);               
+            }
+            else{
+                JOptionPane.showMessageDialog(frame, resultado, "Ingreso Fallido", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_Boton_IngresarMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Ass;

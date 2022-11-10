@@ -55,24 +55,28 @@ public class MenuEstudiante extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(148, 180, 59));
         jPanel1.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel1.setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(86, 90, 92));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/LogoUN.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 0, -1, 110));
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(1120, 0, 214, 110);
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Menu Principal");
         jLabel5.setToolTipText("");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 560, 53));
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(370, 20, 560, 53);
 
         Img_atras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Img_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Atras.png"))); // NOI18N
@@ -81,10 +85,11 @@ public class MenuEstudiante extends javax.swing.JFrame {
                 Img_atrasMouseClicked(evt);
             }
         });
-        jPanel2.add(Img_atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        jPanel2.add(Img_atras);
+        Img_atras.setBounds(30, 30, 33, 33);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 1660, 110);
+        jPanel2.setBounds(0, 0, 1660, 0);
 
         jPanel3.setBackground(new java.awt.Color(86, 90, 92));
         jPanel3.setLayout(null);
@@ -137,7 +142,7 @@ public class MenuEstudiante extends javax.swing.JFrame {
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel3.add(jSeparator5);
-        jSeparator5.setBounds(390, 0, 3, 110);
+        jSeparator5.setBounds(390, 0, 2, 110);
 
         Boton_Usuario1.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -171,7 +176,7 @@ public class MenuEstudiante extends javax.swing.JFrame {
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel3.add(jSeparator6);
-        jSeparator6.setBounds(780, 0, 3, 110);
+        jSeparator6.setBounds(780, 0, 2, 110);
 
         Boton_Usuario3.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -201,18 +206,8 @@ public class MenuEstudiante extends javax.swing.JFrame {
         jPanel1.add(jPanel3);
         jPanel3.setBounds(100, 140, 1170, 550);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 1366, 768);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -261,38 +256,6 @@ public class MenuEstudiante extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuEstudiante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuEstudiante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuEstudiante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuEstudiante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MenuEstudiante().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Boton_InfoPersonal;

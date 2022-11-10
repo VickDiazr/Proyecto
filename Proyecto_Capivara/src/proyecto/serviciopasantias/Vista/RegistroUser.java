@@ -32,9 +32,9 @@ public class RegistroUser extends javax.swing.JFrame {
 
         Fondo = new javax.swing.JPanel();
         Barra_Sup = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         Escudo_Nacional = new javax.swing.JLabel();
         Img_atras = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -62,12 +62,11 @@ public class RegistroUser extends javax.swing.JFrame {
         Fondo.setLayout(null);
 
         Barra_Sup.setBackground(new java.awt.Color(86, 90, 92));
-
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Servicio de Pasantías");
+        Barra_Sup.setLayout(null);
 
         Escudo_Nacional.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/LogoUN.png"))); // NOI18N
+        Barra_Sup.add(Escudo_Nacional);
+        Escudo_Nacional.setBounds(1129, 0, 214, 90);
 
         Img_atras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Img_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Atras.png"))); // NOI18N
@@ -76,32 +75,16 @@ public class RegistroUser extends javax.swing.JFrame {
                 Img_atrasMouseClicked(evt);
             }
         });
+        Barra_Sup.add(Img_atras);
+        Img_atras.setBounds(19, 14, 55, 54);
 
-        javax.swing.GroupLayout Barra_SupLayout = new javax.swing.GroupLayout(Barra_Sup);
-        Barra_Sup.setLayout(Barra_SupLayout);
-        Barra_SupLayout.setHorizontalGroup(
-            Barra_SupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Barra_SupLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(Img_atras, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(536, 536, 536)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
-                .addComponent(Escudo_Nacional)
-                .addContainerGap(227, Short.MAX_VALUE))
-        );
-        Barra_SupLayout.setVerticalGroup(
-            Barra_SupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Barra_SupLayout.createSequentialGroup()
-                .addGroup(Barra_SupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Escudo_Nacional, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(Barra_SupLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(Barra_SupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Img_atras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Servicio de pasantias");
+        jLabel10.setToolTipText("");
+        Barra_Sup.add(jLabel10);
+        jLabel10.setBounds(0, 0, 1370, 90);
 
         Fondo.add(Barra_Sup);
         Barra_Sup.setBounds(0, 0, 1570, 90);
@@ -109,11 +92,12 @@ public class RegistroUser extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(86, 90, 92));
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Registro");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(620, 10, 170, 54);
+        jLabel2.setBounds(0, 0, 1170, 80);
 
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
@@ -295,37 +279,6 @@ public class RegistroUser extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistroUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistroUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistroUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistroUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new RegistroUser().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Barra_Sup;
@@ -338,7 +291,7 @@ public class RegistroUser extends javax.swing.JFrame {
     private javax.swing.JPanel Fondo_Roles;
     private javax.swing.JLabel Img_atras;
     private javax.swing.JPanel Panel_Contenido;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
