@@ -204,7 +204,7 @@ public class RegistroUser extends javax.swing.JFrame {
         Panel_Contenido.setLayout(Panel_ContenidoLayout);
         Panel_ContenidoLayout.setHorizontalGroup(
             Panel_ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 970, Short.MAX_VALUE)
+            .addGap(0, 940, Short.MAX_VALUE)
         );
         Panel_ContenidoLayout.setVerticalGroup(
             Panel_ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,7 +212,7 @@ public class RegistroUser extends javax.swing.JFrame {
         );
 
         jPanel1.add(Panel_Contenido);
-        Panel_Contenido.setBounds(230, 80, 970, 490);
+        Panel_Contenido.setBounds(230, 80, 940, 490);
 
         Fondo.add(jPanel1);
         jPanel1.setBounds(100, 170, 1170, 570);

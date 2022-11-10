@@ -1,432 +1,451 @@
-drop table if exists VERIFICACION;
-drop table if exists COMITE_ASESOR;
-drop table if exists CRITERIO;
-drop table if exists OBJETIVO_ESPECIFICO;
-drop table if exists ACTIVIDAD;
-drop table if exists EVALUACION;
-drop table if exists PASANTE;
-drop table if exists REGISTRO_PASANTIA;
-drop table if exists ESTUDIANTE;
-drop table if exists ESTADO;
-drop table if exists DOCENTE;
-drop table if exists PROGRAMA;
-drop table if exists JORNADA;
-drop table if exists SEDE;
-drop table if exists FACULTAD;
-drop table if exists RESPONSABLE;
-drop table if exists AREA;
-drop table if exists USUARIO;
-drop table if exists PERSONA;
-drop table if exists TIPO_ID;
-drop table if exists EMPRESA;
-drop table if exists CARGO;
-
 /*==============================================================*/
 /* Table: CARGO                                                 */
 /*==============================================================*/
-create table CARGO (
-	ID                   int                            NOT NULL AUTO_INCREMENT,
-   NOMBRE               varchar(100)                        NOT NULL,
-   PRIMARY KEY (ID)
+create table CARGO 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NOMBRE               varchar(100)                   not null,
+   constraint PK_CARGO primary key clustered (ID)
 );
 
 /*==============================================================*/
-/* Table: EMPRESA                                               */
+/* Table: AREA                                                  */
 /*==============================================================*/
-create table EMPRESA (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   NOMBRE               varchar(100)                        NOT NULL,
-   CORREO               varchar(100)                        NOT NULL,
-   TELEFONO             varchar(100)                        NOT NULL,
-   CIUDAD               varchar(100)                        null,
-   CONSTRAINT PK_EMPRESA PRIMARY KEY clustered (ID)
+create table AREA 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NOMBRE               varchar(100)                   not null,
+   constraint PK_AREA primary key clustered (ID)
 );
 
 /*==============================================================*/
 /* Table: TIPO_ID                                               */
 /*==============================================================*/
-create table TIPO_ID (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   NOMBRE               varchar(100)                        NOT NULL,
-   CONSTRAINT PK_TIPO_ID PRIMARY KEY clustered (ID)
+create table TIPO_ID 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NOMBRE               varchar(100)                   not null UNIQUE,
+   constraint PK_TIPO_ID primary key clustered (ID)
 );
 
 /*==============================================================*/
 /* Table: PERSONA                                               */
 /*==============================================================*/
-create table PERSONA (
-   ID                   int                            NOT NULL,
-   TIPO_ID              int                            NOT NULL,
-   LUGAR_EXP_ID         varchar(100)                        NOT NULL,
-   NOMBRE               varchar(100)                        NOT NULL,
-   APELLIDO             varchar(100)                        NOT NULL,
-   CORREO               varchar(100)                        NOT NULL,
-   TELEFONO             varchar(100)                        NOT NULL,
-   FIRMA                smallint                       NOT NULL,
-   CONSTRAINT PK_PERSONA PRIMARY KEY clustered (ID)
+create table PERSONA 
+(
+   ID                   int                            not null,
+   TIPO_ID              int                            not null,
+   LUGAR_EXP_ID         varchar(100)                   not null,
+   NOMBRE               varchar(100)                   not null,
+   APELLIDO             varchar(100)                   not null,
+   CORREO               varchar(100)                   not null UNIQUE,
+   TELEFONO             varchar(100)                   not null,
+   FIRMA                smallint                       null,
+   constraint PK_PERSONA primary key clustered (ID)
 );
 
 alter table PERSONA
-   add CONSTRAINT FK_PERSONA_REFERENCE_TIPO_ID foreign key (TIPO_ID)
+   add constraint FK_PERSONA_REFERENCE_TIPO_ID foreign key (TIPO_ID)
       references TIPO_ID (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
+      on update cascade
+      on delete cascade;
+      
 /*==============================================================*/
-/* Table: USUARIO                                               */
+/* Table: EMPRESA                                               */
 /*==============================================================*/
-create table USUARIO (
-   PERSONA              int                            NOT NULL,
-   NOMBRE               varchar(100)                   NOT NULL,
-   CONTRASENA           varchar(100)                   NOT NULL,
-   CONSTRAINT PK_USUARIO PRIMARY KEY clustered (NOMBRE)
-);
-
-alter table USUARIO
-   add constraint FK_USUARIO_REFERENCE_PERSONA foreign key (PERSONA)
-      references PERSONA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-/*==============================================================*/
-/* Table: AREA                                                  */
-/*==============================================================*/
-create table AREA (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   NOMBRE               varchar(100)                        NOT NULL,
-   CONSTRAINT PK_AREA PRIMARY KEY clustered (ID)
+create table EMPRESA 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NIT					varchar(100)				   not null UNIQUE,
+   NOMBRE               varchar(100)                   not null,
+   CORREO               varchar(100)                   null,
+   TELEFONO             varchar(100)                   null,
+   CIUDAD               varchar(100)                   null,
+   constraint PK_EMPRESA primary key clustered (ID)
 );
 
 /*==============================================================*/
 /* Table: RESPONSABLE                                           */
 /*==============================================================*/
-CREATE TABLE RESPONSABLE (
-    ID INT NOT NULL,
-    PERSONA_ID INT NOT NULL,
-    EMPRESA INT NOT NULL,
-    CARGO INT NOT NULL,
-    AREA INT NOT NULL,
-    CONSTRAINT PK_RESPONSABLE PRIMARY KEY clustered (ID)
+create table RESPONSABLE 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   PERSONA_ID           int                            not null,
+   EMPRESA              int                            not null,
+   CARGO                int                            null,
+   AREA                 int                            null,
+   constraint PK_RESPONSABLE primary key clustered (ID)
 );
 
 alter table RESPONSABLE
-   add CONSTRAINT FK_RESPONSA_REFERENCE_CARGO foreign key (CARGO)
+   add constraint FK_RESPONSA_REFERENCE_CARGO foreign key (CARGO)
       references CARGO (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
 alter table RESPONSABLE
-   add CONSTRAINT FK_RESPONSA_REFERENCE_EMPRESA foreign key (EMPRESA)
+   add constraint FK_RESPONSA_REFERENCE_EMPRESA foreign key (EMPRESA)
       references EMPRESA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
 alter table RESPONSABLE
-   add CONSTRAINT FK_RESPONSA_REFERENCE_PERSONA foreign key (PERSONA_ID)
+   add constraint FK_RESPONSA_REFERENCE_PERSONA foreign key (PERSONA_ID)
       references PERSONA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
 alter table RESPONSABLE
-   add CONSTRAINT FK_RESPONSA_REFERENCE_AREA foreign key (AREA)
+   add constraint FK_RESPONSA_REFERENCE_AREA foreign key (AREA)
       references AREA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
 /*==============================================================*/
-/* Table: FACULTAD                                              */
+/* Table: USUARIO                                               */
 /*==============================================================*/
-create table FACULTAD (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   NOMBRE               varchar(100)                        NOT NULL,
-   CONSTRAINT PK_DEPARTAMENTO PRIMARY KEY clustered (ID)
+create table USUARIO 
+(
+   NOMBRE               varchar(100)                   not null,
+   CONTRASENA           varchar(100)                   not null,
+   PERSONA              int                            not null,
+   constraint PK_USUARIO primary key clustered (NOMBRE)
+);
+
+alter table USUARIO
+   add constraint FK_USUARIO_REFERENCE_PERSONA foreign key (PERSONA)
+      references PERSONA (ID)
+      on update cascade
+      on delete cascade;
+
+/*==============================================================*/
+/* Table: JORNADA                                               */
+/*==============================================================*/
+create table JORNADA 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NOMBRE               varchar(100)                   not null,
+   constraint PK_JORNADA primary key clustered (ID)
 );
 
 /*==============================================================*/
 /* Table: SEDE                                                  */
 /*==============================================================*/
-create table SEDE (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   NOMBRE               varchar(100)                        NOT NULL,
-   CIUDAD               varchar(100)                        null,
-   CONSTRAINT PK_SEDE PRIMARY KEY clustered (ID)
+create table SEDE 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NOMBRE               varchar(100)                   not null UNIQUE,
+   CIUDAD               varchar(100)                   null,
+   constraint PK_SEDE primary key clustered (ID)
 );
 
 /*==============================================================*/
-/* Table: JORNADA                                               */
+/* Table: FACULTAD                                              */
 /*==============================================================*/
-create table JORNADA (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   NOMBRE               varchar(100)                        NOT NULL,
-   CONSTRAINT PK_JORNADA PRIMARY KEY clustered (ID)
+create table FACULTAD 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NOMBRE               varchar(100)                   not null UNIQUE,
+   SEDE                 int                            not null,
+   constraint PK_FACULTAD primary key clustered (ID)
 );
+
+alter table FACULTAD
+   add constraint FK_FACULTAD_REFERENCE_SEDE foreign key (SEDE)
+      references SEDE (ID)
+      on update cascade
+      on delete cascade;
+
+/*==============================================================*/
+/* Table: DEPARTAMENTO                                          */
+/*==============================================================*/
+create table DEPARTAMENTO 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NOMBRE               varchar(100)                   not null UNIQUE,
+   FACULTAD             int 		                   not null,
+   constraint PK_DEPARTAMENTO primary key clustered (ID)
+);
+
+alter table DEPARTAMENTO
+   add constraint FK_DEPARTAM_REFERENCE_FACULTAD foreign key (FACULTAD)
+      references FACULTAD (ID)
+      on update cascade
+      on delete cascade;
 
 /*==============================================================*/
 /* Table: PROGRAMA                                              */
 /*==============================================================*/
-create table PROGRAMA (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   NOMBRE               varchar(100)                        NOT NULL,
-   SEDE                 int                            NOT NULL,
-   JORNADA              int                            NOT NULL,
-   FACULTAD         int                            null,
-   CONSTRAINT PK_PROGRAMA PRIMARY KEY clustered (ID)
+create table PROGRAMA 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NOMBRE               varchar(100)                   not null,
+   JORNADA              int                            null,
+   DEPARTAMENTO         int 	   	                   not null,
+   constraint PK_PROGRAMA primary key clustered (ID)
 );
 
 alter table PROGRAMA
-   add CONSTRAINT FK_PROGRAMA_REFERENCE_FACULTAD foreign key (FACULTAD)
-      references FACULTAD (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+   add constraint FK_PROGRAMA_REFERENCE_DEPARTAM foreign key (DEPARTAMENTO)
+      references DEPARTAMENTO (ID)
+      on update cascade
+      on delete cascade;
 
 alter table PROGRAMA
-   add CONSTRAINT FK_PROGRAMA_REFERENCE_JORNADA foreign key (JORNADA)
+   add constraint FK_PROGRAMA_REFERENCE_JORNADA foreign key (JORNADA)
       references JORNADA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-alter table PROGRAMA
-   add CONSTRAINT FK_PROGRAMA_REFERENCE_SEDE foreign key (SEDE)
-      references SEDE (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
 /*==============================================================*/
-/* Table: DOCENTE                                               */
+/* Table: COMITE_ASESOR                                         */
 /*==============================================================*/
-CREATE TABLE DOCENTE (
-    ID INT NOT NULL,
-    PERSONA_ID INT NOT NULL,
-    PROGRAMA INT NOT NULL,
-    TELEFONO INT NOT NULL,
-    CONSTRAINT PK_DOCENTE PRIMARY KEY clustered (ID)
+create table COMITE_ASESOR 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   DESCRIPCION          varchar(100)                   not null,
+   PROGRAMA             int                            not null,
+   constraint PK_COMITE_ASESOR primary key clustered (ID)
 );
 
-alter table DOCENTE
-   add CONSTRAINT FK_DOCENTE_REFERENCE_PROGRAMA foreign key (PROGRAMA)
+alter table COMITE_ASESOR
+   add constraint FK_COMITE_A_REFERENCE_PROGRAMA foreign key (PROGRAMA)
       references PROGRAMA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-alter table DOCENTE
-   add CONSTRAINT FK_DOCENTE_REFERENCE_PERSONA foreign key (PERSONA_ID)
-      references PERSONA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
 /*==============================================================*/
 /* Table: ESTADO                                                */
 /*==============================================================*/
-create table ESTADO (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   NOMBRE               varchar(100)                        NOT NULL,
-   CONSTRAINT PK_ESTADO PRIMARY KEY clustered (ID)
+create table ESTADO 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   NOMBRE               varchar(100)                   not null UNIQUE,
+   constraint PK_ESTADO primary key clustered (ID)
 );
 
 /*==============================================================*/
 /* Table: ESTUDIANTE                                            */
 /*==============================================================*/
-CREATE TABLE ESTUDIANTE (
-    ID INT NOT NULL AUTO_INCREMENT,
-    PERSONA_ID INT NOT NULL,
-    PROGRAMA_ID INT NOT NULL,
-    AVANCE FLOAT NOT NULL,
-    ESTADO INT NOT NULL,
-    CONSTRAINT PK_ESTUDIANTE PRIMARY KEY clustered (ID)
+create table ESTUDIANTE 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   PERSONA_ID           int                            not null,
+   PROGRAMA_ID          int                            not null,
+   AVANCE               float                          null,
+   ESTADO               int                            null,
+   constraint PK_ESTUDIANTE primary key clustered (ID)
 );
 
 alter table ESTUDIANTE
-   add CONSTRAINT FK_ESTUDIAN_REFERENCE_ESTADO foreign key (ESTADO)
+   add constraint FK_ESTUDIAN_REFERENCE_ESTADO foreign key (ESTADO)
       references ESTADO (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
 alter table ESTUDIANTE
-   add CONSTRAINT FK_ESTUDIAN_REFERENCE_PERSONA foreign key (PERSONA_ID)
+   add constraint FK_ESTUDIAN_REFERENCE_PERSONA foreign key (PERSONA_ID)
       references PERSONA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
 alter table ESTUDIANTE
-   add CONSTRAINT FK_ESTUDIAN_REFERENCE_PROGRAMA foreign key (PROGRAMA_ID)
+   add constraint FK_ESTUDIAN_REFERENCE_PROGRAMA foreign key (PROGRAMA_ID)
       references PROGRAMA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
 /*==============================================================*/
-/* Table: REGISTRO_PASANTIA                                     */
+/* Table: DOCENTE                                               */
 /*==============================================================*/
-create table REGISTRO_PASANTIA (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   ESTUDIANTE           int                            NOT NULL,
-   TITULO               varchar(100)                        null,
-   OBJETIVO_GENERAL     varchar(100)                        null,
-   INTRODUCCION         varchar(100)                        null,
-   JUSTIFICACION        varchar(100)                        null,
-   APLICACION_APORTE    varchar(100)                        null,
-   CONTRATACION_INTENCION smallint                       null,
-   DURACION             int                            null,
-   RESPONSABLE          int                            null,
-   DOCENTE_DIRECTOR     int                            null,
-   CONSTRAINT PK_REGISTRO_PASANTIA PRIMARY KEY clustered (ID)
+create table DOCENTE 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   PERSONA_ID           int                            not null,
+   DEPARTAMENTO         int 		                   not null,
+   EXTENSION            int                            null,
+   constraint PK_DOCENTE primary key clustered (ID)
 );
 
-alter table REGISTRO_PASANTIA
-   add CONSTRAINT FK_REGISTRO_REFERENCE_ESTUDIAN foreign key (ESTUDIANTE)
+alter table DOCENTE
+   add constraint FK_DOCENTE_REFERENCE_DEPARTAM foreign key (DEPARTAMENTO)
+      references DEPARTAMENTO (ID)
+      on update cascade
+      on delete cascade;
+
+alter table DOCENTE
+   add constraint FK_DOCENTE_REFERENCE_PERSONA foreign key (PERSONA_ID)
+      references PERSONA (ID)
+      on update cascade
+      on delete cascade;
+
+/*==============================================================*/
+/* Table: PASANTIA                                              */
+/*==============================================================*/
+create table PASANTIA 
+(
+   ID                   	int                            not null AUTO_INCREMENT,
+   ESTUDIANTE           	int                            not null,
+   TITULO               	varchar(100)                   null,
+   OBJETIVO_GENERAL     	varchar(100)                   null,
+   INTRODUCCION         	varchar(100)                   null,
+   JUSTIFICACION        	varchar(100)                   null,
+   APLICACION_APORTE    	varchar(100)                   null,
+   CONTRATACION_INTENCION 	smallint                       null,
+   DURACION             	int                            null,
+   RESPONSABLE          	int                            null,
+   DOCENTE_DIRECTOR     	int                            null,
+   FECHA                	timestamp                      not null,
+   constraint PK_PASANTIA primary key clustered (ID)
+);
+
+alter table PASANTIA
+   add constraint FK_PASANTIA_REFERENCE_ESTUDIAN foreign key (ESTUDIANTE)
       references ESTUDIANTE (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
-alter table REGISTRO_PASANTIA
-   add CONSTRAINT FK_REGISTRO_REFERENCE_RESPONSA foreign key (RESPONSABLE)
+alter table PASANTIA
+   add constraint FK_PASANTIA_REFERENCE_RESPONSA foreign key (RESPONSABLE)
       references RESPONSABLE (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
 
-alter table REGISTRO_PASANTIA
-   add CONSTRAINT FK_REGISTRO_REFERENCE_DOCENTE foreign key (DOCENTE_DIRECTOR)
+alter table PASANTIA
+   add constraint FK_PASANTIA_REFERENCE_DOCENTE foreign key (DOCENTE_DIRECTOR)
       references DOCENTE (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-/*==============================================================*/
-/* Table: PASANTE                                               */
-/*==============================================================*/
-CREATE TABLE PASANTE (
-    ID INT NOT NULL AUTO_INCREMENT,
-    ESTUDIANTE INT NOT NULL,
-    REGISTRO INT NOT NULL,
-    CONSTRAINT PK_PASANTE PRIMARY KEY clustered (ID)
-);
-
-alter table PASANTE
-   add CONSTRAINT FK_PASANTE_REFERENCE_ESTUDIAN foreign key (ESTUDIANTE)
-      references ESTUDIANTE (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-alter table PASANTE
-   add CONSTRAINT FK_PASANTE_REFERENCE_REGISTRO foreign key (REGISTRO)
-      references REGISTRO_PASANTIA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-/*==============================================================*/
-/* Table: EVALUACION                                            */
-/*==============================================================*/
-CREATE TABLE EVALUACION (
-    ID INT NOT NULL AUTO_INCREMENT,
-    PASANTE INT NOT NULL,
-    RESPONSABLE INT NOT NULL,
-    FECHA TIMESTAMP NOT NULL,
-    CONSTRAINT PK_EVALUACION PRIMARY KEY clustered (ID)
-);
-
-alter table EVALUACION
-   add CONSTRAINT FK_EVALUACI_REFERENCE_PASANTE foreign key (PASANTE)
-      references PASANTE (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-alter table EVALUACION
-   add CONSTRAINT FK_EVALUACI_REFERENCE_RESPONSA foreign key (RESPONSABLE)
-      references RESPONSABLE (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-/*==============================================================*/
-/* Table: ACTIVIDAD                                             */
-/*==============================================================*/
-create table ACTIVIDAD (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   PASANTIA             int                            NOT NULL,
-   DESCRIPCION          varchar(100)                        NOT NULL,
-   SEMANA_INICIO        int                            NOT NULL,
-   SEMANA_FIN           int                            NOT NULL,
-   CONSTRAINT PK_ACTIVIDAD PRIMARY KEY clustered (ID)
-);
-
-alter table ACTIVIDAD
-   add CONSTRAINT FK_ACTIVIDA_REFERENCE_REGISTRO foreign key (PASANTIA)
-      references REGISTRO_PASANTIA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-/*==============================================================*/
-/* Table: OBJETIVO_ESPECIFICO                                   */
-/*==============================================================*/
-create table OBJETIVO_ESPECIFICO (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   PASANTIA             int                            NOT NULL,
-   DESCRIPCION          varchar(100)                        NOT NULL,
-   CONSTRAINT PK_OBJETIVO_ESPECIFICO PRIMARY KEY clustered (ID)
-);
-
-alter table OBJETIVO_ESPECIFICO
-   add CONSTRAINT FK_OBJETIVO_REFERENCE_REGISTRO foreign key (PASANTIA)
-      references REGISTRO_PASANTIA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-/*==============================================================*/
-/* Table: CRITERIO                                              */
-/*==============================================================*/
-create table CRITERIO (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   PASANTIA             int                            NOT NULL,
-   PORCENTAJE           float                          NOT NULL,
-   DESCRIPCION          varchar(100)                        NOT NULL,
-   CONSTRAINT PK_CRITERIO PRIMARY KEY clustered (ID)
-);
-
-alter table CRITERIO
-   add CONSTRAINT FK_CRITERIO_REFERENCE_REGISTRO foreign key (PASANTIA)
-      references REGISTRO_PASANTIA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
-
-/*==============================================================*/
-/* Table: COMITE_ASESOR                                         */
-/*==============================================================*/
-create table COMITE_ASESOR (
-   ID                   int                            NOT NULL AUTO_INCREMENT,
-   DESCRIPCION          varchar(100)                        NOT NULL,
-   CONSTRAINT PK_COMITE_ASESOR PRIMARY KEY clustered (ID)
-);
+      on update cascade
+      on delete cascade;
 
 /*==============================================================*/
 /* Table: VERIFICACION                                          */
 /*==============================================================*/
-CREATE TABLE VERIFICACION (
-    ID INT NOT NULL AUTO_INCREMENT,
-    REGISTRO_PASANTIA INT NULL,
-    COMITE INT NULL,
-    ACTA INT NOT NULL,
-    CONSECUTIVO INT NOT NULL,
-    FECHA TIMESTAMP NOT NULL,
-    RESULTADO SMALLINT NOT NULL,
-    CONSTRAINT PK_VERIFICACION PRIMARY KEY clustered (ID)
+create table VERIFICACION 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   PASANTIA             int                            not null,
+   COMITE               int                            not null,
+   ACTA                 int                            null,
+   CONSECUTIVO          int                            null,
+   FECHA                timestamp                      not null,
+   RESULTADO            smallint                       not null,
+   constraint PK_VERIFICACION primary key clustered (ID)
 );
 
 alter table VERIFICACION
-   add CONSTRAINT FK_VERIFICA_REFERENCE_REGISTRO foreign key (REGISTRO_PASANTIA)
-      references REGISTRO_PASANTIA (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+   add constraint FK_VERIFICA_REFERENCE_PASANTIA foreign key (PASANTIA)
+      references PASANTIA (ID)
+      on update cascade
+      on delete cascade;
 
 alter table VERIFICACION
-   add CONSTRAINT FK_VERIFICA_REFERENCE_COMITE_A foreign key (COMITE)
+   add constraint FK_VERIFICA_REFERENCE_COMITE_A foreign key (COMITE)
       references COMITE_ASESOR (ID)
-      ON UPDATE CASCADE
-      ON DELETE CASCADE;
+      on update cascade
+      on delete cascade;
+
+/*==============================================================*/
+/* Table: ACTIVIDAD                                             */
+/*==============================================================*/
+create table ACTIVIDAD 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   PASANTIA             int                            not null,
+   DESCRIPCION          varchar(100)                   not null,
+   SEMANA_INICIO        int                            not null,
+   SEMANA_FIN           int                            not null,
+   constraint PK_ACTIVIDAD primary key clustered (ID)
+);
+
+alter table ACTIVIDAD
+   add constraint FK_ACTIVIDA_REFERENCE_PASANTIA foreign key (PASANTIA)
+      references PASANTIA (ID)
+      on update cascade
+      on delete cascade;
+
+/*==============================================================*/
+/* Table: CRITERIO                                              */
+/*==============================================================*/
+create table CRITERIO 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   PASANTIA             int                            not null,
+   PORCENTAJE           float                          not null,
+   DESCRIPCION          varchar(100)                   not null,
+   constraint PK_CRITERIO primary key clustered (ID)
+);
+
+alter table CRITERIO
+   add constraint FK_CRITERIO_REFERENCE_PASANTIA foreign key (PASANTIA)
+      references PASANTIA (ID)
+      on update cascade
+      on delete cascade;
+
+/*==============================================================*/
+/* Table: OBJETIVO_ESPECIFICO                                   */
+/*==============================================================*/
+create table OBJETIVO_ESPECIFICO 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   PASANTIA             int                            not null,
+   DESCRIPCION          varchar(100)                   not null,
+   constraint PK_OBJETIVO_ESPECIFICO primary key clustered (ID)
+);
+
+alter table OBJETIVO_ESPECIFICO
+   add constraint FK_OBJETIVO_REFERENCE_PASANTIA foreign key (PASANTIA)
+      references PASANTIA (ID)
+      on update cascade
+      on delete cascade;
+
+/*==============================================================*/
+/* Table: EVALUACION                                            */
+/*==============================================================*/
+create table EVALUACION 
+(
+   ID                   int                            not null AUTO_INCREMENT,
+   PASANTIA             int                            not null,
+   RESPONSABLE          int                            not null,
+   FECHA                timestamp                      not null,
+   constraint PK_EVALUACION primary key clustered (ID)
+);
+alter table EVALUACION
+   add constraint FK_EVALUACI_REFERENCE_RESPONSA foreign key (RESPONSABLE)
+      references RESPONSABLE (ID)
+      on update cascade
+      on delete cascade;
+
+alter table EVALUACION
+   add constraint FK_EVALUACI_REFERENCE_PASANTIA foreign key (PASANTIA)
+      references PASANTIA (ID)
+      on update cascade
+      on delete cascade;
 
 INSERT INTO `proyecto`.`tipo_id` (`NOMBRE`) VALUES ('Cedula de ciudadania');
 INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808481','1', 'Bogotá', 'Sergio Nicolas', 'Siabatto Cleves', 'ssiabatto@unal.edu.co', '3053109089', '1');
-INSERT INTO `proyecto`.`usuario` (`PERSONA`, `NOMBRE`, `CONTRASENA`) VALUES ('1000808481', 'Nico', '1234');
+INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808482','1', 'Bogotá', 'Victor Daniel', 'Díaz Reyes', 'vidiazr@unal.edu.co', '3053109090', '1');
+INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808483','1', 'Bogotá', 'Ivan David', 'Molina Leguizamo', 'ivdmolinale@unal.edu.co', '3053109091', '1');
+INSERT INTO `proyecto`.`usuario` (`NOMBRE`, `CONTRASENA`, `PERSONA`) VALUES ('ssiabatto', '1234', '1000808481');
+INSERT INTO `proyecto`.`usuario` (`NOMBRE`, `CONTRASENA`, `PERSONA`) VALUES ('vidiazr', '1234', '1000808482');
+INSERT INTO `proyecto`.`usuario` (`NOMBRE`, `CONTRASENA`, `PERSONA`) VALUES ('ivdmolinale', '1234', '1000808483');
 INSERT INTO `proyecto`.`jornada` (`NOMBRE`) VALUES ('Diurno');
 INSERT INTO `proyecto`.`sede` (`NOMBRE`, `CIUDAD`) VALUES ('Sede Bogotá','Bogotá');
-INSERT INTO `proyecto`.`facultad` (`NOMBRE`) VALUES ('Ingeniería');
-INSERT INTO `proyecto`.`programa` (`ID`, `NOMBRE`, `SEDE`,`JORNADA`,`FACULTAD`) VALUES ('24','Ingeniería Agrícola','1','1','1');
-INSERT INTO `proyecto`.`programa` (`ID`, `NOMBRE`, `SEDE`,`JORNADA`,`FACULTAD`) VALUES ('106661','Ingeniería de Sistemas y Computación','1','1','1');
+INSERT INTO `proyecto`.`facultad` (`NOMBRE`, `Sede`) VALUES ('Ingeniería', '1');
+INSERT INTO `proyecto`.`departamento` (`NOMBRE`,`FACULTAD`) VALUES ('Ingeniería Civil y Agrícola', '1');
+INSERT INTO `proyecto`.`departamento` (`NOMBRE`,`FACULTAD`) VALUES ('Ingeniería de Sistemas e Industrial', '1');
+INSERT INTO `proyecto`.`programa` (`ID`, `NOMBRE`, `JORNADA`, `DEPARTAMENTO`) VALUES ('24','Ingeniería Agrícola','1','1');
+INSERT INTO `proyecto`.`programa` (`ID`, `NOMBRE`, `JORNADA`, `DEPARTAMENTO`) VALUES ('106661','Ingeniería de Sistemas y Computación','1','2');
 insert into `proyecto`.`estado` (`NOMBRE`) VALUES ('Disponible');
 INSERT INTO `proyecto`.`estudiante` (`PERSONA_ID`, `PROGRAMA_ID`,`AVANCE`,`ESTADO`) VALUES ('1000808481','106661','50','1');
+INSERT INTO `proyecto`.`docente` (`PERSONA_ID`, `DEPARTAMENTO`) VALUES ('1000808482','2');
+INSERT INTO `proyecto`.`empresa` (`NIT`, `NOMBRE`, `CORREO`, `TELEFONO`, `CIUDAD`) VALUES ('890.900.608-9','Empresa1', 'empresa1@empresa.com', '3053109095', 'Bogotá');
+INSERT INTO `proyecto`.`cargo` (`NOMBRE`) VALUES ('Gerente');
+INSERT INTO `proyecto`.`cargo` (`NOMBRE`) VALUES ('Asesor');
+INSERT INTO `proyecto`.`cargo` (`NOMBRE`) VALUES ('Auxiliar');
+INSERT INTO `proyecto`.`cargo` (`NOMBRE`) VALUES ('Asistente');
+INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Ingeniería');
+INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Contaduría');
+INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Talento Humano');
+INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Compras');
+INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Presidencia');
+INSERT INTO `proyecto`.`responsable` (`PERSONA_ID`, `EMPRESA`, `CARGO`, `AREA`) VALUES ('1000808483','1', '1', '5');

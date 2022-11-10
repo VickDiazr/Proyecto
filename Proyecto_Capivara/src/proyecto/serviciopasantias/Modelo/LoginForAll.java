@@ -27,7 +27,7 @@ public class LoginForAll {
             if (con != null){
                 Statement stmt = con.createStatement();
                 String sqlest = "select * from estudiante where Persona_id = (select Persona from usuario where Nombre= '" + user + "'and Contrasena ='"+password+"')";
-                ResultSet rsest = stmt.executeQuery(sqlest);  
+                ResultSet rsest = stmt.executeQuery(sqlest); 
                 if (!rsest.isBeforeFirst()){
                     String sqldoc = "select * from docente where `Persona_id` = (select `Persona` from usuario where `Nombre`= '" + user + "'and `Contrasena` ='"+password+"')";
                     ResultSet rsdoc = stmt.executeQuery(sqldoc);
