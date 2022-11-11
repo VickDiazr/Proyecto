@@ -18,7 +18,7 @@ public class Estudiantes {
     public static final String driver= "com.mysql.jdbc.Driver";
     public static final String Url = "jdbc:mysql://localhost:3306/proyecto?characterEncoding=latin1";
     public static final String User = "root";
-    public static final String Password = "password";
+    public static final String Password = "";
     
     public static String Register(String id, String tipo, String lugar, String nombre, String apellido, String correo,
             String telefono, String programa, String avance){
