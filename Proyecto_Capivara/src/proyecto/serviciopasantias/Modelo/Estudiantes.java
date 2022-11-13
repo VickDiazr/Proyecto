@@ -16,9 +16,9 @@ public class Estudiantes {
     
     private static Connection con;    
     public static final String driver= "com.mysql.jdbc.Driver";
-    public static final String Url = "jdbc:mysql://localhost:3306/proyecto?characterEncoding=latin1";
+    public static final String Url = "jdbc:mysql://localhost:3306/proyecto?characterEncoding=UTF-8";
     public static final String User = "root";
-    public static final String Password = "";
+    public static final String Password = "password";
     
     public static String Register(String id, String tipo, String lugar, String nombre, String apellido, String correo,
             String telefono, String programa, String avance){
@@ -38,12 +38,9 @@ public class Estudiantes {
                     rstipo.next();
                     String tipoid = rstipo.getString(1);
                     
-                    String sqlpersona = "insert into persona(ID, TIPO_ID, LUGAR_EXP_ID, NOMBRE, APELLIDO, CORREO, TELEFONO, FIRMA) values('" + id + "', '" + tipoid + "', 'Tunja', '" + nombre + "', '" + apellido + "', '" + correo + "', '" + telefono + "', '1')";
-                    System.out.println(sqlpersona);
-                    
-                    /*String sqlpersona = "insert into persona(ID, TIPO_ID, LUGAR_EXP_ID, NOMBRE, APELLIDO, CORREO, TELEFONO, FIRMA)"
+                    String sqlpersona = "insert into persona(ID, TIPO_ID, LUGAR_EXP_ID, NOMBRE, APELLIDO, CORREO, TELEFONO, FIRMA)"
                         + " values('" + id + "', '" + tipoid + "', '" + lugar + "', '" + nombre + "', '" + apellido + "', '" + correo
-                        + "', '" + telefono + "', '1')";*/
+                        + "', '" + telefono + "', '1')";
                     stmt.executeUpdate(sqlpersona);
                     
                     String sqlverifypro = "select ID from programa where Nombre = '" + programa + "'";
@@ -54,11 +51,13 @@ public class Estudiantes {
                     String sqlestudiante = "insert into estudiante(PERSONA_ID, PROGRAMA_ID, AVANCE, ESTADO)"
                         + " values('" + id + "', '" + programaid + "', '" + avance + "', '1')";
                     stmt.executeUpdate(sqlestudiante);
+                    con.close();
                     
                     return "Registro Exitoso";
                 }
                 else{
                     return "Ya Registrado";
+                    
                 }
             }
         }      
