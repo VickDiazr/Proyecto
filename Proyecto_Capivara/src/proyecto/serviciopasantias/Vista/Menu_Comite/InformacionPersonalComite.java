@@ -49,49 +49,50 @@ public class InformacionPersonalComite extends javax.swing.JPanel {
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel9.setText("Comiteing@unal.edu.co");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(420, 250, 390, 30);
+        jLabel9.setBounds(400, 250, 350, 30);
 
         jLabel11.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel11.setText("Nombre de Usuario:");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(40, 80, 200, 30);
+        jLabel11.setBounds(50, 100, 350, 30);
 
         jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel13.setText("Correo eléctronico:");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(40, 250, 200, 30);
+        jLabel13.setBounds(50, 250, 350, 30);
 
         jLabel15.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel15.setText("Sede:");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(40, 130, 200, 30);
+        jLabel15.setBounds(50, 150, 350, 30);
 
         jLabel16.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel16.setText("Facultad:");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(40, 180, 230, 30);
+        jLabel16.setBounds(50, 200, 350, 30);
 
         jLabel18.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel18.setText("Comite Ingenieria");
         jPanel1.add(jLabel18);
-        jLabel18.setBounds(420, 30, 200, 30);
+        jLabel18.setBounds(400, 50, 350, 30);
 
         jLabel19.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel19.setText("Comasesor");
         jPanel1.add(jLabel19);
-        jLabel19.setBounds(420, 80, 200, 30);
+        jLabel19.setBounds(400, 100, 350, 30);
 
         jLabel23.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel23.setText("Bogota");
         jPanel1.add(jLabel23);
-        jLabel23.setBounds(420, 130, 200, 30);
+        jLabel23.setBounds(400, 150, 350, 30);
 
         jLabel24.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel24.setText("Ingenieria");
         jPanel1.add(jLabel24);
-        jLabel24.setBounds(420, 180, 200, 30);
+        jLabel24.setBounds(400, 200, 350, 30);
 
         jPanel2.setBackground(new java.awt.Color(148, 180, 59));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel2.setLayout(null);
 
         Boton_Editar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
@@ -101,12 +102,12 @@ public class InformacionPersonalComite extends javax.swing.JPanel {
         Boton_Editar.setBounds(0, 0, 230, 60);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(890, 290, 230, 60);
+        jPanel2.setBounds(870, 310, 230, 60);
 
         jLabel25.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel25.setText("Nombre:");
         jPanel1.add(jLabel25);
-        jLabel25.setBounds(40, 30, 150, 30);
+        jLabel25.setBounds(50, 50, 350, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

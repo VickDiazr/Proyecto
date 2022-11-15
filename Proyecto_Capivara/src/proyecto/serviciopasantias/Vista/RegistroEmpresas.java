@@ -209,9 +209,10 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         Boton_Registrar.setLayout(null);
 
         jLabel19.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Registrar");
         Boton_Registrar.add(jLabel19);
-        jLabel19.setBounds(90, 10, 110, 40);
+        jLabel19.setBounds(0, 0, 280, 60);
 
         jPanel4.add(Boton_Registrar);
         Boton_Registrar.setBounds(390, 340, 280, 60);

@@ -14,12 +14,16 @@ import java.sql.Statement;
  */
 public class LoginForAll {
     private static Connection con;    
+    public static String usuario = "";
+    public static String passwordu = "";
     public static final String driver= "com.mysql.jdbc.Driver";
     public static final String Url = "jdbc:mysql://localhost:3306/proyecto?characterEncoding=latin1";
     public static final String User = "root";
     public static final String Password = "";    
     
     public static String Login(String user, String password){
+        LoginForAll.usuario = user;
+        LoginForAll.passwordu = password;
         con = null;
         try{
             Class.forName(driver);            

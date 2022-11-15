@@ -510,8 +510,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
                 
                 else if ("Registro Exitoso".equals(resultado)){
                     JOptionPane.showMessageDialog(this, "Se ha hecho el registro de forma exitosa.", "Registro Exitoso.", JOptionPane.INFORMATION_MESSAGE);
-                    Login frame = new Login();
-                    frame.setVisible(true);  
                     this.setVisible(false);
                 }
                 

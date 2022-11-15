@@ -127,6 +127,7 @@ public class Login extends javax.swing.JFrame {
         jLabel6.setBounds(0, 170, 1140, 53);
 
         Ass.setBackground(new java.awt.Color(148, 180, 59));
+        Ass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         Ass.setLayout(null);
 
         Boton_Ingresar.setFont(new java.awt.Font("Tw Cen MT", 1, 28)); // NOI18N
@@ -140,12 +141,13 @@ public class Login extends javax.swing.JFrame {
             }
         });
         Ass.add(Boton_Ingresar);
-        Boton_Ingresar.setBounds(0, 0, 230, 50);
+        Boton_Ingresar.setBounds(0, 0, 250, 60);
 
         jPanel3.add(Ass);
-        Ass.setBounds(190, 400, 230, 50);
+        Ass.setBounds(170, 400, 250, 60);
 
         as.setBackground(new java.awt.Color(148, 180, 59));
+        as.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         as.setToolTipText("");
         as.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -166,10 +168,10 @@ public class Login extends javax.swing.JFrame {
             }
         });
         as.add(Boton_Registrar);
-        Boton_Registrar.setBounds(0, 0, 230, 50);
+        Boton_Registrar.setBounds(0, 0, 250, 60);
 
         jPanel3.add(as);
-        as.setBounds(720, 400, 230, 50);
+        as.setBounds(720, 400, 250, 60);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(113, 179, 1140, 520);
@@ -219,17 +221,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_Ingresar_UsuarioMouseReleased
 
     private void Ingresar_PassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ingresar_PassMousePressed
-
-                
         if (Ingresar_Usuario.getText().isEmpty()){
             
             Ingresar_Usuario.setText("Ingrese Usuario");
             Ingresar_Usuario.setForeground(Color.gray);
-  
         }
-        
-        if (String.valueOf(Ingresar_Pass.getPassword()).equals("************")){
-            
+        if (String.valueOf(Ingresar_Pass.getPassword()).equals("************")){ 
             Ingresar_Pass.setText("");
             Ingresar_Pass.setForeground(Color.black);   
         }
@@ -293,27 +290,27 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(frame, "Las casillas de usuario y contraseña se encuentran vacías.", "Campos Vacíos", JOptionPane.ERROR_MESSAGE);   
         }
         else{
-            String resultado = LoginForAll.Login(Ingresar_Usuario.getText(), Ingresar_Pass.getText());
+            String resultado = LoginForAll.Login(Ingresar_Usuario.getText(), Ingresar_Pass.getText()); 
             if ("Error".equals(resultado)){
                 JOptionPane.showMessageDialog(frame, "Revise sus credenciales.", "Ingreso Fallido", JOptionPane.ERROR_MESSAGE);
             }
             else if ("Estudiante".equals(resultado)){
                 JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, estudiante.", "Ingreso Correcto", JOptionPane.INFORMATION_MESSAGE);
                 MenuEstudiante menuest = new MenuEstudiante();
-                menuest.setVisible(true);  
-                this.setVisible(false);
+                menuest.setVisible(true);
+                this.dispose();
             }
             else if ("Docente".equals(resultado)){
                 JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, docente.", "Ingreso Fallido", JOptionPane.INFORMATION_MESSAGE);
                 MenuProfesor menuprof = new MenuProfesor();
                 menuprof.setVisible(true);  
-                this.setVisible(false);
+                this.dispose();
             }
             else if ("Empresa".equals(resultado)){
                 JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, empresario.", "Ingreso Fallido", JOptionPane.INFORMATION_MESSAGE);
                 MenuEmpresa menuemp = new MenuEmpresa();
                 menuemp.setVisible(true);  
-                this.setVisible(false);               
+                this.dispose();
             }
             else{
                 JOptionPane.showMessageDialog(frame, resultado, "Ingreso Fallido", JOptionPane.ERROR_MESSAGE);

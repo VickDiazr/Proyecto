@@ -6,6 +6,7 @@ package proyecto.serviciopasantias.Vista.Menu_Estudiante;
 
 import proyecto.serviciopasantias.Vista.Menu_Estudiante.MisPasantiasEstudiante;
 import java.awt.BorderLayout;
+import proyecto.serviciopasantias.Modelo.Estudiantes;
 import proyecto.serviciopasantias.Vista.Login;
 
 /**
@@ -216,10 +217,11 @@ public class MenuEstudiante extends javax.swing.JFrame {
     private void Img_atrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Img_atrasMouseClicked
         Login b = new Login();
         b.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_Img_atrasMouseClicked
 
     private void Boton_UsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_UsuarioMouseClicked
+        Estudiantes.GetInfo();
         InformacionPersonalEstudiante p1 = new InformacionPersonalEstudiante();
         p1.setSize(1150,420);
         p1.setLocation(0,0);
