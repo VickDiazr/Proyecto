@@ -20,6 +20,7 @@ public class MenuEstudiante extends javax.swing.JFrame {
      */
     public MenuEstudiante() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

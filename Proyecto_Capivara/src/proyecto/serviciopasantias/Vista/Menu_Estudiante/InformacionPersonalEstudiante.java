@@ -6,6 +6,7 @@ package proyecto.serviciopasantias.Vista.Menu_Estudiante;
 
 import java.awt.event.KeyEvent;
 import proyecto.serviciopasantias.Modelo.Estudiantes;
+import proyecto.serviciopasantias.Modelo.LoginForAll;
 
 /**
  *
@@ -18,6 +19,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
      */
     public InformacionPersonalEstudiante() {
         initComponents();
+        Contraseña2.hide();
         NombreEntry.setText(Estudiantes.nombre);
         ApellidoEntry.setText(Estudiantes.apellido);
         IDEntry.setText(Estudiantes.tipo_id);
@@ -29,6 +31,8 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         FacultadEntry.setText(Estudiantes.facultad);
         ProgramaEntry.setText(Estudiantes.programa);
         AvanceEntry.setText(Estudiantes.avance);
+        ContraseñaEntry.setText(LoginForAll.passwordu);
+        
     }
 
     /**
@@ -68,6 +72,10 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jLabel21 = new javax.swing.JLabel();
         IDEntry1 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
+        jLabel15 = new javax.swing.JLabel();
+        Contraseña1 = new javax.swing.JLabel();
+        Contraseña2 = new javax.swing.JLabel();
+        ContraseñaEntry = new javax.swing.JPasswordField();
 
         setPreferredSize(new java.awt.Dimension(1150, 420));
 
@@ -101,26 +109,26 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Facultad:");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(610, 70, 70, 25);
+        jLabel12.setBounds(610, 120, 70, 25);
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Sede:");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(610, 20, 50, 25);
+        jLabel13.setBounds(610, 70, 50, 25);
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Correo Institucional:");
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(30, 270, 150, 25);
+        jLabel14.setBounds(30, 220, 150, 25);
 
         CorreoEntry.setBackground(new java.awt.Color(255, 255, 255));
         CorreoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         CorreoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         CorreoEntry.setEnabled(false);
         jPanel1.add(CorreoEntry);
-        CorreoEntry.setBounds(180, 270, 350, 25);
+        CorreoEntry.setBounds(180, 220, 350, 25);
 
         ApellidoEntry.setBackground(new java.awt.Color(255, 255, 255));
         ApellidoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -145,7 +153,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Teléfono:");
         jPanel1.add(jLabel20);
-        jLabel20.setBounds(30, 220, 70, 25);
+        jLabel20.setBounds(610, 20, 70, 25);
 
         TelefonoEntry.setBackground(new java.awt.Color(255, 255, 255));
         TelefonoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -157,13 +165,13 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
             }
         });
         jPanel1.add(TelefonoEntry);
-        TelefonoEntry.setBounds(130, 220, 400, 25);
+        TelefonoEntry.setBounds(710, 20, 400, 25);
 
         jLabel16.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Programa curricular:");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(610, 120, 150, 25);
+        jLabel16.setBounds(610, 170, 150, 25);
 
         ProgramaEntry.setBackground(new java.awt.Color(255, 255, 255));
         ProgramaEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -176,13 +184,13 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
             }
         });
         jPanel1.add(ProgramaEntry);
-        ProgramaEntry.setBounds(760, 120, 350, 25);
+        ProgramaEntry.setBounds(760, 170, 350, 25);
 
         jLabel22.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setText("Porcentaje avance:");
         jPanel1.add(jLabel22);
-        jLabel22.setBounds(610, 170, 140, 25);
+        jLabel22.setBounds(610, 220, 140, 25);
 
         AvanceEntry.setBackground(new java.awt.Color(255, 255, 255));
         AvanceEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -194,7 +202,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
             }
         });
         jPanel1.add(AvanceEntry);
-        AvanceEntry.setBounds(750, 170, 360, 25);
+        AvanceEntry.setBounds(750, 220, 360, 25);
 
         Boton_Editar.setBackground(new java.awt.Color(148, 180, 59));
         Boton_Editar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -250,7 +258,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
             }
         });
         jPanel1.add(LugarEntry);
-        LugarEntry.setBounds(180, 170, 345, 25);
+        LugarEntry.setBounds(190, 170, 340, 25);
 
         FacultadEntry.setBackground(new java.awt.Color(255, 255, 255));
         FacultadEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -263,7 +271,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
             }
         });
         jPanel1.add(FacultadEntry);
-        FacultadEntry.setBounds(710, 70, 400, 25);
+        FacultadEntry.setBounds(710, 120, 400, 25);
 
         SedeEntry.setBackground(new java.awt.Color(255, 255, 255));
         SedeEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -276,7 +284,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
             }
         });
         jPanel1.add(SedeEntry);
-        SedeEntry.setBounds(710, 20, 400, 25);
+        SedeEntry.setBounds(710, 70, 400, 25);
 
         Boton_Guardar.setBackground(new java.awt.Color(148, 180, 59));
         Boton_Guardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -322,6 +330,39 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(jSeparator1);
         jSeparator1.setBounds(573, 0, 2, 300);
 
+        jLabel15.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setText("Contraseña:");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(30, 270, 150, 25);
+
+        Contraseña1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/PasswordUn1.png"))); // NOI18N
+        Contraseña1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Contraseña1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(Contraseña1);
+        Contraseña1.setBounds(500, 273, 20, 20);
+
+        Contraseña2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/eye1.png"))); // NOI18N
+        Contraseña2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Contraseña2MouseClicked(evt);
+            }
+        });
+        jPanel1.add(Contraseña2);
+        Contraseña2.setBounds(500, 273, 20, 20);
+
+        ContraseñaEntry.setBackground(new java.awt.Color(255, 255, 255));
+        ContraseñaEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ContraseñaEntry.setForeground(new java.awt.Color(0, 0, 0));
+        ContraseñaEntry.setText("jPasswordField1");
+        ContraseñaEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ContraseñaEntry.setEnabled(false);
+        jPanel1.add(ContraseñaEntry);
+        ContraseñaEntry.setBounds(130, 270, 400, 25);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -351,7 +392,10 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
     }//GEN-LAST:event_AvanceEntryActionPerformed
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-
+        jLabel19.setEnabled(false);
+        jLabel21.setEnabled(true);
+        ContraseñaEntry.setEnabled(true);
+        
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel19KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel19KeyPressed
@@ -388,12 +432,35 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_IDEntry1ActionPerformed
 
+    private void Contraseña1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Contraseña1MouseClicked
+        if (ContraseñaEntry.isEnabled() == true){
+            ContraseñaEntry.setEchoChar((char)0);
+            Contraseña2.show();
+            Contraseña2.setEnabled(true);
+            Contraseña1.hide();
+            Contraseña1.setEnabled(false);
+        }
+    }//GEN-LAST:event_Contraseña1MouseClicked
+
+    private void Contraseña2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Contraseña2MouseClicked
+        if (ContraseñaEntry.isEnabled() == true){
+            ContraseñaEntry.setEchoChar('*');
+            Contraseña1.show();
+            Contraseña1.setEnabled(true);
+            Contraseña2.hide();
+            Contraseña2.setEnabled(false);
+        }
+    }//GEN-LAST:event_Contraseña2MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ApellidoEntry;
     private javax.swing.JTextField AvanceEntry;
     private javax.swing.JPanel Boton_Editar;
     private javax.swing.JPanel Boton_Guardar;
+    private javax.swing.JLabel Contraseña1;
+    private javax.swing.JLabel Contraseña2;
+    private javax.swing.JPasswordField ContraseñaEntry;
     private javax.swing.JTextField CorreoEntry;
     private javax.swing.JTextField FacultadEntry;
     private javax.swing.JTextField IDEntry;
@@ -407,6 +474,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel19;

@@ -5,14 +5,11 @@
         <group>
             <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Modelo/Estudiantes.java</file>
             <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/RegistroEstudiantes.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/RegistroDocente.java</file>
             <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Estudiante/InformacionPersonalEstudiante.java</file>
             <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/RegistroUser.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Profesor/MenuProfesor.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Comite/InformacionPersonalComite.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Comite/MenuComite.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/RegistroEmpresas.java</file>
+            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Modelo/LoginForAll.java</file>
             <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Login.java</file>
+            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Estudiante/MenuEstudiante.java</file>
         </group>
     </open-files>
 </project-private>
