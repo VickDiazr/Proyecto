@@ -19,7 +19,25 @@ public class Docentes {
     public static final String driver= "com.mysql.jdbc.Driver";
     public static final String Url = "jdbc:mysql://localhost:3306/proyecto?characterEncoding=UTF-8";
     public static final String User = "root";
-    public static final String Password = "password";
+    public static final String Password = "";
+
+    public static String nombre = "";
+    public static String apellido = "";
+    public static String tipo_id = "";
+    public static String no_id = "";
+    public static String lugar = "";
+    public static String telefono = "";
+    public static String correo = "";
+    public static String sede = "";
+    public static String facultad = "";
+    public static String programa = "";
+    public static String avance = "";
+
+
+
+
+
+
     
     public static String Register(String id, String tipo, String lugar, String nombre, String apellido, String correo,
             String telefono, String departamento){

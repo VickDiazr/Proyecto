@@ -4,7 +4,10 @@
  */
 package proyecto.serviciopasantias.Vista.Menu_Profesor;
 
-import proyecto.serviciopasantias.Vista.Menu_Estudiante.*;
+import java.awt.event.KeyEvent;
+import proyecto.serviciopasantias.Modelo.Docentes;
+import proyecto.serviciopasantias.Modelo.LoginForAll;
+
 
 /**
  *
@@ -17,6 +20,22 @@ public class InformacionPersonalProfesor extends javax.swing.JPanel {
      */
     public InformacionPersonalProfesor() {
         initComponents();
+        
+        Contraseña2.hide();
+        NombreEntry.setText(Docentes.nombre);
+        ApellidoEntry.setText(Docentes.apellido);
+        IDEntry.setText(Docentes.tipo_id);
+        IDEntry1.setText(Docentes.no_id);
+        LugarEntry.setText(Docentes.lugar);
+        TelefonoEntry.setText(Docentes.telefono);
+        CorreoEntry.setText(Docentes.correo);
+        SedeEntry.setText(Docentes.sede);
+        FacultadEntry.setText(Docentes.facultad);
+        ProgramaEntry.setText(Docentes.programa);
+        AvanceEntry.setText(Docentes.avance);
+        ContraseñaEntry.setText(LoginForAll.passwordu);
+        
+        
     }
 
     /**
@@ -37,112 +56,290 @@ public class InformacionPersonalProfesor extends javax.swing.JPanel {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        Boton_Editar = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
+        NombreEntry = new javax.swing.JTextField();
+        ApellidoEntry = new javax.swing.JTextField();
+        IDEntry = new javax.swing.JTextField();
+        IDEntry1 = new javax.swing.JTextField();
+        LugarEntry = new javax.swing.JTextField();
+        CorreoEntry = new javax.swing.JTextField();
+        Contraseña1 = new javax.swing.JLabel();
+        Contraseña2 = new javax.swing.JLabel();
+        ContraseñaEntry = new javax.swing.JPasswordField();
+        jSeparator1 = new javax.swing.JSeparator();
+        TelefonoEntry = new javax.swing.JTextField();
+        SedeEntry = new javax.swing.JTextField();
+        FacultadEntry = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        ProgramaEntry = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        AvanceEntry = new javax.swing.JTextField();
+        Boton_Editar = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        Boton_Guardar = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1150, 420));
 
         jPanel1.setLayout(null);
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel9.setText("Ciencia");
+        jLabel9.setText("Telefono:");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(430, 310, 390, 30);
+        jLabel9.setBounds(600, 20, 100, 30);
 
         jLabel11.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel11.setText("Apellido:");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(40, 60, 150, 30);
+        jLabel11.setBounds(20, 60, 150, 30);
 
         jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel12.setText("Número de identificación:");
+        jLabel12.setText("No ID:");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(40, 100, 260, 30);
+        jLabel12.setBounds(350, 110, 70, 30);
 
         jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel13.setText("Correo eléctronico:");
+        jLabel13.setText("Correo Institucional:");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(40, 140, 200, 30);
+        jLabel13.setBounds(20, 210, 200, 30);
 
         jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel14.setText("Nombre de usuario:");
+        jLabel14.setText("Facultad:");
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(40, 180, 220, 30);
+        jLabel14.setBounds(600, 110, 100, 30);
 
         jLabel15.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel15.setText("Sede:");
+        jLabel15.setText("Contraseña:");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(40, 220, 200, 30);
+        jLabel15.setBounds(20, 260, 130, 30);
 
         jLabel16.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel16.setText("Facultad:");
+        jLabel16.setText("Lugar de expedición:");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(40, 260, 230, 30);
+        jLabel16.setBounds(20, 160, 230, 30);
 
         jLabel17.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel17.setText("Carrea:");
+        jLabel17.setText("Tipo de ID:");
         jPanel1.add(jLabel17);
-        jLabel17.setBounds(40, 310, 200, 30);
-
-        jLabel18.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel18.setText("Victor");
-        jPanel1.add(jLabel18);
-        jLabel18.setBounds(430, 20, 200, 30);
-
-        jLabel19.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel19.setText("Diaz Reyes");
-        jPanel1.add(jLabel19);
-        jLabel19.setBounds(430, 60, 200, 30);
-
-        jLabel20.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel20.setText("1192803575");
-        jPanel1.add(jLabel20);
-        jLabel20.setBounds(430, 100, 200, 30);
-
-        jLabel21.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel21.setText("Vidiazr@unal.edu.co");
-        jPanel1.add(jLabel21);
-        jLabel21.setBounds(430, 140, 220, 30);
+        jLabel17.setBounds(20, 110, 120, 30);
 
         jLabel22.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel22.setText("Vidiazr");
+        jLabel22.setText("Sede:");
         jPanel1.add(jLabel22);
-        jLabel22.setBounds(430, 180, 200, 30);
-
-        jLabel23.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel23.setText("Bogota");
-        jPanel1.add(jLabel23);
-        jLabel23.setBounds(430, 220, 200, 30);
-
-        jLabel24.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel24.setText("Ingenieria");
-        jPanel1.add(jLabel24);
-        jLabel24.setBounds(430, 260, 200, 30);
-
-        jPanel2.setBackground(new java.awt.Color(148, 180, 59));
-        jPanel2.setLayout(null);
-
-        Boton_Editar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        Boton_Editar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Boton_Editar.setText("Editar");
-        jPanel2.add(Boton_Editar);
-        Boton_Editar.setBounds(0, 0, 230, 60);
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(890, 290, 230, 60);
+        jLabel22.setBounds(600, 60, 70, 30);
 
         jLabel25.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel25.setText("Nombre:");
         jPanel1.add(jLabel25);
-        jLabel25.setBounds(40, 20, 150, 30);
+        jLabel25.setBounds(20, 20, 150, 30);
+
+        NombreEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        NombreEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreEntry.setEnabled(false);
+        NombreEntry.setFocusCycleRoot(true);
+        NombreEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NombreEntry);
+        NombreEntry.setBounds(120, 20, 460, 25);
+
+        ApellidoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ApellidoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ApellidoEntry.setEnabled(false);
+        jPanel1.add(ApellidoEntry);
+        ApellidoEntry.setBounds(120, 60, 460, 25);
+
+        IDEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        IDEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        IDEntry.setEnabled(false);
+        IDEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IDEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(IDEntry);
+        IDEntry.setBounds(130, 110, 190, 25);
+
+        IDEntry1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        IDEntry1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        IDEntry1.setEnabled(false);
+        IDEntry1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IDEntry1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(IDEntry1);
+        IDEntry1.setBounds(420, 110, 160, 25);
+
+        LugarEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        LugarEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        LugarEntry.setEnabled(false);
+        LugarEntry.setFocusCycleRoot(true);
+        LugarEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LugarEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(LugarEntry);
+        LugarEntry.setBounds(240, 160, 340, 25);
+
+        CorreoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        CorreoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        CorreoEntry.setEnabled(false);
+        jPanel1.add(CorreoEntry);
+        CorreoEntry.setBounds(240, 210, 340, 25);
+
+        Contraseña1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/PasswordUn1.png"))); // NOI18N
+        Contraseña1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Contraseña1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(Contraseña1);
+        Contraseña1.setBounds(520, 260, 20, 20);
+
+        Contraseña2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/eye1.png"))); // NOI18N
+        Contraseña2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Contraseña2MouseClicked(evt);
+            }
+        });
+        jPanel1.add(Contraseña2);
+        Contraseña2.setBounds(520, 260, 20, 20);
+
+        ContraseñaEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ContraseñaEntry.setText("jPasswordField1");
+        ContraseñaEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ContraseñaEntry.setEnabled(false);
+        jPanel1.add(ContraseñaEntry);
+        ContraseñaEntry.setBounds(150, 260, 400, 25);
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jSeparator1);
+        jSeparator1.setBounds(590, 0, 3, 300);
+
+        TelefonoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        TelefonoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        TelefonoEntry.setEnabled(false);
+        TelefonoEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TelefonoEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TelefonoEntry);
+        TelefonoEntry.setBounds(700, 20, 400, 25);
+
+        SedeEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        SedeEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        SedeEntry.setEnabled(false);
+        SedeEntry.setFocusCycleRoot(true);
+        SedeEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SedeEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SedeEntry);
+        SedeEntry.setBounds(700, 60, 400, 25);
+
+        FacultadEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        FacultadEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        FacultadEntry.setEnabled(false);
+        FacultadEntry.setFocusCycleRoot(true);
+        FacultadEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FacultadEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(FacultadEntry);
+        FacultadEntry.setBounds(700, 110, 400, 25);
+
+        jLabel26.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel26.setText("Programa curricular:");
+        jPanel1.add(jLabel26);
+        jLabel26.setBounds(600, 160, 200, 25);
+
+        ProgramaEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ProgramaEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ProgramaEntry.setEnabled(false);
+        ProgramaEntry.setFocusCycleRoot(true);
+        ProgramaEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProgramaEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ProgramaEntry);
+        ProgramaEntry.setBounds(810, 160, 300, 25);
+
+        jLabel23.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel23.setText("Porcentaje avance:");
+        jPanel1.add(jLabel23);
+        jLabel23.setBounds(600, 210, 190, 25);
+
+        AvanceEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        AvanceEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        AvanceEntry.setEnabled(false);
+        AvanceEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AvanceEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(AvanceEntry);
+        AvanceEntry.setBounds(810, 210, 300, 25);
+
+        Boton_Editar.setBackground(new java.awt.Color(148, 180, 59));
+        Boton_Editar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        Boton_Editar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        Boton_Editar.setLayout(null);
+
+        jLabel20.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("Editar");
+        jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel20MouseClicked(evt);
+            }
+        });
+        jLabel20.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jLabel20KeyPressed(evt);
+            }
+        });
+        Boton_Editar.add(jLabel20);
+        jLabel20.setBounds(0, 0, 280, 60);
+
+        jPanel1.add(Boton_Editar);
+        Boton_Editar.setBounds(595, 340, 280, 60);
+
+        Boton_Guardar.setBackground(new java.awt.Color(148, 180, 59));
+        Boton_Guardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        Boton_Guardar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        Boton_Guardar.setLayout(null);
+
+        jLabel21.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("Guardar");
+        jLabel21.setEnabled(false);
+        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel21MouseClicked(evt);
+            }
+        });
+        jLabel21.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jLabel21KeyPressed(evt);
+            }
+        });
+        Boton_Guardar.add(jLabel21);
+        jLabel21.setBounds(0, 0, 280, 60);
+
+        jPanel1.add(Boton_Guardar);
+        Boton_Guardar.setBounds(275, 340, 280, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -156,9 +353,101 @@ public class InformacionPersonalProfesor extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void NombreEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreEntryActionPerformed
+
+    private void IDEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IDEntryActionPerformed
+
+    private void IDEntry1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDEntry1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IDEntry1ActionPerformed
+
+    private void LugarEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LugarEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LugarEntryActionPerformed
+
+    private void Contraseña1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Contraseña1MouseClicked
+        if (ContraseñaEntry.isEnabled() == true){
+            ContraseñaEntry.setEchoChar((char)0);
+            Contraseña2.show();
+            Contraseña2.setEnabled(true);
+            Contraseña1.hide();
+            Contraseña1.setEnabled(false);
+        }
+    }//GEN-LAST:event_Contraseña1MouseClicked
+
+    private void TelefonoEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefonoEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TelefonoEntryActionPerformed
+
+    private void SedeEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SedeEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SedeEntryActionPerformed
+
+    private void FacultadEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FacultadEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FacultadEntryActionPerformed
+
+    private void ProgramaEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProgramaEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProgramaEntryActionPerformed
+
+    private void AvanceEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AvanceEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AvanceEntryActionPerformed
+
+    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
+        jLabel20.setEnabled(false);
+        jLabel21.setEnabled(true);
+        ContraseñaEntry.setEnabled(true);
+
+    }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void jLabel20KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel20KeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+
+        }
+    }//GEN-LAST:event_jLabel20KeyPressed
+
+    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel21MouseClicked
+
+    private void jLabel21KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel21KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel21KeyPressed
+
+    private void Contraseña2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Contraseña2MouseClicked
+        if (ContraseñaEntry.isEnabled() == true){
+            ContraseñaEntry.setEchoChar('*');
+            Contraseña1.show();
+            Contraseña1.setEnabled(true);
+            Contraseña2.hide();
+            Contraseña2.setEnabled(false);
+        }
+    }//GEN-LAST:event_Contraseña2MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Boton_Editar;
+    private javax.swing.JTextField ApellidoEntry;
+    private javax.swing.JTextField AvanceEntry;
+    private javax.swing.JPanel Boton_Editar;
+    private javax.swing.JPanel Boton_Guardar;
+    private javax.swing.JLabel Contraseña1;
+    private javax.swing.JLabel Contraseña2;
+    private javax.swing.JPasswordField ContraseñaEntry;
+    private javax.swing.JTextField CorreoEntry;
+    private javax.swing.JTextField FacultadEntry;
+    private javax.swing.JTextField IDEntry;
+    private javax.swing.JTextField IDEntry1;
+    private javax.swing.JTextField LugarEntry;
+    private javax.swing.JTextField NombreEntry;
+    private javax.swing.JTextField ProgramaEntry;
+    private javax.swing.JTextField SedeEntry;
+    private javax.swing.JTextField TelefonoEntry;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -166,16 +455,14 @@ public class InformacionPersonalProfesor extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

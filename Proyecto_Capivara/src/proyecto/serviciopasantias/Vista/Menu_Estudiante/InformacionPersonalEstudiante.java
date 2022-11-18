@@ -82,62 +82,52 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.setLayout(null);
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("No. ID:");
         jPanel1.add(jLabel7);
         jLabel7.setBounds(330, 120, 70, 25);
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Nombres:");
         jPanel1.add(jLabel8);
         jLabel8.setBounds(30, 20, 160, 25);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Apellidos:");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(30, 70, 150, 25);
+        jLabel9.setBounds(30, 70, 80, 25);
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Tipo ID:");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(30, 120, 60, 25);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Facultad:");
         jPanel1.add(jLabel12);
         jLabel12.setBounds(610, 120, 70, 25);
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Sede:");
         jPanel1.add(jLabel13);
         jLabel13.setBounds(610, 70, 50, 25);
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Correo Institucional:");
         jPanel1.add(jLabel14);
         jLabel14.setBounds(30, 220, 150, 25);
 
-        CorreoEntry.setBackground(new java.awt.Color(255, 255, 255));
         CorreoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         CorreoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         CorreoEntry.setEnabled(false);
         jPanel1.add(CorreoEntry);
         CorreoEntry.setBounds(180, 220, 350, 25);
 
-        ApellidoEntry.setBackground(new java.awt.Color(255, 255, 255));
         ApellidoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         ApellidoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ApellidoEntry.setEnabled(false);
         jPanel1.add(ApellidoEntry);
         ApellidoEntry.setBounds(130, 70, 400, 25);
 
-        IDEntry.setBackground(new java.awt.Color(255, 255, 255));
         IDEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         IDEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         IDEntry.setEnabled(false);
@@ -150,12 +140,10 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         IDEntry.setBounds(130, 120, 190, 25);
 
         jLabel20.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Teléfono:");
         jPanel1.add(jLabel20);
         jLabel20.setBounds(610, 20, 70, 25);
 
-        TelefonoEntry.setBackground(new java.awt.Color(255, 255, 255));
         TelefonoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         TelefonoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         TelefonoEntry.setEnabled(false);
@@ -168,12 +156,10 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         TelefonoEntry.setBounds(710, 20, 400, 25);
 
         jLabel16.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Programa curricular:");
         jPanel1.add(jLabel16);
         jLabel16.setBounds(610, 170, 150, 25);
 
-        ProgramaEntry.setBackground(new java.awt.Color(255, 255, 255));
         ProgramaEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         ProgramaEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ProgramaEntry.setEnabled(false);
@@ -187,12 +173,10 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         ProgramaEntry.setBounds(760, 170, 350, 25);
 
         jLabel22.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setText("Porcentaje avance:");
         jPanel1.add(jLabel22);
         jLabel22.setBounds(610, 220, 140, 25);
 
-        AvanceEntry.setBackground(new java.awt.Color(255, 255, 255));
         AvanceEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         AvanceEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         AvanceEntry.setEnabled(false);
@@ -229,12 +213,10 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         Boton_Editar.setBounds(595, 340, 280, 60);
 
         jLabel17.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("Lugar de Expedición:");
         jPanel1.add(jLabel17);
         jLabel17.setBounds(30, 170, 170, 25);
 
-        NombreEntry.setBackground(new java.awt.Color(255, 255, 255));
         NombreEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         NombreEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         NombreEntry.setEnabled(false);
@@ -247,7 +229,6 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(NombreEntry);
         NombreEntry.setBounds(130, 20, 400, 25);
 
-        LugarEntry.setBackground(new java.awt.Color(255, 255, 255));
         LugarEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         LugarEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         LugarEntry.setEnabled(false);
@@ -260,7 +241,6 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(LugarEntry);
         LugarEntry.setBounds(190, 170, 340, 25);
 
-        FacultadEntry.setBackground(new java.awt.Color(255, 255, 255));
         FacultadEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         FacultadEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         FacultadEntry.setEnabled(false);
@@ -273,7 +253,6 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(FacultadEntry);
         FacultadEntry.setBounds(710, 120, 400, 25);
 
-        SedeEntry.setBackground(new java.awt.Color(255, 255, 255));
         SedeEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         SedeEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         SedeEntry.setEnabled(false);
@@ -311,7 +290,6 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(Boton_Guardar);
         Boton_Guardar.setBounds(275, 340, 280, 60);
 
-        IDEntry1.setBackground(new java.awt.Color(255, 255, 255));
         IDEntry1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         IDEntry1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         IDEntry1.setEnabled(false);
@@ -331,7 +309,6 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jSeparator1.setBounds(573, 0, 2, 300);
 
         jLabel15.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Contraseña:");
         jPanel1.add(jLabel15);
         jLabel15.setBounds(30, 270, 150, 25);
@@ -354,9 +331,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(Contraseña2);
         Contraseña2.setBounds(500, 273, 20, 20);
 
-        ContraseñaEntry.setBackground(new java.awt.Color(255, 255, 255));
         ContraseñaEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        ContraseñaEntry.setForeground(new java.awt.Color(0, 0, 0));
         ContraseñaEntry.setText("jPasswordField1");
         ContraseñaEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ContraseñaEntry.setEnabled(false);
@@ -432,16 +407,6 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_IDEntry1ActionPerformed
 
-    private void Contraseña1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Contraseña1MouseClicked
-        if (ContraseñaEntry.isEnabled() == true){
-            ContraseñaEntry.setEchoChar((char)0);
-            Contraseña2.show();
-            Contraseña2.setEnabled(true);
-            Contraseña1.hide();
-            Contraseña1.setEnabled(false);
-        }
-    }//GEN-LAST:event_Contraseña1MouseClicked
-
     private void Contraseña2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Contraseña2MouseClicked
         if (ContraseñaEntry.isEnabled() == true){
             ContraseñaEntry.setEchoChar('*');
@@ -451,6 +416,16 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
             Contraseña2.setEnabled(false);
         }
     }//GEN-LAST:event_Contraseña2MouseClicked
+
+    private void Contraseña1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Contraseña1MouseClicked
+        if (ContraseñaEntry.isEnabled() == true){
+            ContraseñaEntry.setEchoChar((char)0);
+            Contraseña2.show();
+            Contraseña2.setEnabled(true);
+            Contraseña1.hide();
+            Contraseña1.setEnabled(false);
+        }
+    }//GEN-LAST:event_Contraseña1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
