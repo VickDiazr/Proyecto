@@ -5,6 +5,7 @@
 package proyecto.serviciopasantias.Vista;
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import proyecto.serviciopasantias.Modelo.LoginForAll;
 import proyecto.serviciopasantias.Vista.Menu_Estudiante.*;
 import proyecto.serviciopasantias.Vista.Menu_Empresa.*;
@@ -20,6 +21,44 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        jLabel9.hide();
+        jLabel9.setEnabled(false);
+        Ingresar_Usuario.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt){
+                SwingUtilities.invokeLater(new Runnable (){
+                    @Override
+                    public void run(){
+                        if (Ingresar_Usuario.getText().equals("Ingrese Usuario")){            
+                            Ingresar_Usuario.setText("");
+                            Ingresar_Usuario.setForeground(Color.black);  
+                        }        
+                        if (String.valueOf(Ingresar_Pass.getPassword()).isEmpty()){            
+                            Ingresar_Pass.setText("************");
+                            Ingresar_Pass.setForeground(Color.gray);   
+                        } 
+                    }
+                });
+            }
+        });
+        
+        Ingresar_Pass.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt){
+                SwingUtilities.invokeLater(new Runnable (){
+                    @Override
+                    public void run(){
+                        if (Ingresar_Usuario.getText().isEmpty()){            
+                            Ingresar_Usuario.setText("Ingrese Usuario");
+                            Ingresar_Usuario.setForeground(Color.gray);
+                        }
+                        if (String.valueOf(Ingresar_Pass.getPassword()).equals("************")){ 
+                            Ingresar_Pass.setText("");
+                            Ingresar_Pass.setForeground(Color.black);   
+                        }
+                    }
+                });
+            }
+        });
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,6 +74,7 @@ public class Login extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         Ingresar_Usuario = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         Ingresar_Pass = new javax.swing.JPasswordField();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -73,6 +113,11 @@ public class Login extends javax.swing.JFrame {
         Ingresar_Usuario.setBorder(null);
         Ingresar_Usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Ingresar_Usuario.setName(""); // NOI18N
+        Ingresar_Usuario.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                Ingresar_UsuarioFocusGained(evt);
+            }
+        });
         Ingresar_Usuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 Ingresar_UsuarioMousePressed(evt);
@@ -91,8 +136,23 @@ public class Login extends javax.swing.JFrame {
         Ingresar_Usuario.getAccessibleContext().setAccessibleName("");
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/PasswordUn.png"))); // NOI18N
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
         jPanel3.add(jLabel8);
         jLabel8.setBounds(430, 310, 36, 34);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/eye.png"))); // NOI18N
+        jLabel9.setPreferredSize(new java.awt.Dimension(36, 34));
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel9);
+        jLabel9.setBounds(430, 310, 36, 34);
 
         Ingresar_Pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ingresar_Pass.setText("************");
@@ -232,6 +292,8 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Ingresar_PassMousePressed
 
+    
+    
     private void Ingresar_PassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ingresar_PassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Ingresar_PassActionPerformed
@@ -318,6 +380,26 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Boton_IngresarMouseClicked
 
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        Ingresar_Pass.setEchoChar((char)0);
+        jLabel9.show();
+        jLabel9.setEnabled(true);
+        jLabel8.hide();
+        jLabel8.setEnabled(false);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        Ingresar_Pass.setEchoChar('*');
+        jLabel8.show();
+        jLabel8.setEnabled(true);
+        jLabel9.hide();
+        jLabel9.setEnabled(false);
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void Ingresar_UsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ingresar_UsuarioFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Ingresar_UsuarioFocusGained
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Ass;
     private javax.swing.JLabel Boton_Ingresar;
@@ -331,6 +413,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

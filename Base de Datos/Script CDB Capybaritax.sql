@@ -449,3 +449,5 @@ INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Talento Humano');
 INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Compras');
 INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Presidencia');
 INSERT INTO `proyecto`.`responsable` (`PERSONA_ID`, `EMPRESA`, `CARGO`, `AREA`) VALUES ('1000808483','1', '1', '5');
+
+
