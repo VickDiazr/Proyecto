@@ -4,7 +4,7 @@
 create table CARGO 
 (
    ID                   int                            not null AUTO_INCREMENT,
-   NOMBRE               varchar(100)                   not null,
+   NOMBRE               varchar(100)                   not null UNIQUE,
    constraint PK_CARGO primary key clustered (ID)
 );
 
@@ -14,7 +14,7 @@ create table CARGO
 create table AREA 
 (
    ID                   int                            not null AUTO_INCREMENT,
-   NOMBRE               varchar(100)                   not null,
+   NOMBRE               varchar(100)                   not null UNIQUE,
    constraint PK_AREA primary key clustered (ID)
 );
 
