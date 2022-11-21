@@ -237,7 +237,7 @@ public class RegistroUser extends javax.swing.JFrame {
     private void Boton_UsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_UsuarioMouseClicked
         
         RegistroEstudiantes p1 = new RegistroEstudiantes();
-        p1.setSize(970,490);
+        p1.setSize(940,490);
         p1.setLocation(0,0);
         
         Panel_Contenido.removeAll();
@@ -251,7 +251,7 @@ public class RegistroUser extends javax.swing.JFrame {
 
     private void Boton_DocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_DocenteMouseClicked
         RegistroDocente p2 = new RegistroDocente();
-        p2.setSize(970,490);
+        p2.setSize(940,490);
         p2.setLocation(0,0);
         
         Panel_Contenido.removeAll();
@@ -262,7 +262,7 @@ public class RegistroUser extends javax.swing.JFrame {
 
     private void Boton_EmpresaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_EmpresaMouseClicked
         RegistroEmpresas p3 = new RegistroEmpresas();
-        p3.setSize(970,490);
+        p3.setSize(940,490);
         p3.setLocation(0,0);
         
         Panel_Contenido.removeAll();

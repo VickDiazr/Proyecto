@@ -27,18 +27,10 @@ public class Docentes {
     public static String no_id = "";
     public static String lugar = "";
     public static String telefono = "";
-    public static String correo = "";
-    public static String sede = "";
-    public static String facultad = "";
-    public static String programa = "";
-    public static String avance = "";
-
-
-
-
-
-
-    
+    public static String extension = "";
+    public static String correo = "";    
+    public static String departamento = "";
+   
     public static String Register(String id, String tipo, String lugar, String nombre, String apellido, String correo,
             String telefono, String departamento){
         con = null;
@@ -78,6 +70,78 @@ public class Docentes {
                 }
             }
         }      
+        catch (ClassNotFoundException | SQLException e){
+            return e.getMessage();
+        }
+        return "Error";
+    }
+    
+    public static String GetInfo(){
+        con = null;
+        try{
+            Class.forName(driver);
+            con = (Connection) DriverManager.getConnection(Url, User, Password);
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlpersona = "select * from persona where id = (select Persona from usuario where Nombre = '" 
+                        + LoginForAll.usuario + "' and Contrasena ='" + LoginForAll.passwordu + "')";
+                ResultSet rspersona = stmt.executeQuery(sqlpersona);
+                rspersona.next();
+                Docentes.nombre = rspersona.getString(4);
+                Docentes.apellido = rspersona.getString(5);
+                Docentes.no_id = rspersona.getString(1);
+                Docentes.lugar = rspersona.getString(3);
+                Docentes.telefono = rspersona.getString(7);
+                Docentes.correo = rspersona.getString(6);
+                
+                /*Para la busqueda de Tipo"*/                
+                String tipo_idb = rspersona.getString(2);
+                String sqltipo = "select nombre from tipo_id where id = '" + tipo_idb + "'";
+                ResultSet rstipo = stmt.executeQuery(sqltipo);
+                rstipo.next();
+                Docentes.tipo_id = rstipo.getString(1);
+                
+                /*Para la busqueda de codigo de departamento*/
+                String sqlcoddep = "select departamento, extension from docente where persona_id = '" + Docentes.no_id + "'";
+                ResultSet rscoddep = stmt.executeQuery(sqlcoddep);
+                rscoddep.next();
+                
+                String coddep = rscoddep.getString(1);
+                Docentes.extension = rscoddep.getString(2);
+                
+                String sqldepar = "select nombre from departamento where id = '" + coddep + "'";
+                ResultSet rsdepar = stmt.executeQuery(sqldepar);
+                rsdepar.next();
+                Docentes.departamento = rsdepar.getString(1);
+            }
+        }
+        catch (ClassNotFoundException | SQLException e){
+            return e.getMessage();
+        }
+        return "Error";
+    }
+    
+    public static String CambiarDatos(String newpass, String usuario, String telefono, String extension){
+        con = null;
+        try{
+            Class.forName(driver);
+            con = (Connection) DriverManager.getConnection(Url, User, Password);
+            
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlchange = "update usuario set contrasena = '" + newpass + "' where nombre = '" + usuario + "'";
+                stmt.executeUpdate(sqlchange);
+                
+                Statement stmt2 = con.createStatement();
+                String sqlchange2 = "update persona set telefono = '" + telefono + "' where id = '" + no_id + "'";
+                stmt2.executeUpdate(sqlchange2);
+                
+                Statement stmt3 = con.createStatement();
+                String sqlchange3 = "update docente set extension = '" + extension + "' where persona_id = '" + no_id + "'";
+                stmt3.executeUpdate(sqlchange3);
+                return "Datos Actualizados";
+            }
+        }
         catch (ClassNotFoundException | SQLException e){
             return e.getMessage();
         }

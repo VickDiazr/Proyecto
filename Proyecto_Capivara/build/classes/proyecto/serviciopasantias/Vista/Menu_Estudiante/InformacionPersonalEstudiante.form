@@ -40,20 +40,20 @@
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="No. ID:"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="330" y="120" width="70" height="25"/>
+              <AbsoluteConstraints x="325" y="120" width="70" height="25"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nombres:"/>
           </Properties>
@@ -66,7 +66,7 @@
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Apellidos:"/>
           </Properties>
@@ -79,7 +79,7 @@
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Tipo ID:"/>
           </Properties>
@@ -92,7 +92,7 @@
         <Component class="javax.swing.JLabel" name="jLabel12">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Facultad:"/>
           </Properties>
@@ -105,7 +105,7 @@
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sede:"/>
           </Properties>
@@ -118,7 +118,7 @@
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Correo Institucional:"/>
           </Properties>
@@ -131,7 +131,7 @@
         <Component class="javax.swing.JTextField" name="CorreoEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -139,6 +139,9 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="Contrase&#xf1;aEntry"/>
+            </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -149,7 +152,7 @@
         <Component class="javax.swing.JTextField" name="ApellidoEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -157,6 +160,9 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="IDEntry"/>
+            </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -167,7 +173,7 @@
         <Component class="javax.swing.JTextField" name="IDEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -175,6 +181,9 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="IDEntry1"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IDEntryActionPerformed"/>
@@ -188,7 +197,7 @@
         <Component class="javax.swing.JLabel" name="jLabel20">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Tel&#xe9;fono:"/>
           </Properties>
@@ -201,7 +210,7 @@
         <Component class="javax.swing.JTextField" name="TelefonoEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -209,6 +218,9 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="SedeEntry"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TelefonoEntryActionPerformed"/>
@@ -222,7 +234,7 @@
         <Component class="javax.swing.JLabel" name="jLabel16">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Programa curricular:"/>
           </Properties>
@@ -235,7 +247,7 @@
         <Component class="javax.swing.JTextField" name="ProgramaEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -243,21 +255,23 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
-            <Property name="focusCycleRoot" type="boolean" value="true"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="AvanceEntry"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ProgramaEntryActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="760" y="170" width="350" height="25"/>
+              <AbsoluteConstraints x="770" y="170" width="340" height="25"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel22">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Porcentaje avance:"/>
           </Properties>
@@ -270,7 +284,7 @@
         <Component class="javax.swing.JTextField" name="AvanceEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -278,13 +292,16 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="LabelGuardar"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AvanceEntryActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="750" y="220" width="360" height="25"/>
+              <AbsoluteConstraints x="760" y="220" width="350" height="25"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -312,17 +329,20 @@
             <Property name="useNullLayout" type="boolean" value="true"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel19">
+            <Component class="javax.swing.JLabel" name="LabelEditar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Arial" size="24" style="0"/>
+                  <Font name="Tw Cen MT" size="24" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Editar"/>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="NombreEntry"/>
+                </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel19MouseClicked"/>
-                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jLabel19KeyPressed"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="LabelEditarMouseClicked"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="LabelEditarKeyPressed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -335,7 +355,7 @@
         <Component class="javax.swing.JLabel" name="jLabel17">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Lugar de Expedici&#xf3;n:"/>
           </Properties>
@@ -348,7 +368,7 @@
         <Component class="javax.swing.JTextField" name="NombreEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -357,6 +377,9 @@
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
             <Property name="focusCycleRoot" type="boolean" value="true"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="ApellidoEntry"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NombreEntryActionPerformed"/>
@@ -370,7 +393,7 @@
         <Component class="javax.swing.JTextField" name="LugarEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -378,7 +401,9 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
-            <Property name="focusCycleRoot" type="boolean" value="true"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="CorreoEntry"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LugarEntryActionPerformed"/>
@@ -392,7 +417,7 @@
         <Component class="javax.swing.JTextField" name="FacultadEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -400,7 +425,9 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
-            <Property name="focusCycleRoot" type="boolean" value="true"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="ProgramaEntry"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FacultadEntryActionPerformed"/>
@@ -414,7 +441,7 @@
         <Component class="javax.swing.JTextField" name="SedeEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -422,7 +449,9 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
-            <Property name="focusCycleRoot" type="boolean" value="true"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="FacultadEntry"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SedeEntryActionPerformed"/>
@@ -457,18 +486,21 @@
             <Property name="useNullLayout" type="boolean" value="true"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel21">
+            <Component class="javax.swing.JLabel" name="LabelGuardar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Arial" size="24" style="0"/>
+                  <Font name="Tw Cen MT" size="24" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Guardar"/>
                 <Property name="enabled" type="boolean" value="false"/>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="LabelEditar"/>
+                </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel21MouseClicked"/>
-                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jLabel21KeyPressed"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="LabelGuardarMouseClicked"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="LabelGuardarKeyPressed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -481,7 +513,7 @@
         <Component class="javax.swing.JTextField" name="IDEntry1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -489,6 +521,9 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="LugarEntry"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IDEntry1ActionPerformed"/>
@@ -523,7 +558,7 @@
         <Component class="javax.swing.JLabel" name="jLabel15">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Contrase&#xf1;a:"/>
           </Properties>
@@ -566,7 +601,7 @@
         <Component class="javax.swing.JPasswordField" name="Contrase&#xf1;aEntry">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="16" style="0"/>
+              <Font name="Tw Cen MT" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jPasswordField1"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -575,6 +610,9 @@
               </Border>
             </Property>
             <Property name="enabled" type="boolean" value="false"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="TelefonoEntry"/>
+            </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

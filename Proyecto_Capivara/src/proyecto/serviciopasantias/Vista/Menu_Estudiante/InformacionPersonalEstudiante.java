@@ -5,6 +5,7 @@
 package proyecto.serviciopasantias.Vista.Menu_Estudiante;
 
 import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 import proyecto.serviciopasantias.Modelo.Estudiantes;
 import proyecto.serviciopasantias.Modelo.LoginForAll;
 
@@ -62,14 +63,14 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jLabel22 = new javax.swing.JLabel();
         AvanceEntry = new javax.swing.JTextField();
         Boton_Editar = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
+        LabelEditar = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         NombreEntry = new javax.swing.JTextField();
         LugarEntry = new javax.swing.JTextField();
         FacultadEntry = new javax.swing.JTextField();
         SedeEntry = new javax.swing.JTextField();
         Boton_Guardar = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
+        LabelGuardar = new javax.swing.JLabel();
         IDEntry1 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel15 = new javax.swing.JLabel();
@@ -81,56 +82,59 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
 
         jPanel1.setLayout(null);
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel7.setText("No. ID:");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(330, 120, 70, 25);
+        jLabel7.setBounds(325, 120, 70, 25);
 
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel8.setText("Nombres:");
         jPanel1.add(jLabel8);
         jLabel8.setBounds(30, 20, 160, 25);
 
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel9.setText("Apellidos:");
         jPanel1.add(jLabel9);
         jLabel9.setBounds(30, 70, 80, 25);
 
-        jLabel10.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel10.setText("Tipo ID:");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(30, 120, 60, 25);
 
-        jLabel12.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel12.setText("Facultad:");
         jPanel1.add(jLabel12);
         jLabel12.setBounds(610, 120, 70, 25);
 
-        jLabel13.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel13.setText("Sede:");
         jPanel1.add(jLabel13);
         jLabel13.setBounds(610, 70, 50, 25);
 
-        jLabel14.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel14.setText("Correo Institucional:");
         jPanel1.add(jLabel14);
         jLabel14.setBounds(30, 220, 150, 25);
 
-        CorreoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        CorreoEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         CorreoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         CorreoEntry.setEnabled(false);
+        CorreoEntry.setNextFocusableComponent(ContraseñaEntry);
         jPanel1.add(CorreoEntry);
         CorreoEntry.setBounds(180, 220, 350, 25);
 
-        ApellidoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ApellidoEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         ApellidoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ApellidoEntry.setEnabled(false);
+        ApellidoEntry.setNextFocusableComponent(IDEntry);
         jPanel1.add(ApellidoEntry);
         ApellidoEntry.setBounds(130, 70, 400, 25);
 
-        IDEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        IDEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         IDEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         IDEntry.setEnabled(false);
+        IDEntry.setNextFocusableComponent(IDEntry1);
         IDEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IDEntryActionPerformed(evt);
@@ -139,14 +143,15 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(IDEntry);
         IDEntry.setBounds(130, 120, 190, 25);
 
-        jLabel20.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel20.setText("Teléfono:");
         jPanel1.add(jLabel20);
         jLabel20.setBounds(610, 20, 70, 25);
 
-        TelefonoEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        TelefonoEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         TelefonoEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         TelefonoEntry.setEnabled(false);
+        TelefonoEntry.setNextFocusableComponent(SedeEntry);
         TelefonoEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TelefonoEntryActionPerformed(evt);
@@ -155,72 +160,75 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(TelefonoEntry);
         TelefonoEntry.setBounds(710, 20, 400, 25);
 
-        jLabel16.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel16.setText("Programa curricular:");
         jPanel1.add(jLabel16);
         jLabel16.setBounds(610, 170, 150, 25);
 
-        ProgramaEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ProgramaEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         ProgramaEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ProgramaEntry.setEnabled(false);
-        ProgramaEntry.setFocusCycleRoot(true);
+        ProgramaEntry.setNextFocusableComponent(AvanceEntry);
         ProgramaEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProgramaEntryActionPerformed(evt);
             }
         });
         jPanel1.add(ProgramaEntry);
-        ProgramaEntry.setBounds(760, 170, 350, 25);
+        ProgramaEntry.setBounds(770, 170, 340, 25);
 
-        jLabel22.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel22.setText("Porcentaje avance:");
         jPanel1.add(jLabel22);
         jLabel22.setBounds(610, 220, 140, 25);
 
-        AvanceEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        AvanceEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         AvanceEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         AvanceEntry.setEnabled(false);
+        AvanceEntry.setNextFocusableComponent(LabelGuardar);
         AvanceEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AvanceEntryActionPerformed(evt);
             }
         });
         jPanel1.add(AvanceEntry);
-        AvanceEntry.setBounds(750, 220, 360, 25);
+        AvanceEntry.setBounds(760, 220, 350, 25);
 
         Boton_Editar.setBackground(new java.awt.Color(148, 180, 59));
         Boton_Editar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         Boton_Editar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Boton_Editar.setLayout(null);
 
-        jLabel19.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Editar");
-        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+        LabelEditar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        LabelEditar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelEditar.setText("Editar");
+        LabelEditar.setNextFocusableComponent(NombreEntry);
+        LabelEditar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel19MouseClicked(evt);
+                LabelEditarMouseClicked(evt);
             }
         });
-        jLabel19.addKeyListener(new java.awt.event.KeyAdapter() {
+        LabelEditar.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jLabel19KeyPressed(evt);
+                LabelEditarKeyPressed(evt);
             }
         });
-        Boton_Editar.add(jLabel19);
-        jLabel19.setBounds(0, 0, 280, 60);
+        Boton_Editar.add(LabelEditar);
+        LabelEditar.setBounds(0, 0, 280, 60);
 
         jPanel1.add(Boton_Editar);
         Boton_Editar.setBounds(595, 340, 280, 60);
 
-        jLabel17.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel17.setText("Lugar de Expedición:");
         jPanel1.add(jLabel17);
         jLabel17.setBounds(30, 170, 170, 25);
 
-        NombreEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        NombreEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         NombreEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         NombreEntry.setEnabled(false);
         NombreEntry.setFocusCycleRoot(true);
+        NombreEntry.setNextFocusableComponent(ApellidoEntry);
         NombreEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NombreEntryActionPerformed(evt);
@@ -229,10 +237,10 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(NombreEntry);
         NombreEntry.setBounds(130, 20, 400, 25);
 
-        LugarEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        LugarEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         LugarEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         LugarEntry.setEnabled(false);
-        LugarEntry.setFocusCycleRoot(true);
+        LugarEntry.setNextFocusableComponent(CorreoEntry);
         LugarEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LugarEntryActionPerformed(evt);
@@ -241,10 +249,10 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(LugarEntry);
         LugarEntry.setBounds(190, 170, 340, 25);
 
-        FacultadEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        FacultadEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         FacultadEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         FacultadEntry.setEnabled(false);
-        FacultadEntry.setFocusCycleRoot(true);
+        FacultadEntry.setNextFocusableComponent(ProgramaEntry);
         FacultadEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FacultadEntryActionPerformed(evt);
@@ -253,10 +261,10 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(FacultadEntry);
         FacultadEntry.setBounds(710, 120, 400, 25);
 
-        SedeEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        SedeEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         SedeEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         SedeEntry.setEnabled(false);
-        SedeEntry.setFocusCycleRoot(true);
+        SedeEntry.setNextFocusableComponent(FacultadEntry);
         SedeEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SedeEntryActionPerformed(evt);
@@ -270,29 +278,31 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         Boton_Guardar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Boton_Guardar.setLayout(null);
 
-        jLabel21.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("Guardar");
-        jLabel21.setEnabled(false);
-        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+        LabelGuardar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        LabelGuardar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelGuardar.setText("Guardar");
+        LabelGuardar.setEnabled(false);
+        LabelGuardar.setNextFocusableComponent(LabelEditar);
+        LabelGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel21MouseClicked(evt);
+                LabelGuardarMouseClicked(evt);
             }
         });
-        jLabel21.addKeyListener(new java.awt.event.KeyAdapter() {
+        LabelGuardar.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jLabel21KeyPressed(evt);
+                LabelGuardarKeyPressed(evt);
             }
         });
-        Boton_Guardar.add(jLabel21);
-        jLabel21.setBounds(0, 0, 280, 60);
+        Boton_Guardar.add(LabelGuardar);
+        LabelGuardar.setBounds(0, 0, 280, 60);
 
         jPanel1.add(Boton_Guardar);
         Boton_Guardar.setBounds(275, 340, 280, 60);
 
-        IDEntry1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        IDEntry1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         IDEntry1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         IDEntry1.setEnabled(false);
+        IDEntry1.setNextFocusableComponent(LugarEntry);
         IDEntry1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IDEntry1ActionPerformed(evt);
@@ -308,7 +318,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(jSeparator1);
         jSeparator1.setBounds(573, 0, 2, 300);
 
-        jLabel15.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel15.setText("Contraseña:");
         jPanel1.add(jLabel15);
         jLabel15.setBounds(30, 270, 150, 25);
@@ -331,10 +341,11 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         jPanel1.add(Contraseña2);
         Contraseña2.setBounds(500, 273, 20, 20);
 
-        ContraseñaEntry.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        ContraseñaEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         ContraseñaEntry.setText("jPasswordField1");
         ContraseñaEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ContraseñaEntry.setEnabled(false);
+        ContraseñaEntry.setNextFocusableComponent(TelefonoEntry);
         jPanel1.add(ContraseñaEntry);
         ContraseñaEntry.setBounds(130, 270, 400, 25);
 
@@ -366,18 +377,33 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_AvanceEntryActionPerformed
 
-    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-        jLabel19.setEnabled(false);
-        jLabel21.setEnabled(true);
-        ContraseñaEntry.setEnabled(true);
-        
-    }//GEN-LAST:event_jLabel19MouseClicked
-
-    private void jLabel19KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel19KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
-            
+    private void LabelEditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelEditarMouseClicked
+        String pass = JOptionPane.showInputDialog("Ingrese su contraseña para hacer cambios");
+        if (pass.equals(LoginForAll.passwordu)){
+            LabelEditar.setEnabled(false);
+            LabelGuardar.setEnabled(true);
+            ContraseñaEntry.setEnabled(true);
+            TelefonoEntry.setEnabled(true);
         }
-    }//GEN-LAST:event_jLabel19KeyPressed
+        else{
+            JOptionPane.showMessageDialog(null, "Contraseña Incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_LabelEditarMouseClicked
+
+    private void LabelEditarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LabelEditarKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            String pass = JOptionPane.showInputDialog("Ingrese su contraseña para hacer cambios");
+            if (pass.equals(LoginForAll.passwordu)){
+                LabelEditar.setEnabled(false);
+                LabelGuardar.setEnabled(true);
+                ContraseñaEntry.setEnabled(true);
+                TelefonoEntry.setEnabled(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Contraseña Incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+            }           
+        }
+    }//GEN-LAST:event_LabelEditarKeyPressed
 
     private void NombreEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEntryActionPerformed
         // TODO add your handling code here:
@@ -395,13 +421,41 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_SedeEntryActionPerformed
 
-    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel21MouseClicked
+    private void LabelGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelGuardarMouseClicked
+        String resultado = Estudiantes.CambiarDatos(ContraseñaEntry.getText(), LoginForAll.usuario, TelefonoEntry.getText());
+        if (resultado.equals("Datos Actualizados")){
+            JOptionPane.showMessageDialog(this, "Los datos han sido actualizados con éxito", "Cambio Exitoso", JOptionPane.INFORMATION_MESSAGE);
+            LabelEditar.setEnabled(true);
+            LabelGuardar.setEnabled(false);
+            ContraseñaEntry.setEnabled(false);
+            TelefonoEntry.setEnabled(false);
+        }
+        else if (resultado.equals("Error")){
+            JOptionPane.showMessageDialog(this, "Ha habido un error en el cambio de credenciales", "Error", JOptionPane.ERROR_MESSAGE);   
+        }
+        else{             
+            JOptionPane.showMessageDialog(this, resultado , "Ingreso Fallido", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_LabelGuardarMouseClicked
 
-    private void jLabel21KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel21KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel21KeyPressed
+    private void LabelGuardarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LabelGuardarKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            String resultado = Estudiantes.CambiarDatos(ContraseñaEntry.getText(), LoginForAll.usuario, TelefonoEntry.getText());
+            if (resultado.equals("Datos Actualizados")){
+               JOptionPane.showMessageDialog(this, "Los datos han sido actualizados con éxito", "Cambio Exitoso", JOptionPane.INFORMATION_MESSAGE);
+               LabelEditar.setEnabled(true);
+               LabelGuardar.setEnabled(false);
+               ContraseñaEntry.setEnabled(false);
+               TelefonoEntry.setEnabled(false);
+            }
+            else if (resultado.equals("Error")){
+                JOptionPane.showMessageDialog(this, "Ha habido un error en el cambio de credenciales", "Error", JOptionPane.ERROR_MESSAGE);   
+            }
+            else{             
+                JOptionPane.showMessageDialog(this, resultado , "Ingreso Fallido", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_LabelGuardarKeyPressed
 
     private void IDEntry1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDEntry1ActionPerformed
         // TODO add your handling code here:
@@ -440,6 +494,8 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
     private javax.swing.JTextField FacultadEntry;
     private javax.swing.JTextField IDEntry;
     private javax.swing.JTextField IDEntry1;
+    private javax.swing.JLabel LabelEditar;
+    private javax.swing.JLabel LabelGuardar;
     private javax.swing.JTextField LugarEntry;
     private javax.swing.JTextField NombreEntry;
     private javax.swing.JTextField ProgramaEntry;
@@ -452,9 +508,7 @@ public class InformacionPersonalEstudiante extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

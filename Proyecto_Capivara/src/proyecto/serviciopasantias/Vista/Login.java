@@ -4,6 +4,7 @@
  */
 package proyecto.serviciopasantias.Vista;
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import proyecto.serviciopasantias.Modelo.LoginForAll;
@@ -156,6 +157,8 @@ public class Login extends javax.swing.JFrame {
 
         Ingresar_Pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Ingresar_Pass.setText("************");
+        Ingresar_Pass.setToolTipText("Contraseña");
+        Ingresar_Pass.setNextFocusableComponent(Boton_Ingresar);
         Ingresar_Pass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 Ingresar_PassMousePressed(evt);
@@ -195,9 +198,15 @@ public class Login extends javax.swing.JFrame {
         Boton_Ingresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Boton_Ingresar.setText("Ingresar");
         Boton_Ingresar.setToolTipText("");
+        Boton_Ingresar.setNextFocusableComponent(Boton_Registrar);
         Boton_Ingresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Boton_IngresarMouseClicked(evt);
+            }
+        });
+        Boton_Ingresar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                Boton_IngresarKeyPressed(evt);
             }
         });
         Ass.add(Boton_Ingresar);
@@ -341,6 +350,30 @@ public class Login extends javax.swing.JFrame {
     }
     
     private void Boton_IngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_IngresarMouseClicked
+        Ingresar();
+    }//GEN-LAST:event_Boton_IngresarMouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        Ingresar_Pass.setEchoChar((char)0);
+        jLabel9.show();
+        jLabel9.setEnabled(true);
+        jLabel8.hide();
+        jLabel8.setEnabled(false);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        Ingresar_Pass.setEchoChar('*');
+        jLabel8.show();
+        jLabel8.setEnabled(true);
+        jLabel9.hide();
+        jLabel9.setEnabled(false);
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void Ingresar_UsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ingresar_UsuarioFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Ingresar_UsuarioFocusGained
+
+    public void Ingresar(){
         Login frame = new Login();
         if ("Ingrese Usuario".equals(Ingresar_Usuario.getText()) && "************".equals(Ingresar_Pass.getText())){
             JOptionPane.showMessageDialog(frame, "Las casillas de usuario y contraseña se encuentran vacías.", "Campos Vacíos", JOptionPane.ERROR_MESSAGE);   
@@ -378,27 +411,12 @@ public class Login extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(frame, resultado, "Ingreso Fallido", JOptionPane.ERROR_MESSAGE);
             }
         }
-    }//GEN-LAST:event_Boton_IngresarMouseClicked
-
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        Ingresar_Pass.setEchoChar((char)0);
-        jLabel9.show();
-        jLabel9.setEnabled(true);
-        jLabel8.hide();
-        jLabel8.setEnabled(false);
-    }//GEN-LAST:event_jLabel8MouseClicked
-
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        Ingresar_Pass.setEchoChar('*');
-        jLabel8.show();
-        jLabel8.setEnabled(true);
-        jLabel9.hide();
-        jLabel9.setEnabled(false);
-    }//GEN-LAST:event_jLabel9MouseClicked
-
-    private void Ingresar_UsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ingresar_UsuarioFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Ingresar_UsuarioFocusGained
+    }
+    private void Boton_IngresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Boton_IngresarKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            Ingresar();
+        }
+    }//GEN-LAST:event_Boton_IngresarKeyPressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Ass;

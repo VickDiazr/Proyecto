@@ -32,53 +32,6 @@ public class Estudiantes {
     public static String programa = "";
     public static String avance = "";
     
-    public static String Register(String id, String tipo, String lugar, String nombre, String apellido, String correo,
-            String telefono, String programa, String avance){
-        con = null;
-        try{
-            Class.forName(driver);            
-            con = (Connection) DriverManager.getConnection(Url, User, Password);
-            
-            if (con != null){
-                Statement stmt = con.createStatement();
-                String sqlverifyid = "select * from persona where ID = '" + id + "'";
-                ResultSet rsid = stmt.executeQuery(sqlverifyid);
-                
-                if (!rsid.isBeforeFirst()){                
-                    String sqlverifytipo = "select ID from tipo_id where Nombre = '" + tipo + "'";
-                    ResultSet rstipo = stmt.executeQuery(sqlverifytipo);
-                    rstipo.next();
-                    String tipoid = rstipo.getString(1);
-                    
-                    String sqlpersona = "insert into persona(ID, TIPO_ID, LUGAR_EXP_ID, NOMBRE, APELLIDO, CORREO, TELEFONO, FIRMA)"
-                        + " values('" + id + "', '" + tipoid + "', '" + lugar + "', '" + nombre + "', '" + apellido + "', '" + correo
-                        + "', '" + telefono + "', '1')";
-                    stmt.executeUpdate(sqlpersona);
-                    
-                    String sqlverifypro = "select ID from programa where Nombre = '" + programa + "'";
-                    ResultSet rspro = stmt.executeQuery(sqlverifypro);
-                    rspro.next();
-                    String programaid = rspro.getString(1);
-                    
-                    String sqlestudiante = "insert into estudiante(PERSONA_ID, PROGRAMA_ID, AVANCE, ESTADO)"
-                        + " values('" + id + "', '" + programaid + "', '" + avance + "', '1')";
-                    stmt.executeUpdate(sqlestudiante);
-                    con.close();
-                    
-                    return "Registro Exitoso";
-                }
-                else{
-                    return "Ya Registrado";
-                    
-                }
-            }
-        }      
-        catch (ClassNotFoundException | SQLException e){
-            return e.getMessage();
-        }
-        return "Error";
-    }
-    
     public static String GetInfo(){
         con = null;
         try{
@@ -131,6 +84,76 @@ public class Estudiantes {
                 ResultSet rssede = stmt.executeQuery(sqlsede);
                 rssede.next();                
                 Estudiantes.sede = rssede.getString(1);
+            }
+        }
+        catch (ClassNotFoundException | SQLException e){
+            return e.getMessage();
+        }
+        return "Error";
+    }
+    
+    public static String Register(String id, String tipo, String lugar, String nombre, String apellido, String correo,
+            String telefono, String programa, String avance){
+        con = null;
+        try{
+            Class.forName(driver);            
+            con = (Connection) DriverManager.getConnection(Url, User, Password);
+            
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlverifyid = "select * from persona where ID = '" + id + "'";
+                ResultSet rsid = stmt.executeQuery(sqlverifyid);
+                
+                if (!rsid.isBeforeFirst()){                
+                    String sqlverifytipo = "select ID from tipo_id where Nombre = '" + tipo + "'";
+                    ResultSet rstipo = stmt.executeQuery(sqlverifytipo);
+                    rstipo.next();
+                    String tipoid = rstipo.getString(1);
+                    
+                    String sqlpersona = "insert into persona(ID, TIPO_ID, LUGAR_EXP_ID, NOMBRE, APELLIDO, CORREO, TELEFONO, FIRMA)"
+                        + " values('" + id + "', '" + tipoid + "', '" + lugar + "', '" + nombre + "', '" + apellido + "', '" + correo
+                        + "', '" + telefono + "', '1')";
+                    stmt.executeUpdate(sqlpersona);
+                    
+                    String sqlverifypro = "select ID from programa where Nombre = '" + programa + "'";
+                    ResultSet rspro = stmt.executeQuery(sqlverifypro);
+                    rspro.next();
+                    String programaid = rspro.getString(1);
+                    
+                    String sqlestudiante = "insert into estudiante(PERSONA_ID, PROGRAMA_ID, AVANCE, ESTADO)"
+                        + " values('" + id + "', '" + programaid + "', '" + avance + "', '1')";
+                    stmt.executeUpdate(sqlestudiante);
+                    con.close();
+                    
+                    return "Registro Exitoso";
+                }
+                else{
+                    return "Ya Registrado";
+                    
+                }
+            }
+        }      
+        catch (ClassNotFoundException | SQLException e){
+            return e.getMessage();
+        }
+        return "Error";
+    }
+    
+    public static String CambiarDatos(String newpass, String usuario, String telefono){
+        con = null;
+        try{
+            Class.forName(driver);
+            con = (Connection) DriverManager.getConnection(Url, User, Password);
+            
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlchange = "update usuario set contrasena = '" + newpass + "' where nombre = '" + usuario + "'";
+                stmt.executeUpdate(sqlchange);
+                
+                Statement stmt2 = con.createStatement();
+                String sqlchange2 = "update persona set telefono = '" + telefono + "' where id = '" + no_id + "'";
+                stmt2.executeUpdate(sqlchange2);
+                return "Datos Actualizados";
             }
         }
         catch (ClassNotFoundException | SQLException e){
