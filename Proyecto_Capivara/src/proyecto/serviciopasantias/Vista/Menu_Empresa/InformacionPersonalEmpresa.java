@@ -4,7 +4,10 @@
  */
 package proyecto.serviciopasantias.Vista.Menu_Empresa;
 
-import proyecto.serviciopasantias.Vista.Menu_Estudiante.*;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+import proyecto.serviciopasantias.Modelo.Empresas;
+import proyecto.serviciopasantias.Modelo.LoginForAll;
 
 /**
  *
@@ -17,6 +20,22 @@ public class InformacionPersonalEmpresa extends javax.swing.JPanel {
      */
     public InformacionPersonalEmpresa() {
         initComponents();
+        Contraseña2.hide();
+        NombreEmpEntry.setText(Empresas.nombreemp);
+        NITEntry.setText(Empresas.nit);
+        CorreoEmpEntry.setText(Empresas.correoemp);
+        TelefonoEmpEntry.setText(Empresas.telefonoemp);
+        CiudadEmpEntry.setText(Empresas.ciudad);
+        NombreRepEntry.setText(Empresas.nombrerep);
+        ApellidoRepEntry.setText(Empresas.apellidorep);
+        IDEntry.setText(Empresas.tipo_id);
+        IDEntry1.setText(Empresas.no_id);
+        LugarEntry.setText(Empresas.lugar);
+        CorreoRepEntry.setText(Empresas.correorep);
+        TelefonoRepEntry.setText(Empresas.telefonorep);
+        CargoRepEntry.setText(Empresas.cargorep);
+        AreaRepEntry.setText(Empresas.arearep);
+        ContraseñaEntry.setText(LoginForAll.passwordu);
     }
 
     /**
@@ -29,84 +48,366 @@ public class InformacionPersonalEmpresa extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        TelefonoEmpEntry = new javax.swing.JTextField();
+        NITEntry = new javax.swing.JTextField();
+        IDEntry = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        CiudadEmpEntry = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        CorreoRepEntry = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        Boton_Editar = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
+        CargoRepEntry = new javax.swing.JTextField();
+        Boton_Editar = new javax.swing.JPanel();
+        LabelEditar = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        NombreEmpEntry = new javax.swing.JTextField();
+        CorreoEmpEntry = new javax.swing.JTextField();
+        LugarEntry = new javax.swing.JTextField();
+        NombreRepEntry = new javax.swing.JTextField();
+        Boton_Guardar = new javax.swing.JPanel();
+        LabelGuardar = new javax.swing.JLabel();
+        IDEntry1 = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel15 = new javax.swing.JLabel();
+        Contraseña1 = new javax.swing.JLabel();
+        Contraseña2 = new javax.swing.JLabel();
+        ContraseñaEntry = new javax.swing.JPasswordField();
+        jLabel24 = new javax.swing.JLabel();
+        ApellidoRepEntry = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        TelefonoRepEntry = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        AreaRepEntry = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(1150, 420));
 
         jPanel1.setLayout(null);
 
-        jLabel11.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel11.setText("Telefono:");
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(40, 120, 150, 30);
+        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel7.setText("No. ID:");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(905, 20, 70, 25);
 
-        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel13.setText("Correo eléctronico:");
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel8.setText("Nombre de la Empresa:");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(30, 20, 180, 25);
+
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel9.setText("NIT:");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(30, 70, 100, 25);
+
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel10.setText("Tipo ID:");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(610, 20, 60, 25);
+
+        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel12.setText("Lugar de Expedición:");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(610, 70, 160, 25);
+
+        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel13.setText("Nombre del Representante:");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(40, 170, 200, 30);
+        jLabel13.setBounds(30, 270, 210, 25);
 
-        jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel14.setText("Nombre de usuario:");
+        jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel14.setText("Teléfono de la Empresa:");
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(40, 70, 220, 30);
+        jLabel14.setBounds(30, 170, 180, 25);
 
-        jLabel15.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel15.setText("Sede:");
-        jPanel1.add(jLabel15);
-        jLabel15.setBounds(40, 220, 200, 30);
+        TelefonoEmpEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        TelefonoEmpEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        TelefonoEmpEntry.setEnabled(false);
+        TelefonoEmpEntry.setNextFocusableComponent(CiudadEmpEntry);
+        jPanel1.add(TelefonoEmpEntry);
+        TelefonoEmpEntry.setBounds(210, 170, 320, 25);
 
-        jLabel18.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel18.setText("Victor");
-        jPanel1.add(jLabel18);
-        jLabel18.setBounds(430, 20, 200, 30);
+        NITEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        NITEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NITEntry.setEnabled(false);
+        NITEntry.setNextFocusableComponent(CorreoEmpEntry);
+        jPanel1.add(NITEntry);
+        NITEntry.setBounds(130, 70, 400, 25);
 
-        jLabel19.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel19.setText("6012154448");
-        jPanel1.add(jLabel19);
-        jLabel19.setBounds(430, 120, 200, 30);
+        IDEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        IDEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        IDEntry.setEnabled(false);
+        IDEntry.setNextFocusableComponent(IDEntry1);
+        IDEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IDEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(IDEntry);
+        IDEntry.setBounds(710, 20, 190, 25);
 
-        jLabel21.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel21.setText("Vidiazr@unal.edu.co");
-        jPanel1.add(jLabel21);
-        jLabel21.setBounds(430, 170, 220, 30);
+        jLabel20.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel20.setText("Ciudad de la Empresa:");
+        jPanel1.add(jLabel20);
+        jLabel20.setBounds(30, 220, 170, 25);
 
-        jLabel22.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel22.setText("Vidiazr");
+        CiudadEmpEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        CiudadEmpEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        CiudadEmpEntry.setEnabled(false);
+        CiudadEmpEntry.setNextFocusableComponent(NombreRepEntry);
+        CiudadEmpEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CiudadEmpEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CiudadEmpEntry);
+        CiudadEmpEntry.setBounds(210, 220, 320, 25);
+
+        jLabel16.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel16.setText("Correo del Representante:");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(610, 120, 200, 25);
+
+        CorreoRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        CorreoRepEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        CorreoRepEntry.setEnabled(false);
+        CorreoRepEntry.setNextFocusableComponent(TelefonoRepEntry);
+        CorreoRepEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CorreoRepEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CorreoRepEntry);
+        CorreoRepEntry.setBounds(810, 120, 300, 25);
+
+        jLabel22.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel22.setText("Cargo del Representante:");
         jPanel1.add(jLabel22);
-        jLabel22.setBounds(430, 70, 200, 30);
+        jLabel22.setBounds(610, 220, 200, 25);
 
-        jLabel23.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel23.setText("Bogota");
-        jPanel1.add(jLabel23);
-        jLabel23.setBounds(430, 220, 200, 30);
+        CargoRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        CargoRepEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        CargoRepEntry.setEnabled(false);
+        CargoRepEntry.setNextFocusableComponent(AreaRepEntry);
+        CargoRepEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CargoRepEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CargoRepEntry);
+        CargoRepEntry.setBounds(805, 220, 305, 25);
 
-        jPanel2.setBackground(new java.awt.Color(148, 180, 59));
-        jPanel2.setLayout(null);
+        Boton_Editar.setBackground(new java.awt.Color(148, 180, 59));
+        Boton_Editar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        Boton_Editar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        Boton_Editar.setLayout(null);
 
-        Boton_Editar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        Boton_Editar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Boton_Editar.setText("Editar");
-        jPanel2.add(Boton_Editar);
-        Boton_Editar.setBounds(0, 0, 230, 60);
+        LabelEditar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        LabelEditar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelEditar.setText("Editar");
+        LabelEditar.setNextFocusableComponent(NombreEmpEntry);
+        LabelEditar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelEditarMouseClicked(evt);
+            }
+        });
+        LabelEditar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                LabelEditarKeyPressed(evt);
+            }
+        });
+        Boton_Editar.add(LabelEditar);
+        LabelEditar.setBounds(0, 0, 280, 60);
 
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(890, 290, 230, 60);
+        jPanel1.add(Boton_Editar);
+        Boton_Editar.setBounds(595, 380, 280, 60);
 
-        jLabel25.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel25.setText("Nombre:");
-        jPanel1.add(jLabel25);
-        jLabel25.setBounds(40, 20, 150, 30);
+        jLabel17.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel17.setText("Correo de la Empresa:");
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(30, 120, 170, 25);
+
+        NombreEmpEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        NombreEmpEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreEmpEntry.setEnabled(false);
+        NombreEmpEntry.setFocusCycleRoot(true);
+        NombreEmpEntry.setNextFocusableComponent(NITEntry);
+        NombreEmpEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreEmpEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NombreEmpEntry);
+        NombreEmpEntry.setBounds(210, 20, 320, 25);
+
+        CorreoEmpEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        CorreoEmpEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        CorreoEmpEntry.setEnabled(false);
+        CorreoEmpEntry.setNextFocusableComponent(TelefonoEmpEntry);
+        CorreoEmpEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CorreoEmpEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CorreoEmpEntry);
+        CorreoEmpEntry.setBounds(200, 120, 330, 25);
+
+        LugarEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        LugarEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        LugarEntry.setEnabled(false);
+        LugarEntry.setNextFocusableComponent(CorreoRepEntry);
+        LugarEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LugarEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(LugarEntry);
+        LugarEntry.setBounds(770, 70, 340, 25);
+
+        NombreRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        NombreRepEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreRepEntry.setEnabled(false);
+        NombreRepEntry.setNextFocusableComponent(ApellidoRepEntry);
+        NombreRepEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreRepEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NombreRepEntry);
+        NombreRepEntry.setBounds(240, 270, 290, 25);
+
+        Boton_Guardar.setBackground(new java.awt.Color(148, 180, 59));
+        Boton_Guardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        Boton_Guardar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        Boton_Guardar.setLayout(null);
+
+        LabelGuardar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        LabelGuardar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelGuardar.setText("Guardar");
+        LabelGuardar.setEnabled(false);
+        LabelGuardar.setName(""); // NOI18N
+        LabelGuardar.setNextFocusableComponent(LabelEditar);
+        LabelGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LabelGuardarMouseClicked(evt);
+            }
+        });
+        LabelGuardar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                LabelGuardarKeyPressed(evt);
+            }
+        });
+        Boton_Guardar.add(LabelGuardar);
+        LabelGuardar.setBounds(0, 0, 280, 60);
+
+        jPanel1.add(Boton_Guardar);
+        Boton_Guardar.setBounds(275, 380, 280, 60);
+
+        IDEntry1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        IDEntry1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        IDEntry1.setEnabled(false);
+        IDEntry1.setNextFocusableComponent(LugarEntry);
+        IDEntry1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IDEntry1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(IDEntry1);
+        IDEntry1.setBounds(960, 20, 150, 25);
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jSeparator1);
+        jSeparator1.setBounds(573, 0, 2, 350);
+
+        jLabel15.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel15.setText("Contraseña:");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(610, 320, 150, 25);
+
+        Contraseña1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/PasswordUn1.png"))); // NOI18N
+        Contraseña1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Contraseña1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(Contraseña1);
+        Contraseña1.setBounds(1080, 323, 20, 20);
+
+        Contraseña2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/eye1.png"))); // NOI18N
+        Contraseña2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Contraseña2MouseClicked(evt);
+            }
+        });
+        jPanel1.add(Contraseña2);
+        Contraseña2.setBounds(1080, 323, 20, 20);
+
+        ContraseñaEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        ContraseñaEntry.setText("jPasswordField1");
+        ContraseñaEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ContraseñaEntry.setEnabled(false);
+        ContraseñaEntry.setNextFocusableComponent(LabelGuardar);
+        jPanel1.add(ContraseñaEntry);
+        ContraseñaEntry.setBounds(710, 320, 400, 25);
+
+        jLabel24.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel24.setText("Apellidos del Representante:");
+        jPanel1.add(jLabel24);
+        jLabel24.setBounds(30, 320, 210, 25);
+
+        ApellidoRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        ApellidoRepEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ApellidoRepEntry.setEnabled(false);
+        ApellidoRepEntry.setNextFocusableComponent(IDEntry);
+        ApellidoRepEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ApellidoRepEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ApellidoRepEntry);
+        ApellidoRepEntry.setBounds(245, 320, 285, 25);
+
+        jLabel26.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel26.setText("Teléfono del Representante:");
+        jPanel1.add(jLabel26);
+        jLabel26.setBounds(610, 170, 210, 25);
+
+        TelefonoRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        TelefonoRepEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        TelefonoRepEntry.setEnabled(false);
+        TelefonoRepEntry.setNextFocusableComponent(CargoRepEntry);
+        TelefonoRepEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TelefonoRepEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TelefonoRepEntry);
+        TelefonoRepEntry.setBounds(820, 170, 290, 25);
+
+        jLabel27.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel27.setText("Área del Representante:");
+        jPanel1.add(jLabel27);
+        jLabel27.setBounds(610, 270, 200, 25);
+
+        AreaRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        AreaRepEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        AreaRepEntry.setEnabled(false);
+        AreaRepEntry.setNextFocusableComponent(ContraseñaEntry);
+        AreaRepEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AreaRepEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(AreaRepEntry);
+        AreaRepEntry.setBounds(795, 270, 315, 25);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -120,20 +421,191 @@ public class InformacionPersonalEmpresa extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void IDEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IDEntryActionPerformed
+
+    private void CiudadEmpEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CiudadEmpEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CiudadEmpEntryActionPerformed
+
+    private void CorreoRepEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CorreoRepEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CorreoRepEntryActionPerformed
+
+    private void CargoRepEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargoRepEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CargoRepEntryActionPerformed
+
+    private void LabelEditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelEditarMouseClicked
+        String pass = JOptionPane.showInputDialog("Ingrese su contraseña para hacer cambios");
+        if (pass.equals(LoginForAll.passwordu)){
+            LabelEditar.setEnabled(false);
+            LabelGuardar.setEnabled(true);
+            CorreoEmpEntry.setEnabled(true);
+            TelefonoEmpEntry.setEnabled(true);
+            CorreoRepEntry.setEnabled(true);
+            TelefonoRepEntry.setEnabled(true);
+            ContraseñaEntry.setEnabled(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Contraseña Incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_LabelEditarMouseClicked
+
+    private void LabelEditarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LabelEditarKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            String pass = JOptionPane.showInputDialog("Ingrese su contraseña para hacer cambios");
+            if (pass.equals(LoginForAll.passwordu)){
+                LabelEditar.setEnabled(false);
+                LabelGuardar.setEnabled(true);
+                CorreoEmpEntry.setEnabled(true);
+                TelefonoEmpEntry.setEnabled(true);
+                CorreoRepEntry.setEnabled(true);
+                TelefonoRepEntry.setEnabled(true);
+                ContraseñaEntry.setEnabled(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Contraseña Incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_LabelEditarKeyPressed
+
+    private void NombreEmpEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEmpEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreEmpEntryActionPerformed
+
+    private void CorreoEmpEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CorreoEmpEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CorreoEmpEntryActionPerformed
+
+    private void LugarEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LugarEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LugarEntryActionPerformed
+
+    private void NombreRepEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreRepEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreRepEntryActionPerformed
+
+    private void LabelGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelGuardarMouseClicked
+        String resultado = Empresas.CambiarDatos(ContraseñaEntry.getText(), LoginForAll.usuario, CorreoEmpEntry.getText(), TelefonoEmpEntry.getText(),
+                CorreoRepEntry.getText(), TelefonoRepEntry.getText());
+        if (resultado.equals("Datos Actualizados")){
+            JOptionPane.showMessageDialog(this, "Los datos han sido actualizados con éxito", "Cambio Exitoso", JOptionPane.INFORMATION_MESSAGE);
+            LabelEditar.setEnabled(true);
+            LabelGuardar.setEnabled(false);
+            CorreoEmpEntry.setEnabled(false);
+            TelefonoEmpEntry.setEnabled(false);
+            CorreoRepEntry.setEnabled(false);
+            TelefonoRepEntry.setEnabled(false);
+            ContraseñaEntry.setEnabled(false);
+        }
+        else if (resultado.equals("Error")){
+            JOptionPane.showMessageDialog(this, "Ha habido un error en el cambio de credenciales", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            JOptionPane.showMessageDialog(this, resultado , "Ingreso Fallido", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_LabelGuardarMouseClicked
+
+    private void LabelGuardarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LabelGuardarKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            String resultado = Empresas.CambiarDatos(ContraseñaEntry.getText(), LoginForAll.usuario, CorreoEmpEntry.getText(), TelefonoEmpEntry.getText(),
+                    CorreoRepEntry.getText(), TelefonoRepEntry.getText());
+            if (resultado.equals("Datos Actualizados")){
+                JOptionPane.showMessageDialog(this, "Los datos han sido actualizados con éxito", "Cambio Exitoso", JOptionPane.INFORMATION_MESSAGE);
+                LabelEditar.setEnabled(true);
+                LabelGuardar.setEnabled(false);
+                CorreoEmpEntry.setEnabled(false);
+                TelefonoEmpEntry.setEnabled(false);
+                CorreoRepEntry.setEnabled(false);
+                TelefonoRepEntry.setEnabled(false);
+                ContraseñaEntry.setEnabled(false);
+            }
+            else if (resultado.equals("Error")){
+                JOptionPane.showMessageDialog(this, "Ha habido un error en el cambio de credenciales", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, resultado , "Ingreso Fallido", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_LabelGuardarKeyPressed
+
+    private void IDEntry1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDEntry1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IDEntry1ActionPerformed
+
+    private void Contraseña1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Contraseña1MouseClicked
+        if (ContraseñaEntry.isEnabled() == true){
+            ContraseñaEntry.setEchoChar((char)0);
+            Contraseña2.show();
+            Contraseña2.setEnabled(true);
+            Contraseña1.hide();
+            Contraseña1.setEnabled(false);
+        }
+    }//GEN-LAST:event_Contraseña1MouseClicked
+
+    private void Contraseña2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Contraseña2MouseClicked
+        if (ContraseñaEntry.isEnabled() == true){
+            ContraseñaEntry.setEchoChar('*');
+            Contraseña1.show();
+            Contraseña1.setEnabled(true);
+            Contraseña2.hide();
+            Contraseña2.setEnabled(false);
+        }
+    }//GEN-LAST:event_Contraseña2MouseClicked
+
+    private void ApellidoRepEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoRepEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ApellidoRepEntryActionPerformed
+
+    private void TelefonoRepEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefonoRepEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TelefonoRepEntryActionPerformed
+
+    private void AreaRepEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AreaRepEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AreaRepEntryActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Boton_Editar;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JTextField ApellidoRepEntry;
+    private javax.swing.JTextField AreaRepEntry;
+    private javax.swing.JPanel Boton_Editar;
+    private javax.swing.JPanel Boton_Guardar;
+    private javax.swing.JTextField CargoRepEntry;
+    private javax.swing.JTextField CiudadEmpEntry;
+    private javax.swing.JLabel Contraseña1;
+    private javax.swing.JLabel Contraseña2;
+    private javax.swing.JPasswordField ContraseñaEntry;
+    private javax.swing.JTextField CorreoEmpEntry;
+    private javax.swing.JTextField CorreoRepEntry;
+    private javax.swing.JTextField IDEntry;
+    private javax.swing.JTextField IDEntry1;
+    private javax.swing.JLabel LabelEditar;
+    private javax.swing.JLabel LabelGuardar;
+    private javax.swing.JTextField LugarEntry;
+    private javax.swing.JTextField NITEntry;
+    private javax.swing.JTextField NombreEmpEntry;
+    private javax.swing.JTextField NombreRepEntry;
+    private javax.swing.JTextField TelefonoEmpEntry;
+    private javax.swing.JTextField TelefonoRepEntry;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

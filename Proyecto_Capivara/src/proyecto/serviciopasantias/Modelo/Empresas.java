@@ -21,6 +21,76 @@ public class Empresas {
     public static final String User = "root";
     public static final String Password = "";
     
+    public static String nombreemp = "";
+    public static String nit = "";
+    public static String correoemp = "";
+    public static String telefonoemp = "";
+    public static String ciudad = "";
+    public static String nombrerep = "";
+    public static String apellidorep = "";
+    public static String tipo_id = "";
+    public static String no_id = "";
+    public static String lugar = "";
+    public static String correorep = "";
+    public static String telefonorep = "";    
+    public static String cargorep = "";
+    public static String arearep = "";
+    
+    public static String GetInfo(){
+        con = null;
+        try{
+            Class.forName(driver);
+            con = (Connection) DriverManager.getConnection(Url, User, Password);
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlpersona = "select * from persona where id = (select Persona from usuario where Nombre = '" 
+                        + LoginForAll.usuario + "' and Contrasena ='" + LoginForAll.passwordu + "')";
+                ResultSet rspersona = stmt.executeQuery(sqlpersona);
+                rspersona.next();
+                Empresas.nombrerep = rspersona.getString(4);
+                Empresas.apellidorep = rspersona.getString(5);
+                Empresas.no_id = rspersona.getString(1);
+                Empresas.lugar = rspersona.getString(3);
+                Empresas.telefonorep = rspersona.getString(7);
+                Empresas.correorep = rspersona.getString(6);
+                
+                /*Para la busqueda de Tipo"*/                
+                String tipo_idb = rspersona.getString(2);
+                String sqltipo = "select nombre from tipo_id where id = '" + tipo_idb + "'";
+                ResultSet rstipo = stmt.executeQuery(sqltipo);
+                rstipo.next();
+                Empresas.tipo_id = rstipo.getString(1);
+                
+                /*Para la busqueda de empresa*/
+                String sqlempresa = "select * from empresa where id = (select empresa from responsable where persona_id = '" + Empresas.no_id + "')";
+                ResultSet rsempresa = stmt.executeQuery(sqlempresa);
+                rsempresa.next();
+                
+                Empresas.nombreemp = rsempresa.getString(3);
+                Empresas.nit = rsempresa.getString(2);
+                Empresas.correoemp = rsempresa.getString(4);
+                Empresas.telefonoemp = rsempresa.getString(5);
+                Empresas.ciudad = rsempresa.getString(6);
+                
+                /*Para la busqueda de cargo*/
+                String sqlcargo = "select nombre from cargo where id = (select cargo from responsable where persona_id = '" + Empresas.no_id + "')";
+                ResultSet rscargo = stmt.executeQuery(sqlcargo);
+                rscargo.next();
+                Empresas.cargorep = rscargo.getString(1);
+                
+                /*Para la busqueda de area*/
+                String sqlarea = "select nombre from area where id = (select area from responsable where persona_id = '" + Empresas.no_id + "')";
+                ResultSet rsarea = stmt.executeQuery(sqlarea);
+                rsarea.next();
+                Empresas.arearep = rsarea.getString(1);
+            }
+        }
+        catch (ClassNotFoundException | SQLException e){
+            return e.getMessage();
+        }
+        return "Error";
+    }
+    
     public static String Register(String nit, String nombreemp, String correoemp, String telefonoemp, String ciudad, String id, String tipo, String lugar,
             String nombrerep, String apellidorep, String correorep, String telefonorep, String cargo, String area){
         con = null;
@@ -164,6 +234,33 @@ public class Empresas {
                 }
             }
         }      
+        catch (ClassNotFoundException | SQLException e){
+            return e.getMessage();
+        }
+        return "Error";
+    }
+    
+    public static String CambiarDatos(String newpass, String usuario, String correoemp, String telefonoemp, String correorep, String telefonorep){
+        con = null;
+        try{
+            Class.forName(driver);
+            con = (Connection) DriverManager.getConnection(Url, User, Password);
+            
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlchange = "update usuario set contrasena = '" + newpass + "' where nombre = '" + usuario + "'";
+                stmt.executeUpdate(sqlchange);
+                
+                Statement stmt2 = con.createStatement();
+                String sqlchange2 = "update empresa set correo = '" + correoemp + "', telefono = '" + telefonoemp + "' where nit = '" + nit + "'";
+                stmt2.executeUpdate(sqlchange2);
+                
+                Statement stmt3 = con.createStatement();
+                String sqlchange3 = "update persona set correo = '" + correorep + "', telefono = '" + telefonorep + "' where id = '" + no_id + "'";
+                stmt3.executeUpdate(sqlchange3);
+                return "Datos Actualizados";
+            }
+        }
         catch (ClassNotFoundException | SQLException e){
             return e.getMessage();
         }

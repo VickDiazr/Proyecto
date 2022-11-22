@@ -426,7 +426,7 @@ INSERT INTO `proyecto`.`tipo_id` (`NOMBRE`) VALUES ('Tarjeta de identidad');
 INSERT INTO `proyecto`.`tipo_id` (`NOMBRE`) VALUES ('Cédula de extranjería');
 INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808481','1', 'Bogota', 'Sergio Nicolas', 'Siabatto Cleves', 'ssiabatto@unal.edu.co', '3053109089', '1');
 INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808482','1', 'Bogota', 'Victor Daniel', 'Díaz Reyes', 'vidiazr@unal.edu.co', '3053109090', '1');
-INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808483','1', 'Bogota', 'Ivan David', 'Molina Leguizamo', 'ivdmolinale@unal.edu.co', '3053109091', '1');
+INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808483','1', 'Bogota', 'Ivan David', 'Molina Leguizamo', 'ivdmolinale@empresa1.com', '3053109091', '1');
 INSERT INTO `proyecto`.`usuario` (`NOMBRE`, `CONTRASENA`, `PERSONA`) VALUES ('ssiabatto', '1234', '1000808481');
 INSERT INTO `proyecto`.`usuario` (`NOMBRE`, `CONTRASENA`, `PERSONA`) VALUES ('vidiazr', '1234', '1000808482');
 INSERT INTO `proyecto`.`usuario` (`NOMBRE`, `CONTRASENA`, `PERSONA`) VALUES ('ivdmolinale', '1234', '1000808483');

@@ -4,9 +4,8 @@
  */
 package proyecto.serviciopasantias.Vista.Menu_Empresa;
 
-import proyecto.serviciopasantias.Vista.Menu_Estudiante.*;
-import proyecto.serviciopasantias.Vista.Menu_Estudiante.MisPasantiasEstudiante;
 import java.awt.BorderLayout;
+import proyecto.serviciopasantias.Modelo.Empresas;
 import proyecto.serviciopasantias.Vista.Login;
 
 /**
@@ -20,6 +19,7 @@ public class MenuEmpresa extends javax.swing.JFrame {
      */
     public MenuEmpresa() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -55,8 +55,10 @@ public class MenuEmpresa extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1366, 768));
         setPreferredSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
+        setSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(148, 180, 59));
@@ -100,20 +102,9 @@ public class MenuEmpresa extends javax.swing.JFrame {
         jSeparator2.setBounds(0, 110, 1324, 14);
 
         Panel_Contenido.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout Panel_ContenidoLayout = new javax.swing.GroupLayout(Panel_Contenido);
-        Panel_Contenido.setLayout(Panel_ContenidoLayout);
-        Panel_ContenidoLayout.setHorizontalGroup(
-            Panel_ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1150, Short.MAX_VALUE)
-        );
-        Panel_ContenidoLayout.setVerticalGroup(
-            Panel_ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
-        );
-
+        Panel_Contenido.setLayout(null);
         jPanel3.add(Panel_Contenido);
-        Panel_Contenido.setBounds(10, 120, 1150, 420);
+        Panel_Contenido.setBounds(10, 120, 1150, 470);
 
         Boton_Usuario.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -199,7 +190,7 @@ public class MenuEmpresa extends javax.swing.JFrame {
         Boton_Usuario3.setBounds(780, 0, 390, 110);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(98, 164, 1170, 550);
+        jPanel3.setBounds(98, 144, 1170, 600);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1366, 768);
@@ -214,8 +205,9 @@ public class MenuEmpresa extends javax.swing.JFrame {
     }//GEN-LAST:event_Img_atrasMouseClicked
 
     private void Boton_UsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_UsuarioMouseClicked
+        Empresas.GetInfo();
         InformacionPersonalEmpresa p1 = new InformacionPersonalEmpresa();
-        p1.setSize(1150,420);
+        p1.setSize(1150,470);
         p1.setLocation(0,0);
         
         Panel_Contenido.removeAll();
@@ -228,7 +220,7 @@ public class MenuEmpresa extends javax.swing.JFrame {
 
     private void Boton_Usuario1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Usuario1MouseClicked
         PasantiasDisponiblesEmpresa p3 = new PasantiasDisponiblesEmpresa();
-        p3.setSize(1150,420);
+        p3.setSize(1150,470);
         p3.setLocation(0,0);
         
         Panel_Contenido.removeAll();
@@ -239,7 +231,7 @@ public class MenuEmpresa extends javax.swing.JFrame {
 
     private void Boton_Usuario3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Usuario3MouseClicked
         AgregarPasantiaEmpresa p2 = new AgregarPasantiaEmpresa();
-        p2.setSize(1150,420);
+        p2.setSize(1150,470);
         p2.setLocation(0,0);
         
         Panel_Contenido.removeAll();
