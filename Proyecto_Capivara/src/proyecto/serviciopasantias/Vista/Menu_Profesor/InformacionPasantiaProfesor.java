@@ -30,38 +30,26 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         Boton_Editar = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
         Img_atras = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        NombreEntry = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        NombreEntry1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        NombreEntry2 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        NombreEntry3 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        NombreEntry4 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        NombreEntry5 = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setPreferredSize(new java.awt.Dimension(1150, 420));
 
         jPanel1.setLayout(null);
-
-        jLabel11.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel11.setText("Calificación:");
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(40, 200, 130, 30);
-
-        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel12.setText("Descripción:");
-        jPanel1.add(jLabel12);
-        jLabel12.setBounds(40, 270, 120, 30);
 
         jPanel2.setBackground(new java.awt.Color(148, 180, 59));
         jPanel2.setLayout(null);
@@ -75,48 +63,6 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(990, 330, 140, 60);
 
-        jLabel25.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel25.setText("Empresa Encargada:");
-        jPanel1.add(jLabel25);
-        jLabel25.setBounds(40, 100, 220, 30);
-
-        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel4.setLayout(null);
-
-        jLabel22.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel22.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel22.setText("Vick Industries");
-        jPanel4.add(jLabel22);
-        jLabel22.setBounds(0, 0, 190, 30);
-
-        jPanel1.add(jPanel4);
-        jPanel4.setBounds(260, 200, 680, 30);
-
-        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel5.setLayout(null);
-
-        jLabel21.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel21.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("Un trabajo de mierda, mal pagado ");
-        jPanel5.add(jLabel21);
-        jLabel21.setBounds(0, 0, 680, 90);
-
-        jPanel1.add(jPanel5);
-        jPanel5.setBounds(260, 300, 680, 90);
-
-        jPanel6.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel6.setLayout(null);
-
-        jLabel23.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel23.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel23.setText("16 Semanas (18 de agosto de 2022 - 21 de diciembre de 2022)");
-        jPanel6.add(jLabel23);
-        jLabel23.setBounds(0, 0, 680, 30);
-
-        jPanel1.add(jPanel6);
-        jPanel6.setBounds(260, 150, 680, 30);
-
         Img_atras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Img_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Atras.png"))); // NOI18N
         Img_atras.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -127,39 +73,114 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
         jPanel1.add(Img_atras);
         Img_atras.setBounds(10, 10, 33, 33);
 
-        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel13.setText("Estudiante:");
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(40, 50, 140, 30);
+        NombreEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        NombreEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreEntry.setEnabled(false);
+        NombreEntry.setFocusCycleRoot(true);
+        NombreEntry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreEntryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NombreEntry);
+        NombreEntry.setBounds(150, 230, 770, 90);
 
-        jPanel8.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel8.setLayout(null);
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel8.setText("Calificación:");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(550, 150, 100, 25);
 
-        jLabel24.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel24.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel24.setText("Victor Daniel Diaz Reyes");
-        jPanel8.add(jLabel24);
-        jLabel24.setBounds(0, 0, 680, 30);
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel9.setText("Estudiante:");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(40, 50, 90, 25);
 
-        jPanel1.add(jPanel8);
-        jPanel8.setBounds(260, 50, 680, 30);
+        NombreEntry1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        NombreEntry1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreEntry1.setEnabled(false);
+        NombreEntry1.setFocusCycleRoot(true);
+        NombreEntry1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreEntry1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NombreEntry1);
+        NombreEntry1.setBounds(660, 150, 70, 25);
 
-        jPanel7.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel7.setLayout(null);
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel10.setText("Empresa:");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(40, 100, 90, 25);
 
-        jLabel27.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel27.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel27.setText("Vick Industries");
-        jPanel7.add(jLabel27);
-        jLabel27.setBounds(0, 0, 680, 30);
+        NombreEntry2.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        NombreEntry2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreEntry2.setEnabled(false);
+        NombreEntry2.setFocusCycleRoot(true);
+        NombreEntry2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreEntry2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NombreEntry2);
+        NombreEntry2.setBounds(150, 100, 250, 25);
 
-        jPanel1.add(jPanel7);
-        jPanel7.setBounds(260, 100, 680, 30);
+        jLabel15.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel15.setText("Pasantia:");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(40, 150, 90, 25);
 
-        jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel14.setText("Duración:");
-        jPanel1.add(jLabel14);
-        jLabel14.setBounds(40, 150, 100, 30);
+        NombreEntry3.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        NombreEntry3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreEntry3.setEnabled(false);
+        NombreEntry3.setFocusCycleRoot(true);
+        NombreEntry3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreEntry3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NombreEntry3);
+        NombreEntry3.setBounds(150, 150, 250, 25);
+
+        jLabel16.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel16.setText("Descrición:");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(40, 230, 90, 25);
+
+        NombreEntry4.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        NombreEntry4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreEntry4.setEnabled(false);
+        NombreEntry4.setFocusCycleRoot(true);
+        NombreEntry4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreEntry4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NombreEntry4);
+        NombreEntry4.setBounds(150, 50, 250, 25);
+
+        jLabel17.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel17.setText("Introducción:");
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(550, 50, 100, 25);
+
+        NombreEntry5.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        NombreEntry5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        NombreEntry5.setEnabled(false);
+        NombreEntry5.setFocusCycleRoot(true);
+        NombreEntry5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreEntry5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NombreEntry5);
+        NombreEntry5.setBounds(660, 50, 250, 80);
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jSeparator1);
+        jSeparator1.setBounds(500, 0, 3, 210);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -179,26 +200,48 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
         this.setVisible(false);
     }//GEN-LAST:event_Img_atrasMouseClicked
 
+    private void NombreEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEntryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreEntryActionPerformed
+
+    private void NombreEntry1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEntry1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreEntry1ActionPerformed
+
+    private void NombreEntry2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEntry2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreEntry2ActionPerformed
+
+    private void NombreEntry3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEntry3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreEntry3ActionPerformed
+
+    private void NombreEntry4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEntry4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreEntry4ActionPerformed
+
+    private void NombreEntry5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreEntry5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreEntry5ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Boton_Editar;
     private javax.swing.JLabel Img_atras;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel27;
+    private javax.swing.JTextField NombreEntry;
+    private javax.swing.JTextField NombreEntry1;
+    private javax.swing.JTextField NombreEntry2;
+    private javax.swing.JTextField NombreEntry3;
+    private javax.swing.JTextField NombreEntry4;
+    private javax.swing.JTextField NombreEntry5;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

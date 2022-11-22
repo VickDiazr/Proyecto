@@ -255,6 +255,7 @@ public class MenuEstudiante extends javax.swing.JFrame {
         Panel_Contenido.add(p2,BorderLayout.CENTER);
         Panel_Contenido.revalidate();
         Panel_Contenido.repaint();
+        
     }//GEN-LAST:event_Boton_Usuario3MouseClicked
 
     /**

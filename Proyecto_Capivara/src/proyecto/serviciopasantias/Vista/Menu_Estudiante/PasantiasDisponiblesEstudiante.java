@@ -4,19 +4,95 @@
  */
 package proyecto.serviciopasantias.Vista.Menu_Estudiante;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import proyecto.serviciopasantias.Modelo.Conexion;
+
 /**
  *
  * @author Windows
  */
-public class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
+public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
 
     /**
      * Creates new form InformacionPersonal
      */
     public PasantiasDisponiblesEstudiante() {
         initComponents();
+        mostrar();
+    }
+    
+    
+    
+    public void mostrar()
+    {
+        String []  nombresColumnas = {"Empresa","Descripción","Estado"};
+        String [] registros = new String[3];
+        
+        DefaultTableModel modelo = new DefaultTableModel(null,nombresColumnas);
+        visor.setModel(modelo);
+        
+        String sql = "SELECT * FROM usuario";
+        
+        Connection cn = null;
+        
+        PreparedStatement pst = null;
+        
+        ResultSet rs = null;
+        
+        try
+        {
+            cn = Conexion.conectar();
+            
+            pst = cn.prepareStatement(sql);                        
+            
+            rs = pst.executeQuery();
+            
+            while(rs.next())
+            {
+                registros[0] = rs.getString("NOMBRE");
+                
+                registros[1] = rs.getString("CONTRASENA");
+                
+                registros[2] = rs.getString("PERSONA");
+                
+                modelo.addRow(registros);
+                
+            }
+            
+           
+        }
+        catch(SQLException e)
+        {
+            
+            JOptionPane.showMessageDialog(null,"Error al conectar");
+            
+        }
+        finally
+        {
+            try
+            {
+                if (rs != null) rs.close();
+                
+                if (pst != null) pst.close();
+                
+                if (cn != null) cn.close();
+            }
+            catch(SQLException e)
+            {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        }
     }
 
+    
+    
+    
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,72 +103,28 @@ public class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jSeparator3 = new javax.swing.JSeparator();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        visor = new javax.swing.JTable();
 
         setPreferredSize(new java.awt.Dimension(1150, 420));
 
         jPanel1.setLayout(null);
 
-        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator1);
-        jSeparator1.setBounds(420, 0, 20, 50);
+        visor.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(visor);
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.setLayout(null);
-
-        jLabel25.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setText("Descripción");
-        jPanel2.add(jLabel25);
-        jLabel25.setBounds(0, 0, 580, 50);
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(420, 0, 580, 50);
-
-        jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.add(jSeparator2);
-        jSeparator2.setBounds(0, 50, 1150, 10);
-
-        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel3.setLayout(null);
-
-        jLabel27.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("Empresa");
-        jPanel3.add(jLabel27);
-        jLabel27.setBounds(0, 0, 420, 50);
-
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(0, 0, 420, 50);
-
-        jSeparator3.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator3);
-        jSeparator3.setBounds(1000, 0, 20, 50);
-
-        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel4.setLayout(null);
-
-        jLabel26.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
-        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("Estado");
-        jPanel4.add(jLabel26);
-        jLabel26.setBounds(0, 0, 150, 50);
-
-        jPanel1.add(jPanel4);
-        jPanel4.setBounds(1000, 0, 150, 50);
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(50, 30, 1050, 360);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -108,15 +140,8 @@ public class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable visor;
     // End of variables declaration//GEN-END:variables
 }
