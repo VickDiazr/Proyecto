@@ -72,9 +72,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Nombre de la empresa:"/>
               </Properties>
               <Constraints>
@@ -87,9 +84,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="NIT:"/>
               </Properties>
@@ -104,9 +98,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Correo de la empresa:"/>
               </Properties>
               <Constraints>
@@ -119,9 +110,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="No. ID del representante:"/>
               </Properties>
@@ -136,9 +124,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Departamento:"/>
               </Properties>
               <Constraints>
@@ -149,14 +134,8 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="IDEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot; &quot;, &quot;C.C.&quot;, &quot;T.I.&quot;, &quot;C.E.&quot;})" type="code"/>
@@ -176,9 +155,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="NITEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -199,9 +175,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="CorreoEmpEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -228,9 +201,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Tel&#xe9;fono de la empresa:"/>
               </Properties>
               <Constraints>
@@ -241,9 +211,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="TelefonoEmpEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -267,9 +234,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="NombreEmpEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -297,9 +261,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Cargo del representante:"/>
               </Properties>
               <Constraints>
@@ -310,9 +271,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="CargoEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -382,9 +340,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Tipo ID:"/>
               </Properties>
@@ -597,9 +552,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Nombre del representante:"/>
               </Properties>
               <Constraints>
@@ -610,9 +562,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="NombreRepEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -652,9 +601,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Apellidos del representante:"/>
               </Properties>
               <Constraints>
@@ -665,9 +611,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="ApellidoRepEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -704,9 +647,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="IDEntry1">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -733,9 +673,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Correo del representante:"/>
               </Properties>
               <Constraints>
@@ -749,9 +686,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Tel&#xe9;fono del representante:"/>
               </Properties>
               <Constraints>
@@ -762,9 +696,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="TelefonoRepEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -791,9 +722,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc1;rea del representante:"/>
               </Properties>
               <Constraints>
@@ -804,9 +732,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="AreaEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -849,9 +774,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Departamento:"/>
               </Properties>
               <Constraints>
@@ -862,14 +784,8 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="DepartamentoEmpEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot; &quot; , &quot;Amazonas&quot;, &quot;Antioquia&quot;, &quot;Arauca&quot;, &quot;Atl&#xe1;ntico&quot;, &quot;Bol&#xed;var&quot;, &quot;Boyac&#xe1;&quot;, &quot;Caldas&quot;, &quot;Caquet&#xe1;&quot;, &quot;Casanare&quot;, &quot;Cauca&quot;, &quot;Cesar&quot;, &quot;Choc&#xf3;&quot;, &quot;C&#xf3;rdoba&quot;, &quot;Cundinamarca&quot;, &quot;Distrito Capital&quot;, &quot;Guain&#xed;a&quot;, &quot;Guaviare&quot;, &quot;Huila&quot;, &quot;La Guajira&quot;, &quot;Magdalena&quot;, &quot;Meta&quot;, &quot;Nari&#xf1;o&quot;, &quot;Norte de Santander&quot;, &quot;Putumayo&quot;, &quot;Quind&#xed;o&quot;, &quot;Risaralda&quot;, &quot;San Andr&#xe9;s y Providencia&quot;, &quot;Santander&quot;, &quot;Sucre&quot;, &quot;Tolima&quot;, &quot;Valle del Cauca&quot;, &quot;Vaup&#xe9;s&quot;, &quot;Vichada&quot;})" type="code"/>
@@ -908,9 +824,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="CorreoRepEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
@@ -934,14 +847,8 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="LugarDepartamentoCombo">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot; &quot; , &quot;Amazonas&quot;, &quot;Antioquia&quot;, &quot;Arauca&quot;, &quot;Atl&#xe1;ntico&quot;, &quot;Bol&#xed;var&quot;, &quot;Boyac&#xe1;&quot;, &quot;Caldas&quot;, &quot;Caquet&#xe1;&quot;, &quot;Casanare&quot;, &quot;Cauca&quot;, &quot;Cesar&quot;, &quot;Choc&#xf3;&quot;, &quot;C&#xf3;rdoba&quot;, &quot;Cundinamarca&quot;, &quot;Distrito Capital&quot;, &quot;Guain&#xed;a&quot;, &quot;Guaviare&quot;, &quot;Huila&quot;, &quot;La Guajira&quot;, &quot;Magdalena&quot;, &quot;Meta&quot;, &quot;Nari&#xf1;o&quot;, &quot;Norte de Santander&quot;, &quot;Putumayo&quot;, &quot;Quind&#xed;o&quot;, &quot;Risaralda&quot;, &quot;San Andr&#xe9;s y Providencia&quot;, &quot;Santander&quot;, &quot;Sucre&quot;, &quot;Tolima&quot;, &quot;Valle del Cauca&quot;, &quot;Vaup&#xe9;s&quot;, &quot;Vichada&quot;})" type="code"/>
@@ -967,9 +874,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Ciudad / Municipio:"/>
               </Properties>
               <Constraints>
@@ -980,14 +884,8 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="CiudadEmpEntry">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot; &quot; ,&quot;Bogota&quot;, &quot;Tunja&quot;, &quot;Sogamoso&quot;})" type="code"/>
@@ -1026,9 +924,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Lugar de Expedicion:"/>
               </Properties>
@@ -1043,9 +938,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Ciudad / Municipio:"/>
               </Properties>
               <Constraints>
@@ -1056,14 +948,8 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="LugarCiudadCombo">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot; &quot; ,&quot;Bogota&quot;, &quot;Tunja&quot;, &quot;Sogamoso&quot;})" type="code"/>
@@ -1101,9 +987,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tw Cen MT" size="18" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Ciudad de la empresa:"/>

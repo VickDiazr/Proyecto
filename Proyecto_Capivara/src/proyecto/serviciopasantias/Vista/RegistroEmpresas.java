@@ -6,6 +6,7 @@ package proyecto.serviciopasantias.Vista;
 
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
+import proyecto.serviciopasantias.Modelo.ComboBoxes;
 import proyecto.serviciopasantias.Modelo.Empresas;
 
 /**
@@ -36,6 +37,8 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         A15.setVisible(false);
         A16.setVisible(false);
         A17.setVisible(false);
+        ComboBoxes cb = new ComboBoxes();
+        IDEntry.setModel(cb.getValuesTipoID());
     }
 
     /**
