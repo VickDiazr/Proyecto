@@ -41,7 +41,6 @@ public class RegistroUser extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         Fondo_Roles = new javax.swing.JPanel();
-        jSeparator4 = new javax.swing.JSeparator();
         jSeparator1 = new javax.swing.JSeparator();
         Boton_Usuario = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -50,6 +49,7 @@ public class RegistroUser extends javax.swing.JFrame {
         Boton_Docente = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
         Boton_Empresa = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -114,11 +114,6 @@ public class RegistroUser extends javax.swing.JFrame {
         Fondo_Roles.setBackground(new java.awt.Color(114, 137, 48));
         Fondo_Roles.setLayout(null);
 
-        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
-        Fondo_Roles.add(jSeparator4);
-        jSeparator4.setBounds(0, 190, 250, 14);
-
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         Fondo_Roles.add(jSeparator1);
@@ -135,7 +130,7 @@ public class RegistroUser extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel4.setText("Estudiante");
         Boton_Usuario.add(jLabel4);
-        jLabel4.setBounds(130, 120, 110, 27);
+        jLabel4.setBounds(120, 120, 110, 27);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Estudiante.png"))); // NOI18N
         jLabel8.setText("jLabel8");
@@ -143,12 +138,12 @@ public class RegistroUser extends javax.swing.JFrame {
         jLabel8.setBounds(20, 0, 100, 140);
 
         Fondo_Roles.add(Boton_Usuario);
-        Boton_Usuario.setBounds(0, 40, 230, 150);
+        Boton_Usuario.setBounds(0, 40, 230, 165);
 
         jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
         Fondo_Roles.add(jSeparator3);
-        jSeparator3.setBounds(0, 340, 250, 14);
+        jSeparator3.setBounds(0, 370, 250, 14);
 
         Boton_Docente.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Docente.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -161,15 +156,20 @@ public class RegistroUser extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel5.setText("Docente");
         Boton_Docente.add(jLabel5);
-        jLabel5.setBounds(150, 130, 80, 16);
+        jLabel5.setBounds(130, 130, 80, 16);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Profesor.png"))); // NOI18N
         jLabel7.setText("jLabel7");
         Boton_Docente.add(jLabel7);
         jLabel7.setBounds(10, 10, 150, 110);
 
+        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        Boton_Docente.add(jSeparator4);
+        jSeparator4.setBounds(0, 0, 250, 14);
+
         Fondo_Roles.add(Boton_Docente);
-        Boton_Docente.setBounds(0, 190, 230, 150);
+        Boton_Docente.setBounds(0, 205, 230, 165);
 
         Boton_Empresa.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Empresa.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -182,17 +182,17 @@ public class RegistroUser extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel6.setText("Empresa");
         Boton_Empresa.add(jLabel6);
-        jLabel6.setBounds(140, 120, 100, 27);
+        jLabel6.setBounds(130, 120, 100, 27);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Empresa.png"))); // NOI18N
         Boton_Empresa.add(jLabel9);
         jLabel9.setBounds(30, 10, 130, 110);
 
         Fondo_Roles.add(Boton_Empresa);
-        Boton_Empresa.setBounds(0, 340, 230, 150);
+        Boton_Empresa.setBounds(0, 375, 230, 165);
 
         jPanel1.add(Fondo_Roles);
-        Fondo_Roles.setBounds(0, 80, 230, 490);
+        Fondo_Roles.setBounds(0, 80, 230, 540);
 
         Boton_Usuario2.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario2.setLayout(null);
@@ -200,23 +200,24 @@ public class RegistroUser extends javax.swing.JFrame {
         Boton_Usuario2.setBounds(0, 200, 230, 160);
 
         Panel_Contenido.setBackground(new java.awt.Color(86, 90, 92));
+        Panel_Contenido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout Panel_ContenidoLayout = new javax.swing.GroupLayout(Panel_Contenido);
         Panel_Contenido.setLayout(Panel_ContenidoLayout);
         Panel_ContenidoLayout.setHorizontalGroup(
             Panel_ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 940, Short.MAX_VALUE)
+            .addGap(0, 938, Short.MAX_VALUE)
         );
         Panel_ContenidoLayout.setVerticalGroup(
             Panel_ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGap(0, 538, Short.MAX_VALUE)
         );
 
         jPanel1.add(Panel_Contenido);
-        Panel_Contenido.setBounds(230, 80, 940, 490);
+        Panel_Contenido.setBounds(230, 80, 940, 540);
 
         Fondo.add(jPanel1);
-        jPanel1.setBounds(100, 170, 1170, 570);
+        jPanel1.setBounds(100, 120, 1170, 620);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -237,7 +238,7 @@ public class RegistroUser extends javax.swing.JFrame {
     private void Boton_UsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_UsuarioMouseClicked
         
         RegistroEstudiantes p1 = new RegistroEstudiantes();
-        p1.setSize(940,490);
+        p1.setSize(940,540);
         p1.setLocation(0,0);
         
         Panel_Contenido.removeAll();
@@ -251,7 +252,7 @@ public class RegistroUser extends javax.swing.JFrame {
 
     private void Boton_DocenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_DocenteMouseClicked
         RegistroDocente p2 = new RegistroDocente();
-        p2.setSize(940,490);
+        p2.setSize(940,540);
         p2.setLocation(0,0);
         
         Panel_Contenido.removeAll();
@@ -262,7 +263,7 @@ public class RegistroUser extends javax.swing.JFrame {
 
     private void Boton_EmpresaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_EmpresaMouseClicked
         RegistroEmpresas p3 = new RegistroEmpresas();
-        p3.setSize(940,490);
+        p3.setSize(940,540);
         p3.setLocation(0,0);
         
         Panel_Contenido.removeAll();

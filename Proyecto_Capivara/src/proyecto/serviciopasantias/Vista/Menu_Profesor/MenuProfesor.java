@@ -19,6 +19,7 @@ public class MenuProfesor extends javax.swing.JFrame {
      */
     public MenuProfesor() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

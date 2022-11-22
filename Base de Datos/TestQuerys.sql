@@ -15,7 +15,18 @@ select * from cargo;
 select * from area;
 select * from responsable;
 
+select nombre from sede;
+select nombre from facultad;
+select nombre from departamento;
+select nombre from tipo_id;
+select nombre from programa;
 
+select * from area where nombre = 'Compras';
+select * from cargo where nombre = 'Gerente';
+select * from empresa where NIT = '890.900.608-6';
+select * from persona where ID = '1000900870';
+
+select * from area where nombre = 'Compras';
 select programa_id, avance from estudiante where persona_id = 1000808481;
 select nombre, sede from facultad where id = (select facultad from departamento where id = 1);
 select `Persona` from proyecto.usuario where `Nombre` = 'Nico' and `Contrasena` = '1234';

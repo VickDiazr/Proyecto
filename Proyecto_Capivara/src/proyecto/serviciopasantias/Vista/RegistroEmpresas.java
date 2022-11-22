@@ -34,6 +34,8 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         A13.setVisible(false);
         A14.setVisible(false);
         A15.setVisible(false);
+        A16.setVisible(false);
+        A17.setVisible(false);
     }
 
     /**
@@ -89,10 +91,20 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         AreaEntry = new javax.swing.JTextField();
         A12 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        CiudadEmpEntry = new javax.swing.JComboBox<>();
+        DepartamentoEmpEntry = new javax.swing.JComboBox<>();
         A15 = new javax.swing.JLabel();
         CorreoRepEntry = new javax.swing.JTextField();
-        LugarCombo = new javax.swing.JComboBox<>();
+        LugarDepartamentoCombo = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        CiudadEmpEntry = new javax.swing.JComboBox<>();
+        A16 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        LugarCiudadCombo = new javax.swing.JComboBox<>();
+        A17 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+
+        setPreferredSize(new java.awt.Dimension(940, 540));
 
         jPanel5.setBackground(new java.awt.Color(236, 234, 234));
         jPanel5.setLayout(null);
@@ -123,9 +135,9 @@ public class RegistroEmpresas extends javax.swing.JPanel {
 
         jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("Ciudad de la empresa:");
+        jLabel14.setText("Departamento:");
         jPanel5.add(jLabel14);
-        jLabel14.setBounds(20, 220, 167, 25);
+        jLabel14.setBounds(20, 250, 108, 25);
 
         IDEntry.setBackground(new java.awt.Color(255, 255, 255));
         IDEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
@@ -163,7 +175,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         TelefonoEmpEntry.setBackground(new java.awt.Color(255, 255, 255));
         TelefonoEmpEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         TelefonoEmpEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        TelefonoEmpEntry.setNextFocusableComponent(CiudadEmpEntry);
+        TelefonoEmpEntry.setNextFocusableComponent(DepartamentoEmpEntry);
         TelefonoEmpEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TelefonoEmpEntryActionPerformed(evt);
@@ -189,7 +201,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setText("Cargo del representante:");
         jPanel5.add(jLabel22);
-        jLabel22.setBounds(500, 270, 190, 25);
+        jLabel22.setBounds(500, 350, 190, 25);
 
         CargoEntry.setBackground(new java.awt.Color(255, 255, 255));
         CargoEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
@@ -201,7 +213,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             }
         });
         jPanel5.add(CargoEntry);
-        CargoEntry.setBounds(690, 270, 230, 25);
+        CargoEntry.setBounds(690, 350, 230, 25);
 
         Boton_Registrar.setBackground(new java.awt.Color(148, 180, 59));
         Boton_Registrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -225,7 +237,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         RegistrarLabel.setBounds(0, 0, 280, 60);
 
         jPanel5.add(Boton_Registrar);
-        Boton_Registrar.setBounds(330, 380, 280, 60);
+        Boton_Registrar.setBounds(330, 455, 280, 60);
 
         jLabel17.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
@@ -238,7 +250,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel5.add(jSeparator1);
-        jSeparator1.setBounds(468, 0, 2, 345);
+        jSeparator1.setBounds(468, 0, 2, 425);
 
         A1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A1.setForeground(new java.awt.Color(255, 0, 51));
@@ -268,7 +280,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         A13.setForeground(new java.awt.Color(255, 0, 51));
         A13.setText("*");
         jPanel5.add(A13);
-        A13.setBounds(925, 310, 10, 15);
+        A13.setBounds(925, 390, 10, 15);
 
         A4.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A4.setForeground(new java.awt.Color(255, 0, 51));
@@ -280,7 +292,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         A5.setForeground(new java.awt.Color(255, 0, 51));
         A5.setText("*");
         jPanel5.add(A5);
-        A5.setBounds(440, 210, 10, 15);
+        A5.setBounds(440, 240, 10, 15);
 
         A9.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A9.setForeground(new java.awt.Color(255, 0, 51));
@@ -292,63 +304,63 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         A10.setForeground(new java.awt.Color(255, 0, 51));
         A10.setText("*");
         jPanel5.add(A10);
-        A10.setBounds(925, 160, 10, 15);
+        A10.setBounds(925, 240, 10, 15);
 
         A11.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A11.setForeground(new java.awt.Color(255, 0, 51));
         A11.setText("*");
         jPanel5.add(A11);
-        A11.setBounds(925, 210, 10, 15);
+        A11.setBounds(925, 290, 10, 15);
 
         A14.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A14.setForeground(new java.awt.Color(255, 0, 51));
         A14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         A14.setText("Las casillas marcadas con un * son obligatorias.");
         jPanel5.add(A14);
-        A14.setBounds(0, 450, 940, 21);
+        A14.setBounds(0, 515, 940, 21);
 
         jLabel11.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Nombre del representante:");
         jPanel5.add(jLabel11);
-        jLabel11.setBounds(20, 270, 200, 25);
+        jLabel11.setBounds(20, 350, 200, 25);
 
         NombreRepEntry.setBackground(new java.awt.Color(255, 255, 255));
         NombreRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         NombreRepEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         NombreRepEntry.setNextFocusableComponent(ApellidoRepEntry);
         jPanel5.add(NombreRepEntry);
-        NombreRepEntry.setBounds(225, 270, 210, 25);
+        NombreRepEntry.setBounds(225, 350, 210, 25);
 
         A6.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A6.setForeground(new java.awt.Color(255, 0, 51));
         A6.setText("*");
         jPanel5.add(A6);
-        A6.setBounds(440, 260, 10, 15);
+        A6.setBounds(440, 340, 10, 15);
 
         jLabel15.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Apellidos del representante:");
         jPanel5.add(jLabel15);
-        jLabel15.setBounds(20, 320, 210, 25);
+        jLabel15.setBounds(20, 400, 210, 25);
 
         ApellidoRepEntry.setBackground(new java.awt.Color(255, 255, 255));
         ApellidoRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         ApellidoRepEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ApellidoRepEntry.setNextFocusableComponent(IDEntry);
         jPanel5.add(ApellidoRepEntry);
-        ApellidoRepEntry.setBounds(235, 320, 200, 25);
+        ApellidoRepEntry.setBounds(235, 400, 200, 25);
 
         A7.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A7.setForeground(new java.awt.Color(255, 0, 51));
         A7.setText("*");
         jPanel5.add(A7);
-        A7.setBounds(440, 310, 10, 15);
+        A7.setBounds(440, 390, 10, 15);
 
         IDEntry1.setBackground(new java.awt.Color(255, 255, 255));
         IDEntry1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         IDEntry1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        IDEntry1.setNextFocusableComponent(LugarCombo);
+        IDEntry1.setNextFocusableComponent(LugarDepartamentoCombo);
         IDEntry1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IDEntry1ActionPerformed(evt);
@@ -361,13 +373,13 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         jLabel23.setForeground(new java.awt.Color(0, 0, 0));
         jLabel23.setText("Correo del representante:");
         jPanel5.add(jLabel23);
-        jLabel23.setBounds(500, 170, 190, 25);
+        jLabel23.setBounds(500, 250, 190, 25);
 
         jLabel24.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setText("Teléfono del representante:");
         jPanel5.add(jLabel24);
-        jLabel24.setBounds(500, 220, 210, 25);
+        jLabel24.setBounds(500, 300, 210, 25);
 
         TelefonoRepEntry.setBackground(new java.awt.Color(255, 255, 255));
         TelefonoRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
@@ -379,13 +391,13 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             }
         });
         jPanel5.add(TelefonoRepEntry);
-        TelefonoRepEntry.setBounds(710, 220, 210, 25);
+        TelefonoRepEntry.setBounds(710, 300, 210, 25);
 
         jLabel25.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(0, 0, 0));
         jLabel25.setText("Área del representante:");
         jPanel5.add(jLabel25);
-        jLabel25.setBounds(500, 320, 180, 25);
+        jLabel25.setBounds(500, 400, 180, 25);
 
         AreaEntry.setBackground(new java.awt.Color(255, 255, 255));
         AreaEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
@@ -397,33 +409,38 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             }
         });
         jPanel5.add(AreaEntry);
-        AreaEntry.setBounds(680, 320, 240, 25);
+        AreaEntry.setBounds(680, 400, 240, 25);
 
         A12.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A12.setForeground(new java.awt.Color(255, 0, 51));
         A12.setText("*");
         jPanel5.add(A12);
-        A12.setBounds(925, 260, 10, 15);
+        A12.setBounds(925, 340, 10, 15);
 
         jLabel18.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel18.setText("Lugar de Expedición:");
+        jLabel18.setText("Departamento:");
         jPanel5.add(jLabel18);
-        jLabel18.setBounds(500, 120, 170, 25);
+        jLabel18.setBounds(500, 150, 170, 25);
 
-        CiudadEmpEntry.setBackground(new java.awt.Color(255, 255, 255));
-        CiudadEmpEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
-        CiudadEmpEntry.setForeground(new java.awt.Color(0, 0, 0));
-        CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Bogota", "Tunja", "Sogamoso"}));
-        CiudadEmpEntry.setNextFocusableComponent(NombreRepEntry);
-        jPanel5.add(CiudadEmpEntry);
-        CiudadEmpEntry.setBounds(195, 220, 240, 25);
+        DepartamentoEmpEntry.setBackground(new java.awt.Color(255, 255, 255));
+        DepartamentoEmpEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        DepartamentoEmpEntry.setForeground(new java.awt.Color(0, 0, 0));
+        DepartamentoEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Amazonas", "Antioquia", "Arauca", "Atlántico", "Bolívar", "Boyacá", "Caldas", "Caquetá", "Casanare", "Cauca", "Cesar", "Chocó", "Córdoba", "Cundinamarca", "Distrito Capital", "Guainía", "Guaviare", "Huila", "La Guajira", "Magdalena", "Meta", "Nariño", "Norte de Santander", "Putumayo", "Quindío", "Risaralda", "San Andrés y Providencia", "Santander", "Sucre", "Tolima", "Valle del Cauca", "Vaupés", "Vichada"}));
+        DepartamentoEmpEntry.setNextFocusableComponent(CiudadEmpEntry);
+        DepartamentoEmpEntry.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                DepartamentoEmpEntryItemStateChanged(evt);
+            }
+        });
+        jPanel5.add(DepartamentoEmpEntry);
+        DepartamentoEmpEntry.setBounds(140, 250, 295, 25);
 
         A15.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A15.setForeground(new java.awt.Color(255, 0, 51));
         A15.setText("*");
         jPanel5.add(A15);
-        A15.setBounds(925, 110, 10, 15);
+        A15.setBounds(925, 140, 10, 15);
 
         CorreoRepEntry.setBackground(new java.awt.Color(255, 255, 255));
         CorreoRepEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
@@ -435,15 +452,74 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             }
         });
         jPanel5.add(CorreoRepEntry);
-        CorreoRepEntry.setBounds(690, 170, 230, 25);
+        CorreoRepEntry.setBounds(690, 250, 230, 25);
 
-        LugarCombo.setBackground(new java.awt.Color(255, 255, 255));
-        LugarCombo.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
-        LugarCombo.setForeground(new java.awt.Color(0, 0, 0));
-        LugarCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Bogota", "Tunja", "Sogamoso"}));
-        LugarCombo.setNextFocusableComponent(CorreoRepEntry);
-        jPanel5.add(LugarCombo);
-        LugarCombo.setBounds(660, 120, 260, 25);
+        LugarDepartamentoCombo.setBackground(new java.awt.Color(255, 255, 255));
+        LugarDepartamentoCombo.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        LugarDepartamentoCombo.setForeground(new java.awt.Color(0, 0, 0));
+        LugarDepartamentoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Amazonas", "Antioquia", "Arauca", "Atlántico", "Bolívar", "Boyacá", "Caldas", "Caquetá", "Casanare", "Cauca", "Cesar", "Chocó", "Córdoba", "Cundinamarca", "Distrito Capital", "Guainía", "Guaviare", "Huila", "La Guajira", "Magdalena", "Meta", "Nariño", "Norte de Santander", "Putumayo", "Quindío", "Risaralda", "San Andrés y Providencia", "Santander", "Sucre", "Tolima", "Valle del Cauca", "Vaupés", "Vichada"}));
+        LugarDepartamentoCombo.setNextFocusableComponent(LugarCiudadCombo);
+        LugarDepartamentoCombo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                LugarDepartamentoComboItemStateChanged(evt);
+            }
+        });
+        jPanel5.add(LugarDepartamentoCombo);
+        LugarDepartamentoCombo.setBounds(615, 150, 305, 25);
+
+        jLabel16.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("Ciudad / Municipio:");
+        jPanel5.add(jLabel16);
+        jLabel16.setBounds(20, 300, 144, 25);
+
+        CiudadEmpEntry.setBackground(new java.awt.Color(255, 255, 255));
+        CiudadEmpEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        CiudadEmpEntry.setForeground(new java.awt.Color(0, 0, 0));
+        CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Bogota", "Tunja", "Sogamoso"}));
+        CiudadEmpEntry.setNextFocusableComponent(NombreRepEntry);
+        jPanel5.add(CiudadEmpEntry);
+        CiudadEmpEntry.setBounds(175, 300, 260, 25);
+
+        A16.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A16.setForeground(new java.awt.Color(255, 0, 51));
+        A16.setText("*");
+        jPanel5.add(A16);
+        A16.setBounds(440, 290, 10, 15);
+
+        jLabel19.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Lugar de Expedicion:");
+        jPanel5.add(jLabel19);
+        jLabel19.setBounds(470, 95, 475, 55);
+
+        jLabel21.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel21.setText("Ciudad / Municipio:");
+        jPanel5.add(jLabel21);
+        jLabel21.setBounds(500, 200, 170, 25);
+
+        LugarCiudadCombo.setBackground(new java.awt.Color(255, 255, 255));
+        LugarCiudadCombo.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        LugarCiudadCombo.setForeground(new java.awt.Color(0, 0, 0));
+        LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Bogota", "Tunja", "Sogamoso"}));
+        LugarCiudadCombo.setNextFocusableComponent(CorreoRepEntry);
+        jPanel5.add(LugarCiudadCombo);
+        LugarCiudadCombo.setBounds(660, 200, 260, 25);
+
+        A17.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A17.setForeground(new java.awt.Color(255, 0, 51));
+        A17.setText("*");
+        jPanel5.add(A17);
+        A17.setBounds(925, 190, 10, 15);
+
+        jLabel26.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("Ciudad de la empresa:");
+        jPanel5.add(jLabel26);
+        jLabel26.setBounds(0, 195, 470, 55);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -455,7 +531,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -471,8 +547,7 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -512,6 +587,8 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         A13.setVisible(false);
         A14.setVisible(false);
         A15.setVisible(false);
+        A16.setVisible(false);
+        A17.setVisible(false);
         int contador = 0;
         if ("".equals(NombreEmpEntry.getText()))
         {
@@ -533,10 +610,15 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             contador += 1;
             A4.setVisible(true);
         }
-        if (" ".equals(CiudadEmpEntry.getSelectedItem().toString()))
+        if (" ".equals(DepartamentoEmpEntry.getSelectedItem().toString()))
         {
             contador += 1;
             A5.setVisible(true);
+        }
+        if (" ".equals(CiudadEmpEntry.getSelectedItem().toString()))
+        {
+            contador += 1;
+            A16.setVisible(true);
         }
         if ("".equals(NombreRepEntry.getText()))
         {
@@ -558,10 +640,15 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             contador += 1;
             A9.setVisible(true);
         }
-        if (" ".equals(LugarCombo.getSelectedItem().toString()))
+        if (" ".equals(LugarDepartamentoCombo.getSelectedItem().toString()))
         {
             contador += 1;
             A15.setVisible(true);
+        }
+        if (" ".equals(LugarCiudadCombo.getSelectedItem().toString()))
+        {
+            contador += 1;
+            A17.setVisible(true);
         }
         if ("".equals(CorreoRepEntry.getText()))
         {
@@ -587,31 +674,29 @@ public class RegistroEmpresas extends javax.swing.JPanel {
             A14.setVisible(true);
         }
         else{
-            if ("C.C.".equals(IDEntry.getSelectedItem().toString())){
-                String resultado = Empresas.Register(NITEntry.getText(), NombreEmpEntry.getText(), CorreoEmpEntry.getText(), TelefonoEmpEntry.getText(),
-                        CiudadEmpEntry.getSelectedItem().toString(), IDEntry1.getText(), "Cedula de ciudadania", LugarCombo.getSelectedItem().toString(),
-                        NombreRepEntry.getText(), ApellidoRepEntry.getText(), CorreoRepEntry.getText(), TelefonoRepEntry.getText(), CargoEntry.getText(), AreaEntry.getText());
+            String resultado = Empresas.Register(NITEntry.getText(), NombreEmpEntry.getText(), CorreoEmpEntry.getText(), TelefonoEmpEntry.getText(),
+                    CiudadEmpEntry.getSelectedItem().toString(), IDEntry1.getText(), IDEntry.getSelectedItem().toString(), LugarCiudadCombo.getSelectedItem().toString(),
+                    NombreRepEntry.getText(), ApellidoRepEntry.getText(), CorreoRepEntry.getText(), TelefonoRepEntry.getText(), CargoEntry.getText(), AreaEntry.getText());
             
-                if ("Error".equals(resultado)){
-                    JOptionPane.showMessageDialog(this, "Revise el registro.", "Registro Fallido", JOptionPane.ERROR_MESSAGE);
-                }
+            if ("Error".equals(resultado)){
+                JOptionPane.showMessageDialog(this, "Revise el registro.", "Registro Fallido", JOptionPane.ERROR_MESSAGE);
+            }
                 
-                else if ("Registro Exitoso".equals(resultado)){
-                    JOptionPane.showMessageDialog(this, "Se ha hecho el registro de forma exitosa.", "Registro Exitoso.", JOptionPane.INFORMATION_MESSAGE);
-                    this.setVisible(false);
-                }
+            else if ("Registro Exitoso".equals(resultado)){
+                JOptionPane.showMessageDialog(this, "Se ha hecho el registro de forma exitosa.", "Registro Exitoso.", JOptionPane.INFORMATION_MESSAGE);
+                this.setVisible(false);
+            }
                 
-                else if ("Usuario Ya Registrado".equals(resultado)){
-                    JOptionPane.showMessageDialog(this, "Ya existe un usuario registrado con esa ID.", "Registro Fallido", JOptionPane.ERROR_MESSAGE);
-                }
+            else if ("Usuario Ya Registrado".equals(resultado)){
+                JOptionPane.showMessageDialog(this, "Ya existe un usuario registrado con esa ID.", "Registro Fallido", JOptionPane.ERROR_MESSAGE);
+            }
                 
-                else if ("Empresa Ya Registrada".equals(resultado)){
-                    JOptionPane.showMessageDialog(this, "Ya existe una empresa registrada con ese NIT.", "Registro Fallido", JOptionPane.ERROR_MESSAGE);
-                }
+            else if ("Empresa Ya Registrada".equals(resultado)){
+                JOptionPane.showMessageDialog(this, "Ya existe una empresa registrada con ese NIT.", "Registro Fallido", JOptionPane.ERROR_MESSAGE);
+            }
             
-                else{
-                    JOptionPane.showMessageDialog(this, resultado, "Registro Fallido", JOptionPane.ERROR_MESSAGE);
-                }
+            else{
+                JOptionPane.showMessageDialog(this, resultado, "Registro Fallido", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -638,6 +723,151 @@ public class RegistroEmpresas extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_CorreoRepEntryActionPerformed
 
+    private void DepartamentoEmpEntryItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_DepartamentoEmpEntryItemStateChanged
+        if ("Distrito Capital".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Bogotá"}));
+        }
+        else if ("Antioquia".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Medellín", "Bello", "Itagüí", "Envigado"}));
+        }
+        else if ("Atlántico".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Barranquilla", "Soledad"}));
+        }
+        else if ("Bolívar".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Cartagena"}));
+        }
+        else if ("Boyacá".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Tunja", "Sogamoso", "Duitama"}));
+        }
+        else if ("Caldas".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Manizales"}));
+        }
+        else if ("Cauca".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Popayán"}));
+        }
+        else if ("Cesar".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Valledupar"}));
+        }
+        else if ("Córdoba".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Montería"}));
+        }
+        else if ("Cundinamarca".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Soacha"}));
+        }
+        else if ("Huila".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Neiva"}));
+        }
+        else if ("La Guajira".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Riohacha"}));
+        }
+        else if ("Magdalena".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Santa Marta"}));
+        }
+        else if ("Nariño".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Pasto", "Tumaco"}));
+        }
+        else if ("Norte de Santander".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Cúcuta"}));
+        }
+        else if ("Quindío".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Armenia"}));
+        }
+        else if ("Risaralda".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Pereira", "Dosquebradas"}));
+        }
+        else if ("Santander".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Bucaramanga", "Floridablanca", "Barrancabermeja"}));
+        }
+        else if ("Sucre".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Sincelejo"}));
+        }
+        else if ("Tolima".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Ibagué"}));
+        }
+        else if ("Valle del Cauca".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Cali", "Palmira", "Buenaventura", "Tuluá"}));
+        }
+        else if ("Meta".equals(DepartamentoEmpEntry.getSelectedItem().toString())){
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Villavicencio"}));
+        }
+        else{
+            CiudadEmpEntry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        }
+    }//GEN-LAST:event_DepartamentoEmpEntryItemStateChanged
+
+    private void LugarDepartamentoComboItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_LugarDepartamentoComboItemStateChanged
+        if ("Distrito Capital".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Bogotá"}));
+        }
+        else if ("Antioquia".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Medellín", "Bello", "Itagüí", "Envigado"}));
+        }
+        else if ("Atlántico".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Barranquilla", "Soledad"}));
+        }
+        else if ("Bolívar".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Cartagena"}));
+        }
+        else if ("Boyacá".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Tunja", "Sogamoso", "Duitama"}));
+        }
+        else if ("Caldas".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Manizales"}));
+        }
+        else if ("Cauca".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Popayán"}));
+        }
+        else if ("Cesar".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Valledupar"}));
+        }
+        else if ("Córdoba".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Montería"}));
+        }
+        else if ("Cundinamarca".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Soacha"}));
+        }
+        else if ("Huila".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Neiva"}));
+        }
+        else if ("La Guajira".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Riohacha"}));
+        }
+        else if ("Magdalena".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Santa Marta"}));
+        }
+        else if ("Nariño".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Pasto", "Tumaco"}));
+        }
+        else if ("Norte de Santander".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Cúcuta"}));
+        }
+        else if ("Quindío".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Armenia"}));
+        }
+        else if ("Risaralda".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Pereira", "Dosquebradas"}));
+        }
+        else if ("Santander".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Bucaramanga", "Floridablanca", "Barrancabermeja"}));
+        }
+        else if ("Sucre".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Sincelejo"}));
+        }
+        else if ("Tolima".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Ibagué"}));
+        }
+        else if ("Valle del Cauca".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Cali", "Palmira", "Buenaventura", "Tuluá"}));
+        }
+        else if ("Meta".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Villavicencio"}));
+        }
+        else
+        {
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        }
+    }//GEN-LAST:event_LugarDepartamentoComboItemStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel A1;
@@ -647,6 +877,8 @@ public class RegistroEmpresas extends javax.swing.JPanel {
     private javax.swing.JLabel A13;
     private javax.swing.JLabel A14;
     private javax.swing.JLabel A15;
+    private javax.swing.JLabel A16;
+    private javax.swing.JLabel A17;
     private javax.swing.JLabel A2;
     private javax.swing.JLabel A3;
     private javax.swing.JLabel A4;
@@ -662,9 +894,11 @@ public class RegistroEmpresas extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> CiudadEmpEntry;
     private javax.swing.JTextField CorreoEmpEntry;
     private javax.swing.JTextField CorreoRepEntry;
+    private javax.swing.JComboBox<String> DepartamentoEmpEntry;
     private javax.swing.JComboBox<String> IDEntry;
     private javax.swing.JTextField IDEntry1;
-    private javax.swing.JComboBox<String> LugarCombo;
+    private javax.swing.JComboBox<String> LugarCiudadCombo;
+    private javax.swing.JComboBox<String> LugarDepartamentoCombo;
     private javax.swing.JTextField NITEntry;
     private javax.swing.JTextField NombreEmpEntry;
     private javax.swing.JTextField NombreRepEntry;
@@ -676,13 +910,17 @@ public class RegistroEmpresas extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

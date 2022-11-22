@@ -21,7 +21,6 @@ public class InformacionPersonalProfesor extends javax.swing.JPanel {
      */
     public InformacionPersonalProfesor() {
         initComponents();
-        
         Contraseña2.hide();
         NombreEntry.setText(Docentes.nombre);
         ApellidoEntry.setText(Docentes.apellido);
@@ -374,7 +373,14 @@ public class InformacionPersonalProfesor extends javax.swing.JPanel {
     }//GEN-LAST:event_DepartamentoEntryActionPerformed
 
     private void LabelGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelGuardarMouseClicked
-        String resultado = Docentes.CambiarDatos(ContraseñaEntry.getText(), LoginForAll.usuario, TelefonoEntry.getText(), TelefonoEntry1.getText());
+        String extension = "";
+        if ("".equals(TelefonoEntry1.getText())){
+            extension = "null";
+        }
+        else{
+            extension = TelefonoEntry1.getText();
+        }
+        String resultado = Docentes.CambiarDatos(ContraseñaEntry.getText(), LoginForAll.usuario, TelefonoEntry.getText(), extension);
         if (resultado.equals("Datos Actualizados")){
             JOptionPane.showMessageDialog(this, "Los datos han sido actualizados con éxito", "Cambio Exitoso", JOptionPane.INFORMATION_MESSAGE);
             LabelEditar.setEnabled(true);
@@ -393,7 +399,14 @@ public class InformacionPersonalProfesor extends javax.swing.JPanel {
 
     private void LabelGuardarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LabelGuardarKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
-            String resultado = Docentes.CambiarDatos(ContraseñaEntry.getText(), LoginForAll.usuario, TelefonoEntry.getText(), TelefonoEntry1.getText());
+            String extension = "";
+            if ("".equals(TelefonoEntry1.getText())){
+                extension = "null";
+            }
+            else{
+                extension = TelefonoEntry1.getText();
+            }
+            String resultado = Docentes.CambiarDatos(ContraseñaEntry.getText(), LoginForAll.usuario, TelefonoEntry.getText(), extension);
             if (resultado.equals("Datos Actualizados")){
                 JOptionPane.showMessageDialog(this, "Los datos han sido actualizados con éxito", "Cambio Exitoso", JOptionPane.INFORMATION_MESSAGE);
                 LabelEditar.setEnabled(true);

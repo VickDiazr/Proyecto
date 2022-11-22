@@ -33,7 +33,7 @@ public class Empresas {
                 String sqlverifyid = "select * from persona where ID = '" + id + "'";
                 ResultSet rsid = stmt.executeQuery(sqlverifyid);
                 
-                if (!rsid.isBeforeFirst()){                
+                if (!rsid.isBeforeFirst()){             
                     String sqlverifytipo = "select ID from tipo_id where Nombre = '" + tipo + "'";
                     ResultSet rstipo = stmt.executeQuery(sqlverifytipo);
                     rstipo.next();
@@ -43,6 +43,29 @@ public class Empresas {
                     ResultSet rsnit = stmt.executeQuery(sqlverifynit);
                     
                     if (!rsnit.isBeforeFirst()){
+                        Statement stmtarea = con.createStatement();
+                        String sqlidarea = "select * from area where nombre = '" + area + "'";
+                        ResultSet rsidarea = stmtarea.executeQuery(sqlidarea);
+                        String areaexiste = "";
+                        if (!rsidarea.isBeforeFirst()){
+                            areaexiste = "no registrado";
+                        }
+                        else{
+                            areaexiste = "ya registrado";
+                        }
+                        
+                        Statement stmtcargo = con.createStatement();
+                        String sqlidcargo = "select * from cargo where nombre = '" + cargo + "'";
+                        ResultSet rsidcargo = stmtcargo.executeQuery(sqlidcargo);
+                        String cargoexiste = "";
+                        if (!rsidcargo.isBeforeFirst()){
+                            cargoexiste = "no registrado";
+                        }
+                        else
+                        {
+                            cargoexiste = "ya registrado";
+                        }
+                        
                         String sqlempresa = "insert into empresa(NIT, NOMBRE, CORREO, TELEFONO, CIUDAD) values ('" + nit + "', '" + nombreemp +
                                 "', '" + correoemp + "', '" + telefonoemp + "', '" + ciudad + "')";
                         stmt.executeUpdate(sqlempresa);
@@ -52,38 +75,14 @@ public class Empresas {
                             + "', '" + telefonorep + "', '1')";
                         stmt.executeUpdate(sqlpersona);
                     
-                        Statement stmtarea = con.createStatement();
-                        String sqlidarea = "select * from area where nombre = '" + area + "'";
-                        ResultSet rsidarea = stmtarea.executeQuery(sqlidarea);
-                        String areaexiste;
-                        if (!rsidarea.isBeforeFirst()){
-                            areaexiste = "falso";
-                        }
-                        else
-                        {
-                            areaexiste = "verdadero";
-                        }
-                    
-                        Statement stmtcargo = con.createStatement();
-                        String sqlidcargo = "select * from cargo where nombre = '" + cargo + "'";
-                        ResultSet rsidcargo = stmtcargo.executeQuery(sqlidcargo);
-                        String cargoexiste;
-                        if (!rsidcargo.isBeforeFirst()){
-                            cargoexiste = "falso";
-                        }
-                        else
-                        {
-                            cargoexiste = "verdadero";
-                        }
-                    
                         Statement stmtemp = con.createStatement();
                         String sqlidemp = "select id from empresa where nit = '" + nit + "'";
                         ResultSet rsidemp = stmtemp.executeQuery(sqlidemp);
                         rsidemp.next();
                         String idemp = rsidemp.getString(1);
                     
-                        if (areaexiste.equals("falso")){
-                            if (cargoexiste.equals("falso")){
+                        if (areaexiste.equals("ya registrado")){
+                            if (cargoexiste.equals("ya registrado")){
                                 rsidarea.next();
                                 rsidcargo.next();
                                 String areaid = rsidarea.getString(1);
@@ -111,7 +110,7 @@ public class Empresas {
                             }
                         }
                         else{
-                            if (cargoexiste.equals("falso")){
+                            if (cargoexiste.equals("ya registrado")){
                                 rsidcargo.next();
                                 String cargoid = rsidcargo.getString(1);
 

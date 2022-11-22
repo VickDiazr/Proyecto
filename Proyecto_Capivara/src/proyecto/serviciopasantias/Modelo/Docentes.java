@@ -32,7 +32,7 @@ public class Docentes {
     public static String departamento = "";
    
     public static String Register(String id, String tipo, String lugar, String nombre, String apellido, String correo,
-            String telefono, String departamento){
+            String telefono, String departamento, String extension){
         con = null;
         try{
             Class.forName(driver);            
@@ -58,11 +58,16 @@ public class Docentes {
                     ResultSet rspro = stmt.executeQuery(sqlverifypro);
                     rspro.next();
                     String departamentoid = rspro.getString(1);
-                    
-                    String sqldocente = "insert into docente(PERSONA_ID, DEPARTAMENTO) values('" + id + "', '" + departamentoid + "')";
-                    stmt.executeUpdate(sqldocente);
-                    con.close();
-                    
+                    if ("null".equals(extension)){
+                        String sqldocente = "insert into docente(PERSONA_ID, DEPARTAMENTO, EXTENSION) values('" + id + "', '" + departamentoid + "', null)";
+                        stmt.executeUpdate(sqldocente);
+                        con.close();    
+                    }
+                    else{
+                        String sqldocente = "insert into docente(PERSONA_ID, DEPARTAMENTO, EXTENSION) values('" + id + "', '" + departamentoid + "', '" + extension +"')";
+                        stmt.executeUpdate(sqldocente);
+                        con.close();    
+                    }
                     return "Registro Exitoso";
                 }
                 else{
@@ -137,8 +142,14 @@ public class Docentes {
                 stmt2.executeUpdate(sqlchange2);
                 
                 Statement stmt3 = con.createStatement();
-                String sqlchange3 = "update docente set extension = '" + extension + "' where persona_id = '" + no_id + "'";
-                stmt3.executeUpdate(sqlchange3);
+                if ("null".equals(extension)){
+                    String sqlchange3 = "update docente set extension = null where persona_id = '" + no_id + "'";
+                    stmt3.executeUpdate(sqlchange3);                
+                }
+                else{
+                    String sqlchange3 = "update docente set extension = '" + extension + "' where persona_id = '" + no_id + "'";
+                    stmt3.executeUpdate(sqlchange3);            
+                }
                 return "Datos Actualizados";
             }
         }
