@@ -10,7 +10,9 @@ import javax.swing.SwingUtilities;
 import proyecto.serviciopasantias.Modelo.LoginForAll;
 import proyecto.serviciopasantias.Vista.Menu_Estudiante.*;
 import proyecto.serviciopasantias.Vista.Menu_Empresa.*;
+import proyecto.serviciopasantias.Vista.Menu_Comite.*;
 import proyecto.serviciopasantias.Vista.Menu_Profesor.*;
+import proyecto.serviciopasantias.Modelo.UserCorreo;
 
 /**
  *
@@ -243,7 +245,7 @@ public class Login extends javax.swing.JFrame {
         as.setBounds(720, 400, 250, 60);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(113, 179, 1140, 520);
+        jPanel3.setBounds(113, 164, 1140, 520);
 
         jPanel2.setBackground(new java.awt.Color(86, 90, 92));
         jPanel2.setPreferredSize(new java.awt.Dimension(1366, 0));
@@ -396,15 +398,21 @@ public class Login extends javax.swing.JFrame {
                 this.dispose();
             }
             else if ("Docente".equals(resultado)){
-                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, docente.", "Ingreso Fallido", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, docente.", "Ingreso Correcto", JOptionPane.INFORMATION_MESSAGE);
                 MenuProfesor menuprof = new MenuProfesor();
                 menuprof.setVisible(true);  
                 this.dispose();
             }
             else if ("Empresa".equals(resultado)){
-                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, empresario.", "Ingreso Fallido", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, empresario.", "Ingreso Correcto", JOptionPane.INFORMATION_MESSAGE);
                 MenuEmpresa menuemp = new MenuEmpresa();
                 menuemp.setVisible(true);  
+                this.dispose();
+            }
+            else if ("Comite".equals(resultado)){
+                JOptionPane.showMessageDialog(frame, "Bienvenido a la plataforma, miembro del cómite asesor.", "Ingreso Correcto", JOptionPane.INFORMATION_MESSAGE);
+                MenuComite menucom = new MenuComite();
+                menucom.setVisible(true);  
                 this.dispose();
             }
             else{

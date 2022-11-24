@@ -203,17 +203,22 @@ alter table PROGRAMA
 create table COMITE_ASESOR 
 (
    ID                   int                            not null AUTO_INCREMENT,
-   DESCRIPCION          varchar(100)                   not null,
-   PROGRAMA             int                            not null,
+   PERSONA_ID           int                   		   not null,
+   PROGRAMA_ID          int                            not null,
    constraint PK_COMITE_ASESOR primary key clustered (ID)
 );
 
 alter table COMITE_ASESOR
-   add constraint FK_COMITE_A_REFERENCE_PROGRAMA foreign key (PROGRAMA)
+   add constraint FK_COMITE_A_REFERENCE_PROGRAMA foreign key (PROGRAMA_ID)
       references PROGRAMA (ID)
       on update cascade
       on delete cascade;
 
+alter table COMITE_ASESOR
+   add constraint FK_COMITE_REFERENCE_PERSONA foreign key (PERSONA_ID)
+      references PERSONA (ID)
+      on update cascade
+      on delete cascade;
 /*==============================================================*/
 /* Table: ESTADO                                                */
 /*==============================================================*/
@@ -421,35 +426,99 @@ alter table EVALUACION
       on update cascade
       on delete cascade;
 
-INSERT INTO `proyecto`.`tipo_id` (`NOMBRE`) VALUES ('Cédula de ciudadanía');
-INSERT INTO `proyecto`.`tipo_id` (`NOMBRE`) VALUES ('Tarjeta de identidad');
-INSERT INTO `proyecto`.`tipo_id` (`NOMBRE`) VALUES ('Cédula de extranjería');
-INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808481','1', 'Bogota', 'Sergio Nicolas', 'Siabatto Cleves', 'ssiabatto@unal.edu.co', '3053109089', '1');
-INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808482','1', 'Bogota', 'Victor Daniel', 'Díaz Reyes', 'vidiazr@unal.edu.co', '3053109090', '1');
-INSERT INTO `proyecto`.`persona` (`ID`,`TIPO_ID`, `LUGAR_EXP_ID`, `NOMBRE`, `APELLIDO`, `CORREO`, `TELEFONO`, `FIRMA`) VALUES ('1000808483','1', 'Bogota', 'Ivan David', 'Molina Leguizamo', 'ivdmolinale@empresa1.com', '3053109091', '1');
-INSERT INTO `proyecto`.`usuario` (`NOMBRE`, `CONTRASENA`, `PERSONA`) VALUES ('ssiabatto', '1234', '1000808481');
-INSERT INTO `proyecto`.`usuario` (`NOMBRE`, `CONTRASENA`, `PERSONA`) VALUES ('vidiazr', '1234', '1000808482');
-INSERT INTO `proyecto`.`usuario` (`NOMBRE`, `CONTRASENA`, `PERSONA`) VALUES ('ivdmolinale', '1234', '1000808483');
-INSERT INTO `proyecto`.`jornada` (`NOMBRE`) VALUES ('Diurno');
-INSERT INTO `proyecto`.`sede` (`NOMBRE`, `CIUDAD`) VALUES ('Sede Bogotá','Bogotá');
-INSERT INTO `proyecto`.`facultad` (`NOMBRE`, `Sede`) VALUES ('Ingeniería', '1');
-INSERT INTO `proyecto`.`departamento` (`NOMBRE`,`FACULTAD`) VALUES ('Ingeniería Civil y Agrícola', '1');
-INSERT INTO `proyecto`.`departamento` (`NOMBRE`,`FACULTAD`) VALUES ('Ingeniería de Sistemas e Industrial', '1');
-INSERT INTO `proyecto`.`programa` (`ID`, `NOMBRE`, `JORNADA`, `DEPARTAMENTO`) VALUES ('24','Ingeniería Agrícola','1','1');
-INSERT INTO `proyecto`.`programa` (`ID`, `NOMBRE`, `JORNADA`, `DEPARTAMENTO`) VALUES ('106661','Ingeniería de Sistemas y Computación','1','2');
-insert into `proyecto`.`estado` (`NOMBRE`) VALUES ('Disponible');
-INSERT INTO `proyecto`.`estudiante` (`PERSONA_ID`, `PROGRAMA_ID`,`AVANCE`,`ESTADO`) VALUES ('1000808481','106661','50','1');
-INSERT INTO `proyecto`.`docente` (`PERSONA_ID`, `DEPARTAMENTO`, Extension) VALUES ('1000808482','2', null);
-INSERT INTO `proyecto`.`empresa` (`NIT`, `NOMBRE`, `CORREO`, `TELEFONO`, `CIUDAD`) VALUES ('890.900.608-9','Empresa1', 'empresa1@empresa.com', '3053109095', 'Bogotá');
-INSERT INTO `proyecto`.`cargo` (`NOMBRE`) VALUES ('Gerente');
-INSERT INTO `proyecto`.`cargo` (`NOMBRE`) VALUES ('Asesor');
-INSERT INTO `proyecto`.`cargo` (`NOMBRE`) VALUES ('Auxiliar');
-INSERT INTO `proyecto`.`cargo` (`NOMBRE`) VALUES ('Asistente');
-INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Ingeniería');
-INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Contaduría');
-INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Talento Humano');
-INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Compras');
-INSERT INTO `proyecto`.`area` (`NOMBRE`) VALUES ('Presidencia');
-INSERT INTO `proyecto`.`responsable` (`PERSONA_ID`, `EMPRESA`, `CARGO`, `AREA`) VALUES ('1000808483','1', '1', '5');
+INSERT INTO tipo_id (NOMBRE) VALUES
+('Cédula de ciudadanía'),
+('Tarjeta de identidad'),
+('Cédula de extranjería');
+
+Insert into persona (id, tipo_id, lugar_exp_id, nombre, apellido, correo, telefono, firma) values
+('1000808483','1', 'Bogota', 'Ivan David', 'Molina Leguizamo', 'ivdmolinale@empresa1.com', '3053109091', '1'),
+('1000808481','1', 'Bogota', 'Sergio Nicolas', 'Siabatto Cleves', 'ssiabatto@unal.edu.co', '3053109089', '1'),
+('1000808482','1', 'Bogota', 'Victor Daniel', 'Díaz Reyes', 'vidiazr@unal.edu.co', '3053109090', '1'),
+(1000808491, 1, 'Bogotá', 'Karen Tatiana', 'Alvarez Baez', 'kaalvarezb@unal.edu.co', '3053119089', 1),
+(1000808471, 1, 'Bogotá', 'Diana Marcela', 'Bello Lopez', 'dbellol@unal.edu.co', '3053129089', 1),
+(1000808461, 1, 'Bogotá', 'Camilo Andres', 'Cardenas Vargas', 'ccardenasv@unal.edu.co', '3053139089', 1),
+(1000808451, 1, 'Bogotá', 'Calina', 'Catalina Roz', 'catroz@gmail.com', '3053139986', 1),
+(1000808431, 1, 'Soacha', 'Raul', 'Rodriguez', 'similar@gmail.com', '3053136985', 1),
+(1000808421, 1, 'Soacha', 'Nicolas', 'Ruiz Garzon', 'nic@gmail.com', '3053116895', 1),
+(1000808411, 1, 'Soacha', 'Nicolas', 'Ruiz Garzon', 'snsc25@hotmail.com', '3053116854', 1),
+(1020355481, 1, 'Soacha', 'Raul', 'Rodriguez', 'rodrigrau@unal.edu.co', '3203251258', 1),
+(1051238523, 1, 'Bogotá', 'Calina', 'Catalina Roa', 'catroa@unal.edu.co', '3058421851', 1),
+(1003235621, 1, 'Tunja', 'Obed Felipe', 'Espinosa Angarita', 'ofespinosaa@unal.edu.co', '3058085048', 1),
+(1051586412, 1, 'Bogotá', 'David Alejandro', ' Cifuentes Gonzalez', 'dcifuentesg@unal.edu.co', '3205612315', 1);
+
+
+INSERT INTO usuario (NOMBRE, CONTRASENA, PERSONA) VALUES
+('ivdmolinale', '1234', '1000808483'),
+('ssiabatto', '1234', '1000808481'),
+('vidiazr', '1234', '1000808482'),
+('kaalvarezb', '1234', '1000808491'),
+('dbello', '1234', '1000808471'),
+('ccardenas', '1234', '1000808461'),
+('catroz', '1234', '1000808451'),
+('similar', '1234', '1000808431'),
+('nic', '1234', '1000808421'),
+('rodrigrau', '1234', '1020355481');
+
+INSERT INTO jornada (NOMBRE) VALUES ('Diurno');
+
+INSERT INTO sede (NOMBRE, CIUDAD) VALUES ('Sede Bogotá','Bogotá');
+
+INSERT INTO facultad (NOMBRE, Sede) VALUES ('Ingeniería', '1');
+
+INSERT INTO departamento (NOMBRE, FACULTAD) VALUES
+('Ingeniería Civil y Agrícola', '1'),
+('Ingeniería de Sistemas e Industrial', '1');
+
+INSERT INTO programa (ID, NOMBRE, JORNADA, DEPARTAMENTO) VALUES
+('24','Ingeniería Agrícola','1','1'),
+('106661','Ingeniería de Sistemas y Computación','1','2');
+
+INSERT INTO comite_asesor (persona_id, programa_id) values ('1020355481', '24');
+
+insert into estado (NOMBRE) VALUES ('Disponible');
+
+INSERT INTO estudiante (PERSONA_ID, PROGRAMA_ID, AVANCE, ESTADO) VALUES
+('1000808481','106661','70','1'),
+('1000808491','24','80','1'),
+('1000808471','106661','82','1'),
+('1000808461','24','92','1'),
+('1000808411','24', null, '1'),
+('1051238523','106661',null, '1');
+
+INSERT INTO docente (PERSONA_ID, DEPARTAMENTO, Extension) VALUES
+('1000808482','2', null),
+('1000808451','2', null),
+('1000808431','2', null),
+('1000808421','2', null),
+('1051586412','1', null);
+
+INSERT INTO empresa (NIT, NOMBRE, CORREO, TELEFONO, CIUDAD) VALUES 
+('890.900.608-9','Empresa1', 'empresa1@empresa1.com', '3053109095', 'Bogotá'),
+('890.879.680-5','Empresa2', 'empresa2@empresa2.com', '3058475184', 'Bogotá');
+
+INSERT INTO cargo (NOMBRE) VALUES
+('Gerente'),
+('Asesor'),
+('Auxiliar'),
+('Asistente'),
+('Secretario');
+
+INSERT INTO area (NOMBRE) VALUES
+('Ingeniería'), 
+('Contaduría'),
+('Talento Humano'),
+('Compras'),
+('Presidencia');
+
+INSERT INTO responsable (PERSONA_ID, EMPRESA, CARGO, AREA) VALUES 
+('1000808483','1', '1', '5'),
+(1003235621,'2','4','1');
+
+INSERT INTO pasantia (ESTUDIANTE, TITULO, OBJETIVO_GENERAL, INTRODUCCION, JUSTIFICACION, APLICACION_APORTE, CONTRATACION_INTENCION, DURACION, RESPONSABLE, DOCENTE_DIRECTOR, FECHA) VALUES
+('1', 'Programa de mantenimiento de 200 horas', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '0', '8', '1', '1', '2022-11-19 21:37:37'),
+('2', 'Traduccion del manial de normas y procedimientos', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '1', '8', '1', '2', '2022-11-10 05:00:00'),
+('3', 'Evaluacion del desempeño de un sistema de intercambio', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '0', '8', '1', '3', '2022-10-15 05:00:00'),
+('4', 'Reparaciones de filtraciones y Grietas en el ', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '0', '16', '1', '4', '2022-11-19 05:00:00');
 
 

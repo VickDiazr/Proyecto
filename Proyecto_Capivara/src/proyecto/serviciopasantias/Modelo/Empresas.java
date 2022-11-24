@@ -267,4 +267,57 @@ public class Empresas {
         return "Error";
     }
     
+    public static String GetInfoValidar(String id){
+        con = null;
+        try{
+            Class.forName(driver);
+            con = (Connection) DriverManager.getConnection(Url, User, Password);
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlpersona = "select * from persona where id = '" + id + "'";
+                ResultSet rspersona = stmt.executeQuery(sqlpersona);
+                rspersona.next();
+                Empresas.nombrerep = rspersona.getString(4);
+                Empresas.apellidorep = rspersona.getString(5);
+                Empresas.no_id = rspersona.getString(1);
+                Empresas.lugar = rspersona.getString(3);
+                Empresas.telefonorep = rspersona.getString(7);
+                Empresas.correorep = rspersona.getString(6);
+                
+                /*Para la busqueda de Tipo"*/                
+                String tipo_idb = rspersona.getString(2);
+                String sqltipo = "select nombre from tipo_id where id = '" + tipo_idb + "'";
+                ResultSet rstipo = stmt.executeQuery(sqltipo);
+                rstipo.next();
+                Empresas.tipo_id = rstipo.getString(1);
+                
+                /*Para la busqueda de empresa*/
+                String sqlempresa = "select * from empresa where id = (select empresa from responsable where persona_id = '" + Empresas.no_id + "')";
+                ResultSet rsempresa = stmt.executeQuery(sqlempresa);
+                rsempresa.next();
+                
+                Empresas.nombreemp = rsempresa.getString(3);
+                Empresas.nit = rsempresa.getString(2);
+                Empresas.correoemp = rsempresa.getString(4);
+                Empresas.telefonoemp = rsempresa.getString(5);
+                Empresas.ciudad = rsempresa.getString(6);
+                
+                /*Para la busqueda de cargo*/
+                String sqlcargo = "select nombre from cargo where id = (select cargo from responsable where persona_id = '" + Empresas.no_id + "')";
+                ResultSet rscargo = stmt.executeQuery(sqlcargo);
+                rscargo.next();
+                Empresas.cargorep = rscargo.getString(1);
+                
+                /*Para la busqueda de area*/
+                String sqlarea = "select nombre from area where id = (select area from responsable where persona_id = '" + Empresas.no_id + "')";
+                ResultSet rsarea = stmt.executeQuery(sqlarea);
+                rsarea.next();
+                Empresas.arearep = rsarea.getString(1);
+            }
+        }
+        catch (ClassNotFoundException | SQLException e){
+            return e.getMessage();
+        }
+        return "Error";
+    }
 }

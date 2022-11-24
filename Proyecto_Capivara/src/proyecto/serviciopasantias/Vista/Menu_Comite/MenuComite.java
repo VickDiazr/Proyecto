@@ -5,8 +5,12 @@
 package proyecto.serviciopasantias.Vista.Menu_Comite;
 
 import proyecto.serviciopasantias.Vista.Menu_Estudiante.*;
+import proyecto.serviciopasantias.Modelo.Estudiantes;
 import proyecto.serviciopasantias.Vista.Menu_Estudiante.MisPasantiasEstudiante;
 import java.awt.BorderLayout;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import proyecto.serviciopasantias.Vista.Login;
 
 /**
@@ -20,6 +24,7 @@ public class MenuComite extends javax.swing.JFrame {
      */
     public MenuComite() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -53,8 +58,14 @@ public class MenuComite extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jSeparator7 = new javax.swing.JSeparator();
+        Boton_Usuario4 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -97,7 +108,7 @@ public class MenuComite extends javax.swing.JFrame {
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jSeparator2);
-        jSeparator2.setBounds(0, 110, 1324, 14);
+        jSeparator2.setBounds(0, 100, 1324, 14);
 
         Panel_Contenido.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -109,11 +120,11 @@ public class MenuComite extends javax.swing.JFrame {
         );
         Panel_ContenidoLayout.setVerticalGroup(
             Panel_ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGap(0, 470, Short.MAX_VALUE)
         );
 
         jPanel3.add(Panel_Contenido);
-        Panel_Contenido.setBounds(10, 120, 1150, 420);
+        Panel_Contenido.setBounds(10, 110, 1150, 470);
 
         Boton_Usuario.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -125,24 +136,26 @@ public class MenuComite extends javax.swing.JFrame {
 
         Boton_InfoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Usuario.png"))); // NOI18N
         Boton_Usuario.add(Boton_InfoPersonal);
-        Boton_InfoPersonal.setBounds(30, 0, 110, 110);
+        Boton_InfoPersonal.setBounds(5, 0, 110, 100);
 
-        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Personal");
         Boton_Usuario.add(jLabel4);
-        jLabel4.setBounds(200, 60, 110, 30);
+        jLabel4.setBounds(80, 50, 210, 30);
 
-        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Información");
         Boton_Usuario.add(jLabel9);
-        jLabel9.setBounds(130, 30, 150, 30);
+        jLabel9.setBounds(80, 20, 210, 30);
 
         jPanel3.add(Boton_Usuario);
-        Boton_Usuario.setBounds(0, 0, 390, 110);
+        Boton_Usuario.setBounds(0, 0, 292, 100);
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel3.add(jSeparator5);
-        jSeparator5.setBounds(390, 0, 3, 110);
+        jSeparator5.setBounds(292, 0, 2, 110);
 
         Boton_Usuario1.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -154,24 +167,26 @@ public class MenuComite extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Inventario.png"))); // NOI18N
         Boton_Usuario1.add(jLabel3);
-        jLabel3.setBounds(10, 20, 90, 80);
+        jLabel3.setBounds(5, 0, 90, 100);
 
-        jLabel10.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Activas");
         Boton_Usuario1.add(jLabel10);
-        jLabel10.setBounds(200, 70, 100, 30);
+        jLabel10.setBounds(80, 50, 220, 30);
 
-        jLabel11.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Pasantias/Practicas");
         Boton_Usuario1.add(jLabel11);
-        jLabel11.setBounds(130, 30, 240, 30);
+        jLabel11.setBounds(80, 20, 220, 30);
 
         jPanel3.add(Boton_Usuario1);
-        Boton_Usuario1.setBounds(390, 0, 390, 110);
+        Boton_Usuario1.setBounds(293, 0, 292, 100);
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel3.add(jSeparator6);
-        jSeparator6.setBounds(780, 0, 3, 110);
+        jSeparator6.setBounds(585, 0, 2, 110);
 
         Boton_Usuario3.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -183,23 +198,56 @@ public class MenuComite extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Pasantias.png"))); // NOI18N
         Boton_Usuario3.add(jLabel2);
-        jLabel2.setBounds(10, 10, 100, 90);
+        jLabel2.setBounds(5, 0, 100, 100);
 
-        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 23)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Pasantias/Practicas");
         Boton_Usuario3.add(jLabel7);
-        jLabel7.setBounds(130, 70, 240, 30);
+        jLabel7.setBounds(90, 50, 210, 30);
 
-        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
-        jLabel8.setText("Solicitudes");
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Solicitudes de");
         Boton_Usuario3.add(jLabel8);
-        jLabel8.setBounds(190, 30, 130, 30);
+        jLabel8.setBounds(90, 20, 210, 30);
 
         jPanel3.add(Boton_Usuario3);
-        Boton_Usuario3.setBounds(780, 0, 390, 110);
+        Boton_Usuario3.setBounds(586, 0, 292, 100);
+
+        jSeparator7.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel3.add(jSeparator7);
+        jSeparator7.setBounds(878, 0, 2, 110);
+
+        Boton_Usuario4.setBackground(new java.awt.Color(114, 137, 48));
+        Boton_Usuario4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Boton_Usuario4MouseClicked(evt);
+            }
+        });
+        Boton_Usuario4.setLayout(null);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Pasantias.png"))); // NOI18N
+        Boton_Usuario4.add(jLabel6);
+        jLabel6.setBounds(5, 0, 100, 100);
+
+        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 23)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Usuarios");
+        Boton_Usuario4.add(jLabel12);
+        jLabel12.setBounds(90, 50, 210, 30);
+
+        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Validación de");
+        Boton_Usuario4.add(jLabel13);
+        jLabel13.setBounds(90, 20, 210, 30);
+
+        jPanel3.add(Boton_Usuario4);
+        Boton_Usuario4.setBounds(880, 0, 290, 100);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(98, 164, 1170, 550);
+        jPanel3.setBounds(98, 130, 1170, 590);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1366, 768);
@@ -214,16 +262,13 @@ public class MenuComite extends javax.swing.JFrame {
     }//GEN-LAST:event_Img_atrasMouseClicked
 
     private void Boton_UsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_UsuarioMouseClicked
-        InformacionPersonalEstudiante p1 = new InformacionPersonalEstudiante();
-        p1.setSize(1150,420);
-        p1.setLocation(0,0);
-        
+        InformacionPersonalComite p1 = new InformacionPersonalComite();
+        p1.setSize(1150,470);
+        p1.setLocation(0,0);        
         Panel_Contenido.removeAll();
         Panel_Contenido.add(p1,BorderLayout.CENTER);
         Panel_Contenido.revalidate();
         Panel_Contenido.repaint(); 
-        
-
     }//GEN-LAST:event_Boton_UsuarioMouseClicked
 
     private void Boton_Usuario1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Usuario1MouseClicked
@@ -238,8 +283,8 @@ public class MenuComite extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_Usuario1MouseClicked
 
     private void Boton_Usuario3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Usuario3MouseClicked
-        PasantiasDisponiblesEstudiante p2 = new PasantiasDisponiblesEstudiante();
-        p2.setSize(1150,420);
+        PasantiasDisponiblesComite p2 = new PasantiasDisponiblesComite();
+        p2.setSize(1150,470);
         p2.setLocation(0,0);
         
         Panel_Contenido.removeAll();
@@ -247,6 +292,21 @@ public class MenuComite extends javax.swing.JFrame {
         Panel_Contenido.revalidate();
         Panel_Contenido.repaint();
     }//GEN-LAST:event_Boton_Usuario3MouseClicked
+
+    private void Boton_Usuario4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Usuario4MouseClicked
+        try {
+            UsuariosSinRegistrar p4 = new UsuariosSinRegistrar();
+            p4.setSize(1150,470);
+            p4.setLocation(0,0);
+            
+            Panel_Contenido.removeAll();
+            Panel_Contenido.add(p4,BorderLayout.CENTER);
+            Panel_Contenido.revalidate();
+            Panel_Contenido.repaint();
+        } catch (SQLException ex) {
+            Logger.getLogger(MenuComite.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_Boton_Usuario4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -257,15 +317,19 @@ public class MenuComite extends javax.swing.JFrame {
     private javax.swing.JPanel Boton_Usuario;
     private javax.swing.JPanel Boton_Usuario1;
     private javax.swing.JPanel Boton_Usuario3;
+    private javax.swing.JPanel Boton_Usuario4;
     private javax.swing.JLabel Img_atras;
     private javax.swing.JPanel Panel_Contenido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -275,5 +339,6 @@ public class MenuComite extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
     // End of variables declaration//GEN-END:variables
 }

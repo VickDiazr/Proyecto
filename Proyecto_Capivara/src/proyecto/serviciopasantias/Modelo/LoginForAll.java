@@ -39,8 +39,15 @@ public class LoginForAll {
                         String sqlemp = "select * from responsable where `Persona_id` = (select `Persona` from usuario where `Nombre`= '" + user + "'and `Contrasena` ='"+password+"')";
                         ResultSet rsemp = stmt.executeQuery(sqlemp);
                         if (!rsemp.isBeforeFirst()){
-                            con.close();
-                            return "Error";
+                            String sqlcom = "select * from comite_asesor where Persona_id = (select Persona from usuario where Nombre = '" + user + "'and Contrasena ='"+password+"')";
+                            ResultSet rscom = stmt.executeQuery(sqlcom);
+                            if (!rscom.isBeforeFirst()){
+                                con.close();
+                                return "Error";
+                            }
+                            else{
+                                return "Comite";
+                            }
                         }
                         else{
                             con.close();

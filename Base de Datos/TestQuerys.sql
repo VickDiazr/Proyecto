@@ -15,6 +15,16 @@ select * from empresa;
 select * from cargo;
 select * from area;
 select * from responsable;
+select * from comite_asesor;
+
+delete from persona where id = 1051238523;
+
+select persona.nombre, persona.apellido, persona.id from persona left join usuario on persona.id = usuario.persona where usuario.persona is null;
+select persona_id from estudiante where persona_id = '1000808411';
+select persona_id from estudiante where persona_id = (select persona.id from persona left join usuario on persona.id = usuario.persona where usuario.persona is null);
+select persona_id from docente where persona_id = (select persona.id from persona left join usuario on persona.id = usuario.persona where usuario.persona is null);
+select persona_id from responsable where persona_id = (select persona.id from persona left join usuario on persona.id = usuario.persona where usuario.persona is null);
+
 
 select * from empresa where id = (select empresa from responsable where persona_id = '1000808483');
 select nombre from area where id = (select area from responsable where persona_id = '1000808483');

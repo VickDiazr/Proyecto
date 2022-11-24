@@ -30,7 +30,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         A8.setVisible(false);
         A9.setVisible(false);
         A10.setVisible(false);
-        A11.setVisible(false);
         A12.setVisible(false);
         A13.setVisible(false);
         ComboBoxes cb = new ComboBoxes();
@@ -64,8 +63,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         jLabel16 = new javax.swing.JLabel();
         ProgramaCombo = new javax.swing.JComboBox<>();
         NombreEntry = new javax.swing.JTextField();
-        jLabel22 = new javax.swing.JLabel();
-        AvanceEntry = new javax.swing.JTextField();
         Boton_Registrar = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -76,7 +73,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         A7 = new javax.swing.JLabel();
         A9 = new javax.swing.JLabel();
         A10 = new javax.swing.JLabel();
-        A11 = new javax.swing.JLabel();
         A12 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         IDCombo = new javax.swing.JComboBox<>();
@@ -193,7 +189,7 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         ProgramaCombo.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         ProgramaCombo.setForeground(new java.awt.Color(0, 0, 0));
         ProgramaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Administración de Empresas", "Antropología", "Arquictectura", "Artes Plasticas", "Administración de Sistemas Informaticos", "Biologia,Ciencia Política", "Ciencias de la Computación", "Cine y Televisión", "Contaduría Pública", "Construcción", "Derecho", "Diseño Grafico", "Diseño Industrial", "Economia", "Enfermeria", "Español y Filología Clasíca", "Estadistica", "Estudios Literarios", "Farmacia", "Filología e Idiomas:Alemán", "Filología e Idiomas:Francés", "Filología e Idiomas:Inglés", "Filología", "Física", "Fonoaudiología","Geografia","Geologia", "Gestión Cultural y Comunicativa", "Historia", "Ingeniería Agrícola", "Ingeniería Agronómica", "Ingeniería Civil", "Ingeniería de Sistemas y Computación", "Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería Industrial", "Ingeniería Mecánica", "Ingeniería Mecatrónica", "Ingeniería Química", "Ingeniería Fisica", "Ingeniería de Control", "Ingeniería de Minas y Metalurgia", "Ingeniería de Petroleos", "Ingeniería de Sistemas e Informatica", "Ingeniería Forestal","Ingeniería Geológica", "Matematicas", "Medicina", "Medicina Veterinaria", "Música", "Musica Instrumental", "Nutrición y Dietetica", "Odontologia", "Psicologia", "Quimica", "Sociologia", "Terepia Ocupacional", "Trabajo Social", "Zootecnía" }));
-        ProgramaCombo.setNextFocusableComponent(AvanceEntry);
+        ProgramaCombo.setNextFocusableComponent(jLabel19);
         ProgramaCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProgramaComboActionPerformed(evt);
@@ -214,24 +210,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         });
         jPanel4.add(NombreEntry);
         NombreEntry.setBounds(95, 20, 340, 25);
-
-        jLabel22.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel22.setText("Porcentaje avance:");
-        jPanel4.add(jLabel22);
-        jLabel22.setBounds(500, 270, 140, 25);
-
-        AvanceEntry.setBackground(new java.awt.Color(255, 255, 255));
-        AvanceEntry.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
-        AvanceEntry.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        AvanceEntry.setNextFocusableComponent(jLabel19);
-        AvanceEntry.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AvanceEntryActionPerformed(evt);
-            }
-        });
-        jPanel4.add(AvanceEntry);
-        AvanceEntry.setBounds(645, 270, 275, 25);
 
         Boton_Registrar.setBackground(new java.awt.Color(148, 180, 59));
         Boton_Registrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -306,12 +284,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         A10.setText("*");
         jPanel4.add(A10);
         A10.setBounds(925, 210, 10, 15);
-
-        A11.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
-        A11.setForeground(new java.awt.Color(255, 0, 51));
-        A11.setText("*");
-        jPanel4.add(A11);
-        A11.setBounds(925, 260, 10, 15);
 
         A12.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         A12.setForeground(new java.awt.Color(255, 0, 51));
@@ -441,10 +413,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_NombreEntryActionPerformed
 
-    private void AvanceEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AvanceEntryActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AvanceEntryActionPerformed
-
     private void FacultadComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FacultadComboActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_FacultadComboActionPerformed
@@ -464,7 +432,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
         A8.setVisible(false);
         A9.setVisible(false);
         A10.setVisible(false);
-        A11.setVisible(false);
         A12.setVisible(false);
         int contador = 0;
         if ("".equals(NombreEntry.getText()))
@@ -522,18 +489,13 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
             contador += 1;
             A10.setVisible(true);
         }
-        if ("".equals(AvanceEntry.getText()))
-        {
-            contador += 1;
-            A11.setVisible(true);
-        }
         if (contador > 0){
             A12.setVisible(true);
         }
         else{
             String resultado = Estudiantes.Register(IDEntry.getText(), IDCombo.getSelectedItem().toString(), LugarCiudadCombo.getSelectedItem().toString(), 
                     NombreEntry.getText(), ApellidoEntry.getText(), CorreoEntry.getText(), TelefonoEntry.getText(),
-                    ProgramaCombo.getSelectedItem().toString(), AvanceEntry.getText());
+                    ProgramaCombo.getSelectedItem().toString());
             
             if ("Error".equals(resultado)){
                 JOptionPane.showMessageDialog(this, "Revise el registro.", "Registro Fallido", JOptionPane.ERROR_MESSAGE);
@@ -649,7 +611,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel A1;
     private javax.swing.JLabel A10;
-    private javax.swing.JLabel A11;
     private javax.swing.JLabel A12;
     private javax.swing.JLabel A13;
     private javax.swing.JLabel A2;
@@ -661,7 +622,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
     private javax.swing.JLabel A8;
     private javax.swing.JLabel A9;
     private javax.swing.JTextField ApellidoEntry;
-    private javax.swing.JTextField AvanceEntry;
     private javax.swing.JPanel Boton_Registrar;
     private javax.swing.JTextField CorreoEntry;
     private javax.swing.JComboBox<String> FacultadCombo;
@@ -683,7 +643,6 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
