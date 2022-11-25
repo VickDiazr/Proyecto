@@ -17,6 +17,7 @@ select * from area;
 select * from responsable;
 select * from comite_asesor;
 
+select nombre from programa where id = (select programa_id from comite_asesor where persona_id = '1020355481');
 delete from persona where id = 1051238523;
 
 select persona.nombre, persona.apellido, persona.id from persona left join usuario on persona.id = usuario.persona where usuario.persona is null;

@@ -447,7 +447,6 @@ Insert into persona (id, tipo_id, lugar_exp_id, nombre, apellido, correo, telefo
 (1003235621, 1, 'Tunja', 'Obed Felipe', 'Espinosa Angarita', 'ofespinosaa@unal.edu.co', '3058085048', 1),
 (1051586412, 1, 'Bogotá', 'David Alejandro', ' Cifuentes Gonzalez', 'dcifuentesg@unal.edu.co', '3205612315', 1);
 
-
 INSERT INTO usuario (NOMBRE, CONTRASENA, PERSONA) VALUES
 ('ivdmolinale', '1234', '1000808483'),
 ('ssiabatto', '1234', '1000808481'),
