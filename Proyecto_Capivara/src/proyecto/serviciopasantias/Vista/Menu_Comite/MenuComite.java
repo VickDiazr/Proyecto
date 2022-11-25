@@ -4,13 +4,13 @@
  */
 package proyecto.serviciopasantias.Vista.Menu_Comite;
 
-import proyecto.serviciopasantias.Vista.Menu_Estudiante.*;
-import proyecto.serviciopasantias.Modelo.Estudiantes;
+import proyecto.serviciopasantias.Modelo.ComiteAsesor;
 import proyecto.serviciopasantias.Vista.Menu_Estudiante.MisPasantiasEstudiante;
 import java.awt.BorderLayout;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import proyecto.serviciopasantias.Modelo.ComiteAsesor;
 import proyecto.serviciopasantias.Vista.Login;
 
 /**
@@ -262,6 +262,7 @@ public class MenuComite extends javax.swing.JFrame {
     }//GEN-LAST:event_Img_atrasMouseClicked
 
     private void Boton_UsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_UsuarioMouseClicked
+        ComiteAsesor.GetInfo();
         InformacionPersonalComite p1 = new InformacionPersonalComite();
         p1.setSize(1150,470);
         p1.setLocation(0,0);        

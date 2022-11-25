@@ -34,8 +34,8 @@ public class MenuProfesor extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        Img_atras = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        Img_atras = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         Panel_Contenido = new javax.swing.JPanel();
@@ -50,7 +50,6 @@ public class MenuProfesor extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -59,12 +58,19 @@ public class MenuProfesor extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(86, 90, 92));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1366, 110));
         jPanel2.setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/LogoUN.png"))); // NOI18N
         jPanel2.add(jLabel1);
         jLabel1.setBounds(1120, 0, 214, 110);
+
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Menu Principal");
+        jLabel5.setToolTipText("");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(370, 20, 560, 53);
 
         Img_atras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Img_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Atras.png"))); // NOI18N
@@ -74,18 +80,10 @@ public class MenuProfesor extends javax.swing.JFrame {
             }
         });
         jPanel2.add(Img_atras);
-        Img_atras.setBounds(38, 38, 33, 33);
-
-        jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Menú Principal");
-        jLabel5.setToolTipText("");
-        jPanel2.add(jLabel5);
-        jLabel5.setBounds(0, 0, 1366, 110);
+        Img_atras.setBounds(30, 30, 33, 33);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 1366, 110);
+        jPanel2.setBounds(0, 0, 1660, 0);
 
         jPanel3.setBackground(new java.awt.Color(86, 90, 92));
         jPanel3.setLayout(null);
@@ -166,7 +164,7 @@ public class MenuProfesor extends javax.swing.JFrame {
         Boton_Usuario3.setBounds(580, 0, 590, 110);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(98, 164, 1170, 550);
+        jPanel3.setBounds(100, 140, 1170, 550);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1366, 768);
