@@ -4,13 +4,28 @@
  */
 package proyecto.serviciopasantias.Vista.Menu_Estudiante;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-import proyecto.serviciopasantias.Modelo.Conexion;
+import java.util.Vector;
+import java.sql.ResultSetMetaData;
+import javax.swing.DefaultCellEditor;
+import javax.swing.JButton;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableCellRenderer;
+import proyecto.serviciopasantias.Modelo.Docentes;
+import proyecto.serviciopasantias.Modelo.Empresas;
+import proyecto.serviciopasantias.Modelo.Estudiantes;
+import proyecto.serviciopasantias.Modelo.Actividad;
+import proyecto.serviciopasantias.Vista.Menu_Comite.ValidarDocentes;
+import proyecto.serviciopasantias.Vista.Menu_Comite.ValidarEmpresas;
+import proyecto.serviciopasantias.Vista.Menu_Comite.ValidarEstudiante;
 
 /**
  *
@@ -21,77 +36,147 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
     /**
      * Creates new form InformacionPersonal
      */
-    public PasantiasDisponiblesEstudiante() {
+    
+    public static String empresa;
+    
+    public PasantiasDisponiblesEstudiante() throws SQLException {
         initComponents();
-        mostrar();
+        ResultSet rs = Actividad.GetInfo();
+        if (rs == null){
+            jTable1.removeAll();
+            jTable1.setFont(new Font("Tw Cen Mt", Font.PLAIN, 16));
+        }
+        else{
+            jTable1.setModel(buildTableModel(Actividad.GetInfo()));
+            jTable1.setFont(new Font("Tw Cen Mt", Font.PLAIN, 16));
+            jTable1.getColumnModel().getColumn(8).setCellRenderer(new PasantiasDisponiblesEstudiante.ButtonRenderer());
+            jTable1.getColumnModel().getColumn(8).setCellEditor(new PasantiasDisponiblesEstudiante.ButtonEditor(new JTextField()));
+        }
+        JTableHeader tableHeader = jTable1.getTableHeader();
+        Font headerFont = new Font("Tw Cen Mt", Font.BOLD, 18);
+        tableHeader.setFont(headerFont);
     }
     
+    public void Hide(){
+        this.setVisible(false);
+    }
     
-    
-    public void mostrar()
+    class ButtonRenderer extends JButton implements  TableCellRenderer
     {
-        String []  nombresColumnas = {"Empresa","Descripción","Estado"};
-        String [] registros = new String[3];
-        
-        DefaultTableModel modelo = new DefaultTableModel(null,nombresColumnas);
-        visor.setModel(modelo);
-        
-        String sql = "SELECT * FROM usuario";
-        
-        Connection cn = null;
-        
-        PreparedStatement pst = null;
-        
-        ResultSet rs = null;
-        
-        try
-        {
-            cn = Conexion.conectar();
-            
-            pst = cn.prepareStatement(sql);                        
-            
-            rs = pst.executeQuery();
-            
-            while(rs.next())
-            {
-                registros[0] = rs.getString("NOMBRE");
-                
-                registros[1] = rs.getString("CONTRASENA");
-                
-                registros[2] = rs.getString("PERSONA");
-                
-                modelo.addRow(registros);
-                
-            }
-            
-           
+        //CONSTRUCTOR
+        public ButtonRenderer() {
+            //SET BUTTON PROPERTIES
+            setOpaque(true);
         }
-        catch(SQLException e)
-        {
-            
-            JOptionPane.showMessageDialog(null,"Error al conectar");
-            
-        }
-        finally
-        {
-            try
-            {
-                if (rs != null) rs.close();
-                
-                if (pst != null) pst.close();
-                
-                if (cn != null) cn.close();
-            }
-            catch(SQLException e)
-            {
-                JOptionPane.showMessageDialog(null,e);
-            }
+        @Override
+        public Component getTableCellRendererComponent(JTable table, Object obj,
+            boolean selected, boolean focused, int row, int col) {
+
+            //SET PASSED OBJECT AS BUTTON TEXT
+            setText((obj==null) ? "":obj.toString());
+            return this;
         }
     }
+    
+    //BUTTON EDITOR CLASS
+    class ButtonEditor extends DefaultCellEditor
+    {
+        protected JButton btn;
+        private String lbl;
+        private Boolean clicked;
 
+        public ButtonEditor(JTextField txt) {
+            super(txt);
+
+            btn=new JButton();
+            btn.setOpaque(true);
+
+            //WHEN BUTTON IS CLICKED
+            btn.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    fireEditingStopped();
+                }
+            });
+        }
+
+        //OVERRIDE A COUPLE OF METHODS
+        @Override
+        public Component getTableCellEditorComponent(JTable table, Object obj,
+        boolean selected, int row, int col) {
+            //SET TEXT TO BUTTON,SET CLICKED TO TRUE,THEN RETURN THE BTN OBJECT
+            lbl=(obj==null) ? "":obj.toString();
+            btn.setText(lbl);
+            clicked=true;
+            return btn;
+        }
+
+        //IF BUTTON CELL VALUE CHNAGES,IF CLICKED THAT IS
+        @Override
+        public Object getCellEditorValue() {
+            if(clicked){
+                //SHOW US SOME MESSAGE
+                int row = jTable1.getSelectedRow();
+                String id = jTable1.getModel().getValueAt(row, 0).toString();
+                empresa = jTable1.getModel().getValueAt(row, 7).toString();
+                Actividad.GetInfoValidar(id);
+                RegistrarPasantía b = new RegistrarPasantía();                
+                b.setVisible(true);
+            }
+            //SET IT TO FALSE NOW THAT ITS CLICKED
+            clicked=false;
+            return new String(lbl);
+        }
+
+        @Override
+        public boolean stopCellEditing() {
+            //SET CLICKED TO FALSE FIRST
+            clicked=false;
+            return super.stopCellEditing();
+        }
+
+        @Override
+        protected void fireEditingStopped() {
+            // TODO Auto-generated method stub
+            super.fireEditingStopped();
+        }
+    }
     
-    
-    
+    public static DefaultTableModel buildTableModel(ResultSet rs) throws SQLException{
+        Vector<String> columnNames = new Vector<String>();
+        columnNames.add("ID");
+        columnNames.add("Título");
+        columnNames.add("Descripción");
+        columnNames.add("Tipología");
+        columnNames.add("Fecha de Inicio");
+        columnNames.add("Fecha de Fin");
+        columnNames.add("Ubicación");
+        columnNames.add("Empresa");
+        columnNames.add("Aplicar");
+        
+        Vector<Vector<Object>> data = new Vector<Vector<Object>>();
+        
+        ResultSetMetaData metaData = rs.getMetaData();
+        int columnCount = metaData.getColumnCount();
+        rs.beforeFirst();
+        while (rs.next()) {
+            Vector<Object> vector = new Vector<Object>();
+            for (int columnIndex = 1; columnIndex <= columnCount+1; columnIndex++) {
+                if (columnIndex == 8){
+                    String nombre = Actividad.GetEmpresa(rs.getString(columnIndex));
+                    vector.add(nombre);
+                }
+                else if (columnIndex == 9){
+                    vector.add("Aplicar");
+                }
+                else{
+                    vector.add(rs.getObject(columnIndex));                   
+                }
+            }
+            data.add(vector);
+        }        
+        return new DefaultTableModel(data, columnNames);
+    }
    
     /**
      * This method is called from within the constructor to initialize the form.
@@ -104,7 +189,7 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        visor = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
 
         setPreferredSize(new java.awt.Dimension(1150, 420));
 
@@ -112,18 +197,28 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
 
         jScrollPane1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
 
-        visor.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Título", "Descripción", "Tipología", "Fecha de Inicio", "Fecha de Fin", "Empresa", "Aplicar"
             }
-        ));
-        jScrollPane1.setViewportView(visor);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setRowHeight(30);
+        jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(0, 0, 1150, 420);
@@ -144,6 +239,6 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable visor;
+    public javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

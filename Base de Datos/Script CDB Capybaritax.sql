@@ -8,7 +8,6 @@ create table CARGO
    FECHA                timestamp                      not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
    constraint PK_CARGO primary key clustered (ID)
 );
-
 /*==============================================================*/
 /* Table: AREA                                                  */
 /*==============================================================*/
@@ -19,7 +18,6 @@ create table AREA
    FECHA                timestamp                      not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
    constraint PK_AREA primary key clustered (ID)
 );
-
 /*==============================================================*/
 /* Table: EMPRESA                                               */
 /*==============================================================*/
@@ -35,7 +33,6 @@ create table EMPRESA
    USUARIO              int                            null,
    constraint PK_EMPRESA primary key clustered (ID)
 );
-
 /*==============================================================*/
 /* Table: TIPO_ID                                               */
 /*==============================================================*/
@@ -46,7 +43,6 @@ create table TIPO_ID
    FECHA                timestamp                      not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
    constraint PK_TIPO_ID primary key clustered (ID)
 );
-
 /*==============================================================*/
 /* Table: PERSONA                                               */
 /*==============================================================*/
@@ -71,7 +67,6 @@ alter table PERSONA
       references TIPO_ID (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: RESPONSABLE                                           */
 /*==============================================================*/
@@ -110,7 +105,6 @@ alter table RESPONSABLE
       references AREA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: USUARIO                                               */
 /*==============================================================*/
@@ -130,7 +124,6 @@ alter table USUARIO
       references PERSONA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: SEDE                                                  */
 /*==============================================================*/
@@ -142,7 +135,6 @@ create table SEDE
    FECHA                timestamp                      not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
    constraint PK_SEDE primary key clustered (ID)
 );
-
 /*==============================================================*/
 /* Table: FACULTAD                                              */
 /*==============================================================*/
@@ -160,7 +152,6 @@ alter table FACULTAD
       references SEDE (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: DEPARTAMENTO                                          */
 /*==============================================================*/
@@ -178,7 +169,6 @@ alter table DEPARTAMENTO
       references FACULTAD (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: PROGRAMA                                              */
 /*==============================================================*/
@@ -196,7 +186,6 @@ alter table PROGRAMA
       references DEPARTAMENTO (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: COMITE_ASESOR                                         */
 /*==============================================================*/
@@ -214,7 +203,6 @@ alter table COMITE_ASESOR
       references PROGRAMA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: ESTUDIANTE                                            */
 /*==============================================================*/
@@ -240,7 +228,6 @@ alter table ESTUDIANTE
       references PROGRAMA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: DOCENTE                                               */
 /*==============================================================*/
@@ -266,7 +253,6 @@ alter table DOCENTE
       references PERSONA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: PASANTIA                                              */
 /*==============================================================*/
@@ -280,9 +266,10 @@ create table PASANTIA
    JUSTIFICACION        varchar(100)                   null,
    APLICACION_APORTE    varchar(100)                   null,
    CONTRATACION_INTENCION smallint                     null,
-   DURACION             int                            null,
+   DURACION             float                          null,
    RESPONSABLE          int                            null,
    DOCENTE_DIRECTOR     int                            null,
+   ESTADO               smallint                       null,
    FECHA                timestamp                      not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
    constraint PK_PASANTIA primary key clustered (ID)
 );
@@ -304,7 +291,6 @@ alter table PASANTIA
       references DOCENTE (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: VERIFICACION                                          */
 /*==============================================================*/
@@ -331,7 +317,6 @@ alter table VERIFICACION
       references COMITE_ASESOR (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: ACTIVIDAD                                             */
 /*==============================================================*/
@@ -354,7 +339,6 @@ alter table ACTIVIDAD
       references RESPONSABLE (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: CRITERIO                                              */
 /*==============================================================*/
@@ -373,7 +357,6 @@ alter table CRITERIO
       references PASANTIA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: OBJETIVO_ESPECIFICO                                   */
 /*==============================================================*/
@@ -391,7 +374,6 @@ alter table OBJETIVO_ESPECIFICO
       references PASANTIA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: EVALUACION                                            */
 /*==============================================================*/
@@ -403,6 +385,7 @@ create table EVALUACION
    FECHA                timestamp                      not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
    constraint PK_EVALUACION primary key clustered (ID)
 );
+
 alter table EVALUACION
    add constraint FK_EVALUACI_REFERENCE_RESPONSA foreign key (RESPONSABLE)
       references RESPONSABLE (ID)
@@ -414,8 +397,6 @@ alter table EVALUACION
       references PASANTIA (ID)
       on update cascade
       on delete cascade;
-
-
 /*==============================================================*/
 /* Table: DOCENTE_COMITE                                        */
 /*==============================================================*/
@@ -438,12 +419,10 @@ alter table DOCENTE_COMITE
    add constraint FK_DOCENTE_REFERENCE_DOCENTE foreign key (DOCENTE)
       references DOCENTE (ID)
       on update cascade
-      on delete cascade;
-      
+      on delete cascade;      
 /*===================================================================================*/
-/* Table: AUDITORIA                                                                  */
+/* AUDITORIA                                                                         */
 /*===================================================================================*/
-
 /*==============================================================*/
 /* Table: AUD_CARGO                                             */
 /*==============================================================*/
@@ -461,7 +440,6 @@ alter table AUD_CARGO
       references CARGO (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_AREA                                              */
 /*==============================================================*/
@@ -479,7 +457,6 @@ alter table AUD_AREA
       references AREA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_EMPRESA                                               */
 /*==============================================================*/
@@ -501,7 +478,6 @@ alter table AUD_EMPRESA
       references EMPRESA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_TIPO_ID                                               */
 /*==============================================================*/
@@ -518,8 +494,7 @@ alter table AUD_TIPO_ID
    add constraint FK_AUD_TIPO_ID_REFERENCE_TIPO_ID foreign key (TIPO_ID)
       references TIPO_ID (ID)
       on update cascade
-      on delete cascade;
-      
+      on delete cascade;      
 /*==============================================================*/
 /* Table: AUD_PERSONA                                               */
 /*==============================================================*/
@@ -544,7 +519,6 @@ alter table AUD_PERSONA
       references PERSONA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_RESPONSABLE                                           */
 /*==============================================================*/
@@ -566,7 +540,6 @@ alter table AUD_RESPONSABLE
       references RESPONSABLE (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_USUARIO                                               */
 /*==============================================================*/
@@ -587,7 +560,6 @@ alter table AUD_USUARIO
       references USUARIO (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_SEDE                                                  */
 /*==============================================================*/
@@ -605,8 +577,7 @@ alter table AUD_SEDE
    add constraint FK_AUD_SEDE_REFERENCE_SEDE foreign key (SEDE)
       references SEDE (ID)
       on update cascade
-      on delete cascade;
-      
+      on delete cascade;      
 /*==============================================================*/
 /* Table: AUD_FACULTAD                                              */
 /*==============================================================*/
@@ -625,7 +596,6 @@ alter table AUD_FACULTAD
       references FACULTAD (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_DEPARTAMENTO                                          */
 /*==============================================================*/
@@ -644,7 +614,6 @@ alter table AUD_DEPARTAMENTO
       references DEPARTAMENTO (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_PROGRAMA                                              */
 /*==============================================================*/
@@ -663,7 +632,6 @@ alter table AUD_PROGRAMA
       references PROGRAMA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_COMITE_ASESOR                                         */
 /*==============================================================*/
@@ -682,7 +650,6 @@ alter table AUD_COMITE_ASESOR
       references COMITE_ASESOR (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_ESTUDIANTE                                            */
 /*==============================================================*/
@@ -704,7 +671,6 @@ alter table AUD_ESTUDIANTE
       references ESTUDIANTE (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_DOCENTE                                               */
 /*==============================================================*/
@@ -725,7 +691,6 @@ alter table AUD_DOCENTE
       references DOCENTE (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_PASANTIA                                              */
 /*==============================================================*/
@@ -740,9 +705,10 @@ create table AUD_PASANTIA
    JUSTIFICACION        varchar(100)                   null,
    APLICACION_APORTE    varchar(100)                   null,
    CONTRATACION_INTENCION smallint                     null,
-   DURACION             int                            null,
+   DURACION             float                          null,
    RESPONSABLE          int                            null,
    DOCENTE_DIRECTOR     int                            null,
+   ESTADO               smallint                       null,
    FECHA                timestamp                      not null,
    constraint PK_AUD_PASANTIA primary key clustered (ID)
 );
@@ -752,7 +718,6 @@ alter table AUD_PASANTIA
       references PASANTIA (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_VERIFICACION                                          */
 /*==============================================================*/
@@ -774,7 +739,6 @@ alter table AUD_VERIFICACION
       references VERIFICACION (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_ACTIVIDAD                                             */
 /*==============================================================*/
@@ -798,7 +762,6 @@ alter table AUD_ACTIVIDAD
       references ACTIVIDAD (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_CRITERIO                                              */
 /*==============================================================*/
@@ -818,7 +781,6 @@ alter table AUD_CRITERIO
       references CRITERIO (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_OBJETIVO_ESPECIFICO                                   */
 /*==============================================================*/
@@ -837,7 +799,6 @@ alter table AUD_OBJETIVO_ESPECIFICO
       references OBJETIVO_ESPECIFICO (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_EVALUACION                                            */
 /*==============================================================*/
@@ -856,7 +817,6 @@ alter table AUD_EVALUACION
       references EVALUACION (ID)
       on update cascade
       on delete cascade;
-
 /*==============================================================*/
 /* Table: AUD_DOCENTE_COMITE                                    */
 /*==============================================================*/
@@ -875,7 +835,9 @@ alter table AUD_DOCENTE_COMITE
       references DOCENTE_COMITE (ID)
       on update cascade
       on delete cascade;
-      
+/*===================================================================================*/
+/* TRIGGERS                                                                          */
+/*===================================================================================*/
 CREATE TRIGGER trigger_cargo BEFORE UPDATE ON cargo FOR EACH ROW
    INSERT INTO AUD_CARGO(CARGO,NOMBRE,FECHA) 
    VALUES(OLD.ID,OLD.NOMBRE,OLD.FECHA);
@@ -933,8 +895,8 @@ CREATE TRIGGER trigger_docente BEFORE UPDATE ON docente FOR EACH ROW
    VALUES(OLD.ID,OLD.PERSONA_ID,OLD.DEPARTAMENTO,OLD.EXTENSION,OLD.FECHA,OLD.USUARIO);
 
 CREATE TRIGGER trigger_pasantia BEFORE UPDATE ON pasantia FOR EACH ROW
-   INSERT INTO AUD_PASANTIA(PASANTIA,ESTUDIANTE,TITULO,OBJETIVO_GENERAL,INTRODUCCION,JUSTIFICACION,APLICACION_APORTE,CONTRATACION_INTENCION,DURACION,RESPONSABLE,DOCENTE_DIRECTOR,FECHA) 
-   VALUES(OLD.ID,OLD.ESTUDIANTE,OLD.TITULO,OLD.OBJETIVO_GENERAL,OLD.INTRODUCCION,OLD.JUSTIFICACION,OLD.APLICACION_APORTE,OLD.CONTRATACION_INTENCION,OLD.DURACION,OLD.RESPONSABLE,OLD.DOCENTE_DIRECTOR,OLD.FECHA);
+   INSERT INTO AUD_PASANTIA(PASANTIA,ESTUDIANTE,TITULO,OBJETIVO_GENERAL,INTRODUCCION,JUSTIFICACION,APLICACION_APORTE,CONTRATACION_INTENCION,DURACION,RESPONSABLE,DOCENTE_DIRECTOR,ESTADO,FECHA) 
+   VALUES(OLD.ID,OLD.ESTUDIANTE,OLD.TITULO,OLD.OBJETIVO_GENERAL,OLD.INTRODUCCION,OLD.JUSTIFICACION,OLD.APLICACION_APORTE,OLD.CONTRATACION_INTENCION,OLD.DURACION,OLD.RESPONSABLE,OLD.DOCENTE_DIRECTOR,OLD.ESTADO,OLD.FECHA);
 
 CREATE TRIGGER trigger_verificacion BEFORE UPDATE ON verificacion FOR EACH ROW
    INSERT INTO AUD_VERIFICACION(VERIFICACION,PASANTIA,COMITE,ACTA,CONSECUTIVO,RESULTADO,FECHA) 
@@ -959,7 +921,9 @@ CREATE TRIGGER trigger_evaluacion BEFORE UPDATE ON evaluacion FOR EACH ROW
 CREATE TRIGGER trigger_docente_comite BEFORE UPDATE ON docente_comite FOR EACH ROW
    INSERT INTO AUD_DOCENTE_COMITE(DOCENTE_COMITE,DOCENTE,COMITE,FECHA) 
    VALUES(OLD.ID,OLD.DOCENTE,OLD.COMITE,OLD.FECHA);
-
+/*===================================================================================*/
+/* INSERTS                                                                           */
+/*===================================================================================*/
 INSERT INTO tipo_id (NOMBRE) VALUES
 ('Cédula de ciudadanía'),
 ('Tarjeta de identidad'),
@@ -1054,6 +1018,7 @@ Insert into actividad (TITULO, DESCRIPCION, TIPOLOGIA, FECHA_INICIO, FECHA_FIN, 
 ('Reparaciones de filtraciones y grietas', 'Reparación','Pasantía','2022-11-30','2023-05-19','Bogotá','1');
 
 INSERT INTO pasantia (ESTUDIANTE, TITULO, OBJETIVO_GENERAL, INTRODUCCION, JUSTIFICACION, APLICACION_APORTE, CONTRATACION_INTENCION, DURACION, RESPONSABLE, DOCENTE_DIRECTOR) VALUES
+('1', 'Programa de mantenimiento de 200 horas', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '0', (datediff('2023-05-19','2022-11-30')/7), '1', '1'),
 ('1', 'Programa de mantenimiento de 200 horas', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '0', '8', '1', '1'),
 ('2', 'Traduccion del manial de normas y procedimientos', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '1', '8', '1', '2'),
 ('3', 'Evaluacion del desempeño de un sistema de intercambio', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '0', '8', '1', '3'),

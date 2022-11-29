@@ -65,6 +65,27 @@ public class ComboBoxes {
         return modelo;
     }
     
+    public DefaultComboBoxModel getValuesDocentes(){
+        con = null;
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        try{
+            Class.forName(driver);            
+            con = (Connection) DriverManager.getConnection(Url, User, Password);            
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlfacultad = "select id from docente";
+                ResultSet rs = stmt.executeQuery(sqlfacultad);
+                while(rs.next()){
+                    modelo.addElement(rs.getString(1));
+                }
+                con.close();
+                rs.close();
+            }
+        }
+        catch (Exception e){System.out.println(e);}
+        return modelo;
+    }
+    
     public DefaultComboBoxModel getValuesDepartamento(){
         con = null;
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();

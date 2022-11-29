@@ -22,6 +22,7 @@ public class LoginForAll {
     public static final String Password = "";    
     
     private static int rs_id;
+    public static String es_id;
     
     public static String Login(String user, String password){
         LoginForAll.usuario = user;
@@ -35,37 +36,42 @@ public class LoginForAll {
                 String sqlest = "select * from estudiante where Persona_id = (select Persona from usuario where Nombre= '" + user + "'and Contrasena ='"+password+"')";
                 ResultSet rsest = stmt.executeQuery(sqlest); 
                 if (!rsest.isBeforeFirst()){
-                    String sqldoc = "select * from docente where `Persona_id` = (select `Persona` from usuario where `Nombre`= '" + user + "'and `Contrasena` ='"+password+"')";
-                    ResultSet rsdoc = stmt.executeQuery(sqldoc);
-                    if (!rsdoc.isBeforeFirst()){
-                        String sqlemp = "select * from responsable where `Persona_id` = (select `Persona` from usuario where `Nombre`= '" + user + "'and `Contrasena` ='"+password+"')";
-                        ResultSet rsemp = stmt.executeQuery(sqlemp);
-                        if (!rsemp.isBeforeFirst()){
-                            String sqlcom = "select * from comite_asesor where Persona_id = (select Persona from usuario where Nombre = '" + user + "'and Contrasena ='"+password+"')";
-                            ResultSet rscom = stmt.executeQuery(sqlcom);
-                            if (!rscom.isBeforeFirst()){
+                    String sqlcom = "select * from docente_comite where docente = (select ID from docente where Persona_id = (select Persona from usuario where Nombre = '" + user + "'and Contrasena = '" + password + "'))";
+                    ResultSet rscom = stmt.executeQuery(sqlcom);
+                    if (!rscom.isBeforeFirst()){
+                        String sqldoc = "select * from docente where `Persona_id` = (select `Persona` from usuario where `Nombre`= '" + user + "'and `Contrasena` ='"+password+"')";
+                        ResultSet rsdoc = stmt.executeQuery(sqldoc);
+                        if (!rsdoc.isBeforeFirst()){
+                            String sqlemp = "select * from responsable where `Persona_id` = (select `Persona` from usuario where `Nombre`= '" + user + "'and `Contrasena` ='"+password+"')";
+                            ResultSet rsemp = stmt.executeQuery(sqlemp);
+                            if (!rsemp.isBeforeFirst()){                            
                                 con.close();
                                 return "Error";
                             }
                             else{
-                                return "Comite";
+                                String responsable = "select id from responsable where Persona_id = (select Persona from usuario where Nombre = '"+user+"' and Contrasena = '"+password+"')";
+                                ResultSet rsresponsable = stmt.executeQuery(responsable);                            
+                                rsresponsable.first();                            
+                                rs_id = rsresponsable.getInt(1);                            
+                                con.close();
+                                return "Empresa";
                             }
                         }
-                        else{
-                            String responsable = "select id from responsable where Persona_id = (select Persona from usuario where Nombre = '"+user+"' and Contrasena = '"+password+"')";
-                            ResultSet rsresponsable = stmt.executeQuery(responsable);                            
-                            rsresponsable.first();                            
-                            rs_id = rsresponsable.getInt(1);                            
+                        else{                         
                             con.close();
-                            return "Empresa";
+                            return "Docente";
                         }
                     }
                     else{
                         con.close();
-                        return "Docente";
+                        return "Comite";
                     }
                 }
                 else{
+                    String responsable = "select id from estudiante where Persona_id = (select Persona from usuario where Nombre = '"+user+"' and Contrasena = '"+password+"')";
+                    ResultSet rsresponsable = stmt.executeQuery(responsable);                            
+                    rsresponsable.first();                            
+                    es_id = rsresponsable.getString(1);                            
                     con.close();
                     return "Estudiante";
                 }

@@ -4,7 +4,6 @@
  */
 package proyecto.serviciopasantias.Vista.Menu_Comite;
 
-import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -16,16 +15,16 @@ import java.util.Vector;
 import java.sql.ResultSetMetaData;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableCellRenderer;
+import proyecto.serviciopasantias.Modelo.Actividad;
 import proyecto.serviciopasantias.Modelo.Docentes;
 import proyecto.serviciopasantias.Modelo.Empresas;
 import proyecto.serviciopasantias.Modelo.Estudiantes;
 import proyecto.serviciopasantias.Modelo.Validar;
-import proyecto.serviciopasantias.Vista.Login;
+import proyecto.serviciopasantias.Vista.Menu_Estudiante.RegistrarPasantía;
 
 /**
  *
@@ -114,6 +113,7 @@ public class UsuariosSinRegistrar extends javax.swing.JPanel {
         @Override
         public Object getCellEditorValue() {
             if(clicked){
+                
                 //SHOW US SOME MESSAGE
                 int row = jTable1.getSelectedRow();
                 String id = jTable1.getModel().getValueAt(row, 2).toString();

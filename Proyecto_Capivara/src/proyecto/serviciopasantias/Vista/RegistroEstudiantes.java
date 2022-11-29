@@ -224,6 +224,9 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel19MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel19MouseEntered(evt);
+            }
         });
         jLabel19.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -606,6 +609,10 @@ public class RegistroEstudiantes extends javax.swing.JPanel {
             LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         }
     }//GEN-LAST:event_LugarDepartamentoComboItemStateChanged
+
+    private void jLabel19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel19MouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
