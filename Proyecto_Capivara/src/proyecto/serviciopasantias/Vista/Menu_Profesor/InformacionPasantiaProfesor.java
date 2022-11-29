@@ -17,7 +17,7 @@ import proyecto.serviciopasantias.Modelo.Docentes;
  * @author Windows
  */
 public class InformacionPasantiaProfesor extends javax.swing.JPanel {
-
+    public static String id;
     /**
      * Creates new form InformacionPersonal
      */
@@ -35,30 +35,15 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
     
     public void mostrar()
     {
-        
-
-        String [] registros = new String[6];
-        
-        
+        String [] registros = new String[7];
         Connection cn = null;
-        
         PreparedStatement pst= null;
-
         ResultSet rs=null;
-        
         try
         {
-            cn = Conexion.conectar();
-
-           
-            pst = cn.prepareStatement("SELECT persona.NOMBRE, empresa.NOMBRE, pasantia.TITULO,pasantia.OBJETIVO_GENERAL,pasantia.INTRODUCCION,pasantia.NOTA FROM pasantia INNER JOIN estudiante ON pasantia.ESTUDIANTE = estudiante.ID INNER JOIN persona ON estudiante.PERSONA_ID = persona.ID INNER JOIN responsable ON pasantia.RESPONSABLE = responsable.ID INNER JOIN empresa ON responsable.EMPRESA = empresa.ID INNER JOIN usuario ON persona.ID = usuario.PERSONA INNER JOIN docente ON pasantia.DOCENTE_DIRECTOR = docente.ID WHERE persona.NOMBRE = '" + PasantiasDisponiblesProfesor.Id + "'");
-            
+            cn = Conexion.conectar();           
+            pst = cn.prepareStatement("SELECT persona.NOMBRE, empresa.NOMBRE, pasantia.TITULO,pasantia.OBJETIVO_GENERAL,pasantia.INTRODUCCION,pasantia.NOTA,pasantia.ID FROM pasantia INNER JOIN estudiante ON pasantia.ESTUDIANTE = estudiante.ID INNER JOIN persona ON estudiante.PERSONA_ID = persona.ID INNER JOIN responsable ON pasantia.RESPONSABLE = responsable.ID INNER JOIN empresa ON responsable.EMPRESA = empresa.ID INNER JOIN usuario ON persona.ID = usuario.PERSONA INNER JOIN docente ON pasantia.DOCENTE_DIRECTOR = docente.ID WHERE persona.NOMBRE = '" + PasantiasDisponiblesProfesor.Id + "'");            
             rs = pst.executeQuery();
-            
-
-
-         
-
             while(rs.next())
             {
                 registros[0] = rs.getString(1);
@@ -67,19 +52,12 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
                 registros[3] = rs.getString(4);
                 registros[4] = rs.getString(5);
                 registros[5] = rs.getString(6);
-                
-                    
-            } 
-            
-            
-            
-            
+                registros[6] = rs.getString(7);
+            }  
         }
         catch(SQLException e)
         {
-            
             JOptionPane.showMessageDialog(null,"Error al conectar");
-            
         }
         finally
         {
@@ -94,75 +72,37 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null,e);
             }
         }
-        
-        
-        
-        
         Nombre_Container.setText(registros[0]);
         Empresa_Container.setText(registros[1]);
         Pasantia_Container.setText(registros[2]);
         Descricion_Container.setText(registros[3]);
         Introduccion_Container.setText(registros[4]);
         Calificacion_Contair.setText(registros[5]);
-    }
+        id = registros[6];
+    }    
     
-    
-    public void Guardar(){
-        
-        String [] calificacion = new String[1];
-        
+    public void Guardar(String id){
         Connection cn = null;
-        
         PreparedStatement pst= null;
-
-        ResultSet rs=null;
-        
-        
+        String nota = Calificacion_Contair.getText();
         
         try
         {
             cn = Conexion.conectar();
-
-           
-            pst = cn.prepareStatement("INSERT INTO pasantia ");
-            
-            rs = pst.executeQuery();
-            
-
-
-         
-
-            while(rs.next())
-            {
-                calificacion[0] = rs.getString(1);
-                
-        
-             
-                
-            }
-            
-      
-            
-            
-            
-
-            
-            
-
-           
+            pst = cn.prepareStatement("update pasantia set nota = '" + nota + "' where id = '" + id + "'");
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "La nota ha sido actualizada", "Actualizado", JOptionPane.INFORMATION_MESSAGE);
         }
         catch(SQLException e)
         {
             
-            JOptionPane.showMessageDialog(null,"Error al conectar");
-            
+            JOptionPane.showMessageDialog(null,"Error al conectar");        
         }
         finally
         {
             try
             {
                 if (pst != null) pst.close();
-                if (rs != null) rs.close();
                 if (cn != null) cn.close();
             }
             catch(SQLException e)
@@ -170,9 +110,6 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null,e);
             }
         }
-        
-        
-        
     }
     
         
@@ -402,7 +339,7 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
             
             
             Calificacion_Contair.setEnabled(false);
-            
+            Guardar(id);
         
         }
         
