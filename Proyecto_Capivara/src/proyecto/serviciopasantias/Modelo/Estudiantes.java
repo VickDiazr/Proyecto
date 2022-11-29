@@ -93,7 +93,7 @@ public class Estudiantes {
     }
     
     public static String Register(String id, String tipo, String lugar, String nombre, String apellido, String correo,
-            String telefono, String programa, String avance){
+            String telefono, String programa){
         con = null;
         try{
             Class.forName(driver);            
@@ -121,7 +121,7 @@ public class Estudiantes {
                     String programaid = rspro.getString(1);
                     
                     String sqlestudiante = "insert into estudiante(PERSONA_ID, PROGRAMA_ID, AVANCE, ESTADO)"
-                        + " values('" + id + "', '" + programaid + "', '" + avance + "', '1')";
+                        + " values('" + id + "', '" + programaid + "', null, '1')";
                     stmt.executeUpdate(sqlestudiante);
                     con.close();
                     
@@ -154,6 +154,64 @@ public class Estudiantes {
                 String sqlchange2 = "update persona set telefono = '" + telefono + "' where id = '" + no_id + "'";
                 stmt2.executeUpdate(sqlchange2);
                 return "Datos Actualizados";
+            }
+        }
+        catch (ClassNotFoundException | SQLException e){
+            return e.getMessage();
+        }
+        return "Error";
+    }
+    
+    public static String GetInfoValidar(String id){
+        con = null;
+        try{
+            Class.forName(driver);
+            con = (Connection) DriverManager.getConnection(Url, User, Password);
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlpersona = "select * from persona where id = '" + id + "'";
+                ResultSet rspersona = stmt.executeQuery(sqlpersona);
+                rspersona.next();
+                Estudiantes.nombre = rspersona.getString(4);
+                Estudiantes.apellido = rspersona.getString(5);
+                Estudiantes.no_id = rspersona.getString(1);
+                Estudiantes.lugar = rspersona.getString(3);
+                Estudiantes.telefono = rspersona.getString(7);
+                Estudiantes.correo = rspersona.getString(6);
+                
+                /*Para la busqueda de Tipo"*/                
+                String tipo_idb = rspersona.getString(2);
+                String sqltipo = "select nombre from tipo_id where id = '" + tipo_idb + "'";
+                ResultSet rstipo = stmt.executeQuery(sqltipo);
+                rstipo.next();
+                Estudiantes.tipo_id = rstipo.getString(1);
+                
+                /*Para la busqueda de avance y programa*/
+                String sqlavance = "select programa_id from estudiante where persona_id = '" + Estudiantes.no_id + "'";
+                ResultSet rsavpro = stmt.executeQuery(sqlavance);
+                rsavpro.next();
+                
+                String programab = rsavpro.getString(1);
+                
+                String sqlprograma = "select nombre, departamento from programa where id = '" + programab + "'";
+                ResultSet rsprograma = stmt.executeQuery(sqlprograma);
+                rsprograma.next();
+                Estudiantes.programa = rsprograma.getString(1);
+                
+                String departamento = rsprograma.getString(2);
+                
+                /*Para la busqueda de facultad*/
+                String sqlfacultad = "select nombre, sede from facultad where id = (select facultad from departamento where id = '" + departamento +"')";
+                ResultSet rsfacultad = stmt.executeQuery(sqlfacultad);
+                rsfacultad.next();
+                Estudiantes.facultad = rsfacultad.getString(1);
+                String sedeb = rsfacultad.getString(2);
+                
+                /*Para la busqueda de sede*/
+                String sqlsede = "select nombre from sede where id = '" + sedeb + "'";
+                ResultSet rssede = stmt.executeQuery(sqlsede);
+                rssede.next();                
+                Estudiantes.sede = rssede.getString(1);
             }
         }
         catch (ClassNotFoundException | SQLException e){

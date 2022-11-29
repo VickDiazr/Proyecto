@@ -121,6 +121,8 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
 
         jPanel1.setLayout(null);
 
+        jScrollPane1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+
         visor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -143,6 +145,7 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
         jScrollPane1.setViewportView(visor);
 
         jPanel1.add(jScrollPane1);
+<<<<<<< HEAD
         jScrollPane1.setBounds(30, 30, 1100, 290);
 
         Ass.setBackground(new java.awt.Color(148, 180, 59));
@@ -169,6 +172,9 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
 
         jPanel1.add(Ass);
         Ass.setBounds(450, 340, 250, 60);
+=======
+        jScrollPane1.setBounds(0, 0, 1150, 420);
+>>>>>>> f8ef2d7219eac528d1c545369ebf64e1cc9529b1
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

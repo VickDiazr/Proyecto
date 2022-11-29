@@ -21,6 +21,8 @@ public class LoginForAll {
     public static final String User = "root";
     public static final String Password = "";    
     
+    private static int rs_id;
+    
     public static String Login(String user, String password){
         LoginForAll.usuario = user;
         LoginForAll.passwordu = password;
@@ -39,10 +41,21 @@ public class LoginForAll {
                         String sqlemp = "select * from responsable where `Persona_id` = (select `Persona` from usuario where `Nombre`= '" + user + "'and `Contrasena` ='"+password+"')";
                         ResultSet rsemp = stmt.executeQuery(sqlemp);
                         if (!rsemp.isBeforeFirst()){
-                            con.close();
-                            return "Error";
+                            String sqlcom = "select * from comite_asesor where Persona_id = (select Persona from usuario where Nombre = '" + user + "'and Contrasena ='"+password+"')";
+                            ResultSet rscom = stmt.executeQuery(sqlcom);
+                            if (!rscom.isBeforeFirst()){
+                                con.close();
+                                return "Error";
+                            }
+                            else{
+                                return "Comite";
+                            }
                         }
                         else{
+                            String responsable = "select id from responsable where Persona_id = (select Persona from usuario where Nombre = '"+user+"' and Contrasena = '"+password+"')";
+                            ResultSet rsresponsable = stmt.executeQuery(responsable);                            
+                            rsresponsable.first();                            
+                            rs_id = rsresponsable.getInt(1);                            
                             con.close();
                             return "Empresa";
                         }
@@ -62,5 +75,13 @@ public class LoginForAll {
             return e.getMessage();
         }
         return "Error";
+    }
+    
+    public static int getRs_id() {
+        return rs_id;
+    }
+
+    public void setRs_id(int rs_id) {
+        this.rs_id = rs_id;
     }
 }

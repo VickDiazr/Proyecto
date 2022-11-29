@@ -99,12 +99,13 @@ public class MenuEmpresa extends javax.swing.JFrame {
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jSeparator2);
-        jSeparator2.setBounds(0, 110, 1324, 14);
+        jSeparator2.setBounds(0, 100, 1324, 14);
 
         Panel_Contenido.setBackground(new java.awt.Color(255, 255, 255));
+        Panel_Contenido.setMinimumSize(new java.awt.Dimension(1150, 470));
         Panel_Contenido.setLayout(null);
         jPanel3.add(Panel_Contenido);
-        Panel_Contenido.setBounds(10, 120, 1150, 470);
+        Panel_Contenido.setBounds(10, 110, 1150, 470);
 
         Boton_Usuario.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -116,24 +117,24 @@ public class MenuEmpresa extends javax.swing.JFrame {
 
         Boton_InfoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Usuario.png"))); // NOI18N
         Boton_Usuario.add(Boton_InfoPersonal);
-        Boton_InfoPersonal.setBounds(30, 0, 110, 110);
+        Boton_InfoPersonal.setBounds(30, 5, 110, 110);
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
         jLabel4.setText("Personal");
         Boton_Usuario.add(jLabel4);
-        jLabel4.setBounds(200, 60, 110, 30);
+        jLabel4.setBounds(200, 50, 110, 30);
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
         jLabel9.setText("Información");
         Boton_Usuario.add(jLabel9);
-        jLabel9.setBounds(130, 30, 150, 30);
+        jLabel9.setBounds(130, 20, 150, 30);
 
         jPanel3.add(Boton_Usuario);
-        Boton_Usuario.setBounds(0, 0, 390, 110);
+        Boton_Usuario.setBounds(0, 0, 390, 100);
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel3.add(jSeparator5);
-        jSeparator5.setBounds(390, 0, 2, 110);
+        jSeparator5.setBounds(390, 0, 2, 100);
 
         Boton_Usuario1.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -145,12 +146,12 @@ public class MenuEmpresa extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Inventario.png"))); // NOI18N
         Boton_Usuario1.add(jLabel3);
-        jLabel3.setBounds(10, 20, 90, 80);
+        jLabel3.setBounds(10, 10, 90, 80);
 
         jLabel10.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
         jLabel10.setText("Activas");
         Boton_Usuario1.add(jLabel10);
-        jLabel10.setBounds(190, 60, 100, 30);
+        jLabel10.setBounds(190, 50, 100, 30);
 
         jLabel11.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
         jLabel11.setText("Pasantias & Praticas");
@@ -158,11 +159,11 @@ public class MenuEmpresa extends javax.swing.JFrame {
         jLabel11.setBounds(110, 20, 250, 30);
 
         jPanel3.add(Boton_Usuario1);
-        Boton_Usuario1.setBounds(390, 0, 390, 110);
+        Boton_Usuario1.setBounds(390, 0, 390, 100);
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel3.add(jSeparator6);
-        jSeparator6.setBounds(780, 0, 2, 110);
+        jSeparator6.setBounds(780, 0, 2, 100);
 
         Boton_Usuario3.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -174,7 +175,7 @@ public class MenuEmpresa extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Pasantias.png"))); // NOI18N
         Boton_Usuario3.add(jLabel2);
-        jLabel2.setBounds(10, 10, 100, 90);
+        jLabel2.setBounds(10, 5, 100, 90);
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
         jLabel7.setText("Registrar");
@@ -184,13 +185,13 @@ public class MenuEmpresa extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tw Cen MT", 0, 30)); // NOI18N
         jLabel8.setText("Pasantias/Practicas");
         Boton_Usuario3.add(jLabel8);
-        jLabel8.setBounds(130, 60, 240, 30);
+        jLabel8.setBounds(130, 50, 240, 30);
 
         jPanel3.add(Boton_Usuario3);
-        Boton_Usuario3.setBounds(780, 0, 390, 110);
+        Boton_Usuario3.setBounds(780, 0, 390, 100);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(98, 144, 1170, 600);
+        jPanel3.setBounds(100, 125, 1170, 590);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1366, 768);

@@ -207,7 +207,7 @@ public class MenuEstudiante extends javax.swing.JFrame {
         Boton_Usuario3.setBounds(780, 0, 390, 110);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(98, 164, 1170, 550);
+        jPanel3.setBounds(98, 149, 1170, 550);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1366, 768);

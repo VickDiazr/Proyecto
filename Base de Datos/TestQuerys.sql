@@ -1,12 +1,12 @@
-select * from proyecto.docente;
-select * from proyecto.jornada;
-SELECT * FROM proyecto.tipo_id;
-select * From proyecto.persona;
-select * from proyecto.estudiante;
-select * from proyecto.usuario;
-select * from proyecto.programa;
-select * from proyecto.sede;
-select * from proyecto.facultad;
+select * from docente;
+select * from jornada;
+SELECT * FROM tipo_id;
+select * From persona;
+select * from estudiante;
+select * from usuario;
+select * from programa;
+select * from sede;
+select * from facultad;
 select * from departamento;
 select * from proyecto.estado;
 select * from docente;
@@ -15,6 +15,19 @@ select * from empresa;
 select * from cargo;
 select * from area;
 select * from responsable;
+select * from comite_asesor;
+select * from actividad;
+select * from pasantia;
+
+select nombre from programa where id = (select programa_id from comite_asesor where persona_id = '1020355481');
+delete from persona where id = 1051238523;
+
+select persona.nombre, persona.apellido, persona.id from persona left join usuario on persona.id = usuario.persona where usuario.persona is null;
+select persona_id from estudiante where persona_id = '1000808411';
+select persona_id from estudiante where persona_id = (select persona.id from persona left join usuario on persona.id = usuario.persona where usuario.persona is null);
+select persona_id from docente where persona_id = (select persona.id from persona left join usuario on persona.id = usuario.persona where usuario.persona is null);
+select persona_id from responsable where persona_id = (select persona.id from persona left join usuario on persona.id = usuario.persona where usuario.persona is null);
+
 
 select * from empresa where id = (select empresa from responsable where persona_id = '1000808483');
 select nombre from area where id = (select area from responsable where persona_id = '1000808483');

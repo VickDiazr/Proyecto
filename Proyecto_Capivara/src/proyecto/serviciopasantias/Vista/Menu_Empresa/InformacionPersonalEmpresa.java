@@ -86,7 +86,7 @@ public class InformacionPersonalEmpresa extends javax.swing.JPanel {
         jLabel27 = new javax.swing.JLabel();
         AreaRepEntry = new javax.swing.JTextField();
 
-        setPreferredSize(new java.awt.Dimension(1150, 420));
+        setPreferredSize(new java.awt.Dimension(1150, 470));
 
         jPanel1.setLayout(null);
 

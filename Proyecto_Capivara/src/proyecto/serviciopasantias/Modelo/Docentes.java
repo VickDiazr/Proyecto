@@ -158,4 +158,48 @@ public class Docentes {
         }
         return "Error";
     }
+    
+    public static String GetInfoValidar(String id){
+        con = null;
+        try{
+            Class.forName(driver);
+            con = (Connection) DriverManager.getConnection(Url, User, Password);
+            if (con != null){
+                Statement stmt = con.createStatement();
+                String sqlpersona = "select * from persona where id = '" + id + "'";
+                ResultSet rspersona = stmt.executeQuery(sqlpersona);
+                rspersona.next();
+                Docentes.nombre = rspersona.getString(4);
+                Docentes.apellido = rspersona.getString(5);
+                Docentes.no_id = rspersona.getString(1);
+                Docentes.lugar = rspersona.getString(3);
+                Docentes.telefono = rspersona.getString(7);
+                Docentes.correo = rspersona.getString(6);
+                
+                /*Para la busqueda de Tipo"*/                
+                String tipo_idb = rspersona.getString(2);
+                String sqltipo = "select nombre from tipo_id where id = '" + tipo_idb + "'";
+                ResultSet rstipo = stmt.executeQuery(sqltipo);
+                rstipo.next();
+                Docentes.tipo_id = rstipo.getString(1);
+                
+                /*Para la busqueda de codigo de departamento*/
+                String sqlcoddep = "select departamento, extension from docente where persona_id = '" + Docentes.no_id + "'";
+                ResultSet rscoddep = stmt.executeQuery(sqlcoddep);
+                rscoddep.next();
+                
+                String coddep = rscoddep.getString(1);
+                Docentes.extension = rscoddep.getString(2);
+                
+                String sqldepar = "select nombre from departamento where id = '" + coddep + "'";
+                ResultSet rsdepar = stmt.executeQuery(sqldepar);
+                rsdepar.next();
+                Docentes.departamento = rsdepar.getString(1);
+            }
+        }
+        catch (ClassNotFoundException | SQLException e){
+            return e.getMessage();
+        }
+        return "Error";
+    }
 }
