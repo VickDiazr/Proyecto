@@ -6,6 +6,9 @@ package proyecto.serviciopasantias.Vista.Menu_Estudiante;
 
 import proyecto.serviciopasantias.Vista.Menu_Estudiante.MisPasantiasEstudiante;
 import java.awt.BorderLayout;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import proyecto.serviciopasantias.Modelo.Estudiantes;
 import proyecto.serviciopasantias.Vista.Login;
 
@@ -247,15 +250,19 @@ public class MenuEstudiante extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_Usuario1MouseClicked
 
     private void Boton_Usuario3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Usuario3MouseClicked
-        PasantiasDisponiblesEstudiante p2 = new PasantiasDisponiblesEstudiante();
-        p2.setSize(1150,420);
-        p2.setLocation(0,0);
+        PasantiasDisponiblesEstudiante p2;
+        try {
+            p2 = new PasantiasDisponiblesEstudiante();
+            p2.setSize(1150,420);
+            p2.setLocation(0,0);
         
-        Panel_Contenido.removeAll();
-        Panel_Contenido.add(p2,BorderLayout.CENTER);
-        Panel_Contenido.revalidate();
-        Panel_Contenido.repaint();
-        
+            Panel_Contenido.removeAll();
+            Panel_Contenido.add(p2,BorderLayout.CENTER);
+            Panel_Contenido.revalidate();
+            Panel_Contenido.repaint();
+        } catch (SQLException ex) {
+            Logger.getLogger(MenuEstudiante.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_Boton_Usuario3MouseClicked
 
     /**
