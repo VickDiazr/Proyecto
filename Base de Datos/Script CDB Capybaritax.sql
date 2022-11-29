@@ -1047,8 +1047,20 @@ INSERT INTO responsable (PERSONA_ID, EMPRESA, CARGO, AREA) VALUES
 ('1000808483','1', '1', '5'),
 (1003235621,'2','4','1');
 
+Insert into actividad (TITULO, DESCRIPCION, TIPOLOGIA, FECHA_INICIO, FECHA_FIN, UBICACION, RESPONSABLE) values
+('Programa de mantenimiento de 200 horas','Mantenimiento','Pasantía', '2022-11-30','2023-05-19','Bogotá','1'),
+('Traduccion del manial de normas y procedimientos','Traducción','Pasantía','2022-11-30','2023-05-19','Bogotá','1'),
+('Evaluacion del desempeño de un sistema de intercambio','Evaluación','Pasantía','2022-11-30','2023-05-19','Bogotá','1'),
+('Reparaciones de filtraciones y grietas', 'Reparación','Pasantía','2022-11-30','2023-05-19','Bogotá','1');
+
 INSERT INTO pasantia (ESTUDIANTE, TITULO, OBJETIVO_GENERAL, INTRODUCCION, JUSTIFICACION, APLICACION_APORTE, CONTRATACION_INTENCION, DURACION, RESPONSABLE, DOCENTE_DIRECTOR) VALUES
 ('1', 'Programa de mantenimiento de 200 horas', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '0', '8', '1', '1'),
 ('2', 'Traduccion del manial de normas y procedimientos', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '1', '8', '1', '2'),
 ('3', 'Evaluacion del desempeño de un sistema de intercambio', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '0', '8', '1', '3'),
 ('4', 'Reparaciones de filtraciones y Grietas en el ', 'Desarollo del yonoseque con el sisecuando automatizando el abc', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ', 'Lorem ipsum dolor sit amet.', '0', '16', '1', '4');
+
+Insert into verificacion (PASANTIA, COMITE, ACTA, CONSECUTIVO, RESULTADO) values
+('1','1','29','1','0'),
+('1','1','29','1','1'),
+('2','1','35','1','1'),
+('3','1','36','1','1');
