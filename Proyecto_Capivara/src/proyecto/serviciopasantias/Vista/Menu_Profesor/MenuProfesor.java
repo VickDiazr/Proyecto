@@ -20,6 +20,7 @@ public class MenuProfesor extends javax.swing.JFrame {
     public MenuProfesor() {
         initComponents();
         this.setLocationRelativeTo(null);
+        Docentes.GetInfo();
     }
 
     /**
@@ -181,7 +182,7 @@ public class MenuProfesor extends javax.swing.JFrame {
     }//GEN-LAST:event_Img_atrasMouseClicked
 
     private void Boton_UsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_UsuarioMouseClicked
-        Docentes.GetInfo();
+        
         InformacionPersonalProfesor p1 = new InformacionPersonalProfesor();
         p1.setSize(1150,420);
         p1.setLocation(0,0);
