@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import proyecto.serviciopasantias.Modelo.Conexion;
 import java.sql.SQLException;
+import proyecto.serviciopasantias.Modelo.Docentes;
 /**
  *
  * @author Windows
@@ -36,7 +37,7 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
     {
         
 
-        String [] registros = new String[5];
+        String [] registros = new String[6];
         
         
         Connection cn = null;
@@ -50,7 +51,7 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
             cn = Conexion.conectar();
 
            
-            pst = cn.prepareStatement("SELECT persona.NOMBRE, empresa.NOMBRE, pasantia.TITULO,pasantia.OBJETIVO_GENERAL,pasantia.INTRODUCCION FROM pasantia INNER JOIN estudiante ON pasantia.ESTUDIANTE = estudiante.ID INNER JOIN persona ON estudiante.PERSONA_ID = persona.ID INNER JOIN responsable ON pasantia.RESPONSABLE = responsable.ID INNER JOIN empresa ON responsable.EMPRESA = empresa.ID INNER JOIN usuario ON persona.ID = usuario.PERSONA INNER JOIN docente ON pasantia.DOCENTE_DIRECTOR = docente.ID WHERE persona.NOMBRE = '" + PasantiasDisponiblesProfesor.Id + "'");
+            pst = cn.prepareStatement("SELECT persona.NOMBRE, empresa.NOMBRE, pasantia.TITULO,pasantia.OBJETIVO_GENERAL,pasantia.INTRODUCCION,pasantia.NOTA FROM pasantia INNER JOIN estudiante ON pasantia.ESTUDIANTE = estudiante.ID INNER JOIN persona ON estudiante.PERSONA_ID = persona.ID INNER JOIN responsable ON pasantia.RESPONSABLE = responsable.ID INNER JOIN empresa ON responsable.EMPRESA = empresa.ID INNER JOIN usuario ON persona.ID = usuario.PERSONA INNER JOIN docente ON pasantia.DOCENTE_DIRECTOR = docente.ID WHERE persona.NOMBRE = '" + PasantiasDisponiblesProfesor.Id + "'");
             
             rs = pst.executeQuery();
             
@@ -65,15 +66,12 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
                 registros[2] = rs.getString(3);
                 registros[3] = rs.getString(4);
                 registros[4] = rs.getString(5);
+                registros[5] = rs.getString(6);
                 
                     
             } 
             
-            System.out.println(registros[0]);
-            System.out.println(registros[1]);
-            System.out.println(registros[2]);
-            System.out.println(registros[3]);
-            System.out.println(registros[4]);
+            
             
             
         }
@@ -105,6 +103,76 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
         Pasantia_Container.setText(registros[2]);
         Descricion_Container.setText(registros[3]);
         Introduccion_Container.setText(registros[4]);
+        Calificacion_Contair.setText(registros[5]);
+    }
+    
+    
+    public void Guardar(){
+        
+        String [] calificacion = new String[1];
+        
+        Connection cn = null;
+        
+        PreparedStatement pst= null;
+
+        ResultSet rs=null;
+        
+        
+        
+        try
+        {
+            cn = Conexion.conectar();
+
+           
+            pst = cn.prepareStatement("INSERT INTO pasantia ");
+            
+            rs = pst.executeQuery();
+            
+
+
+         
+
+            while(rs.next())
+            {
+                calificacion[0] = rs.getString(1);
+                
+        
+             
+                
+            }
+            
+      
+            
+            
+            
+
+            
+            
+
+           
+        }
+        catch(SQLException e)
+        {
+            
+            JOptionPane.showMessageDialog(null,"Error al conectar");
+            
+        }
+        finally
+        {
+            try
+            {
+                if (pst != null) pst.close();
+                if (rs != null) rs.close();
+                if (cn != null) cn.close();
+            }
+            catch(SQLException e)
+            {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        }
+        
+        
+        
     }
     
         
@@ -146,6 +214,11 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
         Boton_Editar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         Boton_Editar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Boton_Editar.setText("Calificar");
+        Boton_Editar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Boton_EditarMouseClicked(evt);
+            }
+        });
         jPanel2.add(Boton_Editar);
         Boton_Editar.setBounds(0, 0, 140, 60);
 
@@ -317,6 +390,28 @@ public class InformacionPasantiaProfesor extends javax.swing.JPanel {
     private void Introduccion_ContainerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Introduccion_ContainerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Introduccion_ContainerActionPerformed
+
+    private void Boton_EditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_EditarMouseClicked
+        // TODO add your handling code here:
+        if (Calificacion_Contair.isEnabled() == false){
+            
+            Calificacion_Contair.setEnabled(true);
+            
+        }
+        else{
+            
+            
+            Calificacion_Contair.setEnabled(false);
+            
+        
+        }
+        
+   
+            
+            
+        
+        
+    }//GEN-LAST:event_Boton_EditarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
