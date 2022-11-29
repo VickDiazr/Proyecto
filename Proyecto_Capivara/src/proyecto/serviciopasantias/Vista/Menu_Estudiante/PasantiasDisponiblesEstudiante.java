@@ -33,17 +33,10 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
         String []  nombresColumnas = {"Empresa","Descripción","Estado"};
         String [] registros = new String[3];
         
-        DefaultTableModel modelo = new DefaultTableModel(null,nombresColumnas){
-            
-            @Override
-            public boolean isCellEditable(int row, int column){
-                return false;
-            };
-            
-        };
+        DefaultTableModel modelo = new DefaultTableModel(null,nombresColumnas);
+        visor.setModel(modelo);
         
-        
-        String sql = "SELECT * FROM actividad";
+        String sql = "SELECT * FROM usuario";
         
         Connection cn = null;
         
@@ -61,17 +54,15 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
             
             while(rs.next())
             {
-                registros[0] = rs.getString("TITULO");
+                registros[0] = rs.getString("NOMBRE");
                 
-                registros[1] = rs.getString("DESCRIPCION");
+                registros[1] = rs.getString("CONTRASENA");
                 
-                registros[2] = rs.getString("RESPONSABLE");
+                registros[2] = rs.getString("PERSONA");
                 
                 modelo.addRow(registros);
                 
             }
-            
-            visor.setModel(modelo);
             
            
         }
@@ -114,8 +105,6 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         visor = new javax.swing.JTable();
-        Ass = new javax.swing.JPanel();
-        Boton_Ingresar = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1150, 420));
 
@@ -133,48 +122,11 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(visor);
 
         jPanel1.add(jScrollPane1);
-<<<<<<< HEAD
-        jScrollPane1.setBounds(30, 30, 1100, 290);
-
-        Ass.setBackground(new java.awt.Color(148, 180, 59));
-        Ass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        Ass.setLayout(null);
-
-        Boton_Ingresar.setFont(new java.awt.Font("Tw Cen MT", 1, 28)); // NOI18N
-        Boton_Ingresar.setForeground(new java.awt.Color(255, 255, 255));
-        Boton_Ingresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Boton_Ingresar.setText("Ingresar");
-        Boton_Ingresar.setToolTipText("");
-        Boton_Ingresar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Boton_IngresarMouseClicked(evt);
-            }
-        });
-        Boton_Ingresar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                Boton_IngresarKeyPressed(evt);
-            }
-        });
-        Ass.add(Boton_Ingresar);
-        Boton_Ingresar.setBounds(0, 0, 250, 60);
-
-        jPanel1.add(Ass);
-        Ass.setBounds(450, 340, 250, 60);
-=======
         jScrollPane1.setBounds(0, 0, 1150, 420);
->>>>>>> f8ef2d7219eac528d1c545369ebf64e1cc9529b1
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -188,19 +140,8 @@ public final class PasantiasDisponiblesEstudiante extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Boton_IngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_IngresarMouseClicked
-
-        
-    }//GEN-LAST:event_Boton_IngresarMouseClicked
-
-    private void Boton_IngresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Boton_IngresarKeyPressed
-
-    }//GEN-LAST:event_Boton_IngresarKeyPressed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Ass;
-    private javax.swing.JLabel Boton_Ingresar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable visor;
