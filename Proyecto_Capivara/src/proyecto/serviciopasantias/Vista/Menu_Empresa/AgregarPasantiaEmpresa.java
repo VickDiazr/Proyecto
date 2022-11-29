@@ -4,7 +4,10 @@
  */
 package proyecto.serviciopasantias.Vista.Menu_Empresa;
 
-import proyecto.serviciopasantias.Vista.Menu_Estudiante.*;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+import proyecto.serviciopasantias.Modelo.Actividad;
+import proyecto.serviciopasantias.Modelo.LoginForAll;
 
 /**
  *
@@ -17,8 +20,18 @@ public class AgregarPasantiaEmpresa extends javax.swing.JPanel {
      */
     public AgregarPasantiaEmpresa() {
         initComponents();
+        A1.setVisible(false);
+        A2.setVisible(false);
+        A3.setVisible(false);
+        A4.setVisible(false);
+        A5.setVisible(false);
+        A6.setVisible(false);
+        A7.setVisible(false);
+        A8.setVisible(false);
     }
-
+    
+    private int rs_id;
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,164 +42,489 @@ public class AgregarPasantiaEmpresa extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        Img_atras = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
-        Boton_Guardar = new javax.swing.JLabel();
+        jcbTipologia = new javax.swing.JComboBox<>();
+        jtfFecha_inicio = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jtfFecha_fin = new javax.swing.JTextField();
+        jtfTitulo = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtaDescripcion = new javax.swing.JTextArea();
+        jSeparator1 = new javax.swing.JSeparator();
+        Boton_Guardar1 = new javax.swing.JPanel();
+        LabelAgregar = new javax.swing.JLabel();
+        A8 = new javax.swing.JLabel();
+        A1 = new javax.swing.JLabel();
+        A2 = new javax.swing.JLabel();
+        A3 = new javax.swing.JLabel();
+        A4 = new javax.swing.JLabel();
+        A5 = new javax.swing.JLabel();
+        A6 = new javax.swing.JLabel();
+        LugarCiudadCombo = new javax.swing.JComboBox<>();
+        jLabel18 = new javax.swing.JLabel();
+        LugarDepartamentoCombo = new javax.swing.JComboBox<>();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        A7 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(1150, 420));
+        setPreferredSize(new java.awt.Dimension(1150, 470));
+        setLayout(null);
 
         jPanel1.setLayout(null);
 
-        jLabel12.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel12.setText("Ubicación:");
-        jPanel1.add(jLabel12);
-        jLabel12.setBounds(70, 200, 120, 30);
+        jPanel2.setMinimumSize(new java.awt.Dimension(1150, 470));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1150, 470));
 
-        jLabel25.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jPanel3.setPreferredSize(new java.awt.Dimension(1150, 470));
+        jPanel3.setLayout(null);
+
+        jLabel25.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel25.setText("Tipologia:");
-        jPanel1.add(jLabel25);
-        jLabel25.setBounds(70, 60, 200, 30);
+        jPanel3.add(jLabel25);
+        jLabel25.setBounds(20, 80, 200, 25);
 
-        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jLabel13.setText("Descripción:");
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(70, 260, 120, 30);
+        jPanel3.add(jLabel13);
+        jLabel13.setBounds(610, 140, 120, 25);
 
-        jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel14.setText("Duración:");
-        jPanel1.add(jLabel14);
-        jLabel14.setBounds(70, 130, 120, 30);
+        jLabel14.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel14.setText("Fecha fin:");
+        jPanel3.add(jLabel14);
+        jLabel14.setBounds(610, 80, 120, 25);
 
-        jComboBox3.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Pasantia", "Practica"}));
-        jComboBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        jcbTipologia.setBackground(new java.awt.Color(255, 255, 255));
+        jcbTipologia.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jcbTipologia.setForeground(new java.awt.Color(0, 0, 0));
+        jcbTipologia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Pasantia", "Practica"}));
+        jcbTipologia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                jcbTipologiaActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox3);
-        jComboBox3.setBounds(360, 70, 420, 20);
+        jPanel3.add(jcbTipologia);
+        jcbTipologia.setBounds(130, 80, 400, 25);
 
-        jComboBox5.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox5.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " ,"Bogota", "Medellin", "Orinoquia", "Palmira","Manizales","Tumaco"}));
-        jComboBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        jtfFecha_inicio.setBackground(new java.awt.Color(255, 255, 255));
+        jtfFecha_inicio.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jtfFecha_inicio.setForeground(new java.awt.Color(0, 0, 0));
+        jtfFecha_inicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jtfFecha_inicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                jtfFecha_inicioActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox5);
-        jComboBox5.setBounds(360, 210, 420, 20);
+        jPanel3.add(jtfFecha_inicio);
+        jtfFecha_inicio.setBounds(710, 20, 400, 25);
 
-        jTextField5.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField5.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel1.setText("Titulo:");
+        jPanel3.add(jLabel1);
+        jLabel1.setBounds(20, 20, 110, 25);
+
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel2.setText("Fecha inicio:");
+        jPanel3.add(jLabel2);
+        jLabel2.setBounds(610, 20, 130, 25);
+
+        jtfFecha_fin.setBackground(new java.awt.Color(255, 255, 255));
+        jtfFecha_fin.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jtfFecha_fin.setForeground(new java.awt.Color(0, 0, 0));
+        jtfFecha_fin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jtfFecha_fin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                jtfFecha_finActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5);
-        jTextField5.setBounds(360, 140, 420, 20);
+        jPanel3.add(jtfFecha_fin);
+        jtfFecha_fin.setBounds(710, 80, 400, 25);
 
-        jTextField6.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField6.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+        jtfTitulo.setBackground(new java.awt.Color(255, 255, 255));
+        jtfTitulo.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jtfTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        jtfTitulo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jtfTitulo);
+        jtfTitulo.setBounds(130, 20, 400, 25);
+
+        jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jtaDescripcion.setBackground(new java.awt.Color(255, 255, 255));
+        jtaDescripcion.setColumns(20);
+        jtaDescripcion.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jtaDescripcion.setForeground(new java.awt.Color(0, 0, 0));
+        jtaDescripcion.setLineWrap(true);
+        jtaDescripcion.setRows(5);
+        jtaDescripcion.setPreferredSize(new java.awt.Dimension(400, 105));
+        jtaDescripcion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtaDescripcionKeyTyped(evt);
             }
         });
-        jPanel1.add(jTextField6);
-        jTextField6.setBounds(360, 270, 420, 120);
+        jScrollPane1.setViewportView(jtaDescripcion);
 
-        Img_atras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Img_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Atras.png"))); // NOI18N
-        Img_atras.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanel3.add(jScrollPane1);
+        jScrollPane1.setBounds(710, 140, 400, 150);
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jSeparator1);
+        jSeparator1.setBounds(573, 0, 2, 290);
+
+        Boton_Guardar1.setBackground(new java.awt.Color(148, 180, 59));
+        Boton_Guardar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        Boton_Guardar1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        Boton_Guardar1.setLayout(null);
+
+        LabelAgregar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        LabelAgregar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelAgregar.setText("Agregar");
+        LabelAgregar.setName(""); // NOI18N
+        LabelAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Img_atrasMouseClicked(evt);
+                LabelAgregarMouseClicked(evt);
             }
         });
-        jPanel1.add(Img_atras);
-        Img_atras.setBounds(10, 10, 33, 33);
+        LabelAgregar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                LabelAgregarKeyPressed(evt);
+            }
+        });
+        Boton_Guardar1.add(LabelAgregar);
+        LabelAgregar.setBounds(0, 0, 280, 60);
 
-        jPanel10.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel10.setLayout(null);
+        jPanel3.add(Boton_Guardar1);
+        Boton_Guardar1.setBounds(430, 350, 280, 60);
 
-        jPanel11.setBackground(new java.awt.Color(148, 180, 59));
-        jPanel11.setLayout(null);
+        A8.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A8.setForeground(new java.awt.Color(255, 0, 51));
+        A8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        A8.setText("Las casillas marcadas con un * son obligatorias.");
+        jPanel3.add(A8);
+        A8.setBounds(0, 410, 1150, 21);
 
-        Boton_Guardar.setBackground(new java.awt.Color(153, 153, 153));
-        Boton_Guardar.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        Boton_Guardar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Boton_Guardar.setText("Agregar");
-        jPanel11.add(Boton_Guardar);
-        Boton_Guardar.setBounds(0, 0, 210, 50);
+        A1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A1.setForeground(new java.awt.Color(255, 0, 51));
+        A1.setText("*");
+        jPanel3.add(A1);
+        A1.setBounds(535, 10, 10, 15);
 
-        jPanel10.add(jPanel11);
-        jPanel11.setBounds(10, 10, 210, 50);
+        A2.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A2.setForeground(new java.awt.Color(255, 0, 51));
+        A2.setText("*");
+        jPanel3.add(A2);
+        A2.setBounds(535, 70, 10, 15);
 
-        jPanel1.add(jPanel10);
-        jPanel10.setBounds(870, 330, 230, 70);
+        A3.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A3.setForeground(new java.awt.Color(255, 0, 51));
+        A3.setText("*");
+        jPanel3.add(A3);
+        A3.setBounds(535, 145, 10, 15);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        A4.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A4.setForeground(new java.awt.Color(255, 0, 51));
+        A4.setText("*");
+        jPanel3.add(A4);
+        A4.setBounds(535, 205, 10, 15);
+
+        A5.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A5.setForeground(new java.awt.Color(255, 0, 51));
+        A5.setText("*");
+        jPanel3.add(A5);
+        A5.setBounds(1115, 10, 10, 15);
+
+        A6.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A6.setForeground(new java.awt.Color(255, 0, 51));
+        A6.setText("*");
+        jPanel3.add(A6);
+        A6.setBounds(1115, 70, 10, 15);
+
+        LugarCiudadCombo.setBackground(new java.awt.Color(255, 255, 255));
+        LugarCiudadCombo.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        LugarCiudadCombo.setForeground(new java.awt.Color(0, 0, 0));
+        LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        jPanel3.add(LugarCiudadCombo);
+        LugarCiudadCombo.setBounds(180, 215, 350, 25);
+
+        jLabel18.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel18.setText("Ciudad / Municipio:");
+        jPanel3.add(jLabel18);
+        jLabel18.setBounds(20, 215, 170, 25);
+
+        LugarDepartamentoCombo.setBackground(new java.awt.Color(255, 255, 255));
+        LugarDepartamentoCombo.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        LugarDepartamentoCombo.setForeground(new java.awt.Color(0, 0, 0));
+        LugarDepartamentoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Amazonas", "Antioquia", "Arauca", "Atlántico", "Bolívar", "Boyacá", "Caldas", "Caquetá", "Casanare", "Cauca", "Cesar", "Chocó", "Córdoba", "Cundinamarca", "Distrito Capital", "Guainía", "Guaviare", "Huila", "La Guajira", "Magdalena", "Meta", "Nariño", "Norte de Santander", "Putumayo", "Quindío", "Risaralda", "San Andrés y Providencia", "Santander", "Sucre", "Tolima", "Valle del Cauca", "Vaupés", "Vichada"}));
+        LugarDepartamentoCombo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                LugarDepartamentoComboItemStateChanged(evt);
+            }
+        });
+        jPanel3.add(LugarDepartamentoCombo);
+        LugarDepartamentoCombo.setBounds(140, 155, 390, 25);
+
+        jLabel19.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setText("Departamento:");
+        jPanel3.add(jLabel19);
+        jLabel19.setBounds(20, 155, 170, 25);
+
+        jLabel17.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Las fechas ingresarlas siguiendo el siguiente ejemplo: (2022-10-31)");
+        jPanel3.add(jLabel17);
+        jLabel17.setBounds(0, 240, 570, 70);
+
+        A7.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        A7.setForeground(new java.awt.Color(255, 0, 51));
+        A7.setText("*");
+        jPanel3.add(A7);
+        A7.setBounds(1115, 130, 10, 15);
+
+        jLabel20.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("Ubicación:");
+        jPanel3.add(jLabel20);
+        jLabel20.setBounds(0, 105, 570, 50);
+
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        jLabel3.setText("Quedan 100 carácteres.");
+        jPanel3.add(jLabel3);
+        jLabel3.setBounds(970, 290, 140, 16);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 0, 1150, 470);
+
+        add(jPanel1);
+        jPanel1.setBounds(0, 0, 1150, 470);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void jcbTipologiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTipologiaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_jcbTipologiaActionPerformed
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+    private void jtfFecha_inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfFecha_inicioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    }//GEN-LAST:event_jtfFecha_inicioActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    public void registrarPasantia() {
+        A1.setVisible(false);
+        A2.setVisible(false);
+        A3.setVisible(false);
+        A4.setVisible(false);
+        A5.setVisible(false);
+        A6.setVisible(false);
+        A7.setVisible(false);
+        A8.setVisible(false);
+        int contador = 0;
+        if ("".equals(jtfTitulo.getText()))
+        {
+            contador += 1;
+            A1.setVisible(true);
+        }
+        if (" ".equals(jcbTipologia.getSelectedItem().toString()))
+        {
+            contador += 1;
+            A2.setVisible(true);
+        }
+        if (" ".equals(LugarDepartamentoCombo.getSelectedItem().toString()))
+        {
+            contador += 1;
+            A3.setVisible(true);
+        }
+        if (" ".equals(LugarCiudadCombo.getSelectedItem().toString()))
+        {
+            contador += 1;
+            A4.setVisible(true);
+        }
+        if ("".equals(jtfFecha_inicio.getText()))
+        {
+            contador += 1;
+            A5.setVisible(true);
+        }
+        if ("".equals(jtfFecha_fin.getText()))
+        {
+            contador += 1;
+            A6.setVisible(true);
+        }
+        if ("".equals(jtaDescripcion.getText()))
+        {
+            contador += 1;
+            A7.setVisible(true);
+        }        
+        if (contador > 0){
+            A8.setVisible(true);
+        }
+        else{
+            this.rs_id = LoginForAll.getRs_id();        
+            String result = Actividad.Register(jtfTitulo.getText(), (String)jcbTipologia.getSelectedItem(), jtfFecha_inicio.getText(),
+            jtfFecha_fin.getText(), (String) LugarCiudadCombo.getSelectedItem(), jtaDescripcion.getText(), this.rs_id);        
+            if (result.equals("Registro Exitoso")){
+                JOptionPane.showMessageDialog(jPanel1, "El registro se ha hecho de forma exitosa", "Registro Exitoso", JOptionPane.INFORMATION_MESSAGE);
+                this.hide();
+            }
+            else if (result.equals("Error")){
+                JOptionPane.showMessageDialog(this, "Ha habido un error en el proceso de registro", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, result, "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+    
+    private void jtfFecha_finActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfFecha_finActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_jtfFecha_finActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    private void LabelAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelAgregarMouseClicked
+        registrarPasantia();
+    }//GEN-LAST:event_LabelAgregarMouseClicked
 
-    private void Img_atrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Img_atrasMouseClicked
-        
-    }//GEN-LAST:event_Img_atrasMouseClicked
+    private void LabelAgregarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LabelAgregarKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            registrarPasantia();
+        }
+    }//GEN-LAST:event_LabelAgregarKeyPressed
+
+    private void LugarDepartamentoComboItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_LugarDepartamentoComboItemStateChanged
+        if ("Distrito Capital".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Bogotá"}));
+        }
+        else if ("Antioquia".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Medellín", "Bello", "Itagüí", "Envigado"}));
+        }
+        else if ("Atlántico".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Barranquilla", "Soledad"}));
+        }
+        else if ("Bolívar".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Cartagena"}));
+        }
+        else if ("Boyacá".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Tunja", "Sogamoso", "Duitama"}));
+        }
+        else if ("Caldas".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Manizales"}));
+        }
+        else if ("Cauca".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Popayán"}));
+        }
+        else if ("Cesar".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Valledupar"}));
+        }
+        else if ("Córdoba".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Montería"}));
+        }
+        else if ("Cundinamarca".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Soacha"}));
+        }
+        else if ("Huila".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Neiva"}));
+        }
+        else if ("La Guajira".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Riohacha"}));
+        }
+        else if ("Magdalena".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Santa Marta"}));
+        }
+        else if ("Nariño".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Pasto", "Tumaco"}));
+        }
+        else if ("Norte de Santander".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Cúcuta"}));
+        }
+        else if ("Quindío".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Armenia"}));
+        }
+        else if ("Risaralda".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Pereira", "Dosquebradas"}));
+        }
+        else if ("Santander".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Bucaramanga", "Floridablanca", "Barrancabermeja"}));
+        }
+        else if ("Sucre".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Sincelejo"}));
+        }
+        else if ("Tolima".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Ibagué"}));
+        }
+        else if ("Valle del Cauca".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Cali", "Palmira", "Buenaventura", "Tuluá"}));
+        }
+        else if ("Meta".equals(LugarDepartamentoCombo.getSelectedItem().toString())){
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " , "Villavicencio"}));
+        }
+        else
+        {
+            LugarCiudadCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        }
+    }//GEN-LAST:event_LugarDepartamentoComboItemStateChanged
+
+    private void jtaDescripcionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtaDescripcionKeyTyped
+        String s = jtaDescripcion.getText();
+        int l = s.length();
+        int resultado = 100 - l;
+        try{
+            if (l >= 100){evt.consume();}
+        }
+        catch(Exception w){}
+        jLabel3.setText("Quedan "+ resultado + " carácteres");        
+    }//GEN-LAST:event_jtaDescripcionKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Boton_Guardar;
-    private javax.swing.JLabel Img_atras;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel A1;
+    private javax.swing.JLabel A2;
+    private javax.swing.JLabel A3;
+    private javax.swing.JLabel A4;
+    private javax.swing.JLabel A5;
+    private javax.swing.JLabel A6;
+    private javax.swing.JLabel A7;
+    private javax.swing.JLabel A8;
+    private javax.swing.JPanel Boton_Guardar1;
+    private javax.swing.JLabel LabelAgregar;
+    private javax.swing.JComboBox<String> LugarCiudadCombo;
+    private javax.swing.JComboBox<String> LugarDepartamentoCombo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JComboBox<String> jcbTipologia;
+    private javax.swing.JTextArea jtaDescripcion;
+    private javax.swing.JTextField jtfFecha_fin;
+    private javax.swing.JTextField jtfFecha_inicio;
+    private javax.swing.JTextField jtfTitulo;
     // End of variables declaration//GEN-END:variables
 }

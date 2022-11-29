@@ -102,6 +102,7 @@ public class MenuEmpresa extends javax.swing.JFrame {
         jSeparator2.setBounds(0, 100, 1324, 14);
 
         Panel_Contenido.setBackground(new java.awt.Color(255, 255, 255));
+        Panel_Contenido.setMinimumSize(new java.awt.Dimension(1150, 470));
         Panel_Contenido.setLayout(null);
         jPanel3.add(Panel_Contenido);
         Panel_Contenido.setBounds(10, 110, 1150, 470);
@@ -133,7 +134,7 @@ public class MenuEmpresa extends javax.swing.JFrame {
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel3.add(jSeparator5);
-        jSeparator5.setBounds(390, 0, 2, 110);
+        jSeparator5.setBounds(390, 0, 2, 100);
 
         Boton_Usuario1.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -162,7 +163,7 @@ public class MenuEmpresa extends javax.swing.JFrame {
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel3.add(jSeparator6);
-        jSeparator6.setBounds(780, 0, 2, 110);
+        jSeparator6.setBounds(780, 0, 2, 100);
 
         Boton_Usuario3.setBackground(new java.awt.Color(114, 137, 48));
         Boton_Usuario3.addMouseListener(new java.awt.event.MouseAdapter() {

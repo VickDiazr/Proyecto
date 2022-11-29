@@ -3,21 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Profesor/InformacionPersonalProfesor.java</file>
             <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Estudiante/InformacionPersonalEstudiante.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Empresa/InformacionPersonalEmpresa.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Comite/MenuComite.java</file>
+            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/RegistroDocente.java</file>
+            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Modelo/Docentes.java</file>
+            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Profesor/MenuProfesor.java</file>
             <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Comite/InformacionPersonalComite.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Estudiante/PasantiasDisponiblesEstudiante.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Estudiante/MisPasantiasEstudiante.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Modelo/Estudiantes.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Modelo/Empresas.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/RegistroEstudiantes.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Empresa/MenuEmpresa.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Empresa/VerPasantiasEmpresa.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Modelo/LoginForAll.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/RegistroEmpresas.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Login.java</file>
-            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Estudiante/MenuEstudiante.java</file>
+            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Vista/Menu_Comite/MenuComite.java</file>
+            <file>file:/C:/Users/snsc2/OneDrive/Documentos/Nacho/2022-2/Ingesoft%201/ProyectoFinal/Java/Proyecto/Proyecto_Capivara/src/proyecto/serviciopasantias/Modelo/ComiteAsesor.java</file>
         </group>
     </open-files>
 </project-private>

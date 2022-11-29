@@ -33,9 +33,9 @@ public class MenuProfesor extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        Img_atras = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        Img_atras = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         Panel_Contenido = new javax.swing.JPanel();
@@ -50,6 +50,7 @@ public class MenuProfesor extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -59,6 +60,16 @@ public class MenuProfesor extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(86, 90, 92));
         jPanel2.setLayout(null);
+
+        Img_atras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Img_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Atras.png"))); // NOI18N
+        Img_atras.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Img_atrasMouseClicked(evt);
+            }
+        });
+        jPanel2.add(Img_atras);
+        Img_atras.setBounds(38, 38, 33, 33);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/LogoUN.png"))); // NOI18N
         jPanel2.add(jLabel1);
@@ -70,20 +81,10 @@ public class MenuProfesor extends javax.swing.JFrame {
         jLabel5.setText("Menu Principal");
         jLabel5.setToolTipText("");
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(370, 20, 560, 53);
-
-        Img_atras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Img_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto/serviciopasantias/Vista/Images/Atras.png"))); // NOI18N
-        Img_atras.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Img_atrasMouseClicked(evt);
-            }
-        });
-        jPanel2.add(Img_atras);
-        Img_atras.setBounds(30, 30, 33, 33);
+        jLabel5.setBounds(0, 0, 1370, 110);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 1660, 0);
+        jPanel2.setBounds(0, 0, 1660, 110);
 
         jPanel3.setBackground(new java.awt.Color(86, 90, 92));
         jPanel3.setLayout(null);
