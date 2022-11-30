@@ -80,7 +80,6 @@ public class MisPasantiasEstudiante extends javax.swing.JPanel {
         jLabel24.setBackground(new java.awt.Color(153, 153, 153));
         jLabel24.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel24.setText("Un trabajo de mierda, mal pagado");
         jPanel5.add(jLabel24);
         jLabel24.setBounds(0, 0, 1070, 180);
 

@@ -91,7 +91,6 @@ public class InformacionPasantiaEstudiante extends javax.swing.JPanel {
         jLabel21.setBackground(new java.awt.Color(153, 153, 153));
         jLabel21.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("Un trabajo de mierda, mal pagado ");
         jPanel5.add(jLabel21);
         jLabel21.setBounds(0, 0, 680, 200);
 
